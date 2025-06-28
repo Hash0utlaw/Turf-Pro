@@ -1,5 +1,6 @@
 import Image from "next/image"
-import ContactDialog from "@/components/contact-dialog"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 export default function HeroSection() {
   return (
@@ -7,8 +8,8 @@ export default function HeroSection() {
       <Image
         src="/premium-artificial-turf-backyard.png"
         alt="Lush artificial turf in a beautiful backyard setting"
-        layout="fill"
-        objectFit="cover"
+        fill
+        style={{ objectFit: "cover" }}
         quality={85}
         priority
         className="brightness-[0.6]"
@@ -22,11 +23,13 @@ export default function HeroSection() {
           greens, and low-maintenance solutions.
         </p>
         <div>
-          <ContactDialog
-            triggerButtonText="Get a Free Quote Today"
-            triggerButtonVariant="default"
+          <Button
+            asChild
+            size="lg"
             className="bg-turf-green hover:bg-turf-green-dark text-white px-6 py-3 sm:px-8 sm:py-3 h-auto sm:h-12 text-base sm:text-lg rounded-lg shadow-soft-md hover:shadow-soft-lg transition-all"
-          />
+          >
+            <Link href="/contact">Get a Free Quote Today</Link>
+          </Button>
         </div>
       </div>
     </section>

@@ -1,36 +1,45 @@
 import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { Zap, PawPrint, ClubIcon as GolfIcon } from "lucide-react" // Using GolfIcon as a placeholder for putting greens
+import { Home, Building2, PawPrint, Dribbble, ClubIcon as GolfIcon, Zap } from "lucide-react"
 
 const services = [
   {
-    icon: Zap,
-    title: "Turf Installation",
-    description:
-      "Professional installation of high-quality artificial turf for residential and commercial properties. Durable, beautiful, and eco-friendly.",
-    href: "/#contact", // General installation might still point to a contact section or a general services page if created
+    icon: Home,
+    title: "Residential Lawn Turf",
+    description: "Create a stunning, low-maintenance green space for your home that stays perfect all year round.",
+    href: "/residential-lawn-turf",
+  },
+  {
+    icon: Building2,
+    title: "Commercial Turf",
+    description: "Enhance your business's curb appeal with durable, cost-effective, and professional turf solutions.",
+    href: "/commercial-turf",
   },
   {
     icon: GolfIcon,
     title: "Backyard Putting Greens",
-    description:
-      "Custom-designed putting greens to perfect your short game. We use premium turf for a true roll and realistic feel.",
+    description: "Perfect your short game with a custom-designed putting green that offers a true and realistic roll.",
     href: "/putting-greens",
   },
   {
-    icon: PawPrint, // Changed icon to PawPrint for Pet-Friendly Turf
-    title: "Pet-Friendly Turf", // Updated title
-    description:
-      "Safe, durable, and easy-to-clean artificial turf solutions designed specifically for your furry friends. No more muddy paws!", // Updated description
+    icon: PawPrint,
+    title: "Pet-Friendly Turf",
+    description: "A safe, durable, and easy-to-clean turf solution designed specifically for your furry friends.",
     href: "/pet-friendly-turf",
   },
-  // You can add a card for Recreational Turf here if you want it on the homepage services grid
-  // {
-  //   icon: Users, // Example icon for Recreational Turf
-  //   title: "Recreational & Sports Turf",
-  //   description: "High-performance turf for playgrounds, sports courts, and active areas. Safe, durable, and versatile.",
-  //   href: "/recreational-turf",
-  // },
+  {
+    icon: Dribbble,
+    title: "Recreational & Sports Turf",
+    description:
+      "High-performance turf for playgrounds, sports courts, and active areas. Safe, durable, and versatile.",
+    href: "/recreational-turf",
+  },
+  {
+    icon: Zap,
+    title: "General Turf Installation",
+    description: "Our expert team provides professional, high-quality installation for any type of turf project.",
+    href: "/general-turf-installation",
+  },
 ]
 
 export default function ServicesSection() {

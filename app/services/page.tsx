@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Leaf, ClubIcon as GolfIcon, PawPrint, Zap, Users, Wrench } from "lucide-react" // Example icons
+import { ClubIcon as GolfIcon, PawPrint, Zap, Users, Wrench, Building } from "lucide-react"
 import type { Metadata } from "next"
 import ContactDialog from "@/components/contact-dialog"
 import { Toaster } from "@/components/ui/toaster"
@@ -27,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: "Discover all the ways Turf Pros can transform your outdoor and indoor spaces with premium turf.",
       images: [
         {
-          url: "/all-services-overview.png", // Replace with an absolute URL and actual image
+          url: "/all-services-overview.png",
           width: 1200,
           height: 630,
           alt: "Overview of Various Turf Applications",
@@ -50,10 +50,10 @@ const allServicesList = [
     title: "Pet-Friendly Turf",
     description: "Safe, durable, and easy-to-clean turf solutions perfect for your furry companions.",
     href: "/pet-friendly-turf",
-    imgSrc: "/placeholder-pjsuy.png",
+    imgSrc: "/happy-dog-turf.png",
   },
   {
-    icon: Users, // Using Users icon for Recreational Turf
+    icon: Users,
     title: "Recreational & Sports Turf",
     description: "High-performance turf for playgrounds, sports courts, and active areas.",
     href: "/recreational-turf",
@@ -63,22 +63,22 @@ const allServicesList = [
     icon: Zap,
     title: "Residential Lawn Turf",
     description: "Beautiful, low-maintenance artificial lawns that stay green all year round.",
-    href: "/residential-lawns", // Example: Link to a future dedicated page
-    imgSrc: "/modern-backyard-artificial-turf.png",
+    href: "/residential-lawn-turf",
+    imgSrc: "/residential-lawn-hero.png",
+  },
+  {
+    icon: Building,
+    title: "Commercial Turf Solutions",
+    description: "Durable and attractive turf for businesses, public spaces, and commercial landscapes.",
+    href: "/commercial-turf",
+    imgSrc: "/commercial-turf-hero.png",
   },
   {
     icon: Wrench,
-    title: "Commercial Turf Solutions",
-    description: "Durable and attractive turf for businesses, public spaces, and commercial landscapes.",
-    href: "/commercial-turf", // Example: Link to a future dedicated page
-    imgSrc: "/commercial-courtyard-turf.png",
-  },
-  {
-    icon: Leaf,
     title: "General Turf Installation",
     description: "Expert installation for any artificial turf project, ensuring a flawless finish.",
-    href: "/#contact", // Or a dedicated installation page
-    imgSrc: "/turf-installation.png",
+    href: "/general-turf-installation",
+    imgSrc: "/turf-installation-process.png",
   },
 ]
 
@@ -109,8 +109,8 @@ export default function AllServicesPage() {
                   <Image
                     src={service.imgSrc || "/placeholder.svg"}
                     alt={`Image for ${service.title}`}
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: "cover" }}
                     className="transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>

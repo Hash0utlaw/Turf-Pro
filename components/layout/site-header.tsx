@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Menu } from 'lucide-react'
+import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   NavigationMenu,
@@ -14,22 +14,42 @@ import {
 } from "@/components/ui/navigation-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import React from "react"
-import ContactDialog from "@/components/contact-dialog"
 import { cn } from "@/lib/utils"
 import Logo from "./logo"
 
 const servicePageLinks = [
-  { href: "/putting-greens", label: "Putting Greens", description: "Custom backyard golf greens." },
-  { href: "/pet-friendly-turf", label: "Pet-Friendly Turf", description: "Safe turf for your furry friends." },
-  { href: "/recreational-turf", label: "Recreational Turf", description: "Versatile turf for play & sports." },
+  {
+    href: "/residential-lawn-turf",
+    label: "Residential Lawns",
+    description: "Beautiful, low-maintenance lawns for your home.",
+  },
+  { href: "/putting-greens", label: "Putting Greens", description: "Custom backyard and professional golf greens." },
+  {
+    href: "/pet-friendly-turf",
+    label: "Pet-Friendly Turf",
+    description: "Safe, durable, and clean turf for your pets.",
+  },
+  {
+    href: "/recreational-turf",
+    label: "Recreational Turf",
+    description: "Versatile turf for play areas and sports fields.",
+  },
+  {
+    href: "/commercial-turf",
+    label: "Commercial Turf",
+    description: "Durable, cost-effective solutions for businesses.",
+  },
+  {
+    href: "/general-turf-installation",
+    label: "Installation Services",
+    description: "Expert installation for any project, big or small.",
+  },
   { href: "/services", label: "All Services", description: "Explore our complete range of turf solutions." },
 ]
 
 const mainSiteLinks = [
-  { href: "/#portfolio", label: "Portfolio" },
+  { href: "/portfolio", label: "Portfolio" },
   { href: "/#about", label: "About Us" },
-  { href: "/#testimonials", label: "Testimonials" },
-  { href: "/#faq", label: "FAQ" },
 ]
 
 const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a"> & { title: string }>(
@@ -62,10 +82,7 @@ export default function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
-        {/* Logo on the left */}
         <Logo className="h-10 w-24 md:h-12 md:w-28" />
-
-        {/* Desktop Navigation & CTA */}
         <div className="hidden md:flex items-center space-x-2">
           <NavigationMenu>
             <NavigationMenuList>
@@ -98,11 +115,11 @@ export default function SiteHeader() {
             </NavigationMenuList>
           </NavigationMenu>
           <div className="ml-2">
-            <ContactDialog triggerButtonVariant="default" triggerButtonText="Get a Free Quote" />
+            <Button asChild className="shadow-soft hover:shadow-soft-md transition-shadow">
+              <Link href="/contact">Get a Free Quote</Link>
+            </Button>
           </div>
         </div>
-
-        {/* Mobile Navigation Trigger */}
         <div className="flex items-center md:hidden">
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
@@ -139,11 +156,11 @@ export default function SiteHeader() {
                   </Link>
                 ))}
                 <div className="pt-6">
-                  <ContactDialog
-                    triggerButtonVariant="default"
-                    triggerButtonText="Get a Free Quote"
-                    className="w-full"
-                  />
+                  <Button asChild className="w-full">
+                    <Link href="/contact" onClick={() => setIsSheetOpen(false)}>
+                      Get a Free Quote
+                    </Link>
+                  </Button>
                 </div>
               </nav>
             </SheetContent>

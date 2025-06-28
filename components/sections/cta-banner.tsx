@@ -1,8 +1,9 @@
-import ContactDialog from "@/components/contact-dialog"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 export default function CtaBanner() {
   return (
-    <section id="contact" className="py-16 md:py-24 bg-turf-green-extralight">
+    <section id="contact-banner" className="py-16 md:py-24 bg-turf-green-extralight">
       <div className="container px-4 md:px-6 text-center">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-turf-green-dark">
           Ready to Transform Your Backyard?
@@ -11,11 +12,13 @@ export default function CtaBanner() {
           Let our experts help you design the perfect outdoor space. Contact us today for a free consultation and quote.
         </p>
         <div className="mt-8">
-          <ContactDialog
-            triggerButtonText="Contact Us Today"
-            triggerButtonVariant="default"
+          <Button
+            asChild
+            size="lg"
             className="bg-turf-green hover:bg-turf-green-dark text-white px-10 py-4 h-14 text-xl rounded-lg shadow-soft-md hover:shadow-soft-lg transition-all"
-          />
+          >
+            <Link href="/contact">Contact Us Today</Link>
+          </Button>
         </div>
       </div>
     </section>
