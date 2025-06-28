@@ -22,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: "Safe, durable, and easy-to-clean artificial grass for your beloved pets.",
       images: [
         {
-          url: "/placeholder-pjsuy.png",
+          url: "/hero-pet-turf.png",
           width: 1200,
           height: 630,
           alt: "Happy Dog on Pet-Friendly Turf",
@@ -33,8 +33,8 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const petTurfData: ServicePageTemplateProps = {
-  heroImageSrc: "/happy-dog-turf.png",
-  heroImageAlt: "Happy pets enjoying clean and safe artificial turf",
+  heroImageSrc: "/hero-pet-turf.png",
+  heroImageAlt: "Happy dog playing on a clean and safe artificial turf lawn",
   heroTitle: "The Perfect Lawn for Your Furry Friends",
   heroSubtitle: "Discover durable, safe, and easy-to-clean pet-friendly turf solutions.",
   heroCtaText: "Get a Pet-Friendly Turf Quote",

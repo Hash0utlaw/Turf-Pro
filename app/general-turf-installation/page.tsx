@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Expert Turf Installation Services | The Perfect Foundation | Turf Pros",
     description: "Learn about our meticulous turf installation process, ensuring a flawless and long-lasting result.",
-    images: [{ url: "/turf-installation-process.png" }],
+    images: [{ url: "/hero-turf-installation.png" }],
   },
 }
 
 const pageContent: ServicePageTemplateProps = {
-  heroImageSrc: "/turf-installation-process.png",
+  heroImageSrc: "/hero-turf-installation.png",
   heroImageAlt: "A professional installer laying down a roll of artificial turf.",
   heroTitle: "Expert Turf Installation",
   heroSubtitle:

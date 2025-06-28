@@ -22,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: "Design your dream backyard putting green with our expert installation services.",
       images: [
         {
-          url: "/luxury-backyard-putting-green.png",
+          url: "/hero-putting-green.png",
           width: 1200,
           height: 630,
           alt: "Luxury Backyard Putting Green",
@@ -33,7 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const puttingGreensData: ServicePageTemplateProps = {
-  heroImageSrc: "/luxury-backyard-putting-green.png",
+  heroImageSrc: "/hero-putting-green.png",
   heroImageAlt: "Expansive backyard putting green under a clear sky",
   heroTitle: "Professional Backyard Putting Greens",
   heroSubtitle: "Perfect your putt with a custom-designed, tour-quality green in your own backyard.",

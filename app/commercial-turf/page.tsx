@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Commercial Turf Solutions | Low Maintenance, High Impact | Turf Pros",
     description: "Elevate your business's appearance with our durable, cost-effective commercial artificial turf.",
-    images: [{ url: "/commercial-turf-hero.png" }],
+    images: [{ url: "/hero-commercial-turf.png" }],
   },
 }
 
 const pageContent: ServicePageTemplateProps = {
-  heroImageSrc: "/commercial-turf-hero.png",
+  heroImageSrc: "/hero-commercial-turf.png",
   heroImageAlt: "A modern office building with a clean, green artificial turf entrance.",
   heroTitle: "Professional Turf for Your Business",
   heroSubtitle:

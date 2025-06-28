@@ -22,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: "Durable and safe artificial turf for all your recreational and sports needs.",
       images: [
         {
-          url: "/recreational-sports-turf.png",
+          url: "/hero-recreational-turf.png",
           width: 1200,
           height: 630,
           alt: "Recreational Sports Turf Field",
@@ -33,7 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const recreationalTurfData: ServicePageTemplateProps = {
-  heroImageSrc: "/placeholder.svg?width=1920&height=1080",
+  heroImageSrc: "/hero-recreational-turf.png",
   heroImageAlt: "Kids playing various sports on a vibrant artificial turf field",
   heroTitle: "Active Play, All Year Round",
   heroSubtitle: "High-performance recreational turf for sports, playgrounds, and active lifestyles.",
