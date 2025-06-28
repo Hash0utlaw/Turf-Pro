@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Eye } from "lucide-react"
 import type { PortfolioItem } from "@/lib/portfolio-data"
 
-type PortfolioCardProps = {
+interface PortfolioCardProps {
   item: PortfolioItem
   onOpen: () => void
 }
@@ -34,12 +34,13 @@ export default function PortfolioCard({ item, onOpen }: PortfolioCardProps) {
           <h3 className="text-xl font-semibold text-white mb-1">{item.title}</h3>
           <p className="text-sm text-brand-green-light">{item.categoryLabel}</p>
         </div>
-        <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <Button
             variant="outline"
             className="bg-white/20 text-white border-white/50 hover:bg-white/30 backdrop-blur-sm"
           >
-            <Eye className="mr-2 h-4 w-4" /> View Project
+            <Eye className="mr-2 h-4 w-4" />
+            View Project
           </Button>
         </div>
       </CardContent>

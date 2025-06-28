@@ -1,25 +1,14 @@
 import type { Metadata } from "next"
 import PortfolioClient from "./portfolio-client"
-import { portfolioItems, categories } from "@/lib/portfolio-data"
+import { portfolioItems } from "@/lib/portfolio-data"
 
 export const metadata: Metadata = {
-  title: "Our Work - Portfolio",
+  title: "Our Work – Portfolio",
   description:
-    "Explore a gallery of our completed artificial turf projects, including residential lawns, commercial spaces, putting greens, and pet-friendly installations. See the quality of our work for yourself.",
-  openGraph: {
-    title: "Our Work - Portfolio | Turf Professionals",
-    description: "A gallery of our completed artificial turf projects.",
-    images: [
-      {
-        url: "/og-portfolio.png", // Create a specific OG image for the portfolio page
-        width: 1200,
-        height: 630,
-        alt: "A collage of completed turf projects.",
-      },
-    ],
-  },
+    "Explore a gallery of our completed artificial turf projects, including residential lawns, commercial spaces, putting greens, and more.",
 }
 
 export default function PortfolioPage() {
-  return <PortfolioClient allItems={portfolioItems} categories={categories} />
+  // Only serialisable data (no functions) is passed to the client
+  return <PortfolioClient allItems={portfolioItems} />
 }
