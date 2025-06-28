@@ -75,17 +75,10 @@ export const metadata: Metadata = {
     // creatorId: "[Your Twitter Creator ID if different]",
     images: [`${BASE_URL}/og-image.png`], // Must be an absolute URL
   },
-  icons: {
-    // Add favicon links
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
-  },
-  // manifest: "/site.webmanifest", // If you have a web app manifest
   alternates: {
     canonical: "/", // Default canonical for the homepage
   },
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 // Define LocalBusiness JSON-LD Schema
@@ -138,7 +131,7 @@ const localBusinessSchema = {
 }
 
 const websiteSchema = {
-  "@context": "https.schema.org",
+  "@context": "https://schema.org",
   "@type": "WebSite",
   url: BASE_URL,
   name: "Turf Professionals",

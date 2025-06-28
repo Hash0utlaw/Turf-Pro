@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Menu } from "lucide-react"
+import { Menu } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import {
   NavigationMenu,
@@ -61,14 +61,12 @@ export default function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-2xl items-center">
+      <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
         {/* Logo on the left */}
-        <div className="mr-4 flex items-center">
-          <Logo width={110} height={47} />
-        </div>
+        <Logo className="h-10 w-24 md:h-12 md:w-28" />
 
         {/* Desktop Navigation & CTA */}
-        <div className="hidden md:flex flex-1 items-center justify-end space-x-2">
+        <div className="hidden md:flex items-center space-x-2">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
@@ -105,7 +103,7 @@ export default function SiteHeader() {
         </div>
 
         {/* Mobile Navigation Trigger */}
-        <div className="flex flex-1 items-center justify-end md:hidden">
+        <div className="flex items-center md:hidden">
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="bg-transparent text-foreground hover:bg-accent">
@@ -115,7 +113,7 @@ export default function SiteHeader() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[350px]">
               <div className="mb-6 pt-2">
-                <Logo width={100} height={43} />
+                <Logo className="h-12 w-28" />
               </div>
               <nav className="flex flex-col space-y-1">
                 <p className="px-3 py-2 text-sm font-semibold text-muted-foreground">Services</p>

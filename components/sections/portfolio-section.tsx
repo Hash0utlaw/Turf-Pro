@@ -52,11 +52,11 @@ export default function PortfolioSection() {
   const [selectedItem, setSelectedItem] = React.useState<(typeof portfolioItems)[0] | null>(null)
 
   return (
-    <section id="portfolio" className="py-16 md:py-24 bg-brand-gray-light">
+    <section id="portfolio" className="py-12 md:py-24 bg-brand-gray-light">
       <div className="container px-4 md:px-6">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-foreground">Our Recent Work</h2>
-          <p className="mt-3 max-w-2xl mx-auto text-lg text-brand-gray-text md:text-xl">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">Our Recent Work</h2>
+          <p className="mt-3 max-w-2xl mx-auto text-base sm:text-lg text-brand-gray-text md:text-xl">
             Browse through a selection of our successfully completed turf projects.
           </p>
         </div>
@@ -74,7 +74,7 @@ export default function PortfolioSection() {
                       className="object-cover w-full h-64 transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                      <h3 className="text-xl font-semibold text-white mb-1">{item.title}</h3>
+                      <h3 className="text-lg font-semibold text-white mb-1">{item.title}</h3>
                       <p className="text-sm text-gray-200">{item.category}</p>
                       <Button
                         variant="outline"
@@ -95,17 +95,19 @@ export default function PortfolioSection() {
                       alt={selectedItem.title}
                       width={800}
                       height={500}
-                      className="object-cover w-full h-auto max-h-[500px] rounded-t-2xl"
+                      className="object-cover w-full h-auto max-h-[60vh] sm:max-h-[500px] rounded-t-2xl"
                     />
-                    <div className="p-6">
-                      <DialogTitle className="text-2xl font-semibold text-foreground">{selectedItem.title}</DialogTitle>
-                      <DialogDescription className="text-brand-gray-text mt-2 text-base">
+                    <div className="p-4 sm:p-6">
+                      <DialogTitle className="text-xl sm:text-2xl font-semibold text-foreground">
+                        {selectedItem.title}
+                      </DialogTitle>
+                      <DialogDescription className="text-brand-gray-text mt-2 text-sm sm:text-base">
                         <strong>Category:</strong> {selectedItem.category} <br />
                         {selectedItem.description}
                       </DialogDescription>
                     </div>
                   </DialogHeader>
-                  <div className="p-6 pt-0">
+                  <div className="p-4 sm:p-6 pt-0">
                     <Button
                       variant="outline"
                       onClick={() => setSelectedItem(null)}

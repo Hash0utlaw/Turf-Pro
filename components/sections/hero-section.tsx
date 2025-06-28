@@ -14,10 +14,10 @@ export default function HeroSection() {
         className="brightness-[0.6]"
       />
       <div className="relative z-10 container px-4 md:px-6 space-y-6 md:space-y-8">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-md">
+        <h1 className="text-4xl font-bold tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-md">
           Transform Your Outdoors with Premium Turf
         </h1>
-        <p className="max-w-3xl mx-auto text-lg md:text-xl lg:text-2xl text-gray-200 drop-shadow-sm">
+        <p className="max-w-3xl mx-auto text-lg text-balance md:text-xl lg:text-2xl text-gray-200 drop-shadow-sm">
           Experience the beauty and convenience of high-quality artificial grass. Perfect lawns, stunning putting
           greens, and low-maintenance solutions.
         </p>
@@ -25,7 +25,7 @@ export default function HeroSection() {
           <ContactDialog
             triggerButtonText="Get a Free Quote Today"
             triggerButtonVariant="default"
-            className="bg-turf-green hover:bg-turf-green-dark text-white px-8 py-3 h-12 text-lg rounded-lg shadow-soft-md hover:shadow-soft-lg transition-all"
+            className="bg-turf-green hover:bg-turf-green-dark text-white px-6 py-3 sm:px-8 sm:py-3 h-auto sm:h-12 text-base sm:text-lg rounded-lg shadow-soft-md hover:shadow-soft-lg transition-all"
           />
         </div>
       </div>
