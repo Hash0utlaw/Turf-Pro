@@ -1,43 +1,52 @@
 "use server"
 
+import { Resend } from "resend"
 import { z } from "zod"
+import ContactFormEmail from "@/components/emails/contact-form-email"
+import { contactFormSchema, type ContactFormInputs } from "@/lib/contact-form-schema"
 
-const contactFormSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  email: z.string().email({ message: "Please enter a valid email address." }),
-  phone: z.string().optional(),
-  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
-})
+// This line reads your secret API key from the .env.local file.
+const resend = new Resend(process.env.RESEND_API_KEY)
 
-export type FormState = {
-  message: string
-  status: "success" | "error" | "idle"
-  errors?: Record<string, string[]>
+// This helper function safely gets the recipient email from your environment variables.
+function getRecipientAddress(): string {
+  const recipient = process.env.CONTACT_RECIPIENT_EMAIL
+  const validation = z.string().email().safeParse(recipient)
+
+  // If the environment variable is missing or invalid, it uses a fallback.
+  // IMPORTANT: Update this fallback to your Resend account email.
+  if (validation.success) return validation.data
+
+  console.warn("CONTACT_RECIPIENT_EMAIL env var is missing or invalid. Using fallback.")
+  return "davis@summitroofingprofessionals.com" // Fallback for Resend sandbox
 }
 
-export async function submitContactForm(prevState: FormState, formData: FormData): Promise<FormState> {
-  const validatedFields = contactFormSchema.safeParse({
-    name: formData.get("name"),
-    email: formData.get("email"),
-    phone: formData.get("phone"),
-    message: formData.get("message"),
-  })
-
-  if (!validatedFields.success) {
-    return {
-      message: "Please correct the errors below.",
-      status: "error",
-      errors: validatedFields.error.flatten().fieldErrors,
-    }
+export async function submitContactForm(data: ContactFormInputs) {
+  const parsed = contactFormSchema.safeParse(data)
+  if (!parsed.success) {
+    return { success: false, message: "Invalid form data." }
   }
 
-  // Here you would typically send an email or save to a database
-  console.log("Form data submitted successfully:", validatedFields.data)
-  // Simulate network delay
-  await new Promise((resolve) => setTimeout(resolve, 1000))
+  const { name, email, phone, message } = parsed.data
+  const recipientEmail = getRecipientAddress()
 
-  return {
-    message: "Thank you for your message! We'll be in touch shortly.",
-    status: "success",
+  try {
+    const { error } = await resend.emails.send({
+      from: "Turf Pros Website <onboarding@resend.dev>", // Sandbox-safe from address
+      to: [recipientEmail], // Sends to your verified Resend email
+      subject: `New Inquiry from ${name}`,
+      reply_to: email,
+      react: <ContactFormEmail name={name} email={email} phone={phone} message={message} />,
+    })
+
+    if (error) {
+      console.error("Resend API Error:", error)
+      return { success: false, message: "Failed to send message. Please try again later." }
+    }
+
+    return { success: true, message: "Your message has been sent successfully!" }
+  } catch (exception) {
+    console.error("Submission Error:", exception)
+    return { success: false, message: "An unexpected error occurred." }
   }
 }

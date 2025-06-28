@@ -1,156 +1,150 @@
 "use client"
 
-import { useActionState } from "react"
-import { useFormStatus } from "react-dom"
-import { useEffect, useRef } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent } from "@/components/ui/card"
-import { submitContactForm, type FormState } from "./actions"
+import type React from "react"
+
+import { useTransition } from "react"
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { contactFormSchema, type ContactFormInputs } from "@/lib/contact-form-schema"
+import { submitContactForm } from "./actions"
 import { useToast } from "@/hooks/use-toast"
-import { Mail, Phone, MapPin, Loader2 } from "lucide-react"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Loader2, Mail, MapPin, Phone } from "lucide-react"
 import Image from "next/image"
 
-function SubmitButton() {
-  const { pending } = useFormStatus()
-  return (
-    <Button
-      type="submit"
-      disabled={pending}
-      className="w-full bg-turf-green hover:bg-turf-green-dark text-white shadow-soft hover:shadow-soft-md transition-shadow"
-    >
-      {pending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
-      {pending ? "Sending..." : "Send Message"}
-    </Button>
-  )
-}
-
 export default function ContactPageClient() {
-  const initialState: FormState = { message: "", status: "idle" }
-  const [state, formAction] = useActionState(submitContactForm, initialState)
   const { toast } = useToast()
-  const formRef = useRef<HTMLFormElement>(null)
+  const [isPending, startTransition] = useTransition()
 
-  useEffect(() => {
-    if (state.status === "success") {
-      toast({
-        title: "Message Sent!",
-        description: state.message,
-      })
-      formRef.current?.reset()
-    } else if (state.status === "error") {
-      toast({
-        title: "Error",
-        description: state.message,
-        variant: "destructive",
-      })
-    }
-  }, [state, toast])
+  const form = useForm<ContactFormInputs>({
+    resolver: zodResolver(contactFormSchema),
+    mode: "onBlur",
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
+  })
+
+  function onSubmit(values: ContactFormInputs) {
+    startTransition(async () => {
+      const result = await submitContactForm(values)
+      if (result.success) {
+        toast({
+          title: "Message Sent!",
+          description: result.message,
+        })
+        form.reset()
+      } else {
+        toast({
+          title: "Error",
+          description: result.message,
+          variant: "destructive",
+        })
+      }
+    })
+  }
 
   return (
     <>
-      <section className="py-12 md:py-20 bg-brand-gray-light">
-        <div className="container px-4 md:px-6 text-center">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-turf-green-dark">Contact Us</h1>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-brand-gray-text md:text-xl">
-            Have a question or ready to start your project? Fill out the form below or use the contact information to
-            get in touch.
+      <section className="bg-brand-gray-light py-16 text-center">
+        <div className="container">
+          <h1 className="text-4xl font-bold text-turf-green-dark sm:text-5xl">Get in Touch</h1>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-brand-gray-text">
+            Ready to transform your space? Fill out the form, and our team will get back to you shortly to discuss your
+            project.
           </p>
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container px-4 md:px-6">
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-2xl font-bold text-foreground">Get a Free Quote</h2>
-                <p className="text-brand-gray-text mt-2">
-                  Fill out our form and a turf specialist will get back to you as soon as possible.
-                </p>
-              </div>
-              <Card className="bg-card text-card-foreground rounded-2xl shadow-soft">
-                <CardContent className="p-6">
-                  <form ref={formRef} action={formAction} className="space-y-4">
-                    <div className="grid gap-2">
-                      <Label htmlFor="name">Full Name</Label>
-                      <Input id="name" name="name" placeholder="John Doe" required />
-                      {state.errors?.name && <p className="text-sm text-red-500">{state.errors.name[0]}</p>}
-                    </div>
-                    <div className="grid gap-2">
-                      <Label htmlFor="email">Email</Label>
-                      <Input id="email" name="email" type="email" placeholder="john.doe@example.com" required />
-                      {state.errors?.email && <p className="text-sm text-red-500">{state.errors.email[0]}</p>}
-                    </div>
-                    <div className="grid gap-2">
-                      <Label htmlFor="phone">Phone Number (Optional)</Label>
-                      <Input id="phone" name="phone" type="tel" placeholder="(123) 456-7890" />
-                    </div>
-                    <div className="grid gap-2">
-                      <Label htmlFor="message">Project Details</Label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        placeholder="Tell us about your project..."
-                        required
-                        rows={5}
-                      />
-                      {state.errors?.message && <p className="text-sm text-red-500">{state.errors.message[0]}</p>}
-                    </div>
-                    <SubmitButton />
+      <section className="py-16 md:py-24">
+        <div className="container">
+          <div className="grid gap-12 md:grid-cols-2 md:gap-16">
+            <Card className="rounded-2xl border-none shadow-soft">
+              <CardContent className="p-8">
+                <h2 className="mb-6 text-3xl font-bold">Send Us a Message</h2>
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Full Name</FormLabel>
+                          <FormControl>
+                            <Input placeholder="John Doe" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Email Address</FormLabel>
+                          <FormControl>
+                            <Input type="email" placeholder="john.doe@example.com" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="phone"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Phone Number (Optional)</FormLabel>
+                          <FormControl>
+                            <Input placeholder="(123) 456-7890" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>How can we help?</FormLabel>
+                          <FormControl>
+                            <Textarea rows={5} placeholder="Tell us about your project..." {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <Button type="submit" disabled={isPending} className="w-full">
+                      {isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                      Send Message
+                    </Button>
                   </form>
-                </CardContent>
-              </Card>
-            </div>
+                </Form>
+              </CardContent>
+            </Card>
+
             <div className="space-y-8">
-              <div>
-                <h2 className="text-2xl font-bold text-foreground">Contact Information</h2>
-                <p className="text-brand-gray-text mt-2">
-                  Reach out to us directly through phone, email, or visit our office.
-                </p>
-              </div>
+              <h2 className="text-3xl font-bold">Contact Information</h2>
               <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-turf-green-extralight rounded-full">
-                    <Phone className="h-6 w-6 text-turf-green" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground">Phone</h3>
-                    <a href="tel:123-456-7890" className="text-brand-gray-text hover:text-turf-green">
-                      (123) 456-7890
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-turf-green-extralight rounded-full">
-                    <Mail className="h-6 w-6 text-turf-green" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground">Email</h3>
-                    <a href="mailto:contact@turfpros.com" className="text-brand-gray-text hover:text-turf-green">
-                      contact@turfpros.com
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-turf-green-extralight rounded-full">
-                    <MapPin className="h-6 w-6 text-turf-green" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground">Office</h3>
-                    <p className="text-brand-gray-text">123 Turf Lane, Green Valley, CA 90210</p>
-                  </div>
-                </div>
+                <InfoRow icon={Phone} label="Phone" text="(123) 456-7890" href="tel:1234567890" />
+                <InfoRow icon={Mail} label="Email" text="contact@turfpros.com" href="mailto:contact@turfpros.com" />
+                <InfoRow icon={MapPin} label="Office" text="123 Turf Lane, Green Valley CA 90210" />
               </div>
-              <div className="mt-8">
+              <div className="overflow-hidden rounded-2xl shadow-soft-md">
                 <Image
                   src="/greenvalley-california-map.png"
-                  alt="Map showing the location of Turf Pros in Green Valley"
+                  alt="Map showing location of Turf Pros office"
                   width={600}
                   height={400}
-                  className="rounded-2xl shadow-soft-md object-cover w-full"
+                  className="w-full object-cover"
                 />
               </div>
             </div>
@@ -159,4 +153,35 @@ export default function ContactPageClient() {
       </section>
     </>
   )
+}
+
+function InfoRow({
+  icon: Icon,
+  label,
+  text,
+  href,
+}: {
+  icon: React.ElementType
+  label: string
+  text: string
+  href?: string
+}) {
+  const content = (
+    <div className="flex items-start">
+      <Icon className="mt-1 h-6 w-6 flex-shrink-0 text-turf-green" />
+      <div className="ml-4">
+        <h3 className="text-lg font-semibold">{label}</h3>
+        <p className="text-brand-gray-text">
+          {href ? (
+            <a href={href} className="hover:text-turf-green hover:underline">
+              {text}
+            </a>
+          ) : (
+            text
+          )}
+        </p>
+      </div>
+    </div>
+  )
+  return content
 }
