@@ -1,34 +1,27 @@
-interface ContactFormEmailProps {
-  name: string
-  email: string
-  phone?: string
-  message: string
-}
+import type { ContactFormInputs } from "@/lib/contact-form-schema"
 
-export default function ContactFormEmail({ name, email, phone, message }: ContactFormEmailProps) {
+/**
+ * Very small dependency-free JSX email for Resend.
+ */
+export default function ContactFormEmail({ name, email, phone, message }: ContactFormInputs) {
   return (
-    <div style={{ fontFamily: "Arial, sans-serif", lineHeight: "1.6", color: "#333" }}>
-      <h1 style={{ color: "#1a472a" }}>New Inquiry from Turf Pros Website</h1>
-      <p>You have received a new message from your website's contact form.</p>
-      <hr style={{ borderColor: "#eaeaea" }} />
-      <h2 style={{ color: "#1a472a" }}>Sender's Details:</h2>
-      <ul>
-        <li>
-          <strong>Name:</strong> {name}
-        </li>
-        <li>
-          <strong>Email:</strong> <a href={`mailto:${email}`}>{email}</a>
-        </li>
-        {phone && (
-          <li>
-            <strong>Phone:</strong> {phone}
-          </li>
-        )}
-      </ul>
-      <h2 style={{ color: "#1a472a" }}>Message:</h2>
-      <p style={{ whiteSpace: "pre-wrap", backgroundColor: "#f9f9f9", padding: "15px", borderRadius: "5px" }}>
-        {message}
+    <div>
+      <h2>New Contact Form Submission</h2>
+      <p>
+        <strong>Name:</strong> {name}
       </p>
+      <p>
+        <strong>Email:</strong> {email}
+      </p>
+      {phone && (
+        <p>
+          <strong>Phone:</strong> {phone}
+        </p>
+      )}
+      <p>
+        <strong>Message:</strong>
+      </p>
+      <p>{message}</p>
     </div>
   )
 }
