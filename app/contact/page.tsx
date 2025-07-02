@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import dynamic from "next/dynamic"
+import ContactPageClient from "./ContactPageClient"
 
 export const metadata: Metadata = {
   title: "Contact Us | Turf Pros",
@@ -11,10 +11,6 @@ export const metadata: Metadata = {
     url: "/contact",
   },
 }
-
-const ContactPageClient = dynamic(() => import("./ContactPageClient"), {
-  ssr: false,
-})
 
 export default function ContactPage() {
   return <ContactPageClient />
