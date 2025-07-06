@@ -24,8 +24,6 @@ export async function sendContactEmail(values: ContactFormInputs): Promise<SendC
   const { name, email, phone, subject, message } = parsed.data
 
   const payload = {
-    // IMPORTANT: For Resend's free tier, you must send from 'onboarding@resend.dev'
-    // until you have a verified custom domain.
     from: "onboarding@resend.dev",
     to: [RECIPIENT],
     subject: `Turf Pros • New Contact Form Submission: ${subject}`,
