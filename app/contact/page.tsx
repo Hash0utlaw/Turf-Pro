@@ -5,7 +5,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Contact Us | Turf Professionals",
   description:
-    "Get in touch with Turf Professionals for a free quote on your artificial turf project. Contact us via phone, email, or our online form. We serve Green Valley and surrounding areas.",
+    "Get in touch with Turf Professionals for a free quote on your artificial turf project. Contact us via phone, email, or our online form. We serve Charlotte, NC and surrounding areas.",
 }
 
 export default function ContactPage() {
@@ -67,13 +67,13 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-gray-50">Service Area</h3>
-                    <p className="text-gray-600 dark:text-gray-400">Green Valley, CA & Surrounding Areas</p>
+                    <p className="text-gray-600 dark:text-gray-400">Charlotte, NC and surrounding areas</p>
                   </div>
                 </div>
               </div>
               <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50565.72951018927!2d-121.99312905179927!3d38.24943499383245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808513f650a991a1%3A0x53482f6c3a3c09b!2sGreen%20Valley%2C%20CA!5e0!3m2!1sen!2sus!4v1689280895091!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d416887.8313299085!2d-81.03484245849933!3d35.2270869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88541fc4fc381a81%3A0x884650e6bf43d164!2sCharlotte%2C%20NC!5e0!3m2!1sen!2sus!4v1720300955319!5m2!1sen!2sus"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

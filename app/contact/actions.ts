@@ -23,20 +23,28 @@ export async function sendContactEmail(values: ContactFormInputs): Promise<SendC
 
   const { name, email, phone, subject, message } = parsed.data
 
+  // Plain text version for email clients that don't support HTML
+  const text = `New contact form submission from ${name} (${email}).\n\nPhone: ${phone || "Not provided"}\nSubject: ${subject}\n\nMessage:\n${message}`
+
   const payload = {
+    // For Resend's free tier, 'from' must be 'onboarding@resend.dev'
     from: "onboarding@resend.dev",
+    // The 'to' address must be your verified Resend account email on the free tier
     to: [RECIPIENT],
     subject: `Turf Pros • New Contact Form Submission: ${subject}`,
     html: `
-      <h2>New Contact Form Submission</h2>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ""}
-      <p><strong>Subject:</strong> ${subject}</p>
-      <hr/>
-      <p><strong>Message:</strong></p>
-      <p>${message.replace(/\n/g, "<br/>")}</p>
-    `,
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ""}
+        <p><strong>Subject:</strong> ${subject}</p>
+        <hr/>
+        <p><strong>Message:</strong></p>
+        <p>${message.replace(/\n/g, "<br/>")}</p>
+      `,
+    // Add the plain text version
+    text: text,
+    // The 'reply_to' field allows you to reply directly to the user
     reply_to: email,
   }
 
