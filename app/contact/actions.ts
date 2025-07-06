@@ -1,78 +1,72 @@
 "use server"
 
-import { Resend } from "resend"
-import ContactFormEmail from "@/components/emails/contact-form-email"
 import { contactFormSchema, type ContactFormInputs } from "@/lib/contact-form-schema"
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const RESEND_API_KEY = process.env.RESEND_API_KEY
+const RECIPIENT = process.env.CONTACT_RECIPIENT_EMAIL
 
-/**
- * Server Action - sends the email and returns a typed result.
- */
-export async function sendContactEmail(values: ContactFormInputs): Promise<{ success: boolean; message: string }> {
-  // Validate again on the server for safety
-  const parsed = contactFormSchema.safeParse(values)
-  if (!parsed.success) {
+export type SendContactEmailResult = { success: boolean; message: string }
+
+export async function sendContactEmail(values: ContactFormInputs): Promise<SendContactEmailResult> {
+  if (!RESEND_API_KEY || !RECIPIENT) {
+    console.error("Missing Resend API key or recipient email.")
     return {
       success: false,
-      message: "Validation failed. Please check your inputs.",
+      message: "Server configuration error. Could not send email.",
     }
   }
 
-  const recipient = process.env.CONTACT_RECIPIENT_EMAIL ?? "you@example.com" // Fallback
+  const parsed = contactFormSchema.safeParse(values)
+  if (!parsed.success) {
+    return { success: false, message: "Validation failed. Please check your inputs." }
+  }
 
-  // Debug: Log environment variables (remove API key for security)
-  console.log("API Key exists:", !!process.env.RESEND_API_KEY)
-  console.log("API Key starts with 're_':", process.env.RESEND_API_KEY?.startsWith('re_'))
-  console.log("Recipient email:", recipient)
+  const { name, email, phone, subject, message } = parsed.data
+
+  const payload = {
+    // IMPORTANT: For Resend's free tier, you must send from 'onboarding@resend.dev'
+    // until you have a verified custom domain.
+    from: "onboarding@resend.dev",
+    to: [RECIPIENT],
+    subject: `Turf Pros • New Contact Form Submission: ${subject}`,
+    html: `
+      <h2>New Contact Form Submission</h2>
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ""}
+      <p><strong>Subject:</strong> ${subject}</p>
+      <hr/>
+      <p><strong>Message:</strong></p>
+      <p>${message.replace(/\n/g, "<br/>")}</p>
+    `,
+    reply_to: email,
+  }
 
   try {
-    const { error } = await resend.emails.send({
-      from: "onboarding@resend.dev", // Sandbox sender
-      to: [recipient],
-      subject: `Turf Pros • New Contact Form Submission - ${parsed.data.subject}`,
-      react: ContactFormEmail(parsed.data),
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${RESEND_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
     })
 
-    if (error) {
-      console.error("Resend error:", error)
+    if (!res.ok) {
+      const errorBody = await res.text()
+      console.error("Resend API error:", errorBody)
       return {
         success: false,
-        message: "Unable to send message at the moment. Please try again later.",
+        message: "Unable to send your message right now. Please try again later.",
       }
     }
 
-    return {
-      success: true,
-      message: "Your message has been sent. We'll be in touch shortly!",
-    }
+    return { success: true, message: "Your message has been sent. We'll be in touch shortly!" }
   } catch (err) {
-    console.error("Unexpected error:", err)
+    console.error("Unexpected error while sending email:", err)
     return {
       success: false,
       message: "Something went wrong while sending your message. Please email us directly.",
     }
-  }
-}
-
-// Temporary function for testing without Resend
-export async function sendContactEmailTest(values: ContactFormInputs): Promise<{ success: boolean; message: string }> {
-  const parsed = contactFormSchema.safeParse(values)
-  if (!parsed.success) {
-    return {
-      success: false,
-      message: "Validation failed. Please check your inputs.",
-    }
-  }
-
-  // Just log the form data instead of sending email
-  console.log("Form submission received:", parsed.data)
-  
-  // Simulate processing time
-  await new Promise(resolve => setTimeout(resolve, 1000))
-  
-  return {
-    success: true,
-    message: "Test mode: Your message has been logged. Check the console!",
   }
 }

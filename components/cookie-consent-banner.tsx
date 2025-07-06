@@ -4,24 +4,20 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { Cookie } from "lucide-react"
 
-export default function CookieConsentBanner() {
+function CookieConsentBanner() {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    const consent = localStorage.getItem("cookie_consent_turf_pros")
-    if (consent !== "accepted") {
+    const consent = localStorage.getItem("cookie_consent")
+    if (consent !== "given") {
       setIsVisible(true)
     }
   }, [])
 
   const handleAccept = () => {
-    localStorage.setItem("cookie_consent_turf_pros", "accepted")
+    localStorage.setItem("cookie_consent", "given")
     setIsVisible(false)
-    // Here you might also trigger loading of analytics scripts or similar
-    // that were deferred pending consent.
-    console.log("Cookie consent accepted.")
   }
 
   if (!isVisible) {
@@ -31,32 +27,23 @@ export default function CookieConsentBanner() {
   return (
     <div
       className={cn(
-        "fixed bottom-0 left-0 right-0 z-[100] bg-background border-t border-border/60 shadow-soft-lg p-4 md:p-6 transition-transform duration-300 ease-out",
-        isVisible ? "translate-y-0" : "translate-y-full",
+        "fixed bottom-0 left-0 right-0 z-50 p-4 sm:p-6",
+        "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80",
+        "border-t border-border/40 shadow-soft-lg",
       )}
     >
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <div className="flex items-start text-sm text-brand-gray-text">
-          <Cookie className="h-6 w-6 text-turf-green mr-3 mt-0.5 flex-shrink-0" />
-          <p>
-            We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our
-            traffic. By clicking "Accept All", you consent to our use of cookies.{" "}
-            <Link href="/privacy-policy" className="underline hover:text-turf-green font-medium">
-              Learn More
-            </Link>
-            .
-          </p>
-        </div>
-        <div className="flex gap-3 flex-shrink-0">
-          {/* <Button variant="outline" size="sm" onClick={() => setIsVisible(false)} className="bg-transparent text-foreground hover:bg-accent">
-            Decline
-          </Button> */}
-          <Button
-            size="sm"
-            onClick={handleAccept}
-            className="bg-turf-green hover:bg-turf-green-dark text-white shadow-soft hover:shadow-soft-md transition-shadow"
-          >
-            Accept All
+      <div className="container mx-auto max-w-screen-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p className="text-sm text-foreground text-center sm:text-left">
+          We use cookies to enhance your browsing experience and analyze our traffic. By clicking &quot;Accept&quot;,
+          you consent to our use of cookies. Read our{" "}
+          <Link href="/privacy-policy" className="font-medium underline hover:text-turf-green transition-colors">
+            Privacy Policy
+          </Link>
+          .
+        </p>
+        <div className="flex-shrink-0">
+          <Button onClick={handleAccept} className="bg-turf-green hover:bg-turf-green-dark text-white">
+            Accept
           </Button>
         </div>
       </div>
@@ -65,3 +52,4 @@ export default function CookieConsentBanner() {
 }
 
 export { CookieConsentBanner }
+export default CookieConsentBanner

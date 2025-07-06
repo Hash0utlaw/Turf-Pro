@@ -115,7 +115,10 @@ function SiteHeader() {
             </NavigationMenuList>
           </NavigationMenu>
           <div className="ml-2">
-            <Button asChild className="shadow-soft hover:shadow-soft-md transition-shadow">
+            <Button
+              asChild
+              className="shadow-soft hover:shadow-soft-md transition-shadow bg-turf-green hover:bg-turf-green-dark text-white"
+            >
               <Link href="/contact">Get a Free Quote</Link>
             </Button>
           </div>
@@ -156,7 +159,7 @@ function SiteHeader() {
                   </Link>
                 ))}
                 <div className="pt-6">
-                  <Button asChild className="w-full">
+                  <Button asChild className="w-full bg-turf-green hover:bg-turf-green-dark text-white">
                     <Link href="/contact" onClick={() => setIsSheetOpen(false)}>
                       Get a Free Quote
                     </Link>
@@ -171,5 +174,5 @@ function SiteHeader() {
   )
 }
 
-export { SiteHeader } // named export
-export default SiteHeader // default export
+export { SiteHeader }
+export default SiteHeader
