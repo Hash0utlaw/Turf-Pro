@@ -76,7 +76,7 @@ const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWit
 )
 ListItem.displayName = "ListItem"
 
-export default function SiteHeader() {
+function SiteHeader() {
   const [isSheetOpen, setIsSheetOpen] = React.useState(false)
 
   return (
@@ -170,3 +170,6 @@ export default function SiteHeader() {
     </header>
   )
 }
+
+export { SiteHeader } // named export
+export default SiteHeader // default export

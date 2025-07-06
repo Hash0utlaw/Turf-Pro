@@ -17,7 +17,7 @@ const footerNavLinks = [
   { href: "/terms-of-service", label: "Terms of Service" },
 ]
 
-export default function SiteFooter() {
+function SiteFooter() {
   return (
     <footer className="bg-background border-t border-border/40 text-brand-gray-text">
       <div className="container py-12 px-4 md:px-6">
@@ -104,3 +104,7 @@ export default function SiteFooter() {
     </footer>
   )
 }
+
+// Provide both a named and default export so consumers can use either style.
+export { SiteFooter }
+export default SiteFooter
