@@ -47,10 +47,13 @@ const pageContent: ServicePageTemplateProps = {
   galleryTitle: "Our Commercial Portfolio",
   gallerySubtitle: "See how we've helped businesses enhance their properties with premium artificial turf.",
   galleryImages: [
-    { src: "/rooftop-bar-turf.png", alt: "Artificial turf on a trendy rooftop bar" },
-    { src: "/storefront-turf-appeal.png", alt: "Clean artificial grass in front of a retail store" },
-    { src: "/office-park-common-area.png", alt: "A common area in an office park with artificial turf" },
-    { src: "/event-space-turf.png", alt: "Durable turf for a multi-use outdoor event space" },
+    { src: "/portfolio/rooftop-general-turf-low-maintenance.jpg", alt: "Artificial turf on a trendy rooftop bar" },
+    {
+      src: "/portfolio/school-commerical-field-turf.jpg",
+      alt: "Clean artificial grass enhancing a commercial storefront",
+    },
+    { src: "/portfolio/school-playground-field-turf.jpg", alt: "A common area in an office park with artificial turf" },
+    { src: "/portfolio/driveway-concrete-general-turf.jpg", alt: "Durable turf for a multi-use outdoor event space" },
   ],
 
   finalCtaTitle: "Elevate Your Commercial Space",

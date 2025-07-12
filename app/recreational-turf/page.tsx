@@ -48,7 +48,7 @@ const recreationalTurfData: ServicePageTemplateProps = {
     "Durable enough for high-traffic areas",
     "Enhances the aesthetic of play areas",
   ],
-  featuresImageSrc: "/placeholder.svg?width=600&height=450",
+  featuresImageSrc: "/portfolio/playground-putting-green-pet-friendly.jpg",
   featuresImageAlt: "Illustration of recreational turf with shock pad system for safety",
   featuresTitle: "Engineered for Fun and Safety",
   featuresText:
@@ -72,19 +72,19 @@ const recreationalTurfData: ServicePageTemplateProps = {
   gallerySubtitle: "Explore the possibilities with our recreational turf installations.",
   galleryImages: [
     {
-      src: "/placeholder.svg?width=600&height=400",
+      src: "/recreational-sports-turf.png",
       alt: "Backyard mini soccer field with artificial turf",
     },
     {
-      src: "/placeholder.svg?width=600&height=400",
+      src: "/portfolio/backyard-playground-general-turf.jpg",
       alt: "Playground with safe and colorful artificial grass",
     },
     {
-      src: "/placeholder.svg?width=600&height=400",
+      src: "/portfolio/school-commerical-field-turf.jpg",
       alt: "Multi-sport game court with lines on artificial turf",
     },
     {
-      src: "/placeholder.svg?width=600&height=400",
+      src: "/portfolio/rooftop-general-turf-low-maintenance.jpg",
       alt: "Rooftop recreational area with artificial turf",
     },
   ],

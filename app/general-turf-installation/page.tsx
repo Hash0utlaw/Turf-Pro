@@ -47,10 +47,16 @@ const pageContent: ServicePageTemplateProps = {
   galleryTitle: "The Installation Journey",
   gallerySubtitle: "From bare ground to a green oasis, see the key stages of our professional installation.",
   galleryImages: [
-    { src: "/ground-preparation-turf.png", alt: "Ground being prepared and graded for turf installation" },
-    { src: "/base-layer-compaction.png", alt: "Compacting the aggregate base layer for stability" },
-    { src: "/laying-turf-rolls.png", alt: "Rolling out the artificial turf with precision" },
-    { src: "/infill-application-turf.png", alt: "Applying infill to the newly installed turf" },
+    {
+      src: "/portfolio/basic-turf-installation-backyard.jpg",
+      alt: "A clean, prepared site ready for turf installation",
+    },
+    { src: "/turf-installation.png", alt: "Professional installers laying the turf base" },
+    {
+      src: "/portfolio/rooftop-general-turf-low-maintenance.jpg",
+      alt: "Rolling out premium artificial turf with precision",
+    },
+    { src: "/putting-green-closeup.png", alt: "Close-up of the finished turf, showing the quality and detail" },
   ],
 
   finalCtaTitle: "Ready for a Flawless Installation?",

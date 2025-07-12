@@ -51,7 +51,10 @@ const pageContent: ServicePageTemplateProps = {
     { src: "/residential-front-yard.png", alt: "A pristine artificial turf front yard" },
     { src: "/residential-backyard-patio.png", alt: "Artificial grass integrated with a stone patio" },
     { src: "/poolside-turf-installation.png", alt: "Lush green turf surrounding a swimming pool" },
-    { src: "/playground-safe-turf.png", alt: "Safe and soft artificial turf under a children's playset" },
+    {
+      src: "/portfolio/backyard-playground-general-turf.jpg",
+      alt: "Safe and soft artificial turf under a children's playset",
+    },
   ],
 
   testimonials: [

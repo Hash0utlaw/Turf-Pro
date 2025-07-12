@@ -48,7 +48,7 @@ const petTurfData: ServicePageTemplateProps = {
     "Reduces pests like fleas and ticks",
     "Hypoallergenic and comfortable for pets",
   ],
-  featuresImageSrc: "/placeholder-8kb0w.png",
+  featuresImageSrc: "/pet-turf-drainage.png",
   featuresImageAlt: "Cross-section showing layers of pet-friendly turf and infill",
   featuresTitle: "Designed for Pets, Built for Durability",
   featuresText:
@@ -68,7 +68,10 @@ const petTurfData: ServicePageTemplateProps = {
   galleryTitle: "Happy Pets, Happy Owners",
   gallerySubtitle: "See our pet-friendly turf in action.",
   galleryImages: [
-    { src: "/placeholder-pjsuy.png", alt: "Happy dog playing on pet-friendly artificial turf" },
+    {
+      src: "/portfolio/backyard-pet-friendly-general-turf.jpg",
+      alt: "Happy dog playing on pet-friendly artificial turf",
+    },
     { src: "/pet-turf-drainage.png", alt: "Close-up of pet turf drainage system" },
     {
       src: "/cat-artificial-grass.png",
