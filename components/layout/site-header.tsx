@@ -1,8 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import { Menu } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,52 +11,57 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Button } from "@/components/ui/button"
+import { Logo } from "@/components/layout/logo"
+import { Menu } from "lucide-react"
 import React from "react"
 import { cn } from "@/lib/utils"
-import Logo from "./logo"
 
-const servicePageLinks = [
+const services = [
   {
+    title: "Residential Lawn Turf",
     href: "/residential-lawn-turf",
-    label: "Residential Lawns",
-    description: "Beautiful, low-maintenance lawns for your home.",
-  },
-  { href: "/putting-greens", label: "Putting Greens", description: "Custom backyard and professional golf greens." },
-  {
-    href: "/pet-friendly-turf",
-    label: "Pet-Friendly Turf",
-    description: "Safe, durable, and clean turf for your pets.",
+    description: "Get a lush, green lawn that's perfect for families and requires minimal maintenance.",
   },
   {
-    href: "/recreational-turf",
-    label: "Recreational Turf",
-    description: "Versatile turf for play areas and sports fields.",
-  },
-  {
+    title: "Commercial Turf",
     href: "/commercial-turf",
-    label: "Commercial Turf",
-    description: "Durable, cost-effective solutions for businesses.",
+    description: "Enhance your business's curb appeal with durable, attractive artificial turf solutions.",
   },
   {
-    href: "/general-turf-installation",
-    label: "Installation Services",
-    description: "Expert installation for any project, big or small.",
+    title: "Putting Greens",
+    href: "/putting-greens",
+    description: "Practice your putt in your own backyard with a custom-designed putting green.",
   },
-  { href: "/services", label: "All Services", description: "Explore our complete range of turf solutions." },
+  {
+    title: "Pet-Friendly Turf",
+    href: "/pet-friendly-turf",
+    description: "A safe, clean, and durable surface for your furry friends to play on.",
+  },
+  {
+    title: "Recreational & Sports Turf",
+    href: "/recreational-turf",
+    description: "High-performance turf for sports fields, playgrounds, and recreational areas.",
+  },
+  {
+    title: "General Turf Installation",
+    href: "/general-turf-installation",
+    description: "Comprehensive installation services ensuring a flawless finish for any project.",
+  },
 ]
 
-const mainSiteLinks = [
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/#about", label: "About Us" },
+const mainNavLinks = [
+  { title: "Portfolio", href: "/portfolio" },
+  { title: "Blog", href: "/blog" },
+  { title: "Contact", href: "/contact" },
 ]
 
-const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a"> & { title: string }>(
+const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a">>(
   ({ className, title, children, ...props }, ref) => {
     return (
       <li>
         <NavigationMenuLink asChild>
-          <Link
-            href={props.href || "#"}
+          <a
             ref={ref}
             className={cn(
               "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
@@ -68,7 +71,7 @@ const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWit
           >
             <div className="text-sm font-medium leading-none">{title}</div>
             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
-          </Link>
+          </a>
         </NavigationMenuLink>
       </li>
     )
@@ -76,90 +79,84 @@ const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWit
 )
 ListItem.displayName = "ListItem"
 
-function SiteHeader() {
+export function SiteHeader() {
   const [isSheetOpen, setIsSheetOpen] = React.useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
-        <Logo className="h-10 w-24 md:h-12 md:w-28" />
-        <div className="hidden md:flex items-center space-x-2">
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent text-foreground hover:bg-accent">
-                  Services
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[250px] gap-3 p-4 md:w-[300px] lg:w-[350px]">
-                    {servicePageLinks.map((item) => (
-                      <ListItem key={item.label} href={item.href} title={item.label}>
-                        {item.description}
-                      </ListItem>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 items-center justify-between">
+        <Logo />
 
-              {mainSiteLinks.map((item) => (
-                <NavigationMenuItem key={item.label}>
-                  <Link href={item.href} legacyBehavior passHref>
-                    <NavigationMenuLink
-                      className={cn(navigationMenuTriggerStyle(), "bg-transparent text-foreground hover:bg-accent")}
-                    >
-                      {item.label}
-                    </NavigationMenuLink>
-                  </Link>
+        <div className="hidden items-center space-x-2 md:flex">
+          <nav className="flex items-center space-x-1">
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                      {services.map((component) => (
+                        <ListItem key={component.title} title={component.title} href={component.href}>
+                          {component.description}
+                        </ListItem>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
                 </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
+                {mainNavLinks.map((link) => (
+                  <NavigationMenuItem key={link.href}>
+                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                      <Link href={link.href}>{link.title}</Link>
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                ))}
+              </NavigationMenuList>
+            </NavigationMenu>
+          </nav>
           <div className="ml-2">
-            <Button
-              asChild
-              className="shadow-soft hover:shadow-soft-md transition-shadow bg-turf-green hover:bg-turf-green-dark text-white"
-            >
+            <Button asChild className="bg-turf-green text-white hover:bg-turf-green-dark">
               <Link href="/contact">Get a Free Quote</Link>
             </Button>
           </div>
         </div>
+
         <div className="flex items-center md:hidden">
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="bg-transparent text-foreground hover:bg-accent">
-                <Menu className="h-5 w-5" />
+              <Button variant="outline" size="icon">
+                <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[350px]">
-              <div className="mb-6 pt-2">
-                <Logo className="h-12 w-28" />
+            <SheetContent side="right" className="w-[300px]">
+              <div className="mb-6">
+                <Logo />
               </div>
-              <nav className="flex flex-col space-y-1">
+              <nav className="flex flex-col space-y-2">
                 <p className="px-3 py-2 text-sm font-semibold text-muted-foreground">Services</p>
-                {servicePageLinks.map((item) => (
+                {services.map((item) => (
                   <Link
-                    key={item.label}
+                    key={item.href}
                     href={item.href}
-                    className="block px-3 py-2 text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                    className="block rounded-md px-3 py-2 text-base font-medium text-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
                     onClick={() => setIsSheetOpen(false)}
                   >
-                    {item.label}
+                    {item.title}
                   </Link>
                 ))}
-                <p className="px-3 py-2 mt-3 text-sm font-semibold text-muted-foreground">Company</p>
-                {mainSiteLinks.map((item) => (
+                <p className="mt-3 px-3 py-2 text-sm font-semibold text-muted-foreground">Company</p>
+                {mainNavLinks.map((item) => (
                   <Link
-                    key={item.label}
+                    key={item.href}
                     href={item.href}
-                    className="block px-3 py-2 text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                    className="block rounded-md px-3 py-2 text-base font-medium text-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
                     onClick={() => setIsSheetOpen(false)}
                   >
-                    {item.label}
+                    {item.title}
                   </Link>
                 ))}
                 <div className="pt-6">
-                  <Button asChild className="w-full bg-turf-green hover:bg-turf-green-dark text-white">
+                  <Button asChild className="w-full bg-turf-green text-white hover:bg-turf-green-dark">
                     <Link href="/contact" onClick={() => setIsSheetOpen(false)}>
                       Get a Free Quote
                     </Link>
@@ -173,6 +170,3 @@ function SiteHeader() {
     </header>
   )
 }
-
-export { SiteHeader }
-export default SiteHeader

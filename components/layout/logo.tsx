@@ -2,13 +2,19 @@ import Link from "next/link"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 
-interface LogoProps {
+export interface LogoProps {
   className?: string
 }
 
-// This component is now more flexible. Its size is controlled by the Tailwind CSS classes
-// passed to it, rather than fixed width/height props.
-export default function Logo({ className }: LogoProps) {
+/**
+ * Turf Pros Logo
+ *
+ * • Provides BOTH a named and default export so it can be imported with:
+ *      import { Logo } from "@/components/layout/logo"
+ *   or
+ *      import Logo from "@/components/layout/logo"
+ */
+export function Logo({ className }: LogoProps) {
   return (
     <Link
       href="/"
@@ -28,3 +34,5 @@ export default function Logo({ className }: LogoProps) {
     </Link>
   )
 }
+
+export default Logo

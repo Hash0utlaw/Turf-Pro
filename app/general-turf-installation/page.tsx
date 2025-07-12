@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Expert Turf Installation Services | The Perfect Foundation | Turf Pros",
     description: "Learn about our meticulous turf installation process, ensuring a flawless and long-lasting result.",
-    images: [{ url: "/hero-turf-installation.png" }],
+    images: [{ url: "/hero-turf-installation-v2.jpg" }],
   },
 }
 
 const pageContent: ServicePageTemplateProps = {
-  heroImageSrc: "/hero-turf-installation.png",
-  heroImageAlt: "A professional installer laying down a roll of artificial turf.",
+  heroImageSrc: "/hero-turf-installation-v2.jpg",
+  heroImageAlt: "A professional installer laying down a roll of artificial turf in a sunny backyard.",
   heroTitle: "Expert Turf Installation",
   heroSubtitle:
     "A perfect lawn starts with a flawless installation. Our certified team uses industry-leading techniques to ensure your turf is beautiful, durable, and long-lasting.",
@@ -47,16 +47,10 @@ const pageContent: ServicePageTemplateProps = {
   galleryTitle: "The Installation Journey",
   gallerySubtitle: "From bare ground to a green oasis, see the key stages of our professional installation.",
   galleryImages: [
-    {
-      src: "/portfolio/basic-turf-installation-backyard.jpg",
-      alt: "A clean, prepared site ready for turf installation",
-    },
-    { src: "/turf-installation.png", alt: "Professional installers laying the turf base" },
-    {
-      src: "/portfolio/rooftop-general-turf-low-maintenance.jpg",
-      alt: "Rolling out premium artificial turf with precision",
-    },
-    { src: "/putting-green-closeup.png", alt: "Close-up of the finished turf, showing the quality and detail" },
+    { src: "/ground-preparation-turf.png", alt: "Ground being prepared and graded for turf installation" },
+    { src: "/base-layer-compaction.png", alt: "Compacting the aggregate base layer for stability" },
+    { src: "/laying-turf-rolls.png", alt: "Rolling out the artificial turf with precision" },
+    { src: "/infill-application-turf.png", alt: "Applying infill to the newly installed turf" },
   ],
 
   finalCtaTitle: "Ready for a Flawless Installation?",
