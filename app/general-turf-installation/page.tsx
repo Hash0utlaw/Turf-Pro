@@ -33,8 +33,8 @@ const pageContent: ServicePageTemplateProps = {
     "Thorough site cleanup, leaving your property pristine.",
   ],
 
-  featuresImageSrc: "/turf-installation-closeup.png",
-  featuresImageAlt: "A close-up shot showing the secure seams and infill of a professional turf installation.",
+  featuresImageSrc: "/portfolio/general-turf-installation.jpg",
+  featuresImageAlt: "A Turf Pros team member applies infill to a new putting green installation.",
   featuresTitle: "Our Meticulous Process",
   featuresText:
     "We follow a rigorous multi-step process. It begins with a detailed site assessment, followed by extensive ground preparation, precise turf laying, and professional finishing touches. This commitment to quality ensures your new lawn is not just installed, but engineered to last.",

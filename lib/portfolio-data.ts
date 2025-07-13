@@ -23,6 +23,20 @@ export interface PortfolioItem {
 
 export const portfolioItems: PortfolioItem[] = [
   {
+    id: "infill-application-process",
+    title: "Putting Green Infill Application",
+    category: "putting-greens",
+    categoryLabel: "Putting Green",
+    description:
+      "A Turf Pros team member carefully applies sand infill to a new putting green, a crucial step for performance and durability.",
+    imageUrl: "/portfolio/general-turf-installation.jpg",
+    details: [
+      { label: "Process", value: "Infill Application" },
+      { label: "Location", value: "Residential Project" },
+      { label: "Area", value: "800 sq ft" },
+    ],
+  },
+  {
     id: "stadium-sports-field",
     title: "Professional Sports Field Turf",
     category: "recreational",
