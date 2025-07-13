@@ -50,10 +50,16 @@ const pageContent: ServicePageTemplateProps = {
     { src: "/portfolio/rooftop-general-turf-low-maintenance.jpg", alt: "Artificial turf on a trendy rooftop bar" },
     {
       src: "/portfolio/school-commerical-field-turf.jpg",
-      alt: "Clean artificial grass enhancing a commercial storefront",
+      alt: "Multi-purpose school courtyard with turf and a basketball court",
     },
-    { src: "/portfolio/school-playground-field-turf.jpg", alt: "A common area in an office park with artificial turf" },
-    { src: "/portfolio/driveway-concrete-general-turf.jpg", alt: "Durable turf for a multi-use outdoor event space" },
+    {
+      src: "/portfolio/school-playground-field-turf.jpg",
+      alt: "A safe and durable school playground with artificial turf",
+    },
+    {
+      src: "/portfolio/driveway-concrete-general-turf.jpg",
+      alt: "Modern commercial entrance combining turf with concrete pavers",
+    },
   ],
 
   finalCtaTitle: "Elevate Your Commercial Space",

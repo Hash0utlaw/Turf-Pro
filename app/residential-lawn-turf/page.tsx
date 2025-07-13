@@ -48,12 +48,18 @@ const pageContent: ServicePageTemplateProps = {
   galleryTitle: "Residential Turf Inspiration",
   gallerySubtitle: "See how we've transformed backyards, front yards, and patios for homeowners just like you.",
   galleryImages: [
-    { src: "/residential-front-yard.png", alt: "A pristine artificial turf front yard" },
-    { src: "/residential-backyard-patio.png", alt: "Artificial grass integrated with a stone patio" },
-    { src: "/poolside-turf-installation.png", alt: "Lush green turf surrounding a swimming pool" },
     {
-      src: "/portfolio/backyard-playground-general-turf.jpg",
-      alt: "Safe and soft artificial turf under a children's playset",
+      src: "/portfolio/privacy-fence-general-turf-backyard.jpg",
+      alt: "A clean, terraced backyard with a privacy fence and lush artificial turf.",
+    },
+    {
+      src: "/portfolio/landscape-backyard-pet-friendly-turf.jpg",
+      alt: "A manicured garden with a winding artificial turf path.",
+    },
+    { src: "/portfolio/pool-turf.jpg", alt: "A modern poolside patio with a checkerboard pattern of turf and pavers." },
+    {
+      src: "/portfolio/backyard-turf.jpg",
+      alt: "An expansive turf lawn integrated beautifully into a wooded property.",
     },
   ],
 

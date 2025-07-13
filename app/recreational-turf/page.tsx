@@ -72,20 +72,20 @@ const recreationalTurfData: ServicePageTemplateProps = {
   gallerySubtitle: "Explore the possibilities with our recreational turf installations.",
   galleryImages: [
     {
-      src: "/recreational-sports-turf.png",
-      alt: "Backyard mini soccer field with artificial turf",
+      src: "/portfolio/backyard-playground-general-turf.jpg",
+      alt: "A safe and fun backyard playground with soft artificial turf.",
     },
     {
-      src: "/portfolio/backyard-playground-general-turf.jpg",
-      alt: "Playground with safe and colorful artificial grass",
+      src: "/portfolio/playground-putting-green-pet-friendly.jpg",
+      alt: "A multi-purpose backyard combining a playground and a putting green.",
     },
     {
       src: "/portfolio/school-commerical-field-turf.jpg",
-      alt: "Multi-sport game court with lines on artificial turf",
+      alt: "A school sports field with durable, all-weather turf.",
     },
     {
-      src: "/portfolio/rooftop-general-turf-low-maintenance.jpg",
-      alt: "Rooftop recreational area with artificial turf",
+      src: "/portfolio/school-playground-field-turf.jpg",
+      alt: "A vibrant and safe school playground with artificial turf.",
     },
   ],
   finalCtaTitle: "Ready to Create Your Ultimate Play Area?",

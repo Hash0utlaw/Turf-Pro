@@ -70,16 +70,19 @@ const petTurfData: ServicePageTemplateProps = {
   galleryImages: [
     {
       src: "/portfolio/backyard-pet-friendly-general-turf.jpg",
-      alt: "Happy dog playing on pet-friendly artificial turf",
-    },
-    { src: "/pet-turf-drainage.png", alt: "Close-up of pet turf drainage system" },
-    {
-      src: "/cat-artificial-grass.png",
-      alt: "Cat enjoying a sunbath on an artificial grass patio",
+      alt: "A happy dog enjoying a spacious and clean pet-friendly lawn.",
     },
     {
-      src: "/dog-run-turf.png",
-      alt: "Dedicated dog run area with pet-friendly turf",
+      src: "/portfolio/deck-general-turf-pet-friendly.jpg",
+      alt: "A clean and safe turf area for pets next to a raised patio.",
+    },
+    {
+      src: "/portfolio/backyard-pool-pet-friendly-general-turf.jpg",
+      alt: "Lush, pet-friendly turf surrounding a beautiful poolside.",
+    },
+    {
+      src: "/portfolio/pet-friendly-putting-green-backyard-general-turf.jpg",
+      alt: "A versatile backyard that is safe for pets and includes a putting green.",
     },
   ],
   finalCtaTitle: "Give Your Pet the Best with Turf Pros",

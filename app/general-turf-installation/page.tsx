@@ -44,13 +44,25 @@ const pageContent: ServicePageTemplateProps = {
     { icon: <Clock className="h-5 w-5 mr-3 text-turf-green" />, text: "Efficient & Timely Project Completion" },
   ],
 
-  galleryTitle: "The Installation Journey",
-  gallerySubtitle: "From bare ground to a green oasis, see the key stages of our professional installation.",
+  galleryTitle: "Showcasing Flawless Installations",
+  gallerySubtitle: "The final result of our meticulous installation process is a beautiful, durable lawn.",
   galleryImages: [
-    { src: "/ground-preparation-turf.png", alt: "Ground being prepared and graded for turf installation" },
-    { src: "/base-layer-compaction.png", alt: "Compacting the aggregate base layer for stability" },
-    { src: "/laying-turf-rolls.png", alt: "Rolling out the artificial turf with precision" },
-    { src: "/infill-application-turf.png", alt: "Applying infill to the newly installed turf" },
+    {
+      src: "/portfolio/basic-turf-installation-backyard.jpg",
+      alt: "A clean and simple rectangular turf installation in an enclosed backyard.",
+    },
+    {
+      src: "/portfolio/hardscape-basic-turf-backyard.jpg",
+      alt: "A beautiful turf lawn seamlessly integrated with a paver patio.",
+    },
+    {
+      src: "/portfolio/driveway-concrete-general-turf.jpg",
+      alt: "Precision turf strips integrated into a modern concrete driveway.",
+    },
+    {
+      src: "/portfolio/pool-turf.jpg",
+      alt: "Complex turf shapes cut perfectly to fit around a modern pool deck.",
+    },
   ],
 
   finalCtaTitle: "Ready for a Flawless Installation?",
