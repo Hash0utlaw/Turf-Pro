@@ -7,6 +7,8 @@ import { SiteFooter } from "@/components/layout/site-footer"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 import { CookieConsentBanner } from "@/components/cookie-consent-banner"
+import { Analytics } from "@vercel/analytics/next"
+import { Suspense } from "react"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -33,22 +35,25 @@ export const metadata: Metadata = {
   authors: [{ name: "Turf Professionals" }],
   creator: "Turf Professionals",
   publisher: "Turf Professionals",
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${poppins.variable} font-sans`}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
-          <div className="flex min-h-screen flex-col">
-            <SiteHeader />
-            <main className="flex-grow">{children}</main>
-            <SiteFooter />
-          </div>
-          <Toaster />
-          <CookieConsentBanner />
-        </ThemeProvider>
+        <Suspense fallback={null}>
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+            <div className="flex min-h-screen flex-col">
+              <SiteHeader />
+              <main className="flex-grow">{children}</main>
+              <SiteFooter />
+            </div>
+            <Toaster />
+            <CookieConsentBanner />
+            <Analytics />
+          </ThemeProvider>
+        </Suspense>
       </body>
     </html>
   )
