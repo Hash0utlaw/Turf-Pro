@@ -11,19 +11,20 @@ interface BlogPostCardProps {
 
 export function BlogPostCard({ post }: BlogPostCardProps) {
   return (
-    <Card className="flex flex-col overflow-hidden">
-      <Link href={`/blog/${post.slug}`} className="block">
-        <Image
-          src={post.image || "/placeholder.svg"}
-          alt={post.title}
-          width={600}
-          height={400}
-          className="w-full h-48 object-cover"
-        />
+    <Card className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+      <Link href={`/blog/${post.slug}`} className="block group">
+        <div className="relative w-full h-48 overflow-hidden">
+          <Image
+            src={post.image || "/placeholder.svg"}
+            alt={post.title}
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
       </Link>
       <CardHeader>
         <CardTitle>
-          <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors">
+          <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors line-clamp-2">
             {post.title}
           </Link>
         </CardTitle>
@@ -41,10 +42,10 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
         </div>
       </CardHeader>
       <CardContent className="flex-grow">
-        <p className="text-muted-foreground">{post.excerpt}</p>
+        <p className="text-muted-foreground line-clamp-3">{post.excerpt}</p>
       </CardContent>
       <CardFooter>
-        <Button asChild variant="secondary">
+        <Button asChild variant="secondary" className="w-full sm:w-auto">
           <Link href={`/blog/${post.slug}`}>Read More</Link>
         </Button>
       </CardFooter>

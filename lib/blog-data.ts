@@ -14,7 +14,7 @@ export const blogPosts: BlogPost[] = [
     title: "Top 5 Maintenance Tips for Your Artificial Turf",
     date: "2025-07-11",
     author: "Jane Doe, Turf Expert",
-    image: "/blog/turf-maintenance-tips.jpg",
+    image: "/blog/turf-maintenance-tips.png",
     excerpt:
       "Keep your artificial lawn looking pristine with these five simple maintenance tips. From regular brushing to dealing with spills, we've got you covered.",
     content: `
@@ -34,7 +34,7 @@ export const blogPosts: BlogPost[] = [
     title: "How to Choose the Right Artificial Turf for Your Home",
     date: "2025-07-04",
     author: "John Smith, Lead Installer",
-    image: "/blog/choosing-the-right-turf.jpg",
+    image: "/blog/choosing-the-right-turf.png",
     excerpt:
       "Not all turf is created equal. Learn about the key factors to consider when selecting the perfect artificial grass for your residential needs.",
     content: `
@@ -54,7 +54,7 @@ export const blogPosts: BlogPost[] = [
     title: "DIY vs. Professional Turf Installation: Which is Right for You?",
     date: "2025-06-28",
     author: "Jane Doe, Turf Expert",
-    image: "/blog/diy-vs-pro-installation.jpg",
+    image: "/blog/diy-vs-pro-installation.png",
     excerpt:
       "Tempted to install your own turf? We break down the pros and cons of DIY versus hiring a professional team to help you make an informed decision.",
     content: `

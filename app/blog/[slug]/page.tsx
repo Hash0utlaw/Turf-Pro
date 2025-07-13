@@ -2,7 +2,7 @@ import { blogPosts } from "@/lib/blog-data"
 import { notFound } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
-import type { Metadata } from "next"
+import type { Metadata, ResolvingMetadata } from "next"
 import { Calendar, User, ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -18,7 +18,7 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: BlogPostPageProps, parent: ResolvingMetadata): Promise<Metadata> {
   const post = blogPosts.find((p) => p.slug === params.slug)
 
   if (!post) {
@@ -27,9 +27,16 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     }
   }
 
+  const previousImages = (await parent).openGraph?.images || []
+
   return {
     title: `${post.title} | Turf Professionals Blog`,
     description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      images: [post.image, ...previousImages],
+    },
   }
 }
 
@@ -41,40 +48,47 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   return (
-    <div className="container mx-auto px-4 py-12 max-w-4xl">
-      <article>
-        <header className="mb-8">
+    <div className="bg-background">
+      <main className="container mx-auto px-4 py-8 sm:py-12">
+        <div className="max-w-4xl mx-auto">
           <Button asChild variant="outline" className="mb-8 bg-transparent">
             <Link href="/blog">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Blog
             </Link>
           </Button>
-          <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl mb-4">{post.title}</h1>
-          <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-            <div className="flex items-center">
-              <Calendar className="mr-1 h-4 w-4" />
-              <time dateTime={post.date}>
-                {new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-              </time>
+          <article className="prose prose-lg max-w-none">
+            <div className="mb-8">
+              <h1 className="text-3xl sm:text-4xl font-bold !mb-4">{post.title}</h1>
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-base text-muted-foreground">
+                <div className="flex items-center">
+                  <Calendar className="mr-2 h-5 w-5" />
+                  <time dateTime={post.date}>
+                    {new Date(post.date).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </time>
+                </div>
+                <div className="flex items-center">
+                  <User className="mr-2 h-5 w-5" />
+                  <span>{post.author}</span>
+                </div>
+              </div>
             </div>
-            <div className="flex items-center">
-              <User className="mr-1 h-4 w-4" />
-              <span>{post.author}</span>
+
+            <div className="relative w-full aspect-video mb-8 rounded-lg overflow-hidden">
+              <Image src={post.image || "/placeholder.svg"} alt={post.title} fill className="object-cover" priority />
             </div>
-          </div>
-        </header>
 
-        <Image
-          src={post.image || "/placeholder.svg"}
-          alt={post.title}
-          width={1200}
-          height={600}
-          className="w-full rounded-lg mb-8 aspect-video object-cover"
-        />
-
-        <div className="prose dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: post.content }} />
-      </article>
+            <div
+              className="prose-p:text-foreground/80 prose-headings:text-foreground prose-strong:text-foreground"
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
+          </article>
+        </div>
+      </main>
     </div>
   )
 }

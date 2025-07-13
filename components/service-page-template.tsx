@@ -5,13 +5,14 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Star } from "lucide-react"
 import { Toaster } from "@/components/ui/toaster"
 import type { ReactNode } from "react"
+import { ImageGallery } from "@/components/image-gallery"
 
 interface Feature {
   icon: ReactNode
   text: string
 }
 
-interface GalleryImage {
+export interface GalleryImage {
   src: string
   alt: string
 }
@@ -150,32 +151,7 @@ export default function ServicePageTemplate({
       </section>
 
       {/* Gallery Section */}
-      <section className="py-12 md:py-24 bg-background">
-        <div className="container px-4 md:px-6">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground text-balance">
-              {galleryTitle}
-            </h2>
-            <p className="mt-3 max-w-2xl mx-auto text-lg text-brand-gray-text text-balance">{gallerySubtitle}</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {galleryImages.map((image, index) => (
-              <Card
-                key={index}
-                className="overflow-hidden rounded-2xl shadow-soft hover:shadow-soft-md transition-shadow"
-              >
-                <Image
-                  src={image.src || "/placeholder.svg"}
-                  alt={image.alt}
-                  width={600}
-                  height={400}
-                  className="object-cover w-full h-64"
-                />
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ImageGallery galleryTitle={galleryTitle} gallerySubtitle={gallerySubtitle} galleryImages={galleryImages} />
 
       {/* Testimonials Section (Conditional) */}
       {testimonials && testimonials.length > 0 && (
