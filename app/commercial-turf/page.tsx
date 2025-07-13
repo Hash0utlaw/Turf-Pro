@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Commercial Turf Solutions | Low Maintenance, High Impact | Turf Pros",
     description: "Elevate your business's appearance with our durable, cost-effective commercial artificial turf.",
-    images: [{ url: "/hero-commercial-turf.png" }],
+    images: [{ url: "/portfolio/rooftop-general-turf-low-maintenance.jpg" }],
   },
 }
 
 const pageContent: ServicePageTemplateProps = {
-  heroImageSrc: "/hero-commercial-turf.png",
-  heroImageAlt: "A modern office building with a clean, green artificial turf entrance.",
+  heroImageSrc: "/portfolio/rooftop-general-turf-low-maintenance.jpg",
+  heroImageAlt: "A stunning rooftop patio with low-maintenance artificial turf, overlooking a city.",
   heroTitle: "Professional Turf for Your Business",
   heroSubtitle:
     "Make a lasting first impression with pristine, low-maintenance commercial turf solutions. Enhance your property's appeal while reducing operational costs.",

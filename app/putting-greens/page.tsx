@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Custom Putting Greens | Backyard & Indoor Golf Greens | Turf Pros",
     description: "Practice your short game with a custom-designed, professional-grade putting green from Turf Pros.",
-    images: [{ url: "/hero-putting-green.png" }],
+    images: [{ url: "/portfolio/bighome-backyard-putting-green-turf.jpg" }],
   },
 }
 
 const pageContent: ServicePageTemplateProps = {
-  heroImageSrc: "/hero-putting-green.png",
-  heroImageAlt: "A stunning backyard putting green with custom breaks and a sand trap.",
+  heroImageSrc: "/portfolio/bighome-backyard-putting-green-turf.jpg",
+  heroImageAlt: "A professional-grade putting green in the backyard of a large home.",
   heroTitle: "Perfect Your Putt at Home",
   heroSubtitle:
     "Bring the golf course to your backyard with a custom-designed, professional-grade putting green. Experience true ball roll and practice your short game anytime.",

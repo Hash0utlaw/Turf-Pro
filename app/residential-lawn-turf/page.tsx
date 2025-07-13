@@ -10,13 +10,13 @@ export const metadata: Metadata = {
     title: "Residential Lawn Turf | Perfect Lawns, Zero Hassle | Turf Pros",
     description:
       "Discover beautiful, low-maintenance residential artificial turf solutions. Save water, time, and money while enjoying a perfect green lawn year-round.",
-    images: [{ url: "/hero-residential-lawn.png" }],
+    images: [{ url: "/portfolio/backyard-turf.jpg" }],
   },
 }
 
 const pageContent: ServicePageTemplateProps = {
-  heroImageSrc: "/hero-residential-lawn.png",
-  heroImageAlt: "A beautiful suburban home with a perfect artificial grass lawn.",
+  heroImageSrc: "/portfolio/backyard-turf.jpg",
+  heroImageAlt: "A beautiful residential backyard with lush, green artificial turf.",
   heroTitle: "The Perfect Residential Lawn, Made Easy",
   heroSubtitle:
     "Enjoy a lush, green, and beautiful lawn all year round without the constant watering, mowing, and maintenance. The perfect upgrade for your home.",

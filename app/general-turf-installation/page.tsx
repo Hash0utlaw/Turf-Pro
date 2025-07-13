@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Expert Turf Installation Services | The Perfect Foundation | Turf Pros",
     description: "Learn about our meticulous turf installation process, ensuring a flawless and long-lasting result.",
-    images: [{ url: "/hero-turf-installation-v2.jpg" }],
+    images: [{ url: "/portfolio/basic-turf-installation-backyard.jpg" }],
   },
 }
 
 const pageContent: ServicePageTemplateProps = {
-  heroImageSrc: "/hero-turf-installation-v2.jpg",
-  heroImageAlt: "A professional installer laying down a roll of artificial turf in a sunny backyard.",
+  heroImageSrc: "/portfolio/basic-turf-installation-backyard.jpg",
+  heroImageAlt: "A freshly installed, perfect artificial turf lawn in a residential backyard.",
   heroTitle: "Expert Turf Installation",
   heroSubtitle:
     "A perfect lawn starts with a flawless installation. Our certified team uses industry-leading techniques to ensure your turf is beautiful, durable, and long-lasting.",
