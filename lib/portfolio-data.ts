@@ -23,6 +23,20 @@ export interface PortfolioItem {
 
 export const portfolioItems: PortfolioItem[] = [
   {
+    id: "stadium-sports-field",
+    title: "Professional Sports Field Turf",
+    category: "recreational",
+    categoryLabel: "Recreational",
+    description:
+      "A professional-grade sports field with durable, high-performance artificial turf, ready for action under the morning sun.",
+    imageUrl: "/portfolio/sports-field-aritifical-turf-hero.jpg",
+    details: [
+      { label: "Application", value: "Sports & Athletics" },
+      { label: "Features", value: "High-Traffic, All-Weather" },
+      { label: "Area", value: "50,000+ sq ft" },
+    ],
+  },
+  {
     id: "grace-covenant-academy",
     title: "Grace Covenant Academy Courtyard",
     category: "commercial",

@@ -13,7 +13,7 @@ export default function BlogPage() {
     <div className="bg-background">
       <header
         className="relative bg-cover bg-center bg-no-repeat py-24"
-        style={{ backgroundImage: "url(/blog/blog-hero.png)" }}
+        style={{ backgroundImage: "url(/portfolio/sports-field-aritifical-turf-hero.jpg)" }}
       >
         <div className="absolute inset-0 bg-black/50" />
         <div className="container mx-auto px-4 text-center relative z-10">

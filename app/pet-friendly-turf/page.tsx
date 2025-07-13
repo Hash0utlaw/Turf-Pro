@@ -22,10 +22,10 @@ export async function generateMetadata(): Promise<Metadata> {
       description: "Safe, durable, and easy-to-clean artificial grass for your beloved pets.",
       images: [
         {
-          url: "/portfolio/backyard-pet-friendly-general-turf.jpg",
+          url: "/portfolio/pet-friendly-lawn-turf-hero.jpg",
           width: 1200,
           height: 630,
-          alt: "Happy Dog on Pet-Friendly Turf",
+          alt: "Golden retriever relaxing on a lush, pet-friendly artificial turf lawn.",
         },
       ],
     },
@@ -33,8 +33,8 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const petTurfData: ServicePageTemplateProps = {
-  heroImageSrc: "/portfolio/backyard-pet-friendly-general-turf.jpg",
-  heroImageAlt: "A happy dog relaxing on a clean, safe, pet-friendly artificial turf lawn.",
+  heroImageSrc: "/portfolio/pet-friendly-lawn-turf-hero.jpg",
+  heroImageAlt: "Golden retriever relaxing on a lush, pet-friendly artificial turf lawn in a backyard.",
   heroTitle: "The Perfect Lawn for Your Furry Friends",
   heroSubtitle: "Discover durable, safe, and easy-to-clean pet-friendly turf solutions.",
   heroCtaText: "Get a Pet-Friendly Turf Quote",
