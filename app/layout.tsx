@@ -7,7 +7,6 @@ import { SiteFooter } from "@/components/layout/site-footer"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 import { CookieConsentBanner } from "@/components/cookie-consent-banner"
-import { Analytics } from "@vercel/analytics/next"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -34,7 +33,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Turf Professionals" }],
   creator: "Turf Professionals",
   publisher: "Turf Professionals",
-  generator: 'v0.dev'
+    generator: 'v0.dev'
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -49,7 +48,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
           <Toaster />
           <CookieConsentBanner />
-          <Analytics />
         </ThemeProvider>
       </body>
     </html>
