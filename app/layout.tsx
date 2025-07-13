@@ -7,6 +7,9 @@ import { SiteFooter } from "@/components/layout/site-footer"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 import { CookieConsentBanner } from "@/components/cookie-consent-banner"
+import { Analytics } from "@vercel/analytics/next"
+import { Suspense } from "react"
+import Script from "next/script"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -33,21 +36,55 @@ export const metadata: Metadata = {
   authors: [{ name: "Turf Professionals" }],
   creator: "Turf Professionals",
   publisher: "Turf Professionals",
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${poppins.variable} font-sans`}>
+        <Script id="ld-json" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Turf Professionals",
+            image: "https://www.turf-professionals.com/turf-pros-logo.png",
+            "@id": "https://www.turf-professionals.com/",
+            url: "https://www.turf-professionals.com/",
+            telephone: "(704) 995-6265",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Charlotte",
+              addressRegion: "NC",
+              addressCountry: "US",
+            },
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: 35.2270869,
+              longitude: -81.0348424,
+            },
+            areaServed: {
+              "@type": "GeoCircle",
+              geoMidpoint: {
+                "@type": "GeoCoordinates",
+                latitude: 35.2270869,
+                longitude: -81.0348424,
+              },
+              geoRadius: "96561", // 60-mile radius
+            },
+          })}
+        </Script>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
-          <div className="flex min-h-screen flex-col">
-            <SiteHeader />
-            <main className="flex-grow">{children}</main>
-            <SiteFooter />
-          </div>
-          <Toaster />
-          <CookieConsentBanner />
+          <Suspense fallback={null}>
+            <div className="flex min-h-screen flex-col">
+              <SiteHeader />
+              <main className="flex-grow">{children}</main>
+              <SiteFooter />
+            </div>
+            <Toaster />
+            <CookieConsentBanner />
+            <Analytics />
+          </Suspense>
         </ThemeProvider>
       </body>
     </html>
