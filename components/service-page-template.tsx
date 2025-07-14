@@ -79,7 +79,8 @@ export default function ServicePageTemplate({
           alt={heroImageAlt}
           fill
           className="object-cover brightness-[0.6]"
-          quality={85}
+          quality={95}
+          sizes="100vw"
           priority
         />
         <div className="relative z-10 container px-4 md:px-6 space-y-6">
@@ -129,7 +130,9 @@ export default function ServicePageTemplate({
                 alt={featuresImageAlt}
                 width={600}
                 height={450}
-                className="rounded-2xl shadow-soft-md object-cover"
+                quality={95}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="rounded-2xl shadow-soft-md object-cover w-full h-auto"
               />
             </div>
             <div className="space-y-6">

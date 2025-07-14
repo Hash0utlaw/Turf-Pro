@@ -17,7 +17,7 @@ export default function AboutSection() {
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="order-2 md:order-1">
             <Image
-              src="/placeholder.svg?width=600&height=450"
+              src="/turf-professionals-team.png"
               alt="Turf Professionals team working on an installation"
               width={600}
               height={450}

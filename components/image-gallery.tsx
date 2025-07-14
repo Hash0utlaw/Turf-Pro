@@ -2,8 +2,7 @@
 
 import Image from "next/image"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
-import { Card } from "@/components/ui/card"
-import type { GalleryImage } from "@/components/service-page-template"
+import type { GalleryImage } from "./service-page-template"
 
 interface ImageGalleryProps {
   galleryTitle: string
@@ -23,27 +22,28 @@ export function ImageGallery({ galleryTitle, gallerySubtitle, galleryImages }: I
           {galleryImages.map((image, index) => (
             <Dialog key={index}>
               <DialogTrigger asChild>
-                <Card className="overflow-hidden rounded-2xl shadow-soft hover:shadow-soft-md transition-shadow cursor-pointer group">
-                  <div className="relative w-full h-64">
-                    <Image
-                      src={image.src || "/placeholder.svg"}
-                      alt={image.alt}
-                      fill
-                      className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                </Card>
-              </DialogTrigger>
-              <DialogContent className="max-w-5xl w-full p-1 bg-transparent border-0 shadow-none">
-                <div className="relative aspect-video w-full">
+                <div className="overflow-hidden rounded-2xl shadow-soft hover:shadow-soft-md transition-shadow cursor-pointer group">
                   <Image
                     src={image.src || "/placeholder.svg"}
                     alt={image.alt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
-                    className="object-contain rounded-lg"
+                    width={600}
+                    height={400}
+                    quality={95}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
+              </DialogTrigger>
+              <DialogContent className="max-w-4xl p-2 sm:p-4">
+                <Image
+                  src={image.src || "/placeholder.svg"}
+                  alt={image.alt}
+                  width={1200}
+                  height={800}
+                  quality={100}
+                  sizes="90vw"
+                  className="rounded-lg object-contain w-full h-auto max-h-[80vh]"
+                />
               </DialogContent>
             </Dialog>
           ))}

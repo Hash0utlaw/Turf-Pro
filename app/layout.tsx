@@ -9,6 +9,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { CookieConsentBanner } from "@/components/cookie-consent-banner"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import Script from "next/script"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -38,43 +39,41 @@ export const metadata: Metadata = {
   generator: "v0.dev",
 }
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "Turf Professionals",
-  image: "https://www.turf-professionals.com/turf-pros-logo.png",
-  "@id": "https://www.turf-professionals.com/",
-  url: "https://www.turf-professionals.com/",
-  telephone: "(704) 995-6265",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Charlotte",
-    addressRegion: "NC",
-    addressCountry: "US",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 35.2270869,
-    longitude: -81.0348424,
-  },
-  areaServed: {
-    "@type": "GeoCircle",
-    geoMidpoint: {
-      "@type": "GeoCoordinates",
-      latitude: 35.2270869,
-      longitude: -81.0348424,
-    },
-    geoRadius: "96561", // Approx. 60-mile radius around Charlotte
-  },
-}
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      </head>
       <body className={`${poppins.variable} font-sans`}>
+        <Script id="ld-json" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Turf Professionals",
+            image: "https://www.turf-professionals.com/turf-pros-logo.png",
+            "@id": "https://www.turf-professionals.com/",
+            url: "https://www.turf-professionals.com/",
+            telephone: "(704) 995-6265",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Charlotte",
+              addressRegion: "NC",
+              addressCountry: "US",
+            },
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: 35.2270869,
+              longitude: -81.0348424,
+            },
+            areaServed: {
+              "@type": "GeoCircle",
+              geoMidpoint: {
+                "@type": "GeoCoordinates",
+                latitude: 35.2270869,
+                longitude: -81.0348424,
+              },
+              geoRadius: "96561", // 60-mile radius
+            },
+          })}
+        </Script>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <Suspense fallback={null}>
             <div className="flex min-h-screen flex-col">
