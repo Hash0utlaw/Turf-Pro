@@ -15,13 +15,13 @@ export default function AboutSection() {
     <section id="about" className="py-12 md:py-24 bg-background">
       <div className="container px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div className="order-2 md:order-1">
+          <div className="order-2 md:order-1 flex items-center justify-center">
             <Image
-              src="/placeholder.svg?width=600&height=450"
-              alt="Turf Professionals team working on an installation"
-              width={600}
-              height={450}
-              className="rounded-2xl shadow-soft-md object-cover"
+              src="/turf-pros-logo.png"
+              alt="Turf Professionals Logo"
+              width={400}
+              height={400}
+              className="rounded-2xl object-contain"
             />
           </div>
           <div className="space-y-6 order-1 md:order-2">
