@@ -30,8 +30,8 @@ export default function TermsOfServicePage() {
         <div className="container px-4 md:px-6 max-w-3xl mx-auto prose prose-lg prose-headings:text-turf-green-dark prose-a:text-turf-green hover:prose-a:text-turf-green-dark">
           <p>
             Welcome to Turf Professionals! These Terms of Service ("Terms", "Terms of Service") govern your use of our
-            website located at [Your Website URL] (together or individually "Service") operated by Turf Professionals
-            ("us", "we", or "our").
+            website located at https://www.turf-professionals.com (together or individually "Service") operated by Turf
+            Professionals ("us", "we", or "our").
           </p>
           <p>
             Your access to and use of the Service is conditioned upon your acceptance of and compliance with these
@@ -83,7 +83,7 @@ export default function TermsOfServicePage() {
           <p>
             The Service and its original content (excluding Content provided by users), features, and functionality are
             and will remain the exclusive property of Turf Professionals and its licensors. The Service is protected by
-            copyright, trademark, and other laws of both the [Your Country] and foreign countries. Our trademarks and
+            copyright, trademark, and other laws of both the United States and foreign countries. Our trademarks and
             trade dress may not be used in connection with any product or service without the prior written consent of
             Turf Professionals.
           </p>
@@ -151,7 +151,7 @@ export default function TermsOfServicePage() {
 
           <h2>7. Governing Law</h2>
           <p>
-            These Terms shall be governed and construed in accordance with the laws of [Your State/Country], without
+            These Terms shall be governed and construed in accordance with the laws of Texas, United States, without
             regard to its conflict of law provisions.
           </p>
           <p>
@@ -184,11 +184,11 @@ export default function TermsOfServicePage() {
           <h2>10. Contact Us</h2>
           <p>If you have any questions about these Terms, please contact us:</p>
           <ul>
-            <li>By email: [Your Contact Email]</li>
+            <li>By email: contact@turf-professionals.com</li>
             <li>
-              By visiting this page on our website: <Link href="/#contact">Contact Us</Link>
+              By visiting this page on our website: <Link href="/contact">Contact Us</Link>
             </li>
-            <li>By phone number: [Your Phone Number]</li>
+            <li>By phone number: (555) 123-4567</li>
           </ul>
         </div>
       </section>
