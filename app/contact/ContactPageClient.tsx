@@ -11,6 +11,16 @@ import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+
+const services = [
+  "Residential Lawn Turf",
+  "Commercial Turf",
+  "Pet-Friendly Turf",
+  "Backyard Putting Greens",
+  "Recreational & Sports Turf",
+  "General Turf Installation",
+] as const
 
 export function ContactPageClient() {
   const form = useForm<ContactFormInputs>({
@@ -19,7 +29,7 @@ export function ContactPageClient() {
       name: "",
       email: "",
       phone: "",
-      subject: "",
+      service: undefined,
       message: "",
     },
   })
@@ -83,13 +93,24 @@ export function ContactPageClient() {
         />
         <FormField
           control={form.control}
-          name="subject"
+          name="service"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Subject</FormLabel>
-              <FormControl>
-                <Input placeholder="e.g., Quote for backyard turf" {...field} />
-              </FormControl>
+              <FormLabel>Service Category</FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a service you're interested in" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  {services.map((service) => (
+                    <SelectItem key={service} value={service}>
+                      {service}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
               <FormMessage />
             </FormItem>
           )}

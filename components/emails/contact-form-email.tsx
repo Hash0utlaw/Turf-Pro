@@ -1,20 +1,14 @@
 // Plain HTML email template - no React components to avoid getOwner errors
 
 interface ContactFormEmailProps {
-  name: string;
-  email: string;
-  phone?: string;
-  subject: string;
-  message: string;
+  name: string
+  email: string
+  phone?: string
+  service: string
+  message: string
 }
 
-export default function ContactFormEmail({
-  name,
-  email,
-  phone,
-  subject,
-  message,
-}: ContactFormEmailProps) {
+export default function ContactFormEmail({ name, email, phone, service, message }: ContactFormEmailProps) {
   // Return plain HTML string instead of JSX to avoid React rendering issues
   return `
     <!DOCTYPE html>
@@ -42,11 +36,15 @@ export default function ContactFormEmail({
           <div style="margin-bottom: 10px; font-size: 14px; color: #333333;">
             <strong>Email:</strong> ${email}
           </div>
-          ${phone ? `<div style="margin-bottom: 10px; font-size: 14px; color: #333333;">
+          ${
+            phone
+              ? `<div style="margin-bottom: 10px; font-size: 14px; color: #333333;">
             <strong>Phone:</strong> ${phone}
-          </div>` : ''}
+          </div>`
+              : ""
+          }
           <div style="margin-bottom: 10px; font-size: 14px; color: #333333;">
-            <strong>Subject:</strong> ${subject}
+            <strong>Service Inquiry:</strong> ${service}
           </div>
         </div>
 
@@ -55,12 +53,12 @@ export default function ContactFormEmail({
             <strong>Message:</strong>
           </div>
           <div style="margin-top: 10px; font-size: 14px; line-height: 1.6; color: #333333; white-space: pre-wrap;">
-            ${message.replace(/\n/g, '<br>')}
+            ${message.replace(/\n/g, "<br>")}
           </div>
         </div>
 
         <div style="text-align: center; margin-bottom: 30px;">
-          <a href="mailto:${email}?subject=Re: ${subject}" 
+          <a href="mailto:${email}?subject=Re: Inquiry for ${service}" 
              style="background-color: #22c55e; color: #ffffff; text-decoration: none; padding: 12px 24px; border-radius: 6px; font-size: 16px; font-weight: bold; display: inline-block;">
             Reply to ${name}
           </a>
@@ -73,5 +71,5 @@ export default function ContactFormEmail({
       </div>
     </body>
     </html>
-  `;
+  `
 }
