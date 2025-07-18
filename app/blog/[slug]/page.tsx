@@ -3,7 +3,7 @@ import { notFound } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
 import type { Metadata, ResolvingMetadata } from "next"
-import { Calendar, User, ArrowLeft } from "lucide-react"
+import { Calendar, ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 interface BlogPostPageProps {
@@ -70,10 +70,6 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                       day: "numeric",
                     })}
                   </time>
-                </div>
-                <div className="flex items-center">
-                  <User className="mr-2 h-5 w-5" />
-                  <span>{post.author}</span>
                 </div>
               </div>
             </div>

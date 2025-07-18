@@ -3,7 +3,7 @@ import Link from "next/link"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import type { BlogPost } from "@/lib/blog-data"
-import { Calendar, User } from "lucide-react"
+import { Calendar } from "lucide-react"
 
 interface BlogPostCardProps {
   post: BlogPost
@@ -34,10 +34,6 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
             <time dateTime={post.date}>
               {new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
             </time>
-          </div>
-          <div className="flex items-center">
-            <User className="mr-1 h-4 w-4" />
-            <span>{post.author}</span>
           </div>
         </div>
       </CardHeader>
