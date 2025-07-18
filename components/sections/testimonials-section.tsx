@@ -8,33 +8,31 @@ import Image from "next/image"
 import { Star } from "lucide-react"
 
 const testimonials = [
+  // TODO: Replace these examples with your actual Google Reviews.
+  // Simply copy and paste the text, name, and star rating.
   {
-    name: "Sarah L.",
-    location: "Greenvalley, CA",
-    avatarUrl: "/placeholder.svg?width=80&height=80",
+    name: "Michael R.",
     stars: 5,
-    text: "Turf Professionals did an amazing job on our backyard! The turf looks incredibly real, and the kids love playing on it. The team was professional and efficient. Highly recommend!",
+    text: "We had Turf Professionals install a new lawn in our backyard and couldn't be happier. The entire process was seamless, from the initial consultation to the final installation. The crew was professional, on time, and left the site immaculate. Our new turf looks and feels amazing!",
+    avatarUrl: "/happy-customer.png",
   },
   {
-    name: "John B.",
-    location: "Springfield, IL",
-    avatarUrl: "/placeholder.svg?width=80&height=80",
+    name: "Jessica Chen",
     stars: 5,
-    text: "My new putting green is fantastic! The quality of the turf and the installation is top-notch. It's like having a professional course in my own backyard. Thanks, Turf Pros!",
+    text: "The putting green they installed is a dream come true! The quality is outstanding, and it rolls true. It's completely transformed our backyard into a fun and functional space for the whole family. Highly recommend their services for any golf enthusiast.",
+    avatarUrl: "/smiling-person.png",
   },
   {
-    name: "Maria G.",
-    location: "Austin, TX",
-    avatarUrl: "/placeholder.svg?width=80&height=80",
-    stars: 4,
-    text: "We had our front lawn replaced with artificial turf, and it has made such a difference. No more mowing or watering! The installation process was smooth, and the result is beautiful.",
+    name: "David Lee",
+    stars: 5,
+    text: "Our two dogs love the new pet-friendly turf. It's durable, easy to clean, and looks great year-round. The team at Turf Professionals was fantastic to work with and really understood our needs. A five-star experience from start to finish.",
+    avatarUrl: "/person-with-dog.png",
   },
   {
-    name: "David K.",
-    location: "Phoenix, AZ",
-    avatarUrl: "/placeholder.svg?width=80&height=80",
+    name: "Emily S.",
     stars: 5,
-    text: "Excellent service from start to finish. The team was knowledgeable, helped us choose the right turf for our needs, and the installation was flawless. Our yard looks perfect.",
+    text: "Exceptional service and a beautiful result. Our front yard has never looked better, and we've received so many compliments from our neighbors. No more watering or mowing is a huge plus. Thank you, Turf Professionals!",
+    avatarUrl: "/happy-homeowner.png",
   },
 ]
 
@@ -72,14 +70,13 @@ export default function TestimonialsSection() {
                     <CardContent className="flex flex-col items-center text-center p-6 md:p-8 flex-grow">
                       <Image
                         src={testimonial.avatarUrl || "/placeholder.svg"}
-                        alt={testimonial.name}
+                        alt={`Avatar of ${testimonial.name}`}
                         width={80}
                         height={80}
                         className="rounded-full mb-4 shadow-md"
                       />
                       <h3 className="text-xl font-semibold text-foreground">{testimonial.name}</h3>
-                      <p className="text-sm text-brand-gray-dark mb-2">{testimonial.location}</p>
-                      <div className="flex justify-center mb-4">
+                      <div className="flex justify-center my-4">
                         {Array(testimonial.stars)
                           .fill(0)
                           .map((_, i) => (
@@ -88,7 +85,7 @@ export default function TestimonialsSection() {
                         {Array(5 - testimonial.stars)
                           .fill(0)
                           .map((_, i) => (
-                            <Star key={i + testimonial.stars} className="h-5 w-5 text-yellow-400" />
+                            <Star key={i + testimonial.stars} className="h-5 w-5 text-gray-300" />
                           ))}
                       </div>
                       <p className="text-brand-gray-text text-base leading-relaxed italic flex-grow">

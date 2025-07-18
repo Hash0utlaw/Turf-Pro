@@ -12,7 +12,7 @@ const services = [
   {
     imageUrl: "/portfolio/school-commerical-field-turf.jpg",
     title: "Commercial Turf",
-    description: "Enhance your business's curb appeal with durable, cost-effective, and professional turf solutions.",
+    description: "Enhance your businesses curb appeal with durable, cost-effective, and professional turf solutions.",
     href: "/commercial-turf",
   },
   {
