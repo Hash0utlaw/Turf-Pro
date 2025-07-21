@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "Turf Professionals",
     images: [
       {
-        url: "/opengraph-image.png",
+        url: "/opengraph-image.png", // This points to the new static image
         width: 1200,
         height: 630,
       },
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Turf Professionals | Premium Artificial Turf Solutions",
     description: "Expert installation of high-quality artificial turf for residential and commercial properties.",
-    images: ["/opengraph-image.png"],
+    images: ["/opengraph-image.png"], // This also points to the new image
   },
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
