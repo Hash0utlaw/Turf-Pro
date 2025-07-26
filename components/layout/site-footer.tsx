@@ -69,6 +69,11 @@ function SiteFooter() {
                     </Link>
                   </li>
                   <li>
+                    <Link href="/faq" className="text-base text-brand-gray-text hover:text-turf-green">
+                      FAQ
+                    </Link>
+                  </li>
+                  <li>
                     <Link href="/contact" className="text-base text-brand-gray-text hover:text-turf-green">
                       Contact
                     </Link>
