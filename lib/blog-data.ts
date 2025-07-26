@@ -12,7 +12,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "artificial-turf-benefits-comprehensive-guide-2025",
     title: "The Complete Guide to Artificial Turf Benefits: Why Synthetic Grass is the Smart Choice in 2025",
-    date: "2025-01-27",
+    date: "2025-07-26",
     author: "Turf Professionals Team",
     image: "/portfolio/backyard-turf.jpg",
     excerpt:
