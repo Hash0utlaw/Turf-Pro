@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     title: "The True Cost of Artificial Turf: A 2025 Investment Breakdown",
     date: "2025-08-11",
     author: "Turf Professionals Team",
-    image: "/portfolio/bighome-pool-lake-landscape-hardscape-turf.jpg",
+    image: "/portfolio/pool-lake-hardscape-general-turf.jpg",
     excerpt:
       "Thinking about artificial turf? This guide breaks down the true cost, from initial installation prices to long-term savings and return on investment. See how synthetic grass is a smart financial decision for your home in 2025.",
     content: `
