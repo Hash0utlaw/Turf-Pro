@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import ServicePageTemplate, { type ServicePageTemplateProps } from "@/components/service-page-template"
-import { ClubIcon, CheckCircle, Star } from "lucide-react"
+import { CheckCircle, Star, Target } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Custom Putting Greens | Backyard & Indoor Golf Greens | Turf Pros",
@@ -39,7 +39,7 @@ const pageContent: ServicePageTemplateProps = {
     "We use specialized turf products designed specifically for putting greens, mimicking the feel and performance of the finest country club courses. Our expert design and installation process ensures every green is a masterpiece.",
   featuresList: [
     {
-      icon: <ClubIcon className="h-5 w-5 mr-3 text-turf-green" />,
+      icon: <Target className="h-5 w-5 mr-3 text-turf-green" />,
       text: "Adjustable Stimp Speeds to Match Your Preference",
     },
     {

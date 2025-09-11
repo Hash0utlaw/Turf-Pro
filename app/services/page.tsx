@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ClubIcon as GolfIcon, PawPrint, Zap, Users, Wrench, Building } from "lucide-react"
+import { Target, PawPrint, Zap, Users, Wrench, Building } from "lucide-react"
 import type { Metadata } from "next"
 import ContactDialog from "@/components/contact-dialog"
 import { Toaster } from "@/components/ui/toaster"
@@ -39,7 +39,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const allServicesList = [
   {
-    icon: GolfIcon,
+    icon: Target,
     title: "Backyard Putting Greens",
     description: "Custom-designed golf greens for practice and leisure, right in your backyard.",
     href: "/putting-greens",

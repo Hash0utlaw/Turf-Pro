@@ -13,7 +13,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
-import { Eye } from "lucide-react"
+// import { Eye } from 'lucide-react'
 import { portfolioItems, type PortfolioItem } from "@/lib/portfolio-data"
 
 // Select the first 4 portfolio items to feature on the home page
@@ -60,7 +60,6 @@ export default function PortfolioSection() {
                         variant="outline"
                         className="bg-white/20 text-white border-white/50 hover:bg-white/30 backdrop-blur-sm"
                       >
-                        <Eye className="mr-2 h-4 w-4" />
                         View Project
                       </Button>
                     </div>

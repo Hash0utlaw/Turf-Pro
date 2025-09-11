@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button"
 import PortfolioCard from "@/components/portfolio-card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import type { PortfolioItem, CategorySlug } from "@/lib/portfolio-data"
-import { Blocks, Home, Briefcase, GuitarIcon as Golf, Aperture } from "lucide-react"
+import { Blocks, Home, Briefcase, Target, Aperture } from "lucide-react"
 
 type Props = {
   allItems: PortfolioItem[]
@@ -26,7 +26,7 @@ const categories: {
   { name: "All", slug: "all", icon: Blocks },
   { name: "Residential", slug: "residential", icon: Home },
   { name: "Commercial", slug: "commercial", icon: Briefcase },
-  { name: "Putting Greens", slug: "putting-greens", icon: Golf },
+  { name: "Putting Greens", slug: "putting-greens", icon: Target },
   { name: "Recreational", slug: "recreational", icon: Aperture },
 ]
 
