@@ -29,6 +29,9 @@ export interface ServicePageTemplateProps {
   heroTitle: string
   heroSubtitle: string
   heroCtaText: string
+  heroVideoSrc?: string
+  heroVideoPosterSrc?: string
+  heroVideoAriaLabel?: string
   benefitsTitle: string
   benefitsSubtitle: string
   benefits: string[]
@@ -53,6 +56,9 @@ export default function ServicePageTemplate({
   heroTitle,
   heroSubtitle,
   heroCtaText,
+  heroVideoSrc,
+  heroVideoPosterSrc,
+  heroVideoAriaLabel,
   benefitsTitle,
   benefitsSubtitle,
   benefits,
@@ -74,14 +80,28 @@ export default function ServicePageTemplate({
     <>
       {/* Hero Section */}
       <section className="relative w-full h-[70vh] min-h-[400px] md:min-h-[500px] flex items-center justify-center text-center text-white overflow-hidden">
-        <Image
-          src={heroImageSrc || "/placeholder.svg"}
-          alt={heroImageAlt}
-          fill
-          className="object-cover brightness-[0.6]"
-          quality={85}
-          priority
-        />
+        {heroVideoSrc ? (
+          <video
+            className="absolute inset-0 w-full h-full object-cover brightness-[0.6]"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster={heroVideoPosterSrc}
+            aria-label={heroVideoAriaLabel || heroImageAlt}
+          >
+            <source src={heroVideoSrc} type="video/mp4" />
+          </video>
+        ) : (
+          <Image
+            src={heroImageSrc || "/placeholder.svg"}
+            alt={heroImageAlt}
+            fill
+            className="object-cover brightness-[0.6]"
+            quality={85}
+            priority
+          />
+        )}
         <div className="relative z-10 container px-4 md:px-6 space-y-6">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl drop-shadow-md text-balance">
             {heroTitle}
