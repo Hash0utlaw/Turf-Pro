@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 
 const pageContent: ServicePageTemplateProps = {
   heroImageSrc: "/portfolio/bighome-backyard-putting-green-turf.jpg",
-  heroVideoSrc: "/videos/turf-pro-putting-green-residential-home.MP4",
-  heroVideoPosterSrc: "/portfolio/bighome-backyard-putting-green-turf.jpg",
+  heroVideoSrc: "/videos/optimized/turf-pro-putting-green-residential-home-high.mp4",
+  heroVideoPosterSrc: "/videos/optimized/turf-pro-putting-green-residential-home-poster.jpg",
   heroVideoAriaLabel: "Putting green installation drone footage at a residential home",
   heroImageAlt: "A professional-grade putting green in the backyard of a large home.",
   heroTitle: "Perfect Your Putt at Home",

@@ -6,7 +6,9 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "compress-video": "node scripts/compress-video.js",
+    "setup-lfs": "git lfs install && git lfs track '*.mp4' && git lfs track '*.MP4' && git lfs track '*.webm'"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
