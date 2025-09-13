@@ -6,8 +6,8 @@ export default function HeroSection() {
   return (
     <section className="relative w-full h-[calc(100vh-4rem)] min-h-[500px] md:min-h-[600px] lg:min-h-[700px] flex items-center justify-center text-center text-white overflow-hidden bg-gray-800">
       <Image
-        src="/beautiful-modern-backyard-with-artificial-turf-law.jpg"
-        alt="Stunning modern backyard with a pristine artificial turf lawn at sunset"
+        src="/hero-homepage-new.png"
+        alt="Professional turf installation showcase"
         fill
         style={{ objectFit: "cover" }}
         quality={85}
