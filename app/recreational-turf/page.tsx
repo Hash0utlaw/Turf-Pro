@@ -34,9 +34,6 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const recreationalTurfData: ServicePageTemplateProps = {
   heroImageSrc: "/portfolio/school-playground-field-turf.jpg",
-  heroVideoSrc: "/videos/optimized/turf-pro-putting-green-residential-home-medium.mp4",
-  heroVideoPosterSrc: "/videos/optimized/turf-pro-putting-green-residential-home-poster.jpg",
-  heroVideoAriaLabel: "Aerial drone footage showcasing recreational turf installations",
   heroImageAlt: "A vibrant and safe school playground with durable artificial turf.",
   heroTitle: "Active Play, All Year Round",
   heroSubtitle: "High-performance recreational turf for sports, playgrounds, and active lifestyles.",

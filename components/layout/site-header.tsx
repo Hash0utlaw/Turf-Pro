@@ -13,7 +13,6 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import { Logo } from "@/components/layout/logo"
-import { Menu } from "lucide-react"
 import React from "react"
 import { cn } from "@/lib/utils"
 
@@ -124,7 +123,7 @@ export function SiteHeader() {
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon">
-                <Menu className="h-6 w-6" />
+                <span className="text-sm">☰</span>
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>

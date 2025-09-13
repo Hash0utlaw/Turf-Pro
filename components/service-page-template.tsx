@@ -2,7 +2,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Star } from "lucide-react"
 import { Toaster } from "@/components/ui/toaster"
 import type { ReactNode } from "react"
 import { ImageGallery } from "@/components/image-gallery"
@@ -26,12 +25,10 @@ interface Testimonial {
 export interface ServicePageTemplateProps {
   heroImageSrc: string
   heroImageAlt: string
+  heroVideoSrc?: string
   heroTitle: string
   heroSubtitle: string
   heroCtaText: string
-  heroVideoSrc?: string
-  heroVideoPosterSrc?: string
-  heroVideoAriaLabel?: string
   benefitsTitle: string
   benefitsSubtitle: string
   benefits: string[]
@@ -53,12 +50,10 @@ export interface ServicePageTemplateProps {
 export default function ServicePageTemplate({
   heroImageSrc,
   heroImageAlt,
+  heroVideoSrc,
   heroTitle,
   heroSubtitle,
   heroCtaText,
-  heroVideoSrc,
-  heroVideoPosterSrc,
-  heroVideoAriaLabel,
   benefitsTitle,
   benefitsSubtitle,
   benefits,
@@ -82,15 +77,22 @@ export default function ServicePageTemplate({
       <section className="relative w-full h-[70vh] min-h-[400px] md:min-h-[500px] flex items-center justify-center text-center text-white overflow-hidden">
         {heroVideoSrc ? (
           <video
-            className="absolute inset-0 w-full h-full object-cover brightness-[0.6]"
             autoPlay
             muted
             loop
             playsInline
-            poster={heroVideoPosterSrc}
-            aria-label={heroVideoAriaLabel || heroImageAlt}
+            className="absolute inset-0 w-full h-full object-cover brightness-[0.6]"
           >
             <source src={heroVideoSrc} type="video/mp4" />
+            {/* Fallback to image if video fails to load */}
+            <Image
+              src={heroImageSrc || "/placeholder.svg"}
+              alt={heroImageAlt}
+              fill
+              className="object-cover brightness-[0.6]"
+              quality={85}
+              priority
+            />
           </video>
         ) : (
           <Image
@@ -102,6 +104,7 @@ export default function ServicePageTemplate({
             priority
           />
         )}
+        <div className="absolute inset-0 bg-black/40 z-[1]"></div>
         <div className="relative z-10 container px-4 md:px-6 space-y-6">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl drop-shadow-md text-balance">
             {heroTitle}
@@ -131,7 +134,7 @@ export default function ServicePageTemplate({
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-turf-green mt-1 flex-shrink-0" />
+                <span className="text-turf-green text-xl mt-1 flex-shrink-0">✓</span>
                 <p className="text-brand-gray-text text-lg">{benefit}</p>
               </div>
             ))}
@@ -190,7 +193,9 @@ export default function ServicePageTemplate({
                       {Array(testimonial.stars)
                         .fill(0)
                         .map((_, i) => (
-                          <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
+                          <span key={i} className="text-yellow-400 text-xl">
+                            ★
+                          </span>
                         ))}
                     </div>
                     <p className="text-brand-gray-text italic">&ldquo;{testimonial.text}&rdquo;</p>

@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button"
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full h-[calc(100vh-4rem)] min-h-[500px] md:min-h-[600px] lg:min-h-[700px] flex items-center justify-center text-center text-white overflow-hidden">
+    <section className="relative w-full h-[calc(100vh-4rem)] min-h-[500px] md:min-h-[600px] lg:min-h-[700px] flex items-center justify-center text-center text-white overflow-hidden bg-gray-800">
       <Image
-        src="/hero-homepage-new.png"
+        src="/beautiful-modern-backyard-with-artificial-turf-law.jpg"
         alt="Stunning modern backyard with a pristine artificial turf lawn at sunset"
         fill
         style={{ objectFit: "cover" }}
