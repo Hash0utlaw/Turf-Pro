@@ -52,13 +52,13 @@ export default function PortfolioSection() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                     <div className="absolute bottom-0 left-0 p-4">
-                      <h3 className="text-xl font-semibold text-white mb-1">{item.title}</h3>
-                      <p className="text-sm text-brand-green-light">{item.categoryLabel}</p>
+                      <h3 className="text-xl font-semibold text-white mb-1 drop-shadow-lg">{item.title}</h3>
+                      <p className="text-sm text-white drop-shadow-lg">{item.categoryLabel}</p>
                     </div>
                     <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <Button
                         variant="outline"
-                        className="bg-white/20 text-white border-white/50 hover:bg-white/30 backdrop-blur-sm"
+                        className="bg-black/60 text-white border-white hover:bg-black/80 backdrop-blur-sm"
                       >
                         View Project
                       </Button>
