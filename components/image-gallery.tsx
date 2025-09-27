@@ -34,14 +34,16 @@ export function ImageGallery({ galleryTitle, gallerySubtitle, galleryImages }: I
                   </div>
                 </Card>
               </DialogTrigger>
-              <DialogContent className="max-w-5xl w-full p-1 bg-transparent border-0 shadow-none">
-                <div className="relative aspect-video w-full">
+              <DialogContent className="max-w-[95vw] max-h-[95vh] w-full p-2 sm:p-4 bg-black/95 border-0 shadow-none overflow-auto">
+                <div className="relative w-full h-auto min-h-[50vh] flex items-center justify-center">
                   <Image
                     src={image.src || "/placeholder.svg"}
                     alt={image.alt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
-                    className="object-contain rounded-lg"
+                    width={1200}
+                    height={800}
+                    sizes="(max-width: 768px) 95vw, (max-width: 1200px) 80vw, 1000px"
+                    className="object-contain max-w-full max-h-[85vh] w-auto h-auto rounded-lg"
+                    priority
                   />
                 </div>
               </DialogContent>

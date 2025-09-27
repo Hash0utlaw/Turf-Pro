@@ -80,22 +80,24 @@ export default function PortfolioClient({ allItems }: Props) {
 
       {/* Detail dialog */}
       <Dialog open={!!selectedItem} onOpenChange={(open) => !open && setSelectedItem(null)}>
-        <DialogContent className="sm:max-w-[900px] p-0 bg-background rounded-2xl shadow-soft-lg">
+        <DialogContent className="max-w-[95vw] max-h-[95vh] sm:max-w-[900px] p-0 bg-background rounded-2xl shadow-soft-lg overflow-auto">
           {selectedItem && (
             <>
-              <DialogHeader className="p-6 pb-0">
-                <DialogTitle className="text-2xl sm:text-3xl font-semibold">{selectedItem.title}</DialogTitle>
+              <DialogHeader className="p-4 sm:p-6 pb-0">
+                <DialogTitle className="text-xl sm:text-2xl md:text-3xl font-semibold">
+                  {selectedItem.title}
+                </DialogTitle>
                 <DialogDescription className="text-brand-gray-text mt-2">{selectedItem.description}</DialogDescription>
               </DialogHeader>
 
-              <div className="grid md:grid-cols-2 gap-6 p-6">
+              <div className="grid md:grid-cols-2 gap-4 sm:gap-6 p-4 sm:p-6">
                 <div className="order-2 md:order-1">
                   <h4 className="font-semibold text-lg mb-3">Project Details</h4>
                   <ul className="space-y-2 text-brand-gray-text">
                     {selectedItem.details.map((d) => (
                       <li key={d.label} className="flex justify-between border-b pb-2">
                         <span className="font-medium text-foreground/80">{d.label}:</span>
-                        <span>{d.value}</span>
+                        <span className="text-right">{d.value}</span>
                       </li>
                     ))}
                   </ul>
@@ -107,13 +109,15 @@ export default function PortfolioClient({ allItems }: Props) {
                       <CarouselContent>
                         {selectedItem.gallery.map((url, i) => (
                           <CarouselItem key={i}>
-                            <Image
-                              src={url || "/placeholder.svg"}
-                              alt={`${selectedItem.title} image ${i + 1}`}
-                              width={600}
-                              height={400}
-                              className="rounded-lg object-cover w-full h-auto aspect-video"
-                            />
+                            <div className="relative w-full aspect-video">
+                              <Image
+                                src={url || "/placeholder.svg"}
+                                alt={`${selectedItem.title} image ${i + 1}`}
+                                fill
+                                sizes="(max-width: 768px) 95vw, (max-width: 1200px) 50vw, 400px"
+                                className="rounded-lg object-cover"
+                              />
+                            </div>
                           </CarouselItem>
                         ))}
                       </CarouselContent>
@@ -121,13 +125,15 @@ export default function PortfolioClient({ allItems }: Props) {
                       <CarouselNext className="right-2" />
                     </Carousel>
                   ) : (
-                    <Image
-                      src={selectedItem.imageUrl || "/placeholder.svg"}
-                      alt={selectedItem.title}
-                      width={600}
-                      height={400}
-                      className="rounded-lg object-cover w-full h-auto"
-                    />
+                    <div className="relative w-full aspect-video">
+                      <Image
+                        src={selectedItem.imageUrl || "/placeholder.svg"}
+                        alt={selectedItem.title}
+                        fill
+                        sizes="(max-width: 768px) 95vw, (max-width: 1200px) 50vw, 400px"
+                        className="rounded-lg object-cover"
+                      />
+                    </div>
                   )}
                 </div>
               </div>
