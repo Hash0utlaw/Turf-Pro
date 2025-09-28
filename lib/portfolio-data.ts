@@ -23,6 +23,74 @@ export interface PortfolioItem {
 
 export const portfolioItems: PortfolioItem[] = [
   {
+    id: "commercial-turf-installation-process",
+    title: "Commercial Turf Installation Process",
+    category: "commercial",
+    categoryLabel: "Commercial",
+    description:
+      "Professional installation team carefully laying commercial-grade artificial turf with precision equipment and materials for optimal durability.",
+    imageUrl: "/portfolio/commercial-turf-installation-process.jpg",
+    gallery: [
+      "/portfolio/commercial-turf-installation-process.jpg",
+      "/portfolio/commercial-turf-installation-workers.jpg",
+    ],
+    details: [
+      { label: "Project Type", value: "Commercial Installation" },
+      { label: "Features", value: "Heavy-Duty, Professional Grade" },
+      { label: "Area", value: "8,000+ sq ft" },
+    ],
+  },
+  {
+    id: "commercial-playground-safety-surface",
+    title: "Commercial Playground Safety Surface",
+    category: "commercial",
+    categoryLabel: "Commercial",
+    description:
+      "Safe and durable artificial turf playground surface featuring integrated play equipment and decorative stepping stones for enhanced child safety.",
+    imageUrl: "/portfolio/commercial-playground-turf-stepping-stones.jpg",
+    gallery: [
+      "/portfolio/commercial-playground-turf-stepping-stones.jpg",
+      "/portfolio/commercial-playground-side-view-turf.jpg",
+    ],
+    details: [
+      { label: "Application", value: "Playground Safety Surface" },
+      { label: "Features", value: "Impact-Resistant, Child-Safe" },
+      { label: "Area", value: "3,200 sq ft" },
+    ],
+  },
+  {
+    id: "luxury-pool-landscape-design",
+    title: "Luxury Pool Landscape Design",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Stunning luxury pool surrounded by meticulously designed artificial turf landscaping, creating a resort-style backyard oasis.",
+    imageUrl: "/portfolio/luxury-pool-backyard-artificial-turf.jpg",
+    gallery: [
+      "/portfolio/luxury-pool-backyard-artificial-turf.jpg",
+      "/portfolio/luxury-pool-turf-residential-backyard.jpg",
+    ],
+    details: [
+      { label: "Location", value: "Luxury Residential" },
+      { label: "Features", value: "Pool Surround, Landscape Integration" },
+      { label: "Area", value: "4,500 sq ft" },
+    ],
+  },
+  {
+    id: "residential-putting-green-patriotic",
+    title: "Residential Putting Green with Patriotic Touch",
+    category: "putting-greens",
+    categoryLabel: "Putting Green",
+    description:
+      "Custom residential putting green featuring multiple holes and flag positions, perfect for backyard golf practice and entertainment.",
+    imageUrl: "/portfolio/residential-backyard-putting-green-flags.jpg",
+    details: [
+      { label: "Location", value: "Residential Backyard" },
+      { label: "Features", value: "Multiple Holes, Flag System" },
+      { label: "Area", value: "1,400 sq ft" },
+    ],
+  },
+  {
     id: "infill-application-process",
     title: "Putting Green Infill Application",
     category: "putting-greens",
@@ -438,6 +506,38 @@ export const portfolioItems: PortfolioItem[] = [
       { label: "Location", value: "Greensboro, NC" },
       { label: "Features", value: "Playground Safety Surface" },
       { label: "Area", value: "800 sq ft" },
+    ],
+  },
+  {
+    id: "modern-pool-deck-turf-design",
+    title: "Modern Pool Deck Turf Design",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Contemporary pool design featuring artificial turf sections integrated with premium hardscaping for a clean, modern aesthetic.",
+    imageUrl: "/portfolio/pool-deck-artificial-turf-aerial-view.jpg",
+    gallery: [
+      "/portfolio/pool-deck-artificial-turf-aerial-view.jpg",
+      "/portfolio/modern-pool-artificial-turf-hardscape.jpg",
+    ],
+    details: [
+      { label: "Location", value: "Modern Residential" },
+      { label: "Features", value: "Pool Deck Integration, Hardscape" },
+      { label: "Area", value: "2,100 sq ft" },
+    ],
+  },
+  {
+    id: "contemporary-home-putting-green",
+    title: "Contemporary Home Putting Green",
+    category: "putting-greens",
+    categoryLabel: "Putting Green",
+    description:
+      "Sleek putting green installation complementing modern home architecture with clean lines and professional-grade turf surface.",
+    imageUrl: "/portfolio/residential-putting-green-modern-home.jpg",
+    details: [
+      { label: "Location", value: "Contemporary Home" },
+      { label: "Features", value: "Modern Design, Clean Lines" },
+      { label: "Area", value: "900 sq ft" },
     ],
   },
 ]
