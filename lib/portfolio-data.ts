@@ -23,6 +23,76 @@ export interface PortfolioItem {
 
 export const portfolioItems: PortfolioItem[] = [
   {
+    id: "turf-pro-commercial-pool-installation",
+    title: "Professional Commercial Pool Installation",
+    category: "commercial",
+    categoryLabel: "Commercial",
+    description:
+      "Turf Pro team member in signature bright green uniform professionally installing premium artificial turf around commercial pool area with precision and expertise.",
+    imageUrl: "/portfolio/turf-pro-worker-commercial-pool-installation.jpg",
+    details: [
+      { label: "Project Type", value: "Commercial Pool Installation" },
+      { label: "Features", value: "Professional Team, Pool Surround" },
+      { label: "Area", value: "3,500 sq ft" },
+    ],
+  },
+  {
+    id: "school-playground-safety-turf-surface",
+    title: "School Playground Safety Turf Surface",
+    category: "commercial",
+    categoryLabel: "Commercial",
+    description:
+      "Educational facility playground featuring safe artificial turf surface with wooden play equipment, providing durable and child-friendly recreational space.",
+    imageUrl: "/portfolio/school-playground-artificial-turf-safety-surface.jpg",
+    details: [
+      { label: "Application", value: "Educational Playground" },
+      { label: "Features", value: "Child Safety, Impact Resistant" },
+      { label: "Area", value: "2,800 sq ft" },
+    ],
+  },
+  {
+    id: "indoor-school-courtyard-play-area",
+    title: "Indoor School Courtyard Play Area",
+    category: "commercial",
+    categoryLabel: "Commercial",
+    description:
+      "Covered school courtyard featuring artificial turf play area with wooden ship playground equipment and decorative stepping stones for enhanced learning environment.",
+    imageUrl: "/portfolio/indoor-school-courtyard-artificial-turf-play-area.jpg",
+    details: [
+      { label: "Location", value: "Indoor Courtyard" },
+      { label: "Features", value: "Covered Area, Play Equipment" },
+      { label: "Area", value: "1,900 sq ft" },
+    ],
+  },
+  {
+    id: "residential-backyard-turf-landscaping",
+    title: "Residential Backyard Turf Landscaping",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Turf Pro specialist showcasing completed residential artificial turf installation with professional landscaping, retaining walls, and mature tree integration.",
+    imageUrl: "/portfolio/residential-backyard-artificial-turf-landscaping.jpg",
+    details: [
+      { label: "Location", value: "Residential Backyard" },
+      { label: "Features", value: "Landscaping, Retaining Walls" },
+      { label: "Area", value: "4,200 sq ft" },
+    ],
+  },
+  {
+    id: "backyard-tennis-court-putting-green",
+    title: "Backyard Tennis Court & Putting Green Combo",
+    category: "recreational",
+    categoryLabel: "Recreational",
+    description:
+      "Ultimate backyard sports complex featuring professional tennis court and custom putting green with artificial turf landscaping for year-round recreation.",
+    imageUrl: "/portfolio/backyard-tennis-court-putting-green-combo.jpg",
+    details: [
+      { label: "Features", value: "Tennis Court, Putting Green" },
+      { label: "Location", value: "Luxury Residential" },
+      { label: "Area", value: "8,500 sq ft" },
+    ],
+  },
+  {
     id: "commercial-turf-installation-process",
     title: "Commercial Turf Installation Process",
     category: "commercial",
