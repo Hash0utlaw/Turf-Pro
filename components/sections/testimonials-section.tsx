@@ -4,35 +4,53 @@ import React from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
-import Image from "next/image"
 import { Star } from "lucide-react"
 
 const testimonials = [
-  // TODO: Replace these examples with your actual Google Reviews.
-  // Simply copy and paste the text, name, and star rating.
   {
-    name: "Michael R.",
+    name: "Dwayne Matthews",
     stars: 5,
-    text: "We had Turf Professionals install a new lawn in our backyard and couldn't be happier. The entire process was seamless, from the initial consultation to the final installation. The crew was professional, on time, and left the site immaculate. Our new turf looks and feels amazing!",
-    avatarUrl: "/happy-customer.png",
+    text: "I was referred to this company, I knew the quality was going to be good but they blew my mind with how fast and amazing it all turned out. Would highly recommend them for any of your turf needs.",
   },
   {
-    name: "Jessica Chen",
+    name: "Athanasios Muder",
     stars: 5,
-    text: "The putting green they installed is a dream come true! The quality is outstanding, and it rolls true. It's completely transformed our backyard into a fun and functional space for the whole family. Highly recommend their services for any golf enthusiast.",
-    avatarUrl: "/smiling-person.png",
+    text: "Great job guys, I came home to beautiful turf installed in the front and back yard. Couldn't have asked for a better experience. Now it's time for our family and pups to enjoy our new yard",
   },
   {
-    name: "David Lee",
+    name: "Mike Bradley",
     stars: 5,
-    text: "Our two dogs love the new pet-friendly turf. It's durable, easy to clean, and looks great year-round. The team at Turf Professionals was fantastic to work with and really understood our needs. A five-star experience from start to finish.",
-    avatarUrl: "/person-with-dog.png",
+    text: "The upfront cost of artificial turf is saving me hundreds of dollars a month on landscaping maintenance at my Airbnb. I highly recommend!",
   },
   {
-    name: "Emily S.",
+    name: "Annastacia Slater",
     stars: 5,
-    text: "Exceptional service and a beautiful result. Our front yard has never looked better, and we've received so many compliments from our neighbors. No more watering or mowing is a huge plus. Thank you, Turf Professionals!",
-    avatarUrl: "/happy-homeowner.png",
+    text: "Very trustworthy crew, and very attentive to detail",
+  },
+  {
+    name: "Sergey Gorelyshev",
+    stars: 5,
+    text: "Beautiful turf installed for my pup :) Fast, reliable and fair priced",
+  },
+  {
+    name: "Zack Malal",
+    stars: 5,
+    text: "These guys crushed it! Turf Professionals made my yard look insanely good. Super chill crew, showed up on time, got it done right.",
+  },
+  {
+    name: "Austin Schoenbaum",
+    stars: 5,
+    text: "Fantastic service! Quick and affordable.",
+  },
+  {
+    name: "Alejandro Ramy",
+    stars: 5,
+    text: "Used for my investment property. 10/10 recommend. Turfed complete back yard and looks amazing.",
+  },
+  {
+    name: "HSL Powersports",
+    stars: 5,
+    text: "Not the cheapest option, but the quality of work speaks for itself!",
   },
 ]
 
@@ -68,14 +86,7 @@ export default function TestimonialsSection() {
                 <div className="p-1">
                   <Card className="bg-card text-card-foreground rounded-2xl shadow-soft h-full flex flex-col">
                     <CardContent className="flex flex-col items-center text-center p-6 md:p-8 flex-grow">
-                      <Image
-                        src={testimonial.avatarUrl || "/placeholder.svg"}
-                        alt={`Avatar of ${testimonial.name}`}
-                        width={80}
-                        height={80}
-                        className="rounded-full mb-4 shadow-md"
-                      />
-                      <h3 className="text-xl font-semibold text-foreground">{testimonial.name}</h3>
+                      <h3 className="text-xl font-semibold text-foreground mb-2">{testimonial.name}</h3>
                       <div className="flex justify-center my-4">
                         {Array(testimonial.stars)
                           .fill(0)
