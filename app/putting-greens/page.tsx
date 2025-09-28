@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Custom Putting Greens | Backyard & Indoor Golf Greens | Turf Pros",
@@ -12,7 +13,10 @@ export default function PuttingGreensPage() {
       {/* Hero Section with Video */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
-          <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/turf-pro-putting-green-residential-home-medium-iB8P1yagGBoib76YM5qXM7kY15ka6A.mp4" type="video/mp4" />
+          <source
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/turf-pro-putting-green-residential-home-medium-iB8P1yagGBoib76YM5qXM7kY15ka6A.mp4"
+            type="video/mp4"
+          />
         </video>
 
         {/* Dark overlay for text readability */}
@@ -25,9 +29,12 @@ export default function PuttingGreensPage() {
             Bring the golf course to your backyard with a custom-designed, professional-grade putting green. Experience
             true ball roll and practice your short game anytime.
           </p>
-          <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+          <Link
+            href="/contact"
+            className="inline-block bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
+          >
             Get a Putting Green Quote
-          </button>
+          </Link>
         </div>
       </section>
 
@@ -96,9 +103,12 @@ export default function PuttingGreensPage() {
             Our design consultants are ready to help you create the perfect putting green for your space and skill
             level.
           </p>
-          <button className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+          <Link
+            href="/contact"
+            className="inline-block bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
+          >
             Design My Putting Green
-          </button>
+          </Link>
         </div>
       </section>
     </div>
