@@ -23,6 +23,68 @@ export interface PortfolioItem {
 
 export const portfolioItems: PortfolioItem[] = [
   {
+    id: "commercial-brewery-patio-turf",
+    title: "Commercial Brewery Patio Transformation",
+    category: "commercial",
+    categoryLabel: "Commercial",
+    description:
+      "Complete outdoor patio transformation for Two Canes Brewing featuring premium artificial turf installation with modern outdoor furniture and umbrellas, creating an inviting year-round entertainment space.",
+    imageUrl: "/portfolio/commercial-turf-brewery.jpg",
+    gallery: [
+      "/portfolio/commercial-turf-brewery.jpg",
+      "/portfolio/commercial-patio-turf.jpg",
+      "/portfolio/patio-commercial-turf-2.jpg",
+    ],
+    details: [
+      { label: "Project Type", value: "Commercial Brewery Patio" },
+      { label: "Features", value: "Outdoor Seating Area, High-Traffic Turf" },
+      { label: "Area", value: "2,200 sq ft" },
+    ],
+  },
+  {
+    id: "luxury-residential-pool-backyard",
+    title: "Luxury Residential Pool & Backyard",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Stunning modern home backyard featuring pristine artificial turf installation alongside a beautiful pool area with professional landscaping and clean hardscape integration.",
+    imageUrl: "/portfolio/residential-turf-backyard-pool.jpg",
+    details: [
+      { label: "Location", value: "Luxury Residential" },
+      { label: "Features", value: "Pool Surround, Modern Landscaping" },
+      { label: "Area", value: "3,800 sq ft" },
+    ],
+  },
+  {
+    id: "commercial-restaurant-patio-installation",
+    title: "Commercial Restaurant Patio Installation",
+    category: "commercial",
+    categoryLabel: "Commercial",
+    description:
+      "Professional installation of commercial-grade artificial turf for restaurant outdoor dining area, featuring Turf Pro team members in action creating a beautiful, durable entertainment space.",
+    imageUrl: "/portfolio/patio-commercial-turf-2.jpg",
+    gallery: ["/portfolio/patio-commercial-turf-2.jpg", "/portfolio/commercial-patio-turf.jpg"],
+    details: [
+      { label: "Project Type", value: "Restaurant Patio" },
+      { label: "Features", value: "Professional Installation, Outdoor Dining" },
+      { label: "Area", value: "2,500 sq ft" },
+    ],
+  },
+  {
+    id: "commercial-brewery-before-installation",
+    title: "Commercial Brewery Ground Preparation",
+    category: "commercial",
+    categoryLabel: "Commercial",
+    description:
+      "Behind-the-scenes look at professional ground preparation and base installation for commercial brewery patio project, showcasing Turf Pro's meticulous installation process.",
+    imageUrl: "/portfolio/commercial-patio-turf.jpg",
+    details: [
+      { label: "Project Type", value: "Commercial Installation Process" },
+      { label: "Features", value: "Ground Prep, Base Installation" },
+      { label: "Area", value: "2,200 sq ft" },
+    ],
+  },
+  {
     id: "turf-pro-commercial-pool-installation",
     title: "Professional Commercial Pool Installation",
     category: "commercial",
