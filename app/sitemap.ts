@@ -1,11 +1,11 @@
 import type { MetadataRoute } from "next"
 import { blogPosts } from "@/lib/blog-data"
+import { portfolioItems } from "@/lib/portfolio-data"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.turf-professionals.com"
   const currentDate = new Date()
 
-  // URLs for individual blog posts, dynamically generated
   const postUrls = blogPosts
     .filter((post) => post.isPublished)
     .map((post) => ({
@@ -107,8 +107,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
+  const landingPageUrls = [
+    {
+      url: `${baseUrl}/landing/residential-low-maintenance`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/landing/putting-greens-playgrounds`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
+  ]
+
+  const portfolioImageUrls = portfolioItems.map((item) => ({
+    url: `${baseUrl}${item.image}`,
+    lastModified: currentDate,
+    changeFrequency: "yearly" as const,
+    priority: 0.5,
+  }))
+
   // Combine all URLs and sort by priority (highest first) for better SEO
-  const allUrls = [...staticUrls, ...serviceUrls, ...postUrls]
+  const allUrls = [...staticUrls, ...serviceUrls, ...landingPageUrls, ...postUrls, ...portfolioImageUrls]
 
   return allUrls.sort((a, b) => b.priority - a.priority)
 }
