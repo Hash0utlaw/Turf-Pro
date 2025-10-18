@@ -92,6 +92,26 @@ export interface ServiceSchema {
   }
 }
 
+export interface VideoSchema {
+  "@context": "https://schema.org"
+  "@type": "VideoObject"
+  name: string
+  description: string
+  thumbnailUrl: string
+  uploadDate: string
+  contentUrl: string
+  embedUrl?: string
+  duration?: string
+  publisher?: {
+    "@type": "Organization"
+    name: string
+    logo: {
+      "@type": "ImageObject"
+      url: string
+    }
+  }
+}
+
 export function generateOrganizationSchema(): OrganizationSchema {
   return {
     "@context": "https://schema.org",
@@ -203,6 +223,34 @@ export function generateServiceSchema(name: string, description: string, service
       "@type": "Offer",
       availability: "https://schema.org/InStock",
       priceRange: "$$-$$$",
+    },
+  }
+}
+
+export function generateVideoSchema(
+  name: string,
+  description: string,
+  thumbnailUrl: string,
+  contentUrl: string,
+  uploadDate: string,
+  duration?: string,
+): VideoSchema {
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: name,
+    description: description,
+    thumbnailUrl: thumbnailUrl,
+    uploadDate: uploadDate,
+    contentUrl: contentUrl,
+    duration: duration,
+    publisher: {
+      "@type": "Organization",
+      name: "Turf Professionals",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.turf-professionals.com/logo.png",
+      },
     },
   }
 }

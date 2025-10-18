@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { StructuredData } from "@/components/structured-data"
+import { generateServiceSchema, generateBreadcrumbSchema, generateVideoSchema } from "@/lib/structured-data"
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -32,8 +34,32 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function RecreationalTurfPage() {
+  const serviceSchema = generateServiceSchema(
+    "Recreational & Sports Turf Installation",
+    "High-performance recreational turf for sports fields, playgrounds, and active play areas. Durable, safe, and low-maintenance solutions for residential and commercial properties.",
+    "Artificial Turf Installation",
+  )
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "https://www.turf-professionals.com" },
+    { name: "Recreational & Sports Turf" },
+  ])
+
+  const videoSchema = generateVideoSchema(
+    "Recreational & Sports Turf Installation - Turf Professionals",
+    "Discover our high-performance recreational turf solutions for sports fields, playgrounds, and active play areas. Safe, durable, and perfect for year-round use in residential and commercial settings.",
+    "https://www.turf-professionals.com/portfolio/school-playground-field-turf.jpg",
+    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/turf-pro-putting-green-residential-home-medium-iB8P1yagGBoib76YM5qXM7kY15ka6A.mp4",
+    "2024-01-15",
+    "PT45S",
+  )
+
   return (
     <div className="min-h-screen bg-white">
+      <StructuredData data={serviceSchema} />
+      <StructuredData data={breadcrumbSchema} />
+      <StructuredData data={videoSchema} />
+
       {/* Hero Section with Video */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
