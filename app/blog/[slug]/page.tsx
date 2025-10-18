@@ -5,6 +5,8 @@ import Link from "next/link"
 import type { Metadata, ResolvingMetadata } from "next"
 import { Calendar, ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { StructuredData } from "@/components/structured-data"
+import { generateArticleSchema, generateBreadcrumbSchema } from "@/lib/structured-data"
 
 interface BlogPostPageProps {
   params: {
@@ -28,14 +30,28 @@ export async function generateMetadata({ params }: BlogPostPageProps, parent: Re
   }
 
   const previousImages = (await parent).openGraph?.images || []
+  const url = `https://www.turf-professionals.com/blog/${params.slug}`
 
   return {
     title: `${post.title} | Turf Professionals Blog`,
     description: post.excerpt,
+    alternates: {
+      canonical: url,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
       images: [post.image, ...previousImages],
+      type: "article",
+      publishedTime: post.date,
+      authors: ["Turf Professionals"],
+      url: url,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [post.image],
     },
   }
 }
@@ -47,8 +63,27 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     notFound()
   }
 
+  const url = `https://www.turf-professionals.com/blog/${params.slug}`
+  const articleSchema = generateArticleSchema(
+    post.title,
+    post.excerpt,
+    `https://www.turf-professionals.com${post.image}`,
+    post.date,
+    post.date,
+    url,
+  )
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "https://www.turf-professionals.com" },
+    { name: "Blog", url: "https://www.turf-professionals.com/blog" },
+    { name: post.title },
+  ])
+
   return (
     <div className="bg-background">
+      <StructuredData data={articleSchema} />
+      <StructuredData data={breadcrumbSchema} />
+
       <main className="container mx-auto px-4 py-8 sm:py-12">
         <div className="max-w-4xl mx-auto">
           <Button asChild variant="outline" className="mb-8 bg-transparent">

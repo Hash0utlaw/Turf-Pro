@@ -1,15 +1,34 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { StructuredData } from "@/components/structured-data"
+import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/structured-data"
 
 export const metadata: Metadata = {
   title: "Custom Putting Greens | Backyard & Indoor Golf Greens | Turf Pros",
   description:
     "Install a professional-quality custom putting green in your backyard or home. Our artificial turf greens offer true ball roll and realistic performance. Get a free quote!",
+  alternates: {
+    canonical: "https://www.turf-professionals.com/putting-greens",
+  },
 }
 
 export default function PuttingGreensPage() {
+  const serviceSchema = generateServiceSchema(
+    "Custom Putting Green Installation",
+    "Professional-quality custom putting greens for residential and commercial properties. Our artificial turf greens offer true ball roll and realistic performance for year-round practice.",
+    "Artificial Turf Installation",
+  )
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "https://www.turf-professionals.com" },
+    { name: "Putting Greens" },
+  ])
+
   return (
     <div className="min-h-screen bg-white">
+      <StructuredData data={serviceSchema} />
+      <StructuredData data={breadcrumbSchema} />
+
       {/* Hero Section with Video */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">

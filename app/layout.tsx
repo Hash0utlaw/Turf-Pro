@@ -6,6 +6,8 @@ import { SiteHeader } from "@/components/layout/site-header"
 import { SiteFooter } from "@/components/layout/site-footer"
 import { Toaster } from "@/components/ui/toaster"
 import { CookieConsentBanner } from "@/components/cookie-consent-banner"
+import { StructuredData } from "@/components/structured-data"
+import { generateOrganizationSchema } from "@/lib/structured-data"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -88,6 +90,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="light">
+      <head>
+        <StructuredData data={generateOrganizationSchema()} />
+      </head>
       <body className={inter.className}>
         <div className="relative flex min-h-screen flex-col">
           <SiteHeader />
