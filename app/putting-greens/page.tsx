@@ -4,11 +4,29 @@ import { StructuredData } from "@/components/structured-data"
 import { generateServiceSchema, generateBreadcrumbSchema, generateVideoSchema } from "@/lib/structured-data"
 
 export const metadata: Metadata = {
-  title: "Custom Putting Greens | Backyard & Indoor Golf Greens | Turf Pros",
+  title: "Backyard Putting Green Installation Charlotte NC | Custom Golf Greens | Turf Pros",
   description:
-    "Install a professional-quality custom putting green in your backyard or home. Our artificial turf greens offer true ball roll and realistic performance. Get a free quote!",
+    "Custom backyard putting green installation in Charlotte NC. Professional-grade synthetic turf with true ball roll. Perfect for Lake Norman, Ballantyne & Myers Park homes. Get your free putting green quote!",
+  keywords: [
+    "backyard putting green Charlotte NC",
+    "custom putting green Charlotte",
+    "home golf green installation Charlotte",
+    "artificial putting green Lake Norman",
+    "residential putting green Matthews NC",
+    "golf green installation Ballantyne",
+    "putting green Myers Park",
+    "synthetic putting green Charlotte",
+    "backyard golf green Huntersville",
+    "custom golf green Charlotte NC",
+  ],
   alternates: {
     canonical: "https://www.turf-professionals.com/putting-greens",
+  },
+  openGraph: {
+    title: "Backyard Putting Green Installation Charlotte NC | Custom Golf Greens | Turf Pros",
+    description:
+      "Custom backyard putting green installation in Charlotte NC. Professional-grade synthetic turf with true ball roll. Perfect for Lake Norman, Ballantyne & Myers Park homes.",
+    images: [{ url: "/putting-green-with-night-lighting.jpg" }],
   },
 }
 
@@ -39,13 +57,27 @@ export default function PuttingGreensPage() {
       <StructuredData data={breadcrumbSchema} />
       <StructuredData data={videoSchema} />
 
+      <div className="bg-gray-50 py-4 px-4 relative z-20">
+        <div className="container mx-auto max-w-4xl text-center text-sm text-gray-600">
+          Explore our other Charlotte services:{" "}
+          <Link href="/residential-lawn-turf" className="text-turf-green hover:underline font-medium">
+            residential artificial turf Charlotte NC
+          </Link>
+          {" | "}
+          <Link href="/commercial-turf" className="text-turf-green hover:underline font-medium">
+            Charlotte commercial turf installation
+          </Link>
+          {" | "}
+          <Link href="/pet-friendly-turf" className="text-turf-green hover:underline font-medium">
+            pet-friendly synthetic grass Charlotte
+          </Link>
+        </div>
+      </div>
+
       {/* Hero Section with Video */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
-          <source
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/turf-pro-putting-green-residential-home-medium-iB8P1yagGBoib76YM5qXM7kY15ka6A.mp4"
-            type="video/mp4"
-          />
+          <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/turf-pro-putting-green-residential-home-medium-iB8P1yagGBoib76YM5qXM7kY15ka6A.mp4" type="video/mp4" />
         </video>
 
         {/* Dark overlay for text readability */}
@@ -55,8 +87,9 @@ export default function PuttingGreensPage() {
         <div className="relative z-10 text-center text-white px-4 max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">Perfect Your Putt at Home</h1>
           <p className="text-xl md:text-2xl mb-8 leading-relaxed">
-            Bring the golf course to your backyard with a custom-designed, professional-grade putting green. Experience
-            true ball roll and practice your short game anytime.
+            Bring the golf course to your backyard with a custom-designed, professional-grade putting green in Charlotte
+            NC. Experience true ball roll and practice your short game anytime in Lake Norman, Ballantyne, or Myers
+            Park.
           </p>
           <Link
             href="/contact"

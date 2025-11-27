@@ -5,28 +5,31 @@ import { generateServiceSchema, generateBreadcrumbSchema, generateVideoSchema } 
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Recreational & Sports Turf | Playgrounds, Game Courts | Turf Pros",
+    title: "Playground & Sports Turf Charlotte NC | Recreational Turf Installation | Turf Pros",
     description:
-      "Install high-performance recreational turf for sports fields, playgrounds, and active play areas with Turf Pros. Durable, safe, and low-maintenance solutions.",
+      "Safe playground turf & sports field installation in Charlotte NC. Perfect for schools, daycares, churches & recreation centers. Shock-absorbent, durable synthetic grass for active play areas.",
     keywords: [
-      "recreational turf",
-      "sports turf",
-      "playground turf",
-      "artificial grass for sports",
-      "synthetic turf for play areas",
-      "multi-sport turf",
-      "game court turf",
-      "safe play surfaces",
+      "playground turf Charlotte NC",
+      "sports field turf Charlotte",
+      "school turf installation Charlotte",
+      "daycare playground turf Charlotte NC",
+      "recreational artificial grass Charlotte",
+      "church playground turf Charlotte",
+      "sports turf installation Matthews",
+      "playground surface Charlotte NC",
+      "synthetic sports field Huntersville",
+      "recreation center turf Charlotte",
     ],
     openGraph: {
-      title: "Recreational & Sports Turf Applications | Turf Pros",
-      description: "Durable and safe artificial turf for all your recreational and sports needs.",
+      title: "Playground & Sports Turf Charlotte NC | Recreational Turf Installation | Turf Pros",
+      description:
+        "Safe playground turf & sports field installation in Charlotte NC. Perfect for schools, daycares, churches & recreation centers.",
       images: [
         {
           url: "/portfolio/school-playground-field-turf.jpg",
           width: 1200,
           height: 630,
-          alt: "Recreational Sports Turf Field",
+          alt: "Recreational sports turf field in Charlotte NC",
         },
       ],
     },
@@ -60,13 +63,27 @@ export default function RecreationalTurfPage() {
       <StructuredData data={breadcrumbSchema} />
       <StructuredData data={videoSchema} />
 
+      <div className="bg-gray-50 py-4 px-4 relative z-20">
+        <div className="container mx-auto max-w-4xl text-center text-sm text-gray-600">
+          Check out our other services:{" "}
+          <Link href="/commercial-turf" className="text-turf-green hover:underline font-medium">
+            office park landscaping Charlotte
+          </Link>
+          {" | "}
+          <Link href="/residential-lawn-turf" className="text-turf-green hover:underline font-medium">
+            artificial lawn Matthews NC
+          </Link>
+          {" | "}
+          <Link href="/charlotte" className="text-turf-green hover:underline font-medium">
+            turf installation Huntersville
+          </Link>
+        </div>
+      </div>
+
       {/* Hero Section with Video */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
-          <source
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/turf-pro-putting-green-residential-home-medium-iB8P1yagGBoib76YM5qXM7kY15ka6A.mp4"
-            type="video/mp4"
-          />
+          <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/turf-pro-putting-green-residential-home-medium-iB8P1yagGBoib76YM5qXM7kY15ka6A.mp4" type="video/mp4" />
         </video>
 
         {/* Dark overlay for text readability */}
@@ -76,7 +93,8 @@ export default function RecreationalTurfPage() {
         <div className="relative z-10 text-center text-white px-4 max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">Active Play, All Year Round</h1>
           <p className="text-xl md:text-2xl mb-8 leading-relaxed">
-            High-performance recreational turf for sports, playgrounds, and active lifestyles.
+            High-performance recreational turf for sports, playgrounds, and active lifestyles in Charlotte NC. Perfect
+            for schools, daycares, and recreation centers.
           </p>
           <Link
             href="/contact"
@@ -114,7 +132,7 @@ export default function RecreationalTurfPage() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 018.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                   />
                 </svg>
               </div>

@@ -1,30 +1,44 @@
 import type { Metadata } from "next"
 import ServicePageTemplate, { type ServicePageTemplateProps } from "@/components/service-page-template"
 import { Leaf, Droplets, Sun } from "lucide-react"
+import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Residential Lawn Turf | Perfect Lawns, Zero Hassle | Turf Pros",
+  title: "Residential Artificial Turf Charlotte NC | Home Lawn Installation | Turf Pros",
   description:
-    "Discover beautiful, low-maintenance residential artificial turf solutions. Save water, time, and money while enjoying a perfect green lawn year-round. Get your free quote today!",
+    "Transform your Charlotte home with beautiful, maintenance-free artificial turf. Perfect for backyards, front yards & pool areas. Serving Ballantyne, Myers Park, Lake Norman & all Charlotte suburbs. Free estimate!",
+  keywords: [
+    "residential artificial turf Charlotte NC",
+    "backyard turf installation Charlotte",
+    "front yard artificial grass Charlotte",
+    "home lawn replacement Charlotte",
+    "low maintenance yard Charlotte NC",
+    "pool area turf Charlotte",
+    "artificial lawn Lake Norman",
+    "backyard artificial grass Myers Park",
+    "synthetic grass residential Charlotte",
+    "turf installation Ballantyne",
+  ],
   openGraph: {
-    title: "Residential Lawn Turf | Perfect Lawns, Zero Hassle | Turf Pros",
+    title: "Residential Artificial Turf Charlotte NC | Home Lawn Installation | Turf Pros",
     description:
-      "Discover beautiful, low-maintenance residential artificial turf solutions. Save water, time, and money while enjoying a perfect green lawn year-round.",
+      "Transform your Charlotte home with beautiful, maintenance-free artificial turf. Perfect for backyards, front yards & pool areas. Serving Ballantyne, Myers Park, Lake Norman & all Charlotte suburbs.",
     images: [{ url: "/portfolio/backyard-turf.jpg" }],
   },
 }
 
 const pageContent: ServicePageTemplateProps = {
   heroImageSrc: "/portfolio/backyard-turf.jpg",
-  heroImageAlt: "A beautiful residential backyard with lush, green artificial turf.",
+  heroImageAlt:
+    "Residential backyard artificial turf installation in Charlotte NC - beautiful, lush green synthetic grass lawn",
   heroTitle: "The Perfect Residential Lawn, Made Easy",
   heroSubtitle:
-    "Enjoy a lush, green, and beautiful lawn all year round without the constant watering, mowing, and maintenance. The perfect upgrade for your home.",
+    "Enjoy a lush, green, and beautiful lawn all year round without the constant watering, mowing, and maintenance. The perfect upgrade for your Charlotte home.",
   heroCtaText: "Get a Free Residential Quote",
 
   benefitsTitle: "Why Homeowners Love Our Turf",
   benefitsSubtitle:
-    "Our residential turf solutions are designed to enhance your lifestyle and boost your home's curb appeal.",
+    "Our residential turf installation in Charlotte provides homeowners with stunning, low-maintenance artificial grass solutions designed to enhance your lifestyle and boost your home's curb appeal.",
   benefits: [
     "Eliminate mowing, watering, and fertilizing forever.",
     "Save significantly on your monthly water bills.",
@@ -35,10 +49,10 @@ const pageContent: ServicePageTemplateProps = {
   ],
 
   featuresImageSrc: "/family-enjoying-turf.png",
-  featuresImageAlt: "A family playing on their durable and soft artificial grass backyard.",
+  featuresImageAlt: "Family playing on durable and soft artificial grass backyard in Charlotte NC",
   featuresTitle: "Designed for Family, Built to Last",
   featuresText:
-    "We use only the highest quality, lead-free materials that are soft to the touch but incredibly durable. Our turf stands up to heavy foot traffic, active kids, and playful pets, ensuring your investment looks great for years to come.",
+    "We use only the highest quality, lead-free materials that are soft to the touch but incredibly durable. Our turf stands up to heavy foot traffic, active kids, and playful pets, ensuring your investment looks great for years to come. Perfect for Charlotte's climate and weather conditions.",
   featuresList: [
     { icon: <Leaf className="h-5 w-5 mr-3 text-turf-green" />, text: "100% Non-Toxic & Lead-Free Materials" },
     { icon: <Droplets className="h-5 w-5 mr-3 text-turf-green" />, text: "Advanced Drainage for Quick Drying" },
@@ -46,20 +60,24 @@ const pageContent: ServicePageTemplateProps = {
   ],
 
   galleryTitle: "Residential Turf Inspiration",
-  gallerySubtitle: "See how we've transformed backyards, front yards, and patios for homeowners just like you.",
+  gallerySubtitle:
+    "See how we've transformed backyards, front yards, and patios for homeowners in Charlotte, Matthews, Huntersville, and Lake Norman.",
   galleryImages: [
     {
       src: "/portfolio/privacy-fence-general-turf-backyard.jpg",
-      alt: "A clean, terraced backyard with a privacy fence and lush artificial turf.",
+      alt: "Clean, terraced backyard with privacy fence and artificial turf installation in Charlotte NC",
     },
     {
       src: "/portfolio/landscape-backyard-pet-friendly-turf.jpg",
-      alt: "A manicured garden with a winding artificial turf path.",
+      alt: "Manicured Charlotte garden with winding artificial turf path and landscaping",
     },
-    { src: "/portfolio/pool-turf.jpg", alt: "A modern poolside patio with a checkerboard pattern of turf and pavers." },
+    {
+      src: "/portfolio/pool-turf.jpg",
+      alt: "Modern poolside patio with checkerboard pattern of synthetic turf and pavers - Charlotte NC project",
+    },
     {
       src: "/portfolio/backyard-turf.jpg",
-      alt: "An expansive turf lawn integrated beautifully into a wooded property.",
+      alt: "Expansive artificial turf lawn integrated beautifully into wooded Charlotte property",
     },
   ],
 
@@ -79,10 +97,31 @@ const pageContent: ServicePageTemplateProps = {
 
   finalCtaTitle: "Ready for Your Dream Lawn?",
   finalCtaSubtitle:
-    "Let's talk about your project. Our team is ready to provide a no-obligation quote and answer all your questions.",
+    "Let's talk about your project. Our team is ready to provide a no-obligation quote and answer all your questions about residential turf installation in Charlotte NC.",
   finalCtaButtonText: "Start Your Transformation",
 }
 
 export default function ResidentialLawnTurfPage() {
-  return <ServicePageTemplate {...pageContent} />
+  return (
+    <>
+      <div className="bg-gray-50 py-4 px-4">
+        <div className="container mx-auto max-w-4xl text-center text-sm text-gray-600">
+          Looking for other services? Check out our{" "}
+          <Link href="/commercial-turf" className="text-turf-green hover:underline font-medium">
+            Charlotte commercial turf services
+          </Link>
+          ,{" "}
+          <Link href="/putting-greens" className="text-turf-green hover:underline font-medium">
+            Lake Norman putting green installation
+          </Link>
+          , or{" "}
+          <Link href="/pet-friendly-turf" className="text-turf-green hover:underline font-medium">
+            pet-friendly turf for Charlotte homes
+          </Link>
+          .
+        </div>
+      </div>
+      <ServicePageTemplate {...pageContent} />
+    </>
+  )
 }

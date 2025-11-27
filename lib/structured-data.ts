@@ -27,6 +27,23 @@ export interface OrganizationSchema {
   }>
   priceRange?: string
   openingHours?: string[]
+  aggregateRating?: {
+    "@type": "AggregateRating"
+    ratingValue: string
+    reviewCount: string
+  }
+  hasOfferCatalog?: {
+    "@type": "OfferCatalog"
+    name: string
+    itemListElement: Array<{
+      "@type": "Offer"
+      itemOffered: {
+        "@type": "Service"
+        name: string
+        description: string
+      }
+    }>
+  }
   sameAs?: string[]
   image?: string
 }
@@ -118,7 +135,7 @@ export function generateOrganizationSchema(): OrganizationSchema {
     "@type": "LocalBusiness",
     name: "Turf Professionals",
     description:
-      "Premium artificial turf installation services for residential, commercial, and recreational properties in Charlotte, NC and surrounding areas.",
+      "Professional artificial turf installation services for residential, commercial, and recreational properties in Charlotte, NC and surrounding areas including Matthews, Huntersville, Concord, Lake Norman, and Fort Mill SC.",
     url: "https://www.turf-professionals.com",
     telephone: "+1-704-956-2687",
     email: "info@turf-professionals.com",
@@ -126,27 +143,68 @@ export function generateOrganizationSchema(): OrganizationSchema {
       "@type": "PostalAddress",
       addressLocality: "Charlotte",
       addressRegion: "NC",
+      postalCode: "28202",
       addressCountry: "US",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 35.2271,
+      longitude: -80.8431,
+    },
     areaServed: [
-      { "@type": "City", name: "Charlotte" },
-      { "@type": "City", name: "Concord" },
-      { "@type": "City", name: "Matthews" },
-      { "@type": "City", name: "Huntersville" },
-      { "@type": "City", name: "Cornelius" },
-      { "@type": "City", name: "Davidson" },
-      { "@type": "City", name: "Mooresville" },
-      { "@type": "City", name: "Waxhaw" },
-      { "@type": "City", name: "Weddington" },
-      { "@type": "City", name: "Fort Mill" },
+      { "@type": "City", name: "Charlotte, NC" },
+      { "@type": "City", name: "Matthews, NC" },
+      { "@type": "City", name: "Huntersville, NC" },
+      { "@type": "City", name: "Concord, NC" },
+      { "@type": "City", name: "Cornelius, NC" },
+      { "@type": "City", name: "Davidson, NC" },
+      { "@type": "City", name: "Mooresville, NC" },
+      { "@type": "City", name: "Waxhaw, NC" },
+      { "@type": "City", name: "Weddington, NC" },
+      { "@type": "City", name: "Indian Trail, NC" },
+      { "@type": "City", name: "Mint Hill, NC" },
+      { "@type": "City", name: "Fort Mill, SC" },
+      { "@type": "City", name: "Lake Norman Area" },
       { "@type": "State", name: "North Carolina" },
     ],
     priceRange: "$$-$$$",
-    sameAs: [
-      "https://www.facebook.com/turfprofessionals",
-      "https://www.instagram.com/turfprofessionals",
-      "https://twitter.com/turfpros",
-    ],
+    openingHours: ["Monday-Friday 08:00-18:00", "Saturday 09:00-14:00"],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      reviewCount: "50",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Artificial Turf Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Residential Artificial Turf Installation",
+            description: "Professional artificial turf installation for Charlotte NC homes",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Commercial Turf Installation",
+            description: "Commercial artificial grass for Charlotte businesses",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Putting Green Installation",
+            description: "Custom backyard putting greens in Charlotte NC",
+          },
+        },
+      ],
+    },
+    sameAs: ["https://www.facebook.com/turfprofessionals", "https://www.instagram.com/turfprofessionals"],
   }
 }
 

@@ -1,31 +1,35 @@
 import ServicePageTemplate, { type ServicePageTemplateProps } from "@/components/service-page-template"
 import { PawPrint, ShieldCheck, Sparkles, CheckCircle } from "lucide-react"
 import type { Metadata } from "next"
+import Link from "next/link"
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Pet-Friendly Artificial Turf | Safe & Durable Lawns for Dogs | Turf Pros",
+    title: "Pet-Friendly Artificial Turf Charlotte NC | Dog Turf Installation | Turf Pros",
     description:
-      "Keep your pets happy and your yard clean with Turf Pros' pet-friendly artificial turf. Safe, durable, excellent drainage, and easy to clean. Ideal for dogs and cats.",
+      "Safe, durable pet turf installation in Charlotte NC. Easy-clean dog runs & pet-friendly artificial grass with excellent drainage. Perfect for Charlotte's climate. No mud, no mess!",
     keywords: [
-      "pet-friendly turf",
-      "artificial grass for dogs",
-      "synthetic turf for pets",
-      "dog run turf",
-      "pet safe artificial grass",
-      "turf for pets",
-      "easy clean turf for dogs",
-      "durable pet turf",
+      "pet-friendly turf Charlotte NC",
+      "dog turf installation Charlotte",
+      "artificial grass for dogs Charlotte",
+      "pet safe synthetic grass Charlotte NC",
+      "dog run turf Charlotte",
+      "pet turf installation Matthews",
+      "dog friendly grass Huntersville",
+      "pet artificial turf Lake Norman",
+      "easy clean dog turf Charlotte",
+      "synthetic pet grass Charlotte NC",
     ],
     openGraph: {
-      title: "Pet-Friendly Artificial Turf Solutions | Turf Pros",
-      description: "Safe, durable, and easy-to-clean artificial grass for your beloved pets.",
+      title: "Pet-Friendly Artificial Turf Charlotte NC | Dog Turf Installation | Turf Pros",
+      description:
+        "Safe, durable pet turf installation in Charlotte NC. Easy-clean dog runs & pet-friendly artificial grass with excellent drainage. Perfect for Charlotte's climate.",
       images: [
         {
           url: "/portfolio/pet-friendly-lawn-turf-hero.jpg",
           width: 1200,
           height: 630,
-          alt: "Golden retriever relaxing on a lush, pet-friendly artificial turf lawn.",
+          alt: "Pet-friendly artificial turf lawn in Charlotte NC backyard",
         },
       ],
     },
@@ -34,12 +38,14 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const petTurfData: ServicePageTemplateProps = {
   heroImageSrc: "/portfolio/pet-friendly-lawn-turf-hero.jpg",
-  heroImageAlt: "Golden retriever relaxing on a lush, pet-friendly artificial turf lawn in a backyard.",
+  heroImageAlt:
+    "Golden retriever relaxing on pet-friendly artificial turf lawn in Charlotte NC backyard - safe synthetic grass for dogs",
   heroTitle: "The Perfect Lawn for Your Furry Friends",
-  heroSubtitle: "Discover durable, safe, and easy-to-clean pet-friendly turf solutions.",
+  heroSubtitle: "Discover durable, safe, and easy-to-clean pet-friendly turf solutions for Charlotte NC homes.",
   heroCtaText: "Get a Pet-Friendly Turf Quote",
   benefitsTitle: "Why Pet Owners Love Our Turf",
-  benefitsSubtitle: "A clean, green, and safe space for your pets to play, year-round.",
+  benefitsSubtitle:
+    "A clean, green, and safe space for your pets to play year-round in Charlotte, Matthews, and Lake Norman.",
   benefits: [
     "Safe and non-toxic for all pets",
     "Excellent drainage for easy cleanup",
@@ -49,10 +55,11 @@ const petTurfData: ServicePageTemplateProps = {
     "Hypoallergenic and comfortable for pets",
   ],
   featuresImageSrc: "/pet-turf-drainage.png",
-  featuresImageAlt: "Cross-section showing layers of pet-friendly turf and infill",
+  featuresImageAlt:
+    "Cross-section showing drainage layers of pet-friendly artificial turf system for Charlotte NC dogs",
   featuresTitle: "Designed for Pets, Built for Durability",
   featuresText:
-    "Our pet turf systems are engineered to withstand the toughest play while ensuring maximum hygiene and comfort for your beloved animals.",
+    "Our pet turf systems are engineered to withstand the toughest play while ensuring maximum hygiene and comfort for your beloved animals in Charlotte's climate.",
   featuresList: [
     {
       icon: <PawPrint className="h-5 w-5 text-turf-green mr-3" />,
@@ -66,30 +73,52 @@ const petTurfData: ServicePageTemplateProps = {
     { icon: <CheckCircle className="h-5 w-5 text-turf-green mr-3" />, text: "Resistant to staining and discoloration" },
   ],
   galleryTitle: "Happy Pets, Happy Owners",
-  gallerySubtitle: "See our pet-friendly turf in action.",
+  gallerySubtitle: "See our pet-friendly turf installations in Charlotte, Ballantyne, and surrounding NC areas.",
   galleryImages: [
     {
       src: "/portfolio/backyard-pet-friendly-general-turf.jpg",
-      alt: "A happy dog enjoying a spacious and clean pet-friendly lawn.",
+      alt: "Happy dog enjoying spacious and clean pet-friendly artificial turf lawn in Charlotte NC",
     },
     {
       src: "/portfolio/deck-general-turf-pet-friendly.jpg",
-      alt: "A clean and safe turf area for pets next to a raised patio.",
+      alt: "Clean and safe dog turf area next to raised patio - Charlotte NC installation",
     },
     {
       src: "/portfolio/backyard-pool-pet-friendly-general-turf.jpg",
-      alt: "Lush, pet-friendly turf surrounding a beautiful poolside.",
+      alt: "Pet-friendly synthetic grass surrounding beautiful poolside in Charlotte NC backyard",
     },
     {
       src: "/portfolio/pet-friendly-putting-green-backyard-general-turf.jpg",
-      alt: "A versatile backyard that is safe for pets and includes a putting green.",
+      alt: "Versatile Charlotte backyard with pet-safe artificial turf and putting green installation",
     },
   ],
   finalCtaTitle: "Give Your Pet the Best with Turf Pros",
-  finalCtaSubtitle: "Contact us for a free consultation on the ideal turf solution for your pets and your yard.",
+  finalCtaSubtitle:
+    "Contact us for a free consultation on the ideal pet-friendly turf solution for your Charlotte NC yard.",
   finalCtaButtonText: "Get My Pet Turf Quote",
 }
 
 export default function PetFriendlyTurfPage() {
-  return <ServicePageTemplate {...petTurfData} />
+  return (
+    <>
+      <div className="bg-gray-50 py-4 px-4">
+        <div className="container mx-auto max-w-4xl text-center text-sm text-gray-600">
+          Need other services? View our{" "}
+          <Link href="/residential-lawn-turf" className="text-turf-green hover:underline font-medium">
+            home lawn replacement Charlotte
+          </Link>
+          ,{" "}
+          <Link href="/putting-greens" className="text-turf-green hover:underline font-medium">
+            custom putting green installation Charlotte
+          </Link>
+          , or{" "}
+          <Link href="/charlotte" className="text-turf-green hover:underline font-medium">
+            all Charlotte turf services
+          </Link>
+          .
+        </div>
+      </div>
+      <ServicePageTemplate {...petTurfData} />
+    </>
+  )
 }
