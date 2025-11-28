@@ -20,6 +20,14 @@ export const contactFormSchema = z.object({
   service: z.enum(services, {
     errorMap: () => ({ message: "Please select a service category." }),
   }),
+  // Address fields
+  address: z.string().min(5, {
+    message: "Please enter your complete address.",
+  }),
+  street: z.string().optional(),
+  city: z.string().optional(),
+  state: z.string().optional(),
+  zipCode: z.string().optional(),
   message: z.string().min(10, {
     message: "Message must be at least 10 characters.",
   }),

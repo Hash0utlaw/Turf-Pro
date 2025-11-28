@@ -21,17 +21,14 @@ export async function sendContactEmail(values: ContactFormInputs): Promise<SendC
     return { success: false, message: "Validation failed. Please check your inputs." }
   }
 
-  const { name, email, phone, service, message } = parsed.data
+  const { name, email, phone, service, message, address, street, city, state, zipCode } = parsed.data
 
-  // Plain text version for email clients that don't support HTML
-  const text = `New contact form submission from ${name} (${email}).\n\nService Inquiry: ${service}\nPhone: ${phone || "Not provided"}\n\nMessage:\n${message}`
+  const text = `New contact form submission from ${name} (${email}).\n\nService Inquiry: ${service}\nPhone: ${phone || "Not provided"}\nProject Address: ${address}\n  Street: ${street}\n  City: ${city}\n  State: ${state}\n  Zip: ${zipCode}\n\nMessage:\n${message}`
 
   const payload = {
-    // For Resend's free tier, 'from' must be 'onboarding@resend.dev'
     from: "onboarding@resend.dev",
-    // The 'to' address must be your verified Resend account email on the free tier
     to: [RECIPIENT],
-    subject: `Turf Pros • New Inquiry for ${service}`,
+    subject: `Turf Pros • New Inquiry for ${service} - ${city}, ${state}`,
     html: `
         <h2>New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${name}</p>
@@ -39,12 +36,17 @@ export async function sendContactEmail(values: ContactFormInputs): Promise<SendC
         ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ""}
         <p><strong>Service Inquiry:</strong> ${service}</p>
         <hr/>
+        <h3>Project Address</h3>
+        <p><strong>Full Address:</strong> ${address}</p>
+        <p><strong>Street:</strong> ${street}</p>
+        <p><strong>City:</strong> ${city}</p>
+        <p><strong>State:</strong> ${state}</p>
+        <p><strong>Zip Code:</strong> ${zipCode}</p>
+        <hr/>
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, "<br/>")}</p>
       `,
-    // Add the plain text version
     text: text,
-    // The 'reply_to' field allows you to reply directly to the user
     reply_to: email,
   }
 
