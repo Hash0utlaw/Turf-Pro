@@ -132,11 +132,55 @@ function SiteFooter() {
             <h4 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4 text-center">
               Serving Charlotte NC & Surrounding Areas
             </h4>
-            <p className="text-center text-base text-brand-gray-text leading-relaxed">
-              Charlotte | Matthews | Huntersville | Concord | Mooresville | Lake Norman | Waxhaw | Indian Trail | Mint
-              Hill | Fort Mill SC | Ballantyne | Myers Park | South Park | Dilworth | NoDa | Uptown Charlotte |
-              Cornelius | Davidson
-            </p>
+            <div className="flex flex-wrap justify-center gap-2 text-center text-base text-brand-gray-text leading-relaxed">
+              <Link href="/charlotte" className="hover:text-turf-green transition-colors">
+                Charlotte
+              </Link>
+              <span>|</span>
+              <Link href="/matthews" className="hover:text-turf-green transition-colors">
+                Matthews
+              </Link>
+              <span>|</span>
+              <Link href="/huntersville" className="hover:text-turf-green transition-colors">
+                Huntersville
+              </Link>
+              <span>|</span>
+              <Link href="/concord" className="hover:text-turf-green transition-colors">
+                Concord
+              </Link>
+              <span>|</span>
+              <Link href="/mooresville" className="hover:text-turf-green transition-colors">
+                Mooresville
+              </Link>
+              <span>|</span>
+              <Link href="/lake-norman" className="hover:text-turf-green transition-colors">
+                Lake Norman
+              </Link>
+              <span>|</span>
+              <Link href="/waxhaw" className="hover:text-turf-green transition-colors">
+                Waxhaw
+              </Link>
+              <span>|</span>
+              <Link href="/indian-trail" className="hover:text-turf-green transition-colors">
+                Indian Trail
+              </Link>
+              <span>|</span>
+              <Link href="/mint-hill" className="hover:text-turf-green transition-colors">
+                Mint Hill
+              </Link>
+              <span>|</span>
+              <Link href="/fort-mill" className="hover:text-turf-green transition-colors">
+                Fort Mill SC
+              </Link>
+              <span>|</span>
+              <Link href="/cornelius" className="hover:text-turf-green transition-colors">
+                Cornelius
+              </Link>
+              <span>|</span>
+              <Link href="/davidson" className="hover:text-turf-green transition-colors">
+                Davidson
+              </Link>
+            </div>
           </div>
         </div>
         <div className="border-t border-brand-gray py-6 text-center text-sm text-brand-gray-dark">

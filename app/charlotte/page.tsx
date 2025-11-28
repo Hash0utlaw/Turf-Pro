@@ -132,13 +132,31 @@ export default function CharlottePage() {
       <StructuredData data={localBusinessSchema} />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-turf-green to-turf-green-dark text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+      <section className="relative py-32 md:py-40 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center brightness-75"
+          style={{
+            backgroundImage: "url('/beautiful-artificial-turf-backyard-in-charlotte-nc.jpg')",
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/20" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <div className="mb-6 flex flex-wrap gap-3 justify-center">
+              <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium border border-white/30">
+                5.0 ★★★★★ Rated
+              </span>
+              <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium border border-white/30">
+                Licensed & Insured
+              </span>
+              <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium border border-white/30">
+                Free Quotes
+              </span>
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
               Artificial Turf Installation Company <span className="block mt-2">Charlotte NC</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-100 text-balance leading-relaxed">
+            <p className="text-xl md:text-2xl mb-8 text-white/95 text-balance leading-relaxed">
               Professional synthetic grass installation for homes and businesses in Charlotte, Matthews, Huntersville,
               Lake Norman & surrounding NC areas.
             </p>
