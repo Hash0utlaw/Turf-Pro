@@ -3,7 +3,7 @@
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { toast } from "sonner"
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState, useCallback } from "react"
 import type { google } from "googlemaps"
 
 import { contactFormSchema, type ContactFormInputs } from "@/lib/contact-form-schema"
@@ -53,22 +53,21 @@ export function ContactPageClient() {
     },
   })
 
+  const setAddressInputRef = useCallback((node: HTMLInputElement | null) => {
+    addressInputRef.current = node
+  }, [])
+
   useEffect(() => {
     const initializeAutocomplete = () => {
       if (!window.google || !window.google.maps || !window.google.maps.places) {
-        console.log("[v0] Google Maps not loaded yet, waiting...")
         return
       }
 
       if (!addressInputRef.current) {
-        console.log("[v0] Address input ref not ready")
         return
       }
 
-      console.log("[v0] Initializing Google Places Autocomplete")
-
       try {
-        // Initialize autocomplete with US-only restrictions
         const autocomplete = new window.google.maps.places.Autocomplete(addressInputRef.current, {
           types: ["address"],
           componentRestrictions: { country: "us" },
@@ -76,10 +75,8 @@ export function ContactPageClient() {
 
         autocomplete.setFields(["address_components", "formatted_address"])
 
-        // Handle place selection
         autocomplete.addListener("place_changed", () => {
           const place = autocomplete.getPlace()
-          console.log("[v0] Place selected:", place)
 
           if (!place.address_components) {
             setAddressValidated(false)
@@ -87,7 +84,6 @@ export function ContactPageClient() {
             return
           }
 
-          // Parse address components
           let street = ""
           let city = ""
           let state = ""
@@ -113,16 +109,12 @@ export function ContactPageClient() {
             }
           })
 
-          // Validate all components are present
           if (!street || !city || !state || !zipCode) {
             setAddressValidated(false)
             toast.error("Please select a complete address with street, city, state, and zip code")
             return
           }
 
-          console.log("[v0] Address parsed:", { street, city, state, zipCode })
-
-          // Update form with parsed address
           form.setValue("address", place.formatted_address || "")
           form.setValue("street", street)
           form.setValue("city", city)
@@ -135,14 +127,12 @@ export function ContactPageClient() {
 
         autocompleteRef.current = autocomplete
         setIsAutocompleteReady(true)
-        console.log("[v0] Autocomplete initialized successfully")
       } catch (error) {
-        console.error("[v0] Error initializing autocomplete:", error)
+        console.error("Error initializing autocomplete:", error)
         setIsAutocompleteReady(false)
       }
     }
 
-    // Wait for Google Maps to load
     const checkGoogleMaps = setInterval(() => {
       if (window.google?.maps?.places) {
         clearInterval(checkGoogleMaps)
@@ -150,11 +140,9 @@ export function ContactPageClient() {
       }
     }, 100)
 
-    // Cleanup after 10 seconds if not loaded
     const timeout = setTimeout(() => {
       clearInterval(checkGoogleMaps)
       if (!isAutocompleteReady) {
-        console.log("[v0] Google Maps failed to load, falling back to manual entry")
         setIsAutocompleteReady(false)
       }
     }, 10000)
@@ -166,10 +154,9 @@ export function ContactPageClient() {
         window.google.maps.event.clearInstanceListeners(autocompleteRef.current)
       }
     }
-  }, [form])
+  }, [form, isAutocompleteReady])
 
   const onSubmit = async (values: ContactFormInputs) => {
-    // Validate address is complete before submission
     if (!values.street || !values.city || !values.state || !values.zipCode) {
       toast.error("Please select a complete address from the autocomplete suggestions")
       setAddressValidated(false)
@@ -240,26 +227,29 @@ export function ContactPageClient() {
             <FormItem>
               <FormLabel>Project Address</FormLabel>
               <FormControl>
-                <Input
+                <input
+                  type="text"
                   placeholder={
                     isAutocompleteReady ? "Start typing your address..." : "Enter your full address with zip code"
                   }
                   {...field}
-                  ref={addressInputRef}
+                  ref={(node) => {
+                    setAddressInputRef(node)
+                    if (typeof field.ref === "function") {
+                      field.ref(node)
+                    }
+                  }}
                   onChange={(e) => {
                     field.onChange(e)
                     setAddressValidated(null)
                   }}
-                  onBlur={(e) => {
-                    field.onBlur()
-                  }}
-                  className={
+                  className={`flex h-10 w-full rounded-md border bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${
                     addressValidated === true
                       ? "border-green-500 focus-visible:ring-green-500"
                       : addressValidated === false
                         ? "border-red-500 focus-visible:ring-red-500"
-                        : ""
-                  }
+                        : "border-input"
+                  }`}
                   autoComplete="off"
                 />
               </FormControl>

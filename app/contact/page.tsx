@@ -43,12 +43,16 @@ const MapPinIcon = () => (
 )
 
 export default function ContactPage() {
+  const googleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY || ""
+
   return (
     <>
-      <Script
-        src={`https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&libraries=places`}
-        strategy="beforeInteractive"
-      />
+      {googleMapsApiKey && (
+        <Script
+          src={`https://maps.googleapis.com/maps/api/js?key=${googleMapsApiKey}&libraries=places`}
+          strategy="beforeInteractive"
+        />
+      )}
       <div className="bg-white dark:bg-gray-950">
         <header className="bg-gray-50 dark:bg-gray-900 py-12 md:py-20">
           <div className="container mx-auto px-4 md:px-6 text-center">
