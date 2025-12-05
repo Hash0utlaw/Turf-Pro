@@ -48,8 +48,9 @@ const pageContent: ServicePageTemplateProps = {
     "Increases your property value with a stunning, low-maintenance landscape.",
   ],
 
-  featuresImageSrc: "/family-enjoying-turf.png",
-  featuresImageAlt: "Family playing on durable and soft artificial grass backyard in Charlotte NC",
+  featuresImageSrc: "/portfolio/residential-backyard-artificial-turf-landscaping.jpg",
+  featuresImageAlt:
+    "Beautiful residential backyard with professionally installed artificial turf in Charlotte NC - family-friendly lawn",
   featuresTitle: "Designed for Family, Built to Last",
   featuresText:
     "We use only the highest quality, lead-free materials that are soft to the touch but incredibly durable. Our turf stands up to heavy foot traffic, active kids, and playful pets, ensuring your investment looks great for years to come. Perfect for Charlotte's climate and weather conditions.",
