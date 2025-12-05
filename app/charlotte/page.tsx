@@ -86,7 +86,7 @@ const localBusinessSchema = {
   image: "https://www.turf-professionals.com/hero-homepage-new.png",
   "@id": "https://www.turf-professionals.com/charlotte",
   url: "https://www.turf-professionals.com/charlotte",
-  telephone: "+1-704-956-2687",
+  telephone: "+1-704-995-6265",
   priceRange: "$$-$$$",
   address: {
     "@type": "PostalAddress",
@@ -170,9 +170,9 @@ export default function CharlottePage() {
                 variant="outline"
                 className="bg-transparent border-white text-white hover:bg-white/10"
               >
-                <Link href="tel:+17049562687">
+                <Link href="tel:+17049956265">
                   <Phone className="mr-2 h-5 w-5" />
-                  (704) 956-2687
+                  (704) 995-6265
                 </Link>
               </Button>
             </div>
@@ -334,9 +334,9 @@ export default function CharlottePage() {
               variant="outline"
               className="bg-transparent border-white text-white hover:bg-white/10"
             >
-              <Link href="tel:+17049562687">
+              <Link href="tel:+17049956265">
                 <Phone className="mr-2 h-5 w-5" />
-                Call (704) 956-2687
+                Call (704) 995-6265
               </Link>
             </Button>
           </div>

@@ -11,7 +11,7 @@ import { StructuredData } from "@/components/structured-data"
 export const metadata: Metadata = {
   title: "Artificial Turf Installation Huntersville NC | Turf Professionals",
   description:
-    "Professional artificial turf installation in Huntersville NC near Lake Norman. Beautiful synthetic grass for residential & commercial properties. Free quotes! Call (704) 956-2687",
+    "Professional artificial turf installation in Huntersville NC near Lake Norman. Beautiful synthetic grass for residential & commercial properties. Free quotes! Call (704) 995-6265",
   keywords: [
     "artificial turf installation Huntersville NC",
     "synthetic grass Huntersville",
@@ -60,7 +60,7 @@ const localBusinessSchema = {
   image: "https://www.turf-professionals.com/hero-homepage-new.png",
   "@id": "https://www.turf-professionals.com/huntersville",
   url: "https://www.turf-professionals.com/huntersville",
-  telephone: "+1-704-956-2687",
+  telephone: "+1-704-995-6265",
   priceRange: "$$-$$$",
   address: {
     "@type": "PostalAddress",
@@ -113,9 +113,9 @@ export default function HuntersvillePage() {
                 variant="outline"
                 className="bg-white/90 backdrop-blur-sm border-2 border-white text-turf-green hover:bg-white text-lg px-8"
               >
-                <Link href="tel:+17049562687">
+                <Link href="tel:+17049956265">
                   <Phone className="mr-2 h-5 w-5" />
-                  (704) 956-2687
+                  (704) 995-6265
                 </Link>
               </Button>
             </div>
@@ -401,9 +401,9 @@ export default function HuntersvillePage() {
               variant="outline"
               className="bg-transparent border-2 border-white text-white hover:bg-white/10 text-lg px-8"
             >
-              <Link href="tel:+17049562687">
+              <Link href="tel:+17049956265">
                 <Phone className="mr-2 h-5 w-5" />
-                Call (704) 956-2687
+                Call (704) 995-6265
               </Link>
             </Button>
           </div>
