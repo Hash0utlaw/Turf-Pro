@@ -157,10 +157,12 @@ export function ContactPageClient() {
   }, [form, isAutocompleteReady])
 
   const onSubmit = async (values: ContactFormInputs) => {
-    if (!values.street || !values.city || !values.state || !values.zipCode) {
-      toast.error("Please select a complete address from the autocomplete suggestions")
-      setAddressValidated(false)
-      return
+    // If Google autocomplete is available but user hasn't selected from dropdown,
+    // show a warning but still allow manual entry
+    if (isAutocompleteReady && (!values.street || !values.city || !values.state || !values.zipCode)) {
+      toast.warning("For best results, please select an address from the suggestions", {
+        description: "We'll process your manually entered address.",
+      })
     }
 
     const result: SendContactEmailResult = await sendContactEmail(values)

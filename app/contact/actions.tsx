@@ -23,12 +23,15 @@ export async function sendContactEmail(values: ContactFormInputs): Promise<SendC
 
   const { name, email, phone, service, message, address, street, city, state, zipCode } = parsed.data
 
-  const text = `New contact form submission from ${name} (${email}).\n\nService Inquiry: ${service}\nPhone: ${phone || "Not provided"}\nProject Address: ${address}\n  Street: ${street}\n  City: ${city}\n  State: ${state}\n  Zip: ${zipCode}\n\nMessage:\n${message}`
+  // Build location for subject line
+  const location = city && state ? `${city}, ${state}` : state || city || "Address Provided"
+
+  const text = `New contact form submission from ${name} (${email}).\n\nService Inquiry: ${service}\nPhone: ${phone || "Not provided"}\nProject Address: ${address}${street ? `\n  Street: ${street}` : ""}${city ? `\n  City: ${city}` : ""}${state ? `\n  State: ${state}` : ""}${zipCode ? `\n  Zip: ${zipCode}` : ""}\n\nMessage:\n${message}`
 
   const payload = {
     from: "onboarding@resend.dev",
     to: [RECIPIENT],
-    subject: `Turf Pros • New Inquiry for ${service} - ${city}, ${state}`,
+    subject: `Turf Pros • New Inquiry for ${service} - ${location}`,
     html: `
         <h2>New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${name}</p>
@@ -38,10 +41,10 @@ export async function sendContactEmail(values: ContactFormInputs): Promise<SendC
         <hr/>
         <h3>Project Address</h3>
         <p><strong>Full Address:</strong> ${address}</p>
-        <p><strong>Street:</strong> ${street}</p>
-        <p><strong>City:</strong> ${city}</p>
-        <p><strong>State:</strong> ${state}</p>
-        <p><strong>Zip Code:</strong> ${zipCode}</p>
+        ${street ? `<p><strong>Street:</strong> ${street}</p>` : ""}
+        ${city ? `<p><strong>City:</strong> ${city}</p>` : ""}
+        ${state ? `<p><strong>State:</strong> ${state}</p>` : ""}
+        ${zipCode ? `<p><strong>Zip Code:</strong> ${zipCode}</p>` : ""}
         <hr/>
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, "<br/>")}</p>
