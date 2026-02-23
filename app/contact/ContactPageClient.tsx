@@ -34,6 +34,7 @@ const services = [
 export function ContactPageClient() {
   const [isAutocompleteReady, setIsAutocompleteReady] = useState(false)
   const [addressValidated, setAddressValidated] = useState<boolean | null>(null)
+  const [submitSuccess, setSubmitSuccess] = useState(false)
   const addressInputRef = useRef<HTMLInputElement>(null)
   const autocompleteRef = useRef<google.maps.places.Autocomplete | null>(null)
 
@@ -157,17 +158,23 @@ export function ContactPageClient() {
   }, [form, isAutocompleteReady])
 
   const onSubmit = async (values: ContactFormInputs) => {
-    if (!values.street || !values.city || !values.state || !values.zipCode) {
-      toast.error("Please select a complete address from the autocomplete suggestions")
-      setAddressValidated(false)
-      return
+    setSubmitSuccess(false)
+    
+    // If Google autocomplete is available but user hasn't selected from dropdown,
+    // show a warning but still allow manual entry
+    if (isAutocompleteReady && (!values.street || !values.city || !values.state || !values.zipCode)) {
+      toast.warning("For best results, please select an address from the suggestions", {
+        description: "We'll process your manually entered address.",
+      })
     }
 
     const result: SendContactEmailResult = await sendContactEmail(values)
 
     if (result.success) {
-      toast.success("Message Sent!", {
-        description: result.message,
+      setSubmitSuccess(true)
+      toast.success("Message Sent Successfully!", {
+        description: "We'll get back to you within 24 hours.",
+        duration: 5000,
       })
       form.reset()
       setAddressValidated(null)
@@ -181,6 +188,32 @@ export function ContactPageClient() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        {submitSuccess && (
+          <div className="rounded-lg bg-green-50 p-4 border border-green-200">
+            <div className="flex items-start">
+              <div className="flex-shrink-0">
+                <svg
+                  className="h-5 w-5 text-green-400"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <h3 className="text-sm font-medium text-green-800">Message sent successfully!</h3>
+                <p className="mt-1 text-sm text-green-700">
+                  Thank you for contacting us. We'll review your message and get back to you within 24 hours.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
         <FormField
           control={form.control}
           name="name"
