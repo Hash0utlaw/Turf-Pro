@@ -9,7 +9,7 @@ import { Phone, MapPin, Star, CheckCircle2, Award, Shield, Clock } from "lucide-
 import { StructuredData } from "@/components/structured-data"
 
 export const metadata: Metadata = {
-  title: "Artificial Turf Installation Huntersville NC | Atlantic Turf Specialist",
+  title: "Artificial Turf Installation Huntersville NC | Turf Professionals",
   description:
     "Professional artificial turf installation in Huntersville NC near Lake Norman. Beautiful synthetic grass for residential & commercial properties. Free quotes! Call (704) 995-6265",
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "commercial turf Huntersville",
   ],
   openGraph: {
-    title: "Artificial Turf Installation Huntersville NC | Atlantic Turf Specialist",
+    title: "Artificial Turf Installation Huntersville NC | Turf Professionals",
     description: "Professional artificial turf installation in Huntersville NC near Lake Norman.",
     images: [{ url: "/hero-homepage-new.png" }],
   },
@@ -56,10 +56,10 @@ const services = [
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Atlantic Turf Specialist - Huntersville NC",
-  image: "https://www.atlanticturfspecialist.com/hero-homepage-new.png",
-  "@id": "https://www.atlanticturfspecialist.com/huntersville",
-  url: "https://www.atlanticturfspecialist.com/huntersville",
+  name: "Turf Professionals - Huntersville NC",
+  image: "https://www.turf-professionals.com/hero-homepage-new.png",
+  "@id": "https://www.turf-professionals.com/huntersville",
+  url: "https://www.turf-professionals.com/huntersville",
   telephone: "+1-704-995-6265",
   priceRange: "$$-$$$",
   address: {

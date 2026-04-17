@@ -16,7 +16,7 @@ export const blogPosts: BlogPost[] = [
     slug: "custom-putting-greens-charlotte-nc-complete-guide-2025",
     title: "Custom Putting Greens in Charlotte, NC: The Complete 2025 Guide to Backyard Golf Paradise",
     date: "2025-10-15",
-    author: "Atlantic Turf Specialist Team",
+    author: "Turf Professionals Team",
     image: "/portfolio/residential-turf-backyard-pool.jpg",
     excerpt:
       "Transform your Charlotte backyard into a personal golf oasis with a custom putting green. This comprehensive guide covers design options, installation costs, maintenance tips, and why Charlotte homeowners are investing in backyard putting greens in 2025.",
@@ -313,7 +313,7 @@ export const blogPosts: BlogPost[] = [
     
     <p>The combination of year-round usability, minimal maintenance requirements, and the convenience of practicing at home makes a putting green one of the most rewarding additions you can make to your Charlotte property. With proper planning, quality installation, and basic maintenance, your backyard putting green will provide decades of enjoyment and value.</p>
     
-    <p><strong>Ready to transform your Charlotte backyard into a personal golf oasis?</strong> <a href="/contact" class="text-green-600 hover:text-green-700 underline">Contact Atlantic Turf Specialist today</a> for a free consultation. Our experienced team understands Charlotte's unique conditions and will help you design and install the perfect putting green for your home, budget, and golf aspirations.</p>
+    <p><strong>Ready to transform your Charlotte backyard into a personal golf oasis?</strong> <a href="/contact" class="text-green-600 hover:text-green-700 underline">Contact Turf Professionals today</a> for a free consultation. Our experienced team understands Charlotte's unique conditions and will help you design and install the perfect putting green for your home, budget, and golf aspirations.</p>
     `,
     publishedAt: "2025-10-15",
     isPublished: true,
@@ -337,7 +337,7 @@ export const blogPosts: BlogPost[] = [
     slug: "charlotte-nc-artificial-turf-guide-2025",
     title: "The Complete Guide to Artificial Turf Installation in Charlotte, NC and Surrounding Areas: 2025 Edition",
     date: "2025-10-07",
-    author: "Atlantic Turf Specialist Team",
+    author: "Turf Professionals Team",
     image: "/portfolio/residential-backyard-artificial-turf-landscaping.jpg",
     excerpt:
       "Discover why Charlotte, NC homeowners are choosing artificial turf for their lawns. This comprehensive guide covers climate considerations, cost savings, installation tips, and local regulations for synthetic grass in Charlotte, Concord, Matthews, Huntersville, and surrounding areas.",
@@ -579,7 +579,7 @@ export const blogPosts: BlogPost[] = [
     
     <p>Whether you're dealing with Charlotte's challenging clay soil, looking to reduce your water consumption, or simply want a beautiful lawn without the constant maintenance, artificial turf offers a proven solution that enhances property values and quality of life throughout the Queen City and surrounding communities.</p>
     
-    <p><strong>Ready to explore artificial turf for your Charlotte-area property?</strong> <a href="/contact" class="text-green-600 hover:text-green-700 underline">Contact Atlantic Turf Specialist today</a> for a free consultation. Our experienced team understands the unique challenges of Charlotte's climate and soil conditions, and we'll help you design the perfect artificial turf solution for your home or business.</p>
+    <p><strong>Ready to explore artificial turf for your Charlotte-area property?</strong> <a href="/contact" class="text-green-600 hover:text-green-700 underline">Contact Turf Professionals today</a> for a free consultation. Our experienced team understands the unique challenges of Charlotte's climate and soil conditions, and we'll help you design the perfect artificial turf solution for your home or business.</p>
     `,
     publishedAt: "2025-10-07",
     isPublished: true,
@@ -601,7 +601,7 @@ export const blogPosts: BlogPost[] = [
     slug: "artificial-turf-drainage-systems-complete-guide-2025",
     title: "Artificial Turf Drainage Systems: The Complete Guide to Preventing Water Issues in 2025",
     date: "2025-09-11",
-    author: "Atlantic Turf Specialist Team",
+    author: "Turf Professionals Team",
     image: "/portfolio/drainage-installation.jpg",
     excerpt:
       "Discover everything you need to know about artificial turf drainage systems. This comprehensive guide covers drainage design, installation techniques, maintenance, and troubleshooting to ensure your synthetic lawn performs perfectly in all weather conditions.",
@@ -806,7 +806,7 @@ export const blogPosts: BlogPost[] = [
     
     <p>When planning your artificial turf project, prioritize drainage. It’s an investment that pays dividends in a clean, odor-free, and long-lasting synthetic lawn that performs beautifully in all weather conditions.</p>
     
-    <p><strong>Need expert advice on artificial turf drainage?</strong> <a href="/contact" class="text-green-600 hover:text-green-700 underline">Contact Atlantic Turf Specialist today</a> for a site assessment and customized drainage solution. We ensure your synthetic lawn performs perfectly for years to come.</p>
+    <p><strong>Need expert advice on artificial turf drainage?</strong> <a href="/contact" class="text-green-600 hover:text-green-700 underline">Contact Turf Professionals today</a> for a site assessment and customized drainage solution. We ensure your synthetic lawn performs perfectly for years to come.</p>
   `,
     publishedAt: "2025-09-11",
     isPublished: true,
@@ -825,7 +825,7 @@ export const blogPosts: BlogPost[] = [
     slug: "artificial-turf-installation-process-step-by-step-guide-2025",
     title: "Artificial Turf Installation Process: A Step-by-Step Guide to Professional Results in 2025",
     date: "2025-08-25",
-    author: "Atlantic Turf Specialist Team",
+    author: "Turf Professionals Team",
     image: "/portfolio/general-turf-installation.jpg",
     excerpt:
       "Discover the complete artificial turf installation process from start to finish. This comprehensive guide covers every step, from site preparation to final touches, ensuring you understand what to expect from professional installation.",
@@ -1112,7 +1112,7 @@ export const blogPosts: BlogPost[] = [
     
     <p>The step-by-step process outlined in this guide demonstrates why professional installation is worth the investment. The expertise, equipment, and experience that professionals bring to your project ensure optimal results that will stand the test of time.</p>
     
-    <p><strong>Ready to start your artificial turf installation project?</strong> <a href="/contact" class="text-green-600 hover:text-green-700 underline">Contact Atlantic Turf Specialist today</a> for a comprehensive consultation. Our experienced team will assess your property, discuss your needs, and provide a detailed installation plan that ensures exceptional results for your investment.</p>
+    <p><strong>Ready to start your artificial turf installation project?</strong> <a href="/contact" class="text-green-600 hover:text-green-700 underline">Contact Turf Professionals today</a> for a comprehensive consultation. Our experienced team will assess your property, discuss your needs, and provide a detailed installation plan that ensures exceptional results for your investment.</p>
   `,
     publishedAt: "2025-08-25",
     isPublished: true,
@@ -1129,7 +1129,7 @@ export const blogPosts: BlogPost[] = [
     slug: "artificial-turf-vs-natural-grass-complete-comparison-2025",
     title: "Artificial Turf vs. Natural Grass: The Complete 2025 Comparison Guide",
     date: "2025-08-18",
-    author: "Atlantic Turf Specialist Team",
+    author: "Turf Professionals Team",
     image: "/portfolio/backyard-pet-friendly-general-turf.jpg",
     excerpt:
       "Choosing between artificial turf and natural grass? This comprehensive 2025 comparison covers cost, maintenance, environmental impact, durability, and more to help you make the best decision for your property.",
@@ -1349,7 +1349,7 @@ export const blogPosts: BlogPost[] = [
     
     <p>Whichever option you choose, proper installation and maintenance are crucial for optimal results. Professional consultation can help you evaluate your specific situation and make the best decision for your property.</p>
     
-    <p><strong>Ready to explore your options?</strong> <a href="/contact" class="text-green-600 hover:text-green-700 underline">Contact Atlantic Turf Specialist today</a> for a comprehensive consultation. We'll assess your property, discuss your needs, and help you choose the perfect solution for your outdoor space.</p>
+    <p><strong>Ready to explore your options?</strong> <a href="/contact" class="text-green-600 hover:text-green-700 underline">Contact Turf Professionals today</a> for a comprehensive consultation. We'll assess your property, discuss your needs, and help you choose the perfect solution for your outdoor space.</p>
   `,
     publishedAt: "2025-08-18",
     isPublished: true,
@@ -1366,7 +1366,7 @@ export const blogPosts: BlogPost[] = [
     slug: "true-cost-of-artificial-turf-investment-breakdown-2025",
     title: "The True Cost of Artificial Turf: A 2025 Investment Breakdown",
     date: "2025-08-11",
-    author: "Atlantic Turf Specialist Team",
+    author: "Turf Professionals Team",
     image: "/portfolio/pool-lake-hardscape-general-turf.jpg",
     excerpt:
       "Thinking about artificial turf? This guide breaks down the true cost, from initial installation prices to long-term savings and return on investment. See how synthetic grass is a smart financial decision for your home in 2025.",
@@ -1443,7 +1443,7 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion: A Smart Investment in Your Home and Future</h2>
       <p>When you analyze the numbers, the conclusion is clear. The initial cost of artificial turf is not just an expense; it's a pre-payment for decades of savings on water, supplies, and maintenance. It's an investment that offers a clear financial ROI within a few years and continues to pay dividends long after.</p>
       <p>By choosing artificial turf, you are investing in a durable, beautiful, and valuable asset for your home. You are buying back your time, reducing your environmental footprint, and creating a safer, cleaner space for your family to enjoy.</p>
-      <p><strong>Ready to see what the true cost and savings would be for your specific property?</strong> <a href="/contact" class="text-green-600 hover:text-green-700 underline">Contact Atlantic Turf Specialist today for a free, no-obligation estimate.</a> We'll provide a detailed breakdown so you can make the best investment decision for your home.</p>
+      <p><strong>Ready to see what the true cost and savings would be for your specific property?</strong> <a href="/contact" class="text-green-600 hover:text-green-700 underline">Contact Turf Professionals today for a free, no-obligation estimate.</a> We'll provide a detailed breakdown so you can make the best investment decision for your home.</p>
     `,
     publishedAt: "2025-08-11",
     isPublished: true,
@@ -1453,7 +1453,7 @@ export const blogPosts: BlogPost[] = [
     slug: "ultimate-guide-pet-friendly-artificial-turf",
     title: "The Ultimate Guide to Pet-Friendly Artificial Turf: A Safe & Clean Solution for Your Furry Friends",
     date: "2025-08-04",
-    author: "Atlantic Turf Specialist Team",
+    author: "Turf Professionals Team",
     image: "/portfolio/pet-friendly-lawn-turf-hero.jpg",
     excerpt:
       "Is artificial turf right for your pets? This ultimate guide covers everything you need to know about pet-friendly turf, from key benefits and safety features to installation and maintenance. Create the perfect yard for your furry family members.",
@@ -1522,7 +1522,7 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion: A Win-Win for You and Your Pet</h2>
       <p>Investing in a pet-friendly artificial turf system is an investment in peace of mind. It's a solution that frees you from the endless chores and frustrations of maintaining a natural lawn with pets. You get a stunning, low-maintenance yard, and your pet gets a safe, clean, and durable space to be their happiest, most playful self.</p>
       <p>No more mud, no more mess, no more chemicals—just a beautiful, green lawn that everyone in the family, furry or not, can enjoy for years to come.</p>
-      <p><strong>Ready to transform your yard into a pet paradise?</strong> <a href="/contact" class="text-green-600 hover:text-green-700 underline">Contact the experts at Atlantic Turf Specialist today</a> for a free consultation. We'll help you design the perfect pet-friendly turf system for your home and your beloved companions.</p>
+      <p><strong>Ready to transform your yard into a pet paradise?</strong> <a href="/contact" class="text-green-600 hover:text-green-700 underline">Contact the experts at Turf Professionals today</a> for a free consultation. We'll help you design the perfect pet-friendly turf system for your home and your beloved companions.</p>
     `,
     publishedAt: "2025-08-04",
     isPublished: true,
@@ -1532,7 +1532,7 @@ export const blogPosts: BlogPost[] = [
     slug: "artificial-turf-benefits-comprehensive-guide-2025",
     title: "The Complete Guide to Artificial Turf Benefits: Why Synthetic Grass is the Smart Choice in 2025",
     date: "2025-07-26",
-    author: "Atlantic Turf Specialist Team",
+    author: "Turf Professionals Team",
     image: "/portfolio/backyard-turf.jpg",
     excerpt:
       "Discover the comprehensive benefits of artificial turf installation, from water conservation and cost savings to year-round beauty and low maintenance. Learn why synthetic grass is becoming the preferred choice for homeowners and businesses.",
@@ -1854,7 +1854,7 @@ export const blogPosts: BlogPost[] = [
     slug: "fall-artificial-turf-maintenance-complete-guide-2025",
     title: "Fall Artificial Turf Maintenance: The Complete Guide to Preparing Your Synthetic Lawn for Winter 2025",
     date: "2025-09-16",
-    author: "Atlantic Turf Specialist Team",
+    author: "Turf Professionals Team",
     image: "/portfolio/fall-turf-maintenance.jpg",
     excerpt:
       "Essential fall maintenance tips to keep your artificial turf looking perfect through winter. Learn professional techniques for leaf removal, deep cleaning, drainage preparation, and seasonal care that extends your synthetic lawn's lifespan.",
@@ -2105,7 +2105,7 @@ export const blogPosts: BlogPost[] = [
     slug: "winter-artificial-turf-preparation-guide-2025",
     title: "Winter Artificial Turf Preparation: Essential Steps to Protect Your Investment Through Cold Weather 2025",
     date: "2025-09-22",
-    author: "Atlantic Turf Specialist Team",
+    author: "Turf Professionals Team",
     image: "/blog/winter-turf-preparation-hero.jpg",
     excerpt:
       "Prepare your artificial turf for winter with this comprehensive guide. Learn professional techniques for cold weather protection, snow management, ice prevention, and maintenance strategies that ensure your synthetic lawn survives harsh winter conditions and emerges perfect in spring.",

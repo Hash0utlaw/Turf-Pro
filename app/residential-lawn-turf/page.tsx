@@ -4,7 +4,7 @@ import { Leaf, Droplets, Sun } from "lucide-react"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-    title: "Residential Artificial Turf Charlotte NC | Home Lawn Installation | Atlantic Turf Specialist",
+  title: "Residential Artificial Turf Charlotte NC | Home Lawn Installation | Turf Pros",
   description:
     "Transform your Charlotte home with beautiful, maintenance-free artificial turf. Perfect for backyards, front yards & pool areas. Serving Ballantyne, Myers Park, Lake Norman & all Charlotte suburbs. Free estimate!",
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "turf installation Ballantyne",
   ],
   openGraph: {
-  title: "Residential Artificial Turf Charlotte NC | Home Lawn Installation | Atlantic Turf Specialist",
+    title: "Residential Artificial Turf Charlotte NC | Home Lawn Installation | Turf Pros",
     description:
       "Transform your Charlotte home with beautiful, maintenance-free artificial turf. Perfect for backyards, front yards & pool areas. Serving Ballantyne, Myers Park, Lake Norman & all Charlotte suburbs.",
     images: [{ url: "/portfolio/backyard-turf.jpg" }],

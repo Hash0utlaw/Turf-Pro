@@ -5,7 +5,7 @@ import { generateServiceSchema, generateBreadcrumbSchema, generateVideoSchema } 
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-      title: "Playground & Sports Turf Charlotte NC | Recreational Turf Installation | Atlantic Turf Specialist",
+    title: "Playground & Sports Turf Charlotte NC | Recreational Turf Installation | Turf Pros",
     description:
       "Safe playground turf & sports field installation in Charlotte NC. Perfect for schools, daycares, churches & recreation centers. Shock-absorbent, durable synthetic grass for active play areas.",
     keywords: [
@@ -21,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "recreation center turf Charlotte",
     ],
     openGraph: {
-    title: "Playground & Sports Turf Charlotte NC | Recreational Turf Installation | Atlantic Turf Specialist",
+      title: "Playground & Sports Turf Charlotte NC | Recreational Turf Installation | Turf Pros",
       description:
         "Safe playground turf & sports field installation in Charlotte NC. Perfect for schools, daycares, churches & recreation centers.",
       images: [
@@ -44,12 +44,12 @@ export default function RecreationalTurfPage() {
   )
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: "https://www.atlanticturfspecialist.com" },
+    { name: "Home", url: "https://www.turf-professionals.com" },
     { name: "Recreational & Sports Turf" },
   ])
 
   const videoSchema = generateVideoSchema(
-    "Recreational & Sports Turf Installation - Atlantic Turf Specialist",
+    "Recreational & Sports Turf Installation - Turf Professionals",
     "Discover our high-performance recreational turf solutions for sports fields, playgrounds, and active play areas. Safe, durable, and perfect for year-round use in residential and commercial settings.",
     "https://www.turf-professionals.com/portfolio/school-playground-field-turf.jpg",
     "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/turf-pro-putting-green-residential-home-medium-iB8P1yagGBoib76YM5qXM7kY15ka6A.mp4",

@@ -5,7 +5,7 @@ import AboutSection from "@/components/sections/about-section"
 import TestimonialsSection from "@/components/sections/testimonials-section"
 import FaqSection from "@/components/sections/faq-section"
 import CtaBanner from "@/components/sections/cta-banner"
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from "@/components/ui/toaster" // Needed for ContactDialog notifications
 
 export default function HomePage() {
   return (

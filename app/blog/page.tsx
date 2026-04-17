@@ -3,9 +3,9 @@ import { BlogPostCard } from "@/components/blog-post-card"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Blog | Atlantic Turf Specialist",
+  title: "Blog | Turf Professionals",
   description:
-    "Explore articles, tips, and insights on artificial turf installation, maintenance, and benefits from the experts at Atlantic Turf Specialist.",
+    "Explore articles, tips, and insights on artificial turf installation, maintenance, and benefits from the experts at Turf Professionals.",
 }
 
 export default function BlogPage() {

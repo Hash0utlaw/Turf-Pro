@@ -13,15 +13,15 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-    default: "Artificial Turf Installation Charlotte NC | Atlantic Turf Specialist",
-    template: "%s | Atlantic Turf Specialist",
+    default: "Artificial Turf Installation Charlotte NC | Turf Professionals",
+    template: "%s | Turf Professionals Charlotte NC",
   },
   description:
-    "Charlotte's premier artificial turf specialists. Professional synthetic grass for residential lawns, commercial properties & putting greens. Serving Charlotte, Matthews, Huntersville, Concord, Lake Norman & surrounding NC areas. Free quotes! Call (704) 956-2687",
+    "Charlotte's premier artificial turf installers. Professional synthetic grass for residential lawns, commercial properties & putting greens. Serving Charlotte, Matthews, Huntersville, Concord, Lake Norman & surrounding NC areas. Free quotes! Call (704) 956-2687",
   keywords: [
     "artificial turf installation Charlotte NC",
     "synthetic grass Charlotte",
-    "turf specialists Charlotte",
+    "turf installers Charlotte",
     "artificial grass company Charlotte",
     "residential turf Charlotte",
     "commercial turf Charlotte NC",
@@ -33,47 +33,47 @@ export const metadata: Metadata = {
     "Lake Norman artificial turf",
     "turf company near me Charlotte",
     "artificial grass installation Charlotte",
-    "Atlantic Turf Specialist Charlotte",
+    "turf professionals Charlotte",
     "lawn replacement Charlotte NC",
     "backyard turf Charlotte",
     "artificial grass Matthews",
     "synthetic turf Huntersville NC",
     "turf installation near me",
   ],
-  authors: [{ name: "Atlantic Turf Specialist" }],
-  creator: "Atlantic Turf Specialist",
-  publisher: "Atlantic Turf Specialist",
+  authors: [{ name: "Turf Professionals" }],
+  creator: "Turf Professionals",
+  publisher: "Turf Professionals",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://www.atlanticturfspecialist.com"),
+  metadataBase: new URL("https://www.turf-professionals.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.atlanticturfspecialist.com",
-    title: "Artificial Turf Installation Charlotte NC | Atlantic Turf Specialist",
+    url: "https://www.turf-professionals.com",
+    title: "Artificial Turf Installation Charlotte NC | Turf Professionals",
     description:
-      "Charlotte's premier artificial turf specialists. Professional synthetic grass for residential lawns, commercial properties & putting greens. Serving Charlotte, Matthews, Huntersville, Concord, Lake Norman & surrounding NC areas.",
-    siteName: "Atlantic Turf Specialist",
+      "Charlotte's premier artificial turf installers. Professional synthetic grass for residential lawns, commercial properties & putting greens. Serving Charlotte, Matthews, Huntersville, Concord, Lake Norman & surrounding NC areas.",
+    siteName: "Turf Professionals",
     images: [
       {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Atlantic Turf Specialist - Charlotte NC Artificial Turf Installation",
+        alt: "Turf Professionals - Charlotte NC Artificial Turf Installation",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Artificial Turf Installation Charlotte NC | Atlantic Turf Specialist",
+    title: "Artificial Turf Installation Charlotte NC | Turf Professionals",
     description:
-      "Charlotte's premier artificial turf specialists. Professional synthetic grass for residential lawns, commercial properties & putting greens. Serving Charlotte & surrounding NC areas.",
+      "Charlotte's premier artificial turf installers. Professional synthetic grass for residential lawns, commercial properties & putting greens. Serving Charlotte & surrounding NC areas.",
     images: ["/opengraph-image.png"],
   },
   robots: {
