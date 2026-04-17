@@ -29,7 +29,7 @@ function SiteFooter() {
             <div className="md:col-span-4 lg:col-span-5">
               <Logo className="h-12 w-auto" />
               <p className="mt-4 text-brand-gray-text max-w-xs">
-                Your trusted partner for premium artificial turf solutions.
+                Atlantic Turf Specialist — premium artificial turf installation across Charlotte NC and surrounding areas.
               </p>
               <div className="mt-6 flex space-x-4">
                 <Link
@@ -184,7 +184,7 @@ function SiteFooter() {
           </div>
         </div>
         <div className="border-t border-brand-gray py-6 text-center text-sm text-brand-gray-dark">
-          <p>&copy; {new Date().getFullYear()} Turf Professionals. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Atlantic Turf Specialist. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -3,8 +3,8 @@ import Link from "next/link"
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Terms of Service | Turf Pros",
-    description: "Read the Terms of Service for using the Turf Pros website and services.",
+    title: "Terms of Service | Atlantic Turf Specialist",
+    description: "Read the Terms of Service for using the Atlantic Turf Specialist website and services.",
     robots: {
       index: true,
       follow: true,
@@ -29,9 +29,9 @@ export default function TermsOfServicePage() {
       <section className="py-12 md:py-16">
         <div className="container px-4 md:px-6 max-w-3xl mx-auto prose prose-lg prose-headings:text-turf-green-dark prose-a:text-turf-green hover:prose-a:text-turf-green-dark">
           <p>
-            Welcome to Turf Professionals! These Terms of Service ("Terms", "Terms of Service") govern your use of our
-            website located at https://www.turf-professionals.com (together or individually "Service") operated by Turf
-            Professionals ("us", "we", or "our").
+            Welcome to Atlantic Turf Specialist! These Terms of Service ("Terms", "Terms of Service") govern your use of our
+            website located at https://www.atlanticturfspecialist.com (together or individually "Service") operated by Atlantic
+            Turf Specialist ("us", "we", or "our").
           </p>
           <p>
             Your access to and use of the Service is conditioned upon your acceptance of and compliance with these
@@ -65,7 +65,7 @@ export default function TermsOfServicePage() {
               mail", "chain letter," "spam," or any other similar solicitation.
             </li>
             <li>
-              To impersonate or attempt to impersonate Turf Professionals, a Turf Professionals employee, another user,
+              To impersonate or attempt to impersonate Atlantic Turf Specialist, an Atlantic Turf Specialist employee, another user,
               or any other person or entity.
             </li>
             <li>
@@ -74,7 +74,7 @@ export default function TermsOfServicePage() {
             </li>
             <li>
               To engage in any other conduct that restricts or inhibits anyone’s use or enjoyment of the Service, or
-              which, as determined by us, may harm or offend Turf Professionals or users of the Service or expose them
+              which, as determined by us, may harm or offend Atlantic Turf Specialist or users of the Service or expose them
               to liability.
             </li>
           </ul>
@@ -82,24 +82,24 @@ export default function TermsOfServicePage() {
           <h2>3. Intellectual Property</h2>
           <p>
             The Service and its original content (excluding Content provided by users), features, and functionality are
-            and will remain the exclusive property of Turf Professionals and its licensors. The Service is protected by
+            and will remain the exclusive property of Atlantic Turf Specialist and its licensors. The Service is protected by
             copyright, trademark, and other laws of both the United States and foreign countries. Our trademarks and
             trade dress may not be used in connection with any product or service without the prior written consent of
-            Turf Professionals.
+            Atlantic Turf Specialist.
           </p>
 
           <h2>4. Links To Other Web Sites</h2>
           <p>
-            Our Service may contain links to third-party web sites or services that are not owned or controlled by Turf
-            Professionals.
+            Our Service may contain links to third-party web sites or services that are not owned or controlled by Atlantic
+            Turf Specialist.
           </p>
           <p>
-            Turf Professionals has no control over, and assumes no responsibility for the content, privacy policies, or
+            Atlantic Turf Specialist has no control over, and assumes no responsibility for the content, privacy policies, or
             practices of any third-party web sites or services. We do not warrant the offerings of any of these
             entities/individuals or their websites.
           </p>
           <p>
-            You acknowledge and agree that Turf Professionals shall not be responsible or liable, directly or
+            You acknowledge and agree that Atlantic Turf Specialist shall not be responsible or liable, directly or
             indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or
             reliance on any such content, goods or services available on or through any such third-party web sites or
             services.

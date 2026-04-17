@@ -1,36 +1,36 @@
 import Link from "next/link"
-import Image from "next/image"
 import { cn } from "@/lib/utils"
 
 export interface LogoProps {
   className?: string
 }
 
-/**
- * Turf Pros Logo
- *
- * • Provides BOTH a named and default export so it can be imported with:
- *      import { Logo } from "@/components/layout/logo"
- *   or
- *      import Logo from "@/components/layout/logo"
- */
 export function Logo({ className }: LogoProps) {
   return (
     <Link
       href="/"
       className={cn(
-        "relative flex items-center h-12 w-28 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm",
+        "flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm",
         className,
       )}
+      aria-label="Atlantic Turf Specialist – Home"
     >
-      <Image
-        src="/turf-pros-logo.png"
-        alt="Turf Pros Logo"
-        fill
-        priority
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        className="object-contain"
-      />
+      {/* Green wave accent mark */}
+      <span className="flex-shrink-0 flex flex-col gap-[3px]" aria-hidden="true">
+        <span className="block h-[3px] w-7 rounded-full bg-turf-green" />
+        <span className="block h-[3px] w-5 rounded-full bg-turf-green" />
+        <span className="block h-[3px] w-3 rounded-full bg-turf-green" />
+      </span>
+
+      {/* Wordmark */}
+      <span className="flex flex-col leading-none">
+        <span className="text-base font-bold tracking-tight text-foreground uppercase">
+          Atlantic Turf
+        </span>
+        <span className="text-[11px] font-semibold tracking-[0.18em] text-turf-green uppercase">
+          Specialist
+        </span>
+      </span>
     </Link>
   )
 }

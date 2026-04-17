@@ -9,7 +9,7 @@ import { Phone, MapPin, Star, CheckCircle2, Award, Shield, Clock } from "lucide-
 import { StructuredData } from "@/components/structured-data"
 
 export const metadata: Metadata = {
-  title: "Artificial Turf Installation Lake Norman NC | Turf Professionals",
+    title: "Artificial Turf Installation Lake Norman NC | Atlantic Turf Specialist",
   description:
     "Professional artificial turf installation for Lake Norman waterfront homes. Beautiful synthetic grass for Cornelius, Davidson, Huntersville & Mooresville. Free quotes! Call (704) 995-6265",
   keywords: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "Mooresville artificial turf",
   ],
   openGraph: {
-    title: "Artificial Turf Installation Lake Norman NC | Turf Professionals",
+  title: "Artificial Turf Installation Lake Norman NC | Atlantic Turf Specialist",
     description: "Professional artificial turf installation for Lake Norman waterfront homes and properties.",
     images: [{ url: "/hero-homepage-new.png" }],
   },
@@ -57,10 +57,10 @@ const services = [
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Turf Professionals - Lake Norman NC",
-  image: "https://www.turf-professionals.com/hero-homepage-new.png",
-  "@id": "https://www.turf-professionals.com/lake-norman",
-  url: "https://www.turf-professionals.com/lake-norman",
+  name: "Atlantic Turf Specialist - Lake Norman NC",
+  image: "https://www.atlanticturfspecialist.com/hero-homepage-new.png",
+  "@id": "https://www.atlanticturfspecialist.com/lake-norman",
+  url: "https://www.atlanticturfspecialist.com/lake-norman",
   telephone: "+1-704-995-6265",
   priceRange: "$$-$$$",
   address: {
@@ -351,7 +351,7 @@ export default function LakeNormanPage() {
                   ))}
                 </div>
                 <p className="text-gray-700">
-                  "Our Davidson lakeside putting green is amazing! Turf Professionals understood our waterfront property
+                  "Our Davidson lakeside putting green is amazing! Atlantic Turf Specialist understood our waterfront property
                   needs and delivered exceptional results."
                 </p>
               </CardContent>

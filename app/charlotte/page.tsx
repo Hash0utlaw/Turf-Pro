@@ -6,12 +6,12 @@ import { Phone, MapPin, Star } from "lucide-react"
 import { StructuredData } from "@/components/structured-data"
 
 export const metadata: Metadata = {
-  title: "Artificial Turf Installation Company Charlotte NC | Turf Professionals",
+  title: "Artificial Turf Installation Company Charlotte NC | Atlantic Turf Specialist",
   description:
-    "Charlotte's #1 artificial turf installation company. Professional synthetic grass for homes & businesses in Charlotte, Matthews, Huntersville, Lake Norman & surrounding NC areas. Free quotes!",
+    "Charlotte's trusted artificial turf specialists. Professional synthetic grass for homes & businesses in Charlotte, Matthews, Huntersville, Lake Norman & surrounding NC areas. Free quotes!",
   keywords: [
     "artificial turf installation company Charlotte NC",
-    "turf professionals Charlotte",
+    "Atlantic Turf Specialist Charlotte",
     "synthetic grass Charlotte",
     "artificial grass company Charlotte",
     "turf installers Charlotte NC",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "Lake Norman turf company",
   ],
   openGraph: {
-    title: "Artificial Turf Installation Company Charlotte NC | Turf Professionals",
+    title: "Artificial Turf Installation Company Charlotte NC | Atlantic Turf Specialist",
     description:
       "Charlotte's #1 artificial turf installation company. Professional synthetic grass for homes & businesses.",
     images: [{ url: "/hero-homepage-new.png" }],
@@ -82,10 +82,10 @@ const services = [
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Turf Professionals",
-  image: "https://www.turf-professionals.com/hero-homepage-new.png",
-  "@id": "https://www.turf-professionals.com/charlotte",
-  url: "https://www.turf-professionals.com/charlotte",
+  name: "Atlantic Turf Specialist",
+  image: "https://www.atlanticturfspecialist.com/hero-homepage-new.png",
+  "@id": "https://www.atlanticturfspecialist.com/charlotte",
+  url: "https://www.atlanticturfspecialist.com/charlotte",
   telephone: "+1-704-995-6265",
   priceRange: "$$-$$$",
   address: {
@@ -277,7 +277,7 @@ export default function CharlottePage() {
                 </div>
                 <p className="text-gray-700 mb-4">
                   "Best decision we made for our Ballantyne backyard! The kids and dog love it, and we love not having
-                  to mow anymore. Turf Professionals did an amazing job."
+                  to mow anymore. Atlantic Turf Specialist did an amazing job."
                 </p>
                 <p className="font-semibold">- Sarah M., Ballantyne</p>
               </CardContent>

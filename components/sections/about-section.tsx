@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { CheckCircle } from "lucide-react"
@@ -16,20 +15,22 @@ export default function AboutSection() {
       <div className="container px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="order-2 md:order-1 flex items-center justify-center">
-            <Image
-              src="/turf-pros-logo.png"
-              alt="Turf Professionals Logo"
-              width={400}
-              height={400}
-              className="rounded-2xl object-contain"
-            />
+            <div className="flex flex-col items-center justify-center gap-3 rounded-2xl bg-turf-green-extralight border border-turf-green/20 p-10 w-full aspect-square max-w-sm">
+              <span className="flex flex-col gap-2" aria-hidden="true">
+                <span className="block h-[5px] w-20 rounded-full bg-turf-green" />
+                <span className="block h-[5px] w-14 rounded-full bg-turf-green" />
+                <span className="block h-[5px] w-8 rounded-full bg-turf-green" />
+              </span>
+              <p className="text-2xl font-bold tracking-tight text-foreground uppercase text-center mt-4">Atlantic Turf</p>
+              <p className="text-sm font-semibold tracking-[0.25em] text-turf-green uppercase text-center">Specialist</p>
+            </div>
           </div>
           <div className="space-y-6 order-1 md:order-2">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">About Turf Professionals</h2>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">About Atlantic Turf Specialist</h2>
             <p className="text-base sm:text-lg text-brand-gray-text leading-relaxed">
-              At Turf Professionals, we are passionate about transforming outdoor spaces with high-quality artificial
-              turf. With years of experience in the industry, our dedicated team combines expertise with a commitment to
-              excellence, ensuring every project meets the highest standards of beauty and durability.
+              At Atlantic Turf Specialist, we are passionate about transforming outdoor spaces with high-quality
+              artificial turf. With years of experience in the industry, our dedicated team combines expertise with a
+              commitment to excellence, ensuring every project meets the highest standards of beauty and durability.
             </p>
             <p className="text-base sm:text-lg text-brand-gray-text leading-relaxed">
               We believe in using only the best materials and the latest installation techniques to deliver results that
