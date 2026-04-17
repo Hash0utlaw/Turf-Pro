@@ -9,7 +9,7 @@ import { Phone, MapPin, Star, CheckCircle2, Award, Shield, Clock } from "lucide-
 import { StructuredData } from "@/components/structured-data"
 
 export const metadata: Metadata = {
-  title: "Artificial Turf Installation Concord NC | Turf Professionals",
+    title: "Artificial Turf Installation Concord NC | Atlantic Turf Specialist",
   description:
     "Professional artificial turf installation in Concord NC. Beautiful synthetic grass for residential lawns, commercial properties & putting greens. Free quotes! Call (704) 995-6265",
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "putting green Concord NC",
   ],
   openGraph: {
-    title: "Artificial Turf Installation Concord NC | Turf Professionals",
+  title: "Artificial Turf Installation Concord NC | Atlantic Turf Specialist",
     description:
       "Professional artificial turf installation in Concord NC. Beautiful synthetic grass for homes & businesses.",
     images: [{ url: "/hero-homepage-new.png" }],
@@ -64,10 +64,10 @@ const services = [
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Turf Professionals - Concord NC",
-  image: "https://www.turf-professionals.com/hero-homepage-new.png",
-  "@id": "https://www.turf-professionals.com/concord",
-  url: "https://www.turf-professionals.com/concord",
+  name: "Atlantic Turf Specialist - Concord NC",
+  image: "https://www.atlanticturfspecialist.com/hero-homepage-new.png",
+  "@id": "https://www.atlanticturfspecialist.com/concord",
+  url: "https://www.atlanticturfspecialist.com/concord",
   telephone: "+1-704-995-6265",
   priceRange: "$$-$$$",
   address: {

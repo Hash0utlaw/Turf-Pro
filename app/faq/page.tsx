@@ -3,9 +3,9 @@ import Image from "next/image"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | Turf Professionals",
+  title: "Frequently Asked Questions | Atlantic Turf Specialist",
   description:
-    "Get answers to common questions about artificial turf installation, maintenance, costs, and benefits. Expert insights from professional turf installers.",
+    "Get answers to common questions about artificial turf installation, maintenance, costs, and benefits. Expert insights from Atlantic Turf Specialist.",
   keywords: [
     "artificial turf FAQ",
     "synthetic grass questions",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "turf installation process",
   ],
   openGraph: {
-    title: "Frequently Asked Questions | Turf Professionals",
+    title: "Frequently Asked Questions | Atlantic Turf Specialist",
     description:
       "Get answers to common questions about artificial turf installation, maintenance, costs, and benefits.",
     images: ["/opengraph-image.png"],
