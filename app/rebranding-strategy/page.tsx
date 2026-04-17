@@ -44,7 +44,8 @@ export default function RebrandingStrategyPage() {
   const scrollTo = (id: string) => {
     const el = document.getElementById(id)
     if (el) {
-      const offset = 80
+      // 64px site header + 48px section nav = 112px total offset
+      const offset = 120
       const top = el.getBoundingClientRect().top + window.scrollY - offset
       window.scrollTo({ top, behavior: "smooth" })
     }

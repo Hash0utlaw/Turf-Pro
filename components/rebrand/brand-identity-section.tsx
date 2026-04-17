@@ -78,7 +78,7 @@ export function BrandIdentitySection() {
   const [expandedColor, setExpandedColor] = useState<string | null>(null)
 
   return (
-    <section id="brand-identity" className="scroll-mt-20 py-16 border-b border-[#D4C5A9]">
+    <section id="brand-identity" className="scroll-mt-32 py-16 border-b border-[#D4C5A9]">
       {/* Section label */}
       <div className="flex items-center gap-3 mb-10">
         <span className="inline-block w-8 h-px bg-[#52B788]" />

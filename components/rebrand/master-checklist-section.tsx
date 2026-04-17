@@ -98,7 +98,7 @@ export function MasterChecklistSection() {
   const progress = Math.round((checkedCount / totalItems) * 100)
 
   return (
-    <section id="checklist" className="scroll-mt-20 py-16">
+    <section id="checklist" className="scroll-mt-32 py-16">
       <div className="flex items-center gap-3 mb-10">
         <span className="inline-block w-8 h-px bg-[#52B788]" />
         <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#52B788]">Section 06</span>
