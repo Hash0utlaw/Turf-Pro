@@ -22,6 +22,316 @@ export interface PortfolioItem {
 }
 
 export const portfolioItems: PortfolioItem[] = [
+  // --- Newest work (displayed first) ---
+  {
+    id: "luxury-pool-surround-marble-pavers-04",
+    title: "Luxury Pool Surround — Turf & Marble Pavers",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Precision-cut artificial turf strips installed between large marble travertine pavers along a luxury poolside deck beside a white brick home. Crew finishing up with a blower, showcasing the clean integration of premium turf with high-end hardscape.",
+    imageUrl: "/portfolio/artificial-turf-pool-surround-install-04.webp",
+    gallery: [
+      "/portfolio/artificial-turf-pool-surround-install-04.webp",
+      "/portfolio/artificial-turf-pool-surround-install-05.webp",
+      "/portfolio/artificial-turf-pool-surround-install-06.webp",
+    ],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Marble Paver Integration, Poolside, White Brick Home" },
+      { label: "Area", value: "2,200 sq ft" },
+    ],
+  },
+  {
+    id: "pool-surround-turf-pavilion-02",
+    title: "Backyard Pool Turf with Outdoor Kitchen Pavilion",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Full artificial lawn beside a rectangular pool with a covered outdoor kitchen pavilion, basketball hoop, and stepping stone path — crew installing the final edges of a complete backyard outdoor living transformation.",
+    imageUrl: "/portfolio/artificial-turf-pool-surround-install-02.webp",
+    gallery: [
+      "/portfolio/artificial-turf-pool-surround-install-02.webp",
+      "/portfolio/artificial-turf-pool-surround-install-01.webp",
+      "/portfolio/artificial-turf-pool-surround-install-03.webp",
+    ],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Pool Surround, Outdoor Kitchen, Stepping Stone Path" },
+      { label: "Area", value: "2,800 sq ft" },
+    ],
+  },
+  {
+    id: "large-estate-turf-fall-foliage-01",
+    title: "Large Estate Lawn — Fall Installation",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Wide open estate-scale artificial turf installation photographed during fall foliage, crew power-brushing the blades on a massive freshly laid lawn beside a concrete walkway — a striking contrast of vivid green turf against autumn colors.",
+    imageUrl: "/portfolio/artificial-turf-installation-in-progress-01.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Large-Scale Lawn, Fall Install, Concrete Path" },
+      { label: "Area", value: "5,000+ sq ft" },
+    ],
+  },
+  {
+    id: "white-farmhouse-diamond-stepper-turf-01",
+    title: "White Farmhouse — Turf with Diamond Steppers",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Artificial turf installed around a classic white farmhouse with a dramatic diagonal diamond-pattern of concrete steppers cutting through the lawn. Crew still on site with construction around the perimeter — a standout design that blends modern landscaping with traditional architecture.",
+    imageUrl: "/portfolio/artificial-turf-luxury-estate-install-01.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Diamond Stepper Pattern, New Construction, Covered Porch" },
+      { label: "Area", value: "3,400 sq ft" },
+    ],
+  },
+  {
+    id: "pool-surround-turf-pavilion-01",
+    title: "Pool Lawn & Outdoor Living — Wide Angle",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Wide-angle view of the full artificial turf run alongside a rectangular pool, with an outdoor kitchen pavilion with covered seating, river rock border, and mulch garden beds completing the outdoor living space.",
+    imageUrl: "/portfolio/artificial-turf-pool-surround-install-01.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Pool Surround, Outdoor Pavilion, River Rock Border" },
+      { label: "Area", value: "2,800 sq ft" },
+    ],
+  },
+  {
+    id: "modern-new-construction-courtyard-turf-02",
+    title: "Modern New Construction — Courtyard Turf Panels",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Multi-panel artificial turf installation in a geometric courtyard layout at a modern cream multi-story new construction home, with turf squares set precisely between white concrete pavers — a sophisticated hardscape integration.",
+    imageUrl: "/portfolio/artificial-turf-installation-in-progress-02.webp",
+    gallery: [
+      "/portfolio/artificial-turf-installation-in-progress-02.webp",
+      "/portfolio/artificial-turf-pool-surround-install-05.webp",
+      "/portfolio/artificial-turf-pool-surround-install-06.webp",
+    ],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Geometric Panel Layout, New Construction, Concrete Paver Grid" },
+      { label: "Area", value: "1,800 sq ft" },
+    ],
+  },
+  {
+    id: "pool-surround-turf-river-rock-03",
+    title: "Pool Surround Turf — Pergola & River Rock View",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Angle from beneath the pergola showing freshly installed artificial turf running the full length beside a rectangular pool, with a river rock border and lush mulch garden beds framing the lawn.",
+    imageUrl: "/portfolio/artificial-turf-pool-surround-install-03.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Pool Surround, Pergola View, River Rock Border" },
+      { label: "Area", value: "2,800 sq ft" },
+    ],
+  },
+  {
+    id: "cottage-courtyard-iron-gate-turf-01",
+    title: "Cottage Courtyard Turf with Iron Gate",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Charming white cottage-style home inner courtyard with artificial turf and a 3x3 grid of large square marble pavers set into the lawn. Framed by a classic ornate black iron arched gate and natural stone retaining walls — a stunning detail-oriented installation.",
+    imageUrl: "/portfolio/artificial-turf-courtyard-install-01.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Courtyard Install, Marble Paver Grid, Iron Gate, Stone Wall" },
+      { label: "Area", value: "900 sq ft" },
+    ],
+  },
+  {
+    id: "luxury-pool-geometric-turf-overhead-06",
+    title: "Luxury Pool — Geometric Turf Grid Overhead View",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Elevated overhead angle of a luxury pool with travertine surround, showing geometric turf panels integrated into the pool deck in a precise grid pattern. Fall tree foliage surrounds the property, making the green turf pop against the autumn landscape.",
+    imageUrl: "/portfolio/artificial-turf-pool-surround-install-06.webp",
+    gallery: [
+      "/portfolio/artificial-turf-pool-surround-install-06.webp",
+      "/portfolio/artificial-turf-pool-surround-install-05.webp",
+    ],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Geometric Grid, Luxury Pool, Travertine Surround, Overhead View" },
+      { label: "Area", value: "2,500 sq ft" },
+    ],
+  },
+  {
+    id: "luxury-pool-geometric-turf-ground-05",
+    title: "Luxury Pool — Geometric Turf Grid Ground View",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Ground-level view of the luxury pool geometric turf grid installation beside a modern white and tan siding home with covered patio. Turf panels are precisely framed by travertine tiles creating a high-end resort-style backyard.",
+    imageUrl: "/portfolio/artificial-turf-pool-surround-install-05.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Geometric Grid, Luxury Pool, Travertine, Covered Patio" },
+      { label: "Area", value: "2,500 sq ft" },
+    ],
+  },
+  {
+    id: "commercial-brewery-patio-turf-01",
+    title: "Cowart Brewing Co. — Outdoor Patio Turf",
+    category: "commercial",
+    categoryLabel: "Commercial",
+    description:
+      "Artificial turf installed throughout the outdoor patio of Cowart Brewing Co., running on both sides of a concrete walkway beneath a sleek modern louvered pergola. A white picket fence and the brewery's branded wall make this a standout commercial transformation.",
+    imageUrl: "/portfolio/artificial-turf-commercial-install-01.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Type", value: "Commercial Patio / Brewery" },
+      { label: "Features", value: "Louvered Pergola, Concrete Path, Branded Space" },
+    ],
+  },
+  {
+    id: "modern-farmhouse-backyard-turf-07",
+    title: "Modern Black Farmhouse Backyard Turf",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Artificial lawn wrapping around the screened porch and back patio of a striking modern black farmhouse, bordered by river rock and fresh mulch beds. Clean installation that perfectly complements the home's contemporary architecture.",
+    imageUrl: "/portfolio/artificial-turf-backyard-install-07.webp",
+    gallery: [
+      "/portfolio/artificial-turf-backyard-install-07.webp",
+      "/portfolio/artificial-turf-backyard-install-08.webp",
+    ],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Screened Porch Surround, River Rock Border, Mulch Beds" },
+      { label: "Area", value: "2,600 sq ft" },
+    ],
+  },
+  {
+    id: "before-after-backyard-putting-green-01",
+    title: "Before & After: Backyard Putting Green Transformation",
+    category: "putting-greens",
+    categoryLabel: "Putting Green",
+    description:
+      "A compelling before-and-after showing a patchy, drought-stressed natural grass yard transformed into a lush multi-hole putting green, artificial lawn, river rock borders, and a full palm tree landscape — a complete backyard reinvention.",
+    imageUrl: "/portfolio/artificial-turf-before-after-backyard-01.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Before & After, Multi-Hole Putting Green, Full Landscape Renovation" },
+      { label: "Area", value: "3,800 sq ft" },
+    ],
+  },
+  {
+    id: "residential-backyard-turf-playhouse-05",
+    title: "Residential Backyard Turf with Playhouse",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Large residential backyard artificial turf installation at dusk, featuring a charming playhouse, detached garage, and clean red mulch borders. A great example of a full-yard family lawn transformation.",
+    imageUrl: "/portfolio/artificial-turf-backyard-install-05.webp",
+    gallery: [
+      "/portfolio/artificial-turf-backyard-install-05.webp",
+      "/portfolio/artificial-turf-backyard-install-04.webp",
+    ],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Full Backyard Lawn, Playhouse, Red Mulch Border" },
+      { label: "Area", value: "2,800 sq ft" },
+    ],
+  },
+  {
+    id: "curved-turf-new-construction-06",
+    title: "Curved Turf Install — New Construction Home",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Organic curved artificial turf installation beside a modern white new-construction home, with a river rock border and palm trees adding to the landscaping. Installed while surrounding construction was still underway, showing the turf's immediate visual impact.",
+    imageUrl: "/portfolio/artificial-turf-backyard-install-06.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Curved Edge, River Rock Border, New Construction" },
+      { label: "Area", value: "1,900 sq ft" },
+    ],
+  },
+  {
+    id: "commercial-strip-turf-curb-appeal-03",
+    title: "Commercial Building Curb Appeal Turf",
+    category: "commercial",
+    categoryLabel: "Commercial",
+    description:
+      "Artificial turf installed in a small commercial courtyard space beside a brick strip-mall building, replacing a bare concrete area beside the parking lot. A cost-effective way to add green space and curb appeal to any commercial property.",
+    imageUrl: "/portfolio/artificial-turf-commercial-install-03.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Type", value: "Commercial Curb Appeal" },
+      { label: "Features", value: "Parking Lot Adjacent, Concrete Surround" },
+    ],
+  },
+  {
+    id: "modern-farmhouse-turf-wider-angle-08",
+    title: "Modern Farmhouse Turf — Full Scope View",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Wider-angle view of the modern black farmhouse project showing the full scope of artificial turf wrapping around the home, integrated with river rock drainage channels and fresh black mulch garden beds.",
+    imageUrl: "/portfolio/artificial-turf-backyard-install-08.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "River Rock Drainage, Mulch Beds, Modern Home" },
+      { label: "Area", value: "2,600 sq ft" },
+    ],
+  },
+  {
+    id: "backyard-turf-pergola-putting-09",
+    title: "Backyard Lawn with Pergola & Putting Cup",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Artificial lawn installed between two homes featuring a wood-beam pergola, outdoor deck, gravel patio area, and a putting cup — a versatile backyard space designed for year-round outdoor living.",
+    imageUrl: "/portfolio/artificial-turf-backyard-install-09.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Wood Pergola, Deck Integration, Putting Cup, Gravel Patio" },
+      { label: "Area", value: "1,600 sq ft" },
+    ],
+  },
+  {
+    id: "east-lincoln-animal-hospital-turf",
+    title: "East Lincoln Animal Hospital — Pet Turf",
+    category: "commercial",
+    categoryLabel: "Commercial",
+    description:
+      "Large-scale commercial pet-friendly turf installation at East Lincoln Animal Hospital, covering the full exercise and relief area along the back of the facility. Crew installing high-durability synthetic grass designed for heavy animal use with proper drainage.",
+    imageUrl: "/portfolio/artificial-turf-commercial-install-02.webp",
+    details: [
+      { label: "Client", value: "East Lincoln Animal Hospital" },
+      { label: "Location", value: "Lincoln County, NC" },
+      { label: "Type", value: "Commercial Pet / Veterinary Facility" },
+      { label: "Features", value: "High-Durability Pet Turf, Chain-Link Enclosure, Full Facility Coverage" },
+    ],
+  },
+  {
+    id: "residential-backyard-dusk-turf-04",
+    title: "Wide Residential Backyard at Dusk",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Wide freshly installed residential artificial lawn photographed at dusk, showing the vivid green color against a traditional brick home and detached garage. Red mulch border frames the full yard cleanly.",
+    imageUrl: "/portfolio/artificial-turf-backyard-install-04.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Full Backyard Lawn, Brick Home, Red Mulch Border" },
+      { label: "Area", value: "2,400 sq ft" },
+    ],
+  },
+  // --- Previous work ---
   {
     id: "commercial-brewery-patio-turf",
     title: "Commercial Brewery Patio Transformation",
@@ -615,6 +925,146 @@ export const portfolioItems: PortfolioItem[] = [
       { label: "Location", value: "Contemporary Home" },
       { label: "Features", value: "Modern Design, Clean Lines" },
       { label: "Area", value: "900 sq ft" },
+    ],
+  },
+  {
+    id: "luxury-estate-putting-green-pool-drone-04",
+    title: "Luxury Estate: Turf, Putting Green & Pool",
+    category: "putting-greens",
+    categoryLabel: "Putting Green",
+    description:
+      "Stunning side-angle view of a luxury estate backyard featuring a custom multi-hole putting green, lush artificial lawn, resort-style pool with hot tub, and palm tree landscaping.",
+    imageUrl: "/portfolio/artificial-turf-aerial-backyard-drone-04.webp",
+    gallery: [
+      "/portfolio/artificial-turf-aerial-backyard-drone-04.webp",
+      "/portfolio/artificial-turf-aerial-putting-green-drone-03.webp",
+      "/portfolio/artificial-turf-aerial-putting-green-drone-02.webp",
+    ],
+    details: [
+      { label: "Location", value: "Luxury Residential, Charlotte NC" },
+      { label: "Features", value: "Putting Green, Pool Surround, Palm Landscaping" },
+      { label: "Area", value: "5,000+ sq ft" },
+    ],
+  },
+  {
+    id: "drone-overhead-putting-green-palm-shadows",
+    title: "Overhead Drone View: Multi-Hole Putting Green",
+    category: "putting-greens",
+    categoryLabel: "Putting Green",
+    description:
+      "Stunning straight-down drone perspective of a custom multi-hole backyard putting green surrounded by white river rock, with dramatic palm tree shadows across the turf surface.",
+    imageUrl: "/portfolio/artificial-turf-aerial-putting-green-drone-02.webp",
+    details: [
+      { label: "Location", value: "Luxury Residential, Charlotte NC" },
+      { label: "Features", value: "Multiple Holes, River Rock Border, Sand Bunker" },
+      { label: "Area", value: "2,800 sq ft" },
+    ],
+  },
+  {
+    id: "residential-backyard-turf-trampoline-02",
+    title: "Residential Backyard Turf with Trampoline Area",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Beautifully installed residential artificial lawn enclosed by a stone wall with palm trees, accommodating a backyard trampoline and white rock garden border — a perfect family space.",
+    imageUrl: "/portfolio/artificial-turf-backyard-install-02.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Family Backyard, River Rock Border, Stone Wall" },
+      { label: "Area", value: "2,200 sq ft" },
+    ],
+  },
+  {
+    id: "aerial-estate-turf-pool-putting-drone-06",
+    title: "Aerial Estate View: Turf, Pool & Putting Green",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "High drone overview of a full luxury estate showing the interplay of artificial lawn, a custom multi-hole putting green, resort pool, and mature landscaping from above.",
+    imageUrl: "/portfolio/artificial-turf-aerial-backyard-drone-06.webp",
+    gallery: [
+      "/portfolio/artificial-turf-aerial-backyard-drone-06.webp",
+      "/portfolio/artificial-turf-aerial-estate-drone-05.webp",
+      "/portfolio/artificial-turf-aerial-backyard-drone-01.webp",
+    ],
+    details: [
+      { label: "Location", value: "Luxury Estate, Charlotte NC" },
+      { label: "Features", value: "Drone Photography, Full Backyard, Pool & Putting Green" },
+      { label: "Area", value: "6,000+ sq ft" },
+    ],
+  },
+  {
+    id: "wide-aerial-estate-turf-drone-05",
+    title: "Wide Aerial Estate: Acreage Turf & Pool",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Wide-angle drone photo of a sprawling estate showcasing the full scope of the artificial turf installation alongside a freeform pool, putting green, and manicured grounds.",
+    imageUrl: "/portfolio/artificial-turf-aerial-estate-drone-05.webp",
+    details: [
+      { label: "Location", value: "Estate Property, Charlotte NC" },
+      { label: "Features", value: "Large-Scale Lawn, Pool, Putting Green" },
+      { label: "Area", value: "8,000+ sq ft" },
+    ],
+  },
+  {
+    id: "ground-level-backyard-turf-palms-01",
+    title: "Ground-Level Backyard Turf with Palm Trees",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Eye-level close-up of freshly installed artificial turf with rich green blade detail, framed by tall palm trees along a stone privacy wall — showcasing the natural look and feel of premium synthetic grass.",
+    imageUrl: "/portfolio/artificial-turf-backyard-install-01.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Premium Turf Quality, Palm Landscaping, Stone Wall" },
+      { label: "Area", value: "2,400 sq ft" },
+    ],
+  },
+  {
+    id: "residential-backyard-turf-new-home-03",
+    title: "New Construction Residential Backyard Turf",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Freshly installed artificial lawn at a new construction home in Charlotte NC — crew still on site, showcasing the clean, vibrant result of a professional turf installation at a modern two-story residence.",
+    imageUrl: "/portfolio/artificial-turf-backyard-install-03.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "New Construction, Full Backyard Lawn" },
+      { label: "Area", value: "1,800 sq ft" },
+    ],
+  },
+  {
+    id: "luxury-backyard-putting-green-patio-drone-03",
+    title: "Luxury Backyard Putting Green & Patio",
+    category: "putting-greens",
+    categoryLabel: "Putting Green",
+    description:
+      "Elevated angle of a premium multi-hole backyard putting green with flag cups, surrounded by white river rock, mature palms, and a full outdoor patio and seating area — the ultimate backyard golf experience.",
+    imageUrl: "/portfolio/artificial-turf-aerial-putting-green-drone-03.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Multi-Hole Putting Green, River Rock, Outdoor Patio" },
+      { label: "Area", value: "3,200 sq ft" },
+    ],
+  },
+  {
+    id: "aerial-luxury-estate-pool-putting-green-01",
+    title: "Aerial Luxury Estate: Pool, Turf & Putting Green",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Bird's-eye drone view of a stunning luxury estate featuring a freeform pool with spa, terraced stone landscaping, artificial lawn, and a tucked-away putting green — a complete outdoor living masterpiece.",
+    imageUrl: "/portfolio/artificial-turf-aerial-backyard-drone-01.webp",
+    gallery: [
+      "/portfolio/artificial-turf-aerial-backyard-drone-01.webp",
+      "/portfolio/artificial-turf-aerial-backyard-drone-06.webp",
+    ],
+    details: [
+      { label: "Location", value: "Luxury Estate, Charlotte NC" },
+      { label: "Features", value: "Freeform Pool, Terraced Landscaping, Putting Green" },
+      { label: "Area", value: "5,500+ sq ft" },
     ],
   },
 ]
