@@ -63,7 +63,7 @@ const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWit
           <a
             ref={ref}
             className={cn(
-              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-turf-green/10 hover:text-turf-green-light focus:bg-turf-green/10 focus:text-turf-green-light",
               className,
             )}
             {...props}
@@ -82,7 +82,7 @@ export function SiteHeader() {
   const [isSheetOpen, setIsSheetOpen] = React.useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-turf-green/30 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/90">
       <div className="container flex h-16 items-center justify-between">
         <Logo />
 
@@ -127,28 +127,28 @@ export function SiteHeader() {
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px]">
+            <SheetContent side="right" className="w-[300px] bg-background border-l border-turf-green/30">
               <div className="mb-6">
                 <Logo />
               </div>
               <nav className="flex flex-col space-y-2">
-                <p className="px-3 py-2 text-sm font-semibold text-muted-foreground">Services</p>
+                <p className="px-3 py-2 text-sm font-semibold text-turf-green uppercase tracking-wider">Services</p>
                 {services.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="block rounded-md px-3 py-2 text-base font-medium text-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+                    className="block rounded-md px-3 py-2 text-base font-medium text-foreground transition-colors hover:bg-turf-green/10 hover:text-turf-green-light"
                     onClick={() => setIsSheetOpen(false)}
                   >
                     {item.title}
                   </Link>
                 ))}
-                <p className="mt-3 px-3 py-2 text-sm font-semibold text-muted-foreground">Company</p>
+                <p className="mt-3 px-3 py-2 text-sm font-semibold text-turf-green uppercase tracking-wider">Company</p>
                 {mainNavLinks.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="block rounded-md px-3 py-2 text-base font-medium text-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+                    className="block rounded-md px-3 py-2 text-base font-medium text-foreground transition-colors hover:bg-turf-green/10 hover:text-turf-green-light"
                     onClick={() => setIsSheetOpen(false)}
                   >
                     {item.title}

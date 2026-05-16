@@ -53,16 +53,16 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
         "turf-green": {
-          light: "#A3D9A5", // Lighter, fresh green
-          DEFAULT: "#4CAF50", // Main turf green (Primary action color)
-          dark: "#388E3C", // Darker, rich green
-          extralight: "#E8F5E9", // Very light green for subtle backgrounds
+          light: "#6BA35E",   // lighter green for hover states
+          DEFAULT: "#3A6B31", // ATS logo forest green
+          dark: "#2D5426",    // deeper green for active/pressed
+          extralight: "#1A2B17", // dark green tint for subtle dark backgrounds
         },
         "brand-gray": {
-          light: "#F7F9FA", // Very light gray for backgrounds
-          DEFAULT: "#E0E0E0", // Default gray for borders/dividers
-          dark: "#BDBDBD", // Darker gray for subtle text
-          text: "#4F4F4F", // Main body text color
+          light: "#1A1A1A",   // dark card / section background
+          DEFAULT: "#2E2E2E", // border / divider
+          dark: "#A0A0A0",    // muted text on dark bg
+          text: "#D4D4D4",    // primary body text on dark bg
         },
       },
       borderRadius: {

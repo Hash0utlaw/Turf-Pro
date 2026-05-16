@@ -56,7 +56,7 @@ export default function ServicesSection() {
           {services.map((service) => (
             <Link key={service.title} href={service.href} passHref legacyBehavior>
               <a className="block rounded-2xl focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background">
-                <Card className="bg-card text-card-foreground rounded-2xl shadow-soft hover:shadow-soft-md transition-all h-full flex flex-col overflow-hidden group">
+                <Card className="bg-card text-card-foreground border border-turf-green/20 hover:border-turf-green/50 rounded-2xl shadow-soft hover:shadow-soft-md transition-all h-full flex flex-col overflow-hidden group">
                   <div className="relative h-48 w-full overflow-hidden">
                     <Image
                       src={service.imageUrl || "/placeholder.svg"}
