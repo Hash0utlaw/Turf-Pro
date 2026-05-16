@@ -86,9 +86,10 @@ export default function ServicePageTemplate({
             <source src={heroVideoSrc} type="video/mp4" />
             {/* Fallback to image if video fails to load */}
             <Image
-              src={heroImageSrc || "/placeholder.svg"}
+              src={heroImageSrc}
               alt={heroImageAlt}
               fill
+              sizes="100vw"
               className="object-cover brightness-[0.6]"
               quality={85}
               priority
@@ -96,9 +97,10 @@ export default function ServicePageTemplate({
           </video>
         ) : (
           <Image
-            src={heroImageSrc || "/placeholder.svg"}
+            src={heroImageSrc}
             alt={heroImageAlt}
             fill
+            sizes="100vw"
             className="object-cover brightness-[0.6]"
             quality={85}
             priority
@@ -148,10 +150,11 @@ export default function ServicePageTemplate({
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-last md:order-first">
               <Image
-                src={featuresImageSrc || "/placeholder.svg"}
+                src={featuresImageSrc}
                 alt={featuresImageAlt}
                 width={600}
                 height={450}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="rounded-2xl shadow-soft-md object-cover"
               />
             </div>

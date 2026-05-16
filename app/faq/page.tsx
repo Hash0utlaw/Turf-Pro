@@ -1,25 +1,32 @@
 import type { Metadata } from "next"
 import Image from "next/image"
+import Link from "next/link"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { StructuredData } from "@/components/structured-data"
+import { generateBreadcrumbSchema } from "@/lib/structured-data"
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | Atlantic Turf Specialist",
+  title: "Frequently Asked Questions | Artificial Turf Charlotte NC | Atlantic Turf Specialist",
   description:
-    "Get answers to common questions about artificial turf installation, maintenance, costs, and benefits. Expert insights from Atlantic Turf Specialist.",
+    "Get expert answers to common questions about artificial turf installation, maintenance, costs, and benefits in Charlotte NC. Atlantic Turf Specialist covers everything from how long turf lasts to pet safety.",
   keywords: [
-    "artificial turf FAQ",
-    "synthetic grass questions",
-    "turf installation cost",
-    "artificial grass maintenance",
-    "turf warranty",
-    "pet-friendly turf",
-    "turf installation process",
+    "artificial turf FAQ Charlotte NC",
+    "synthetic grass questions Charlotte",
+    "turf installation cost Charlotte",
+    "artificial grass maintenance tips",
+    "how long does artificial turf last",
+    "pet-friendly turf questions",
+    "turf installation process Charlotte",
+    "artificial grass warranty",
   ],
+  alternates: {
+    canonical: "https://www.atlanticturfspecialist.com/faq",
+  },
   openGraph: {
-    title: "Frequently Asked Questions | Atlantic Turf Specialist",
+    title: "Frequently Asked Questions | Artificial Turf Charlotte NC | Atlantic Turf Specialist",
     description:
-      "Get answers to common questions about artificial turf installation, maintenance, costs, and benefits.",
-    images: ["/opengraph-image.png"],
+      "Get expert answers to common questions about artificial turf installation, maintenance, costs, and benefits in Charlotte NC.",
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Atlantic Turf Specialist FAQ - Charlotte NC artificial turf experts" }],
   },
 }
 
@@ -35,12 +42,12 @@ const faqData = [
       {
         question: "How long does artificial turf last?",
         answer:
-          "High-quality artificial turf can last 15-25 years with proper installation and maintenance. The lifespan depends on factors such as foot traffic, climate conditions, and the quality of materials used. Our premium turf products come with warranties ranging from 8-15 years, ensuring long-term value for your investment.",
+          "High-quality artificial turf can last 15–25 years with proper installation and maintenance. The lifespan depends on factors such as foot traffic, climate conditions, and the quality of materials used. Our premium turf products come with warranties ranging from 8–15 years, ensuring long-term value for your investment.",
       },
       {
         question: "Is artificial turf safe for children and pets?",
         answer:
-          "Yes, our artificial turf is completely safe for children and pets. It's made from non-toxic materials and doesn't require harmful pesticides or fertilizers. The turf provides a clean, mud-free surface that's perfect for play areas. For pet owners, we offer specialized pet-friendly turf with enhanced drainage and antimicrobial properties.",
+          "Yes, our artificial turf is completely safe for children and pets. It's made from non-toxic materials and doesn't require harmful pesticides or fertilizers. The turf provides a clean, mud-free surface perfect for play areas. For pet owners, we offer specialized pet-friendly turf with enhanced drainage and antimicrobial properties.",
       },
       {
         question: "Does artificial turf get hot in summer?",
@@ -55,12 +62,12 @@ const faqData = [
       {
         question: "How much does artificial turf installation cost?",
         answer:
-          "The cost varies based on area size, turf quality, site preparation needs, and additional features. Generally, residential installations range from $8-15 per square foot, including materials and professional installation. We provide free, detailed quotes that include all aspects of your project with no hidden fees.",
+          "The cost varies based on area size, turf quality, site preparation needs, and additional features. Generally, residential installations range from $8–15 per square foot, including materials and professional installation. We provide free, detailed quotes that include all aspects of your project with no hidden fees.",
       },
       {
         question: "How long does installation take?",
         answer:
-          "Most residential installations take 1-3 days, depending on the project size and complexity. The process includes site preparation, base installation, turf laying, and finishing touches. Weather conditions and site accessibility can affect timing. We'll provide a detailed timeline during your consultation.",
+          "Most residential installations take 1–3 days, depending on project size and complexity. The process includes site preparation, base installation, turf laying, and finishing touches. Weather conditions and site accessibility can affect timing. We'll provide a detailed timeline during your consultation.",
       },
       {
         question: "What preparation is needed before installation?",
@@ -95,7 +102,7 @@ const faqData = [
       {
         question: "Do I need to add infill, and how often?",
         answer:
-          "Infill helps maintain turf structure and provides cushioning. Depending on usage and weather, you may need to add infill every 2-3 years. We use various infill types including silica sand, rubber granules, and organic options. During installation, we'll recommend the best infill type for your specific needs.",
+          "Infill helps maintain turf structure and provides cushioning. Depending on usage and weather, you may need to add infill every 2–3 years. We use various infill types including silica sand, rubber granules, and organic options. During installation, we'll recommend the best infill type for your specific needs.",
       },
     ],
   },
@@ -110,7 +117,7 @@ const faqData = [
       {
         question: "How much water does artificial turf save?",
         answer:
-          "Artificial turf can save 50,000-70,000 gallons of water per year for an average-sized lawn, depending on your location and climate. This represents significant cost savings on water bills and contributes to water conservation efforts, especially important in drought-prone areas.",
+          "Artificial turf can save 50,000–70,000 gallons of water per year for an average-sized lawn, depending on your location and climate. This represents significant cost savings on water bills and contributes to water conservation efforts, especially important in drought-prone areas.",
       },
       {
         question: "Does artificial turf provide good drainage?",
@@ -126,24 +133,52 @@ const faqData = [
   },
 ]
 
+// FAQPage structured data for Google rich results
+function generateFaqSchema() {
+  const allQuestions = faqData.flatMap((cat) => cat.questions)
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: allQuestions.map((q) => ({
+      "@type": "Question",
+      name: q.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: q.answer,
+      },
+    })),
+  }
+}
+
 export default function FAQPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "https://www.atlanticturfspecialist.com" },
+    { name: "FAQ" },
+  ])
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
+      <StructuredData data={generateFaqSchema()} />
+      <StructuredData data={breadcrumbSchema} />
+
       {/* Hero Section */}
       <section className="relative h-[400px] md:h-[500px] flex items-center justify-center overflow-hidden">
         <Image
           src="/portfolio/backyard-putting-green-genaral-turf.jpg"
-          alt="Beautiful artificial turf installation with putting green"
+          alt="Completed artificial turf putting green installation by Atlantic Turf Specialist in Charlotte NC"
           fill
+          sizes="100vw"
           style={{ objectFit: "cover" }}
           quality={85}
           priority
           className="brightness-[0.4]"
         />
         <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg">Frequently Asked Questions</h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto drop-shadow-md">
-            Get expert answers to all your artificial turf questions
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg text-balance">
+            Frequently Asked Questions
+          </h1>
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto drop-shadow-md text-balance">
+            Expert answers to all your artificial turf questions
           </p>
         </div>
       </section>
@@ -152,18 +187,18 @@ export default function FAQPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
               Everything You Need to Know About Artificial Turf
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              From installation to maintenance, we've compiled answers to the most common questions about artificial
+            <p className="text-lg text-brand-gray-text max-w-2xl mx-auto text-balance">
+              From installation to maintenance, we&apos;ve compiled answers to the most common questions about artificial
               turf to help you make an informed decision.
             </p>
           </div>
 
           {faqData.map((category, categoryIndex) => (
             <div key={categoryIndex} className="mb-12">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6 pb-2 border-b-2 border-turf-green">
+              <h3 className="text-2xl font-semibold text-foreground mb-6 pb-2 border-b-2 border-turf-green">
                 {category.category}
               </h3>
               <Accordion type="single" collapsible className="space-y-4">
@@ -171,12 +206,14 @@ export default function FAQPage() {
                   <AccordionItem
                     key={faqIndex}
                     value={`${categoryIndex}-${faqIndex}`}
-                    className="border border-gray-200 rounded-lg px-6 py-2 shadow-sm hover:shadow-md transition-shadow"
+                    className="border border-turf-green/20 rounded-lg px-6 py-2 bg-brand-gray-light hover:border-turf-green/40 transition-colors"
                   >
-                    <AccordionTrigger className="text-left text-lg font-medium text-gray-900 hover:text-turf-green">
+                    <AccordionTrigger className="text-left text-lg font-medium text-foreground hover:text-turf-green-light">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-gray-700 leading-relaxed pt-2">{faq.answer}</AccordionContent>
+                    <AccordionContent className="text-brand-gray-text leading-relaxed pt-2">
+                      {faq.answer}
+                    </AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
@@ -184,24 +221,24 @@ export default function FAQPage() {
           ))}
 
           {/* Contact CTA */}
-          <div className="mt-16 text-center bg-gray-50 rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Still Have Questions?</h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          <div className="mt-16 text-center bg-turf-green-extralight border border-turf-green/30 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-foreground mb-4">Still Have Questions?</h3>
+            <p className="text-brand-gray-text mb-6 max-w-2xl mx-auto">
               Our team of artificial turf experts is here to help. Get personalized answers and a free consultation for
               your project.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-turf-green hover:bg-turf-green-dark transition-colors"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-lg text-base font-semibold text-white bg-turf-green hover:bg-turf-green-dark transition-colors"
               >
-                Get Free Consultation
-              </a>
+                Get a Free Consultation
+              </Link>
               <a
-                href="tel:+1234567890"
-                className="inline-flex items-center justify-center px-6 py-3 border border-turf-green text-base font-medium rounded-md text-turf-green bg-white hover:bg-gray-50 transition-colors"
+                href="tel:+17049956265"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-turf-green text-base font-semibold text-turf-green-light hover:bg-turf-green/10 transition-colors"
               >
-                Call Us Today
+                Call (704) 995-6265
               </a>
             </div>
           </div>

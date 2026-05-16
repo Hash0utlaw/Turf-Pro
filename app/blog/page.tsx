@@ -1,20 +1,44 @@
 import { blogPosts } from "@/lib/blog-data"
 import { BlogPostCard } from "@/components/blog-post-card"
 import type { Metadata } from "next"
+import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "Blog | Atlantic Turf Specialist",
+  title: "Blog | Artificial Turf Tips & Insights Charlotte NC | Atlantic Turf Specialist",
   description:
-    "Explore articles, tips, and insights on artificial turf installation, maintenance, and benefits from the experts at Atlantic Turf Specialist.",
+    "Expert articles, installation tips, and insights on artificial turf from Atlantic Turf Specialist. Learn about synthetic grass maintenance, costs, pet-friendly turf, putting greens, and more.",
+  keywords: [
+    "artificial turf blog",
+    "synthetic grass tips Charlotte NC",
+    "turf installation advice",
+    "artificial grass maintenance tips",
+    "putting green blog",
+    "pet turf guide",
+    "turf cost guide Charlotte",
+  ],
+  alternates: {
+    canonical: "https://www.atlanticturfspecialist.com/blog",
+  },
+  openGraph: {
+    title: "Blog | Artificial Turf Tips & Insights | Atlantic Turf Specialist",
+    description:
+      "Expert articles and insights on artificial turf installation, maintenance, and benefits from the specialists at Atlantic Turf Specialist in Charlotte NC.",
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Atlantic Turf Specialist blog - Charlotte NC turf experts" }],
+  },
 }
 
 export default function BlogPage() {
   return (
     <div className="bg-background">
-      <header
-        className="relative bg-cover bg-center bg-no-repeat py-24"
-        style={{ backgroundImage: "url(/portfolio/sports-field-aritifical-turf-hero.jpg)" }}
-      >
+      <header className="relative overflow-hidden py-24">
+        <Image
+          src="/portfolio/sports-field-aritifical-turf-hero.jpg"
+          alt="Artificial turf sports field installation by Atlantic Turf Specialist"
+          fill
+          className="object-cover object-center"
+          priority
+          sizes="100vw"
+        />
         <div className="absolute inset-0 bg-black/50" />
         <div className="container mx-auto px-4 text-center relative z-10">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">Our Blog</h1>
