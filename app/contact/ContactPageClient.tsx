@@ -189,26 +189,24 @@ export function ContactPageClient() {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
         {submitSuccess && (
-          <div className="rounded-lg bg-green-50 p-4 border border-green-200">
-            <div className="flex items-start">
-              <div className="flex-shrink-0">
-                <svg
-                  className="h-5 w-5 text-green-400"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <div className="ml-3">
-                <h3 className="text-sm font-medium text-green-800">Message sent successfully!</h3>
-                <p className="mt-1 text-sm text-green-700">
-                  Thank you for contacting us. We'll review your message and get back to you within 24 hours.
+          <div className="rounded-lg bg-turf-green-extralight p-4 border border-turf-green/40">
+            <div className="flex items-start gap-3">
+              <svg
+                className="h-5 w-5 text-turf-green-light flex-shrink-0 mt-0.5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <div>
+                <h3 className="text-sm font-semibold text-white">Message sent successfully!</h3>
+                <p className="mt-1 text-sm text-brand-gray-text">
+                  Thank you for contacting us. We&apos;ll review your message and get back to you within 24 hours.
                 </p>
               </div>
             </div>
@@ -276,11 +274,11 @@ export function ContactPageClient() {
                     field.onChange(e)
                     setAddressValidated(null)
                   }}
-                  className={`flex h-10 w-full rounded-md border bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${
+                  className={`flex h-10 w-full rounded-md border bg-background px-3 py-2 text-sm text-foreground ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${
                     addressValidated === true
-                      ? "border-green-500 focus-visible:ring-green-500"
+                      ? "border-turf-green focus-visible:ring-turf-green"
                       : addressValidated === false
-                        ? "border-red-500 focus-visible:ring-red-500"
+                        ? "border-destructive focus-visible:ring-destructive"
                         : "border-input"
                   }`}
                   autoComplete="off"
