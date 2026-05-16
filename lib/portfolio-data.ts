@@ -617,4 +617,144 @@ export const portfolioItems: PortfolioItem[] = [
       { label: "Area", value: "900 sq ft" },
     ],
   },
+  {
+    id: "luxury-estate-putting-green-pool-drone-04",
+    title: "Luxury Estate: Turf, Putting Green & Pool",
+    category: "putting-greens",
+    categoryLabel: "Putting Green",
+    description:
+      "Stunning side-angle view of a luxury estate backyard featuring a custom multi-hole putting green, lush artificial lawn, resort-style pool with hot tub, and palm tree landscaping.",
+    imageUrl: "/portfolio/artificial-turf-aerial-backyard-drone-04.webp",
+    gallery: [
+      "/portfolio/artificial-turf-aerial-backyard-drone-04.webp",
+      "/portfolio/artificial-turf-aerial-putting-green-drone-03.webp",
+      "/portfolio/artificial-turf-aerial-putting-green-drone-02.webp",
+    ],
+    details: [
+      { label: "Location", value: "Luxury Residential, Charlotte NC" },
+      { label: "Features", value: "Putting Green, Pool Surround, Palm Landscaping" },
+      { label: "Area", value: "5,000+ sq ft" },
+    ],
+  },
+  {
+    id: "drone-overhead-putting-green-palm-shadows",
+    title: "Overhead Drone View: Multi-Hole Putting Green",
+    category: "putting-greens",
+    categoryLabel: "Putting Green",
+    description:
+      "Stunning straight-down drone perspective of a custom multi-hole backyard putting green surrounded by white river rock, with dramatic palm tree shadows across the turf surface.",
+    imageUrl: "/portfolio/artificial-turf-aerial-putting-green-drone-02.webp",
+    details: [
+      { label: "Location", value: "Luxury Residential, Charlotte NC" },
+      { label: "Features", value: "Multiple Holes, River Rock Border, Sand Bunker" },
+      { label: "Area", value: "2,800 sq ft" },
+    ],
+  },
+  {
+    id: "residential-backyard-turf-trampoline-02",
+    title: "Residential Backyard Turf with Trampoline Area",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Beautifully installed residential artificial lawn enclosed by a stone wall with palm trees, accommodating a backyard trampoline and white rock garden border — a perfect family space.",
+    imageUrl: "/portfolio/artificial-turf-backyard-install-02.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Family Backyard, River Rock Border, Stone Wall" },
+      { label: "Area", value: "2,200 sq ft" },
+    ],
+  },
+  {
+    id: "aerial-estate-turf-pool-putting-drone-06",
+    title: "Aerial Estate View: Turf, Pool & Putting Green",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "High drone overview of a full luxury estate showing the interplay of artificial lawn, a custom multi-hole putting green, resort pool, and mature landscaping from above.",
+    imageUrl: "/portfolio/artificial-turf-aerial-backyard-drone-06.webp",
+    gallery: [
+      "/portfolio/artificial-turf-aerial-backyard-drone-06.webp",
+      "/portfolio/artificial-turf-aerial-estate-drone-05.webp",
+      "/portfolio/artificial-turf-aerial-backyard-drone-01.webp",
+    ],
+    details: [
+      { label: "Location", value: "Luxury Estate, Charlotte NC" },
+      { label: "Features", value: "Drone Photography, Full Backyard, Pool & Putting Green" },
+      { label: "Area", value: "6,000+ sq ft" },
+    ],
+  },
+  {
+    id: "wide-aerial-estate-turf-drone-05",
+    title: "Wide Aerial Estate: Acreage Turf & Pool",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Wide-angle drone photo of a sprawling estate showcasing the full scope of the artificial turf installation alongside a freeform pool, putting green, and manicured grounds.",
+    imageUrl: "/portfolio/artificial-turf-aerial-estate-drone-05.webp",
+    details: [
+      { label: "Location", value: "Estate Property, Charlotte NC" },
+      { label: "Features", value: "Large-Scale Lawn, Pool, Putting Green" },
+      { label: "Area", value: "8,000+ sq ft" },
+    ],
+  },
+  {
+    id: "ground-level-backyard-turf-palms-01",
+    title: "Ground-Level Backyard Turf with Palm Trees",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Eye-level close-up of freshly installed artificial turf with rich green blade detail, framed by tall palm trees along a stone privacy wall — showcasing the natural look and feel of premium synthetic grass.",
+    imageUrl: "/portfolio/artificial-turf-backyard-install-01.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Premium Turf Quality, Palm Landscaping, Stone Wall" },
+      { label: "Area", value: "2,400 sq ft" },
+    ],
+  },
+  {
+    id: "residential-backyard-turf-new-home-03",
+    title: "New Construction Residential Backyard Turf",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Freshly installed artificial lawn at a new construction home in Charlotte NC — crew still on site, showcasing the clean, vibrant result of a professional turf installation at a modern two-story residence.",
+    imageUrl: "/portfolio/artificial-turf-backyard-install-03.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "New Construction, Full Backyard Lawn" },
+      { label: "Area", value: "1,800 sq ft" },
+    ],
+  },
+  {
+    id: "luxury-backyard-putting-green-patio-drone-03",
+    title: "Luxury Backyard Putting Green & Patio",
+    category: "putting-greens",
+    categoryLabel: "Putting Green",
+    description:
+      "Elevated angle of a premium multi-hole backyard putting green with flag cups, surrounded by white river rock, mature palms, and a full outdoor patio and seating area — the ultimate backyard golf experience.",
+    imageUrl: "/portfolio/artificial-turf-aerial-putting-green-drone-03.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Multi-Hole Putting Green, River Rock, Outdoor Patio" },
+      { label: "Area", value: "3,200 sq ft" },
+    ],
+  },
+  {
+    id: "aerial-luxury-estate-pool-putting-green-01",
+    title: "Aerial Luxury Estate: Pool, Turf & Putting Green",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Bird's-eye drone view of a stunning luxury estate featuring a freeform pool with spa, terraced stone landscaping, artificial lawn, and a tucked-away putting green — a complete outdoor living masterpiece.",
+    imageUrl: "/portfolio/artificial-turf-aerial-backyard-drone-01.webp",
+    gallery: [
+      "/portfolio/artificial-turf-aerial-backyard-drone-01.webp",
+      "/portfolio/artificial-turf-aerial-backyard-drone-06.webp",
+    ],
+    details: [
+      { label: "Location", value: "Luxury Estate, Charlotte NC" },
+      { label: "Features", value: "Freeform Pool, Terraced Landscaping, Putting Green" },
+      { label: "Area", value: "5,500+ sq ft" },
+    ],
+  },
 ]
