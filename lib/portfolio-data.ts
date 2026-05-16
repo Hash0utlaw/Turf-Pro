@@ -22,6 +22,157 @@ export interface PortfolioItem {
 }
 
 export const portfolioItems: PortfolioItem[] = [
+  // --- Newest work (displayed first) ---
+  {
+    id: "commercial-brewery-patio-turf-01",
+    title: "Cowart Brewing Co. — Outdoor Patio Turf",
+    category: "commercial",
+    categoryLabel: "Commercial",
+    description:
+      "Artificial turf installed throughout the outdoor patio of Cowart Brewing Co., running on both sides of a concrete walkway beneath a sleek modern louvered pergola. A white picket fence and the brewery's branded wall make this a standout commercial transformation.",
+    imageUrl: "/portfolio/artificial-turf-commercial-install-01.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Type", value: "Commercial Patio / Brewery" },
+      { label: "Features", value: "Louvered Pergola, Concrete Path, Branded Space" },
+    ],
+  },
+  {
+    id: "modern-farmhouse-backyard-turf-07",
+    title: "Modern Black Farmhouse Backyard Turf",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Artificial lawn wrapping around the screened porch and back patio of a striking modern black farmhouse, bordered by river rock and fresh mulch beds. Clean installation that perfectly complements the home's contemporary architecture.",
+    imageUrl: "/portfolio/artificial-turf-backyard-install-07.webp",
+    gallery: [
+      "/portfolio/artificial-turf-backyard-install-07.webp",
+      "/portfolio/artificial-turf-backyard-install-08.webp",
+    ],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Screened Porch Surround, River Rock Border, Mulch Beds" },
+      { label: "Area", value: "2,600 sq ft" },
+    ],
+  },
+  {
+    id: "before-after-backyard-putting-green-01",
+    title: "Before & After: Backyard Putting Green Transformation",
+    category: "putting-greens",
+    categoryLabel: "Putting Green",
+    description:
+      "A compelling before-and-after showing a patchy, drought-stressed natural grass yard transformed into a lush multi-hole putting green, artificial lawn, river rock borders, and a full palm tree landscape — a complete backyard reinvention.",
+    imageUrl: "/portfolio/artificial-turf-before-after-backyard-01.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Before & After, Multi-Hole Putting Green, Full Landscape Renovation" },
+      { label: "Area", value: "3,800 sq ft" },
+    ],
+  },
+  {
+    id: "residential-backyard-turf-playhouse-05",
+    title: "Residential Backyard Turf with Playhouse",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Large residential backyard artificial turf installation at dusk, featuring a charming playhouse, detached garage, and clean red mulch borders. A great example of a full-yard family lawn transformation.",
+    imageUrl: "/portfolio/artificial-turf-backyard-install-05.webp",
+    gallery: [
+      "/portfolio/artificial-turf-backyard-install-05.webp",
+      "/portfolio/artificial-turf-backyard-install-04.webp",
+    ],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Full Backyard Lawn, Playhouse, Red Mulch Border" },
+      { label: "Area", value: "2,800 sq ft" },
+    ],
+  },
+  {
+    id: "curved-turf-new-construction-06",
+    title: "Curved Turf Install — New Construction Home",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Organic curved artificial turf installation beside a modern white new-construction home, with a river rock border and palm trees adding to the landscaping. Installed while surrounding construction was still underway, showing the turf's immediate visual impact.",
+    imageUrl: "/portfolio/artificial-turf-backyard-install-06.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Curved Edge, River Rock Border, New Construction" },
+      { label: "Area", value: "1,900 sq ft" },
+    ],
+  },
+  {
+    id: "commercial-strip-turf-curb-appeal-03",
+    title: "Commercial Building Curb Appeal Turf",
+    category: "commercial",
+    categoryLabel: "Commercial",
+    description:
+      "Artificial turf installed in a small commercial courtyard space beside a brick strip-mall building, replacing a bare concrete area beside the parking lot. A cost-effective way to add green space and curb appeal to any commercial property.",
+    imageUrl: "/portfolio/artificial-turf-commercial-install-03.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Type", value: "Commercial Curb Appeal" },
+      { label: "Features", value: "Parking Lot Adjacent, Concrete Surround" },
+    ],
+  },
+  {
+    id: "modern-farmhouse-turf-wider-angle-08",
+    title: "Modern Farmhouse Turf — Full Scope View",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Wider-angle view of the modern black farmhouse project showing the full scope of artificial turf wrapping around the home, integrated with river rock drainage channels and fresh black mulch garden beds.",
+    imageUrl: "/portfolio/artificial-turf-backyard-install-08.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "River Rock Drainage, Mulch Beds, Modern Home" },
+      { label: "Area", value: "2,600 sq ft" },
+    ],
+  },
+  {
+    id: "backyard-turf-pergola-putting-09",
+    title: "Backyard Lawn with Pergola & Putting Cup",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Artificial lawn installed between two homes featuring a wood-beam pergola, outdoor deck, gravel patio area, and a putting cup — a versatile backyard space designed for year-round outdoor living.",
+    imageUrl: "/portfolio/artificial-turf-backyard-install-09.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Wood Pergola, Deck Integration, Putting Cup, Gravel Patio" },
+      { label: "Area", value: "1,600 sq ft" },
+    ],
+  },
+  {
+    id: "east-lincoln-animal-hospital-turf",
+    title: "East Lincoln Animal Hospital — Pet Turf",
+    category: "commercial",
+    categoryLabel: "Commercial",
+    description:
+      "Large-scale commercial pet-friendly turf installation at East Lincoln Animal Hospital, covering the full exercise and relief area along the back of the facility. Crew installing high-durability synthetic grass designed for heavy animal use with proper drainage.",
+    imageUrl: "/portfolio/artificial-turf-commercial-install-02.webp",
+    details: [
+      { label: "Client", value: "East Lincoln Animal Hospital" },
+      { label: "Location", value: "Lincoln County, NC" },
+      { label: "Type", value: "Commercial Pet / Veterinary Facility" },
+      { label: "Features", value: "High-Durability Pet Turf, Chain-Link Enclosure, Full Facility Coverage" },
+    ],
+  },
+  {
+    id: "residential-backyard-dusk-turf-04",
+    title: "Wide Residential Backyard at Dusk",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Wide freshly installed residential artificial lawn photographed at dusk, showing the vivid green color against a traditional brick home and detached garage. Red mulch border frames the full yard cleanly.",
+    imageUrl: "/portfolio/artificial-turf-backyard-install-04.webp",
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Full Backyard Lawn, Brick Home, Red Mulch Border" },
+      { label: "Area", value: "2,400 sq ft" },
+    ],
+  },
+  // --- Previous work ---
   {
     id: "commercial-brewery-patio-turf",
     title: "Commercial Brewery Patio Transformation",
