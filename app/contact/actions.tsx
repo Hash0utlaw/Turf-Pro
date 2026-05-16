@@ -1,15 +1,16 @@
 "use server"
 
+import { Resend } from "resend"
 import { contactFormSchema, type ContactFormInputs } from "@/lib/contact-form-schema"
-
-const RESEND_API_KEY = process.env.RESEND_API_KEY
-const RECIPIENT = process.env.CONTACT_RECIPIENT_EMAIL
 
 export type SendContactEmailResult = { success: boolean; message: string }
 
 export async function sendContactEmail(values: ContactFormInputs): Promise<SendContactEmailResult> {
+  const RESEND_API_KEY = process.env.RESEND_API_KEY
+  const RECIPIENT = process.env.CONTACT_RECIPIENT_EMAIL
+
   if (!RESEND_API_KEY || !RECIPIENT) {
-    console.error("Missing Resend API key or recipient email.")
+    console.error("[sendContactEmail] Missing RESEND_API_KEY or CONTACT_RECIPIENT_EMAIL")
     return {
       success: false,
       message: "Server configuration error. Could not send email.",
@@ -18,66 +19,62 @@ export async function sendContactEmail(values: ContactFormInputs): Promise<SendC
 
   const parsed = contactFormSchema.safeParse(values)
   if (!parsed.success) {
+    console.error("[sendContactEmail] Validation failed:", parsed.error.flatten())
     return { success: false, message: "Validation failed. Please check your inputs." }
   }
 
   const { name, email, phone, service, message, address, street, city, state, zipCode } = parsed.data
 
-  // Build location for subject line
   const location = city && state ? `${city}, ${state}` : state || city || "Address Provided"
 
-  const text = `New contact form submission from ${name} (${email}).\n\nService Inquiry: ${service}\nPhone: ${phone || "Not provided"}\nProject Address: ${address}${street ? `\n  Street: ${street}` : ""}${city ? `\n  City: ${city}` : ""}${state ? `\n  State: ${state}` : ""}${zipCode ? `\n  Zip: ${zipCode}` : ""}\n\nMessage:\n${message}`
+  const resend = new Resend(RESEND_API_KEY)
 
-  const payload = {
-    from: "onboarding@resend.dev",
+  const { data, error } = await resend.emails.send({
+    from: "Atlantic Turf Specialist <onboarding@resend.dev>",
     to: [RECIPIENT],
-    subject: `Atlantic Turf Specialist • New Inquiry for ${service} - ${location}`,
-    html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ""}
-        <p><strong>Service Inquiry:</strong> ${service}</p>
-        <hr/>
-        <h3>Project Address</h3>
-        <p><strong>Full Address:</strong> ${address}</p>
-        ${street ? `<p><strong>Street:</strong> ${street}</p>` : ""}
-        ${city ? `<p><strong>City:</strong> ${city}</p>` : ""}
-        ${state ? `<p><strong>State:</strong> ${state}</p>` : ""}
-        ${zipCode ? `<p><strong>Zip Code:</strong> ${zipCode}</p>` : ""}
-        <hr/>
-        <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, "<br/>")}</p>
-      `,
-    text: text,
     reply_to: email,
-  }
+    subject: `New Inquiry: ${service} — ${location}`,
+    html: `
+      <!DOCTYPE html>
+      <html>
+      <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; margin: 0; padding: 20px;">
+        <div style="background: #ffffff; border-radius: 8px; max-width: 600px; margin: 0 auto; padding: 32px; border: 1px solid #e0e0e0;">
+          <h2 style="color: #166534; margin-top: 0;">New Contact Form Submission</h2>
+          <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #333;">
+            <tr><td style="padding: 8px 0; font-weight: bold; width: 140px;">Name</td><td>${name}</td></tr>
+            <tr><td style="padding: 8px 0; font-weight: bold;">Email</td><td><a href="mailto:${email}">${email}</a></td></tr>
+            ${phone ? `<tr><td style="padding: 8px 0; font-weight: bold;">Phone</td><td>${phone}</td></tr>` : ""}
+            <tr><td style="padding: 8px 0; font-weight: bold;">Service</td><td>${service}</td></tr>
+          </table>
+          <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;" />
+          <h3 style="color: #166534; margin-top: 0;">Project Address</h3>
+          <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #333;">
+            <tr><td style="padding: 8px 0; font-weight: bold; width: 140px;">Full Address</td><td>${address}</td></tr>
+            ${street ? `<tr><td style="padding: 8px 0; font-weight: bold;">Street</td><td>${street}</td></tr>` : ""}
+            ${city ? `<tr><td style="padding: 8px 0; font-weight: bold;">City</td><td>${city}</td></tr>` : ""}
+            ${state ? `<tr><td style="padding: 8px 0; font-weight: bold;">State</td><td>${state}</td></tr>` : ""}
+            ${zipCode ? `<tr><td style="padding: 8px 0; font-weight: bold;">Zip Code</td><td>${zipCode}</td></tr>` : ""}
+          </table>
+          <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;" />
+          <h3 style="color: #166534; margin-top: 0;">Message</h3>
+          <p style="font-size: 14px; color: #333; line-height: 1.6; white-space: pre-wrap;">${message.replace(/\n/g, "<br/>")}</p>
+          <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;" />
+          <p style="font-size: 12px; color: #999; text-align: center; margin: 0;">Sent via the Atlantic Turf Specialist contact form</p>
+        </div>
+      </body>
+      </html>
+    `,
+    text: `New contact form submission from ${name} (${email}).\n\nService: ${service}\nPhone: ${phone || "Not provided"}\nAddress: ${address}${street ? `\nStreet: ${street}` : ""}${city ? `\nCity: ${city}` : ""}${state ? `\nState: ${state}` : ""}${zipCode ? `\nZip: ${zipCode}` : ""}\n\nMessage:\n${message}`,
+  })
 
-  try {
-    const res = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${RESEND_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
-
-    if (!res.ok) {
-      const errorBody = await res.text()
-      console.error("Resend API error:", errorBody)
-      return {
-        success: false,
-        message: "Unable to send your message right now. Please try again later.",
-      }
-    }
-
-    return { success: true, message: "Your message has been sent. We'll be in touch shortly!" }
-  } catch (err) {
-    console.error("Unexpected error while sending email:", err)
+  if (error) {
+    console.error("[sendContactEmail] Resend error:", JSON.stringify(error))
     return {
       success: false,
-      message: "Something went wrong while sending your message. Please email us directly.",
+      message: "Unable to send your message right now. Please try again later.",
     }
   }
+
+  console.log("[sendContactEmail] Email sent successfully, id:", data?.id)
+  return { success: true, message: "Your message has been sent. We'll be in touch shortly!" }
 }
