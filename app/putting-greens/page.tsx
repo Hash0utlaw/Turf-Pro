@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { StructuredData } from "@/components/structured-data"
 import { generateServiceSchema, generateBreadcrumbSchema, generateVideoSchema } from "@/lib/structured-data"
 
@@ -26,9 +27,25 @@ export const metadata: Metadata = {
     title: "Backyard Putting Green Installation Charlotte NC | Custom Golf Greens | Atlantic Turf Specialist",
     description:
       "Custom backyard putting green installation in Charlotte NC. Professional-grade synthetic turf with true ball roll. Perfect for Lake Norman, Ballantyne & Myers Park homes.",
-    images: [{ url: "/putting-green-with-night-lighting.jpg" }],
+    images: [{ url: "/putting-green-with-night-lighting.jpg", width: 1200, height: 630, alt: "Custom backyard putting green installation in Charlotte NC by Atlantic Turf Specialist" }],
   },
 }
+
+const galleryImages = [
+  { src: "/large-multi-hole-putting-green-in-luxury-backyard.jpg", alt: "Large multi-hole residential putting green in luxury Charlotte NC backyard" },
+  { src: "/putting-green-with-beautiful-hardscaping.jpg", alt: "Custom putting green with complementary hardscaping and landscape design" },
+  { src: "/putting-green-with-night-lighting.jpg", alt: "Backyard putting green with professional night lighting installation" },
+  { src: "/putting-green-in-wooded-backyard-setting.jpg", alt: "Natural-looking artificial putting green in wooded backyard setting" },
+]
+
+const benefits = [
+  "True Roll technology for realistic ball speed and movement.",
+  "Fully customizable with custom breaks, tiers, and hole placements.",
+  "Low-maintenance — no watering, mowing, or fertilizing required.",
+  "Durable and weather-resistant for year-round practice.",
+  "Add sand traps, chipping areas, and other practice features.",
+  "A stunning landscape feature that adds value to your home.",
+]
 
 export default function PuttingGreensPage() {
   const serviceSchema = generateServiceSchema(
@@ -52,13 +69,14 @@ export default function PuttingGreensPage() {
   )
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <StructuredData data={serviceSchema} />
       <StructuredData data={breadcrumbSchema} />
       <StructuredData data={videoSchema} />
 
-      <div className="bg-gray-50 py-4 px-4 relative z-20">
-        <div className="container mx-auto max-w-4xl text-center text-sm text-gray-600">
+      {/* Internal link bar */}
+      <nav aria-label="Related services" className="bg-brand-gray-light py-4 px-4 border-b border-turf-green/20">
+        <div className="container mx-auto max-w-4xl text-center text-sm text-brand-gray-text">
           Explore our other Charlotte services:{" "}
           <Link href="/residential-lawn-turf" className="text-turf-green hover:underline font-medium">
             residential artificial turf Charlotte NC
@@ -72,28 +90,34 @@ export default function PuttingGreensPage() {
             pet-friendly synthetic grass Charlotte
           </Link>
         </div>
-      </div>
+      </nav>
 
       {/* Hero Section with Video */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden" aria-label="Putting green hero">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          aria-hidden="true"
+          poster="/putting-green-with-night-lighting.jpg"
+        >
           <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/turf-pro-putting-green-residential-home-medium-iB8P1yagGBoib76YM5qXM7kY15ka6A.mp4" type="video/mp4" />
         </video>
-
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-
-        {/* Hero Content */}
+        <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
         <div className="relative z-10 text-center text-white px-4 max-w-4xl">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">Perfect Your Putt at Home</h1>
-          <p className="text-xl md:text-2xl mb-8 leading-relaxed">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance drop-shadow-lg">
+            Perfect Your Putt at Home
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 leading-relaxed text-balance text-white/90">
             Bring the golf course to your backyard with a custom-designed, professional-grade putting green in Charlotte
             NC. Experience true ball roll and practice your short game anytime in Lake Norman, Ballantyne, or Myers
             Park.
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
+            className="inline-block bg-turf-green hover:bg-turf-green-dark text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg"
           >
             Get a Putting Green Quote
           </Link>
@@ -101,55 +125,49 @@ export default function PuttingGreensPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 bg-gray-50">
+      <section className="py-20 px-4 bg-brand-gray-light" aria-labelledby="benefits-heading">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">The Golfer's Dream Upgrade</h2>
-            <p className="text-xl text-gray-600">
+            <h2 id="benefits-heading" className="text-4xl font-bold text-foreground mb-4 text-balance">
+              The Golfer&apos;s Dream Upgrade
+            </h2>
+            <p className="text-xl text-brand-gray-text text-balance">
               Our putting greens are engineered for realistic performance and lasting beauty.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              "True Roll technology for realistic ball speed and movement.",
-              "Fully customizable with custom breaks, tiers, and hole placements.",
-              "Low-maintenance, requiring no watering, mowing, or fertilizing.",
-              "Durable and weather-resistant for year-round practice.",
-              "Add sand traps, chipping areas, and other features.",
-              "A stunning landscape feature that adds value to your home.",
-            ].map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <span className="text-green-600 text-xl">✓</span>
-                <p className="text-gray-700">{benefit}</p>
-              </div>
+          <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <li key={index} className="flex items-start gap-3">
+                <span className="text-turf-green text-xl flex-shrink-0 mt-0.5" aria-hidden="true">&#10003;</span>
+                <p className="text-brand-gray-text">{benefit}</p>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
       {/* Gallery Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-background" aria-labelledby="gallery-heading">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Putting Green Portfolio</h2>
-            <p className="text-xl text-gray-600">
-              Explore some of the custom putting greens we've designed and installed for our clients.
+            <h2 id="gallery-heading" className="text-4xl font-bold text-foreground mb-4 text-balance">
+              Our Putting Green Portfolio
+            </h2>
+            <p className="text-xl text-brand-gray-text text-balance">
+              Explore custom putting greens we&apos;ve designed and installed for Charlotte NC homeowners.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { src: "/large-multi-hole-putting-green-in-luxury-backyard.jpg", alt: "Large multi-hole putting green" },
-              { src: "/putting-green-with-beautiful-hardscaping.jpg", alt: "Putting green with hardscaping" },
-              { src: "/putting-green-with-night-lighting.jpg", alt: "Putting green with night lighting" },
-              { src: "/putting-green-in-wooded-backyard-setting.jpg", alt: "Putting green in wooded setting" },
-            ].map((image, index) => (
-              <div key={index} className="aspect-square overflow-hidden rounded-lg">
-                <img
-                  src={image.src || "/placeholder.svg"}
+            {galleryImages.map((image, index) => (
+              <div key={index} className="aspect-square overflow-hidden rounded-xl border border-turf-green/20">
+                <Image
+                  src={image.src}
                   alt={image.alt}
+                  width={400}
+                  height={400}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 300px"
+                  loading={index === 0 ? "eager" : "lazy"}
                 />
               </div>
             ))}
@@ -158,16 +176,17 @@ export default function PuttingGreensPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 px-4 bg-green-600 text-white">
+      <section className="py-20 px-4 bg-turf-green-extralight border-y border-turf-green/30" aria-labelledby="cta-heading">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-4">Ready to Build Your Dream Green?</h2>
-          <p className="text-xl mb-8">
-            Our design consultants are ready to help you create the perfect putting green for your space and skill
-            level.
+          <h2 id="cta-heading" className="text-4xl font-bold text-white mb-4 text-balance">
+            Ready to Build Your Dream Green?
+          </h2>
+          <p className="text-xl text-brand-gray-text mb-8 text-balance">
+            Our design consultants are ready to help you create the perfect putting green for your space and skill level.
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
+            className="inline-block bg-turf-green hover:bg-turf-green-dark text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg"
           >
             Design My Putting Green
           </Link>

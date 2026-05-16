@@ -4,9 +4,25 @@ import Script from "next/script"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "Contact Us | Atlantic Turf Specialist",
+  title: "Contact Us | Free Turf Quote Charlotte NC | Atlantic Turf Specialist",
   description:
-    "Get in touch with Atlantic Turf Specialist for a free quote on your artificial turf project. Contact us via phone, email, or our online form. We serve Charlotte, NC and surrounding areas.",
+    "Contact Atlantic Turf Specialist for a free artificial turf quote in Charlotte NC. Reach us by phone at (704) 995-6265, email, or our online form. Serving Charlotte, Matthews, Huntersville, Concord & Lake Norman.",
+  keywords: [
+    "contact Atlantic Turf Specialist",
+    "free turf quote Charlotte NC",
+    "artificial turf estimate Charlotte",
+    "turf installation quote Charlotte",
+    "synthetic grass Charlotte NC contact",
+  ],
+  alternates: {
+    canonical: "https://www.atlanticturfspecialist.com/contact",
+  },
+  openGraph: {
+    title: "Contact Us | Free Turf Quote Charlotte NC | Atlantic Turf Specialist",
+    description:
+      "Get a free artificial turf quote from Atlantic Turf Specialist. Call (704) 995-6265 or submit our online form. Serving Charlotte, NC and surrounding areas.",
+    images: [{ url: "/contact-hero.jpg", width: 1200, height: 630, alt: "Atlantic Turf Specialist contact and service area - Charlotte NC" }],
+  },
 }
 
 const PhoneIcon = () => (
