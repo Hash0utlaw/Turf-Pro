@@ -22,7 +22,7 @@ const TwitterIcon = () => (
 
 function SiteFooter() {
   return (
-    <footer className="bg-brand-gray-light border-t border-brand-gray">
+    <footer className="bg-brand-gray-light border-t border-turf-green/30">
       <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div className="py-12">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
@@ -58,7 +58,7 @@ function SiteFooter() {
 
             <div className="md:col-span-8 lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8">
               <div>
-                <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase">Services</h3>
+                <h3 className="text-sm font-semibold text-white tracking-wider uppercase">Services</h3>
                 <ul className="mt-4 space-y-2">
                   <li>
                     <Link
@@ -86,7 +86,7 @@ function SiteFooter() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase">Company</h3>
+                <h3 className="text-sm font-semibold text-white tracking-wider uppercase">Company</h3>
                 <ul className="mt-4 space-y-2">
                   <li>
                     <Link href="/#about" className="text-base text-brand-gray-text hover:text-turf-green">
@@ -111,7 +111,7 @@ function SiteFooter() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase">Legal</h3>
+                <h3 className="text-sm font-semibold text-white tracking-wider uppercase">Legal</h3>
                 <ul className="mt-4 space-y-2">
                   <li>
                     <Link href="/privacy-policy" className="text-base text-brand-gray-text hover:text-turf-green">
@@ -128,9 +128,9 @@ function SiteFooter() {
             </div>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-brand-gray">
-            <h4 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4 text-center">
-              Serving Charlotte NC & Surrounding Areas
+          <div className="mt-12 pt-8 border-t border-turf-green/30">
+            <h4 className="text-sm font-semibold text-white tracking-wider uppercase mb-4 text-center">
+              Serving Charlotte NC &amp; Surrounding Areas
             </h4>
             <div className="flex flex-wrap justify-center gap-2 text-center text-base text-brand-gray-text leading-relaxed">
               <Link href="/charlotte" className="hover:text-turf-green transition-colors">
@@ -183,7 +183,7 @@ function SiteFooter() {
             </div>
           </div>
         </div>
-        <div className="border-t border-brand-gray py-6 text-center text-sm text-brand-gray-dark">
+        <div className="border-t border-turf-green/30 py-6 text-center text-sm text-brand-gray-dark">
           <p>&copy; {new Date().getFullYear()} Atlantic Turf Specialist. All rights reserved.</p>
         </div>
       </div>

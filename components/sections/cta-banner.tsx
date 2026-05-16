@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button"
 
 export default function CtaBanner() {
   return (
-    <section id="contact-banner" className="py-16 md:py-24 bg-turf-green-extralight">
+    <section id="contact-banner" className="py-16 md:py-24 bg-turf-green-extralight border-y border-turf-green/30">
       <div className="container px-4 md:px-6 text-center">
-        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-turf-green-dark">
+        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-white">
           Ready to Transform Your Backyard?
         </h2>
         <p className="mt-4 max-w-xl mx-auto text-lg text-brand-gray-text md:text-xl">

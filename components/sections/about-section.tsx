@@ -15,7 +15,7 @@ export default function AboutSection() {
       <div className="container px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="order-2 md:order-1 flex items-center justify-center">
-            <div className="flex flex-col items-center justify-center gap-4 rounded-2xl bg-turf-green-extralight border border-turf-green/20 p-10 w-full aspect-square max-w-sm">
+            <div className="flex flex-col items-center justify-center gap-4 rounded-2xl bg-turf-green-extralight border border-turf-green/40 p-10 w-full aspect-square max-w-sm">
               <span className="flex flex-col items-start gap-[5px]" aria-hidden="true">
                 <span className="block h-[6px] w-24 rounded-full bg-turf-green" />
                 <span className="block h-[6px] w-16 rounded-full bg-turf-green" />
