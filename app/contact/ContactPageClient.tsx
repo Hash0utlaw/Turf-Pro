@@ -59,14 +59,14 @@ export function ContactPageClient() {
   }, [])
 
   useEffect(() => {
-    const initializeAutocomplete = () => {
-      if (!window.google || !window.google.maps || !window.google.maps.places) {
-        return
-      }
+    // Prevent re-initialization if already set up
+    if (autocompleteRef.current) return
 
-      if (!addressInputRef.current) {
-        return
-      }
+    const initializeAutocomplete = () => {
+      if (!window.google?.maps?.places) return
+      if (!addressInputRef.current) return
+      // Already initialized
+      if (autocompleteRef.current) return
 
       try {
         const autocomplete = new window.google.maps.places.Autocomplete(addressInputRef.current, {
@@ -134,28 +134,25 @@ export function ContactPageClient() {
       }
     }
 
+    // Poll every 150ms until the Google Maps Places library is available (max 15s)
     const checkGoogleMaps = setInterval(() => {
       if (window.google?.maps?.places) {
         clearInterval(checkGoogleMaps)
+        clearTimeout(timeout)
         initializeAutocomplete()
       }
-    }, 100)
+    }, 150)
 
     const timeout = setTimeout(() => {
       clearInterval(checkGoogleMaps)
-      if (!isAutocompleteReady) {
-        setIsAutocompleteReady(false)
-      }
-    }, 10000)
+    }, 15000)
 
     return () => {
       clearInterval(checkGoogleMaps)
       clearTimeout(timeout)
-      if (autocompleteRef.current && window.google?.maps?.event) {
-        window.google.maps.event.clearInstanceListeners(autocompleteRef.current)
-      }
     }
-  }, [form, isAutocompleteReady])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [form])
 
   const onSubmit = async (values: ContactFormInputs) => {
     setSubmitSuccess(false)
