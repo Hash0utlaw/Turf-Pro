@@ -3,7 +3,7 @@ import { blogPosts } from "@/lib/blog-data"
 import { portfolioItems } from "@/lib/portfolio-data"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.turf-professionals.com"
+  const baseUrl = "https://www.atlanticturfspecialist.com"
   const currentDate = new Date()
 
   const postUrls = blogPosts

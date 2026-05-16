@@ -133,12 +133,12 @@ export function generateOrganizationSchema(): OrganizationSchema {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Turf Professionals",
+    name: "Atlantic Turf Specialist",
     description:
       "Professional artificial turf installation services for residential, commercial, and recreational properties in Charlotte, NC and surrounding areas including Matthews, Huntersville, Concord, Lake Norman, and Fort Mill SC.",
-    url: "https://www.turf-professionals.com",
+    url: "https://www.atlanticturfspecialist.com",
     telephone: "+1-704-956-2687",
-    email: "info@turf-professionals.com",
+    email: "info@atlanticturfspecialist.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Charlotte",
@@ -204,7 +204,7 @@ export function generateOrganizationSchema(): OrganizationSchema {
         },
       ],
     },
-    sameAs: ["https://www.facebook.com/turfprofessionals", "https://www.instagram.com/turfprofessionals"],
+    sameAs: ["https://www.facebook.com/atlanticturfspecialist", "https://www.instagram.com/atlanticturfspecialist"],
   }
 }
 
@@ -226,16 +226,16 @@ export function generateArticleSchema(
     dateModified: dateModified,
     author: {
       "@type": "Organization",
-      name: "Turf Professionals",
-      url: "https://www.turf-professionals.com",
+      name: "Atlantic Turf Specialist",
+      url: "https://www.atlanticturfspecialist.com",
     },
     publisher: {
       "@type": "Organization",
-      name: "Turf Professionals",
-      url: "https://www.turf-professionals.com",
+      name: "Atlantic Turf Specialist",
+      url: "https://www.atlanticturfspecialist.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.turf-professionals.com/logo.png",
+        url: "https://www.atlanticturfspecialist.com/logo.png",
       },
     },
     mainEntityOfPage: {
@@ -266,8 +266,8 @@ export function generateServiceSchema(name: string, description: string, service
     description: description,
     provider: {
       "@type": "LocalBusiness",
-      name: "Turf Professionals",
-      url: "https://www.turf-professionals.com",
+      name: "Atlantic Turf Specialist",
+      url: "https://www.atlanticturfspecialist.com",
     },
     areaServed: [
       { "@type": "City", name: "Charlotte" },
@@ -304,10 +304,10 @@ export function generateVideoSchema(
     duration: duration,
     publisher: {
       "@type": "Organization",
-      name: "Turf Professionals",
+      name: "Atlantic Turf Specialist",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.turf-professionals.com/logo.png",
+        url: "https://www.atlanticturfspecialist.com/logo.png",
       },
     },
   }

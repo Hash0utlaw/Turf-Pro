@@ -7,7 +7,7 @@ import { Phone, MapPin, Star, Check, ArrowRight } from "lucide-react"
 import { StructuredData } from "@/components/structured-data"
 
 export const metadata: Metadata = {
-  title: "Artificial Turf Installation Matthews NC | Turf Professionals",
+    title: "Artificial Turf Installation Matthews NC | Atlantic Turf Specialist",
   description:
     "Professional artificial turf installation in Matthews NC. Beautiful synthetic grass for residential lawns, commercial properties & putting greens. Free quotes! Call (704) 995-6265",
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "putting green Matthews NC",
   ],
   openGraph: {
-    title: "Artificial Turf Installation Matthews NC | Turf Professionals",
+  title: "Artificial Turf Installation Matthews NC | Atlantic Turf Specialist",
     description:
       "Professional artificial turf installation in Matthews NC. Beautiful synthetic grass for homes & businesses.",
     images: [{ url: "/hero-homepage-new.png" }],
@@ -74,10 +74,10 @@ const benefits = [
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Turf Professionals - Matthews NC",
-  image: "https://www.turf-professionals.com/hero-homepage-new.png",
-  "@id": "https://www.turf-professionals.com/matthews",
-  url: "https://www.turf-professionals.com/matthews",
+  name: "Atlantic Turf Specialist - Matthews NC",
+  image: "https://www.atlanticturfspecialist.com/hero-homepage-new.png",
+  "@id": "https://www.atlanticturfspecialist.com/matthews",
+  url: "https://www.atlanticturfspecialist.com/matthews",
   telephone: "+1-704-995-6265",
   priceRange: "$$-$$$",
   address: {

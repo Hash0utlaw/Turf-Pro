@@ -3,9 +3,9 @@ import type { Metadata } from "next"
 import Script from "next/script"
 
 export const metadata: Metadata = {
-  title: "Contact Us | Turf Professionals",
+  title: "Contact Us | Atlantic Turf Specialist",
   description:
-    "Get in touch with Turf Professionals for a free quote on your artificial turf project. Contact us via phone, email, or our online form. We serve Charlotte, NC and surrounding areas.",
+    "Get in touch with Atlantic Turf Specialist for a free quote on your artificial turf project. Contact us via phone, email, or our online form. We serve Charlotte, NC and surrounding areas.",
 }
 
 const PhoneIcon = () => (
@@ -99,10 +99,10 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold text-gray-900 dark:text-gray-50">Email</h3>
                       <a
-                        href="mailto:zach@turf-professionals.com"
+                        href="mailto:zach@atlanticturfspecialist.com"
                         className="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-500"
                       >
-                        zach@turf-professionals.com
+                        zach@atlanticturfspecialist.com
                       </a>
                     </div>
                   </div>

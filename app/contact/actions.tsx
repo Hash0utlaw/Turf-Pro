@@ -31,7 +31,7 @@ export async function sendContactEmail(values: ContactFormInputs): Promise<SendC
   const payload = {
     from: "onboarding@resend.dev",
     to: [RECIPIENT],
-    subject: `Turf Pros • New Inquiry for ${service} - ${location}`,
+    subject: `Atlantic Turf Specialist • New Inquiry for ${service} - ${location}`,
     html: `
         <h2>New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${name}</p>

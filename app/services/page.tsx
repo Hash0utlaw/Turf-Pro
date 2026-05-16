@@ -9,9 +9,9 @@ import { Toaster } from "@/components/ui/toaster"
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Our Artificial Turf Services | Turf Pros",
+    title: "Our Artificial Turf Services | Atlantic Turf Specialist",
     description:
-      "Explore a comprehensive range of artificial turf services from Turf Pros, including putting greens, pet-friendly solutions, recreational turf, and professional installation.",
+      "Explore a comprehensive range of artificial turf services from Atlantic Turf Specialist, including putting greens, pet-friendly solutions, recreational turf, and professional installation.",
     keywords: [
       "artificial turf services",
       "synthetic grass solutions",
@@ -23,8 +23,8 @@ export async function generateMetadata(): Promise<Metadata> {
       "residential turf",
     ],
     openGraph: {
-      title: "Comprehensive Artificial Turf Services | Turf Pros",
-      description: "Discover all the ways Turf Pros can transform your outdoor and indoor spaces with premium turf.",
+      title: "Comprehensive Artificial Turf Services | Atlantic Turf Specialist",
+      description: "Discover all the ways Atlantic Turf Specialist can transform your outdoor and indoor spaces with premium turf.",
       images: [
         {
           url: "/all-services-overview.png",
@@ -91,7 +91,7 @@ export default function AllServicesPage() {
             Our Comprehensive Turf Services
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-brand-gray-text md:text-xl">
-            Discover how Turf Professionals can transform your space with our wide range of premium artificial turf
+            Discover how Atlantic Turf Specialist can transform your space with our wide range of premium artificial turf
             solutions.
           </p>
         </div>

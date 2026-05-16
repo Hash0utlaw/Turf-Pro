@@ -30,10 +30,10 @@ export async function generateMetadata({ params }: BlogPostPageProps, parent: Re
   }
 
   const previousImages = (await parent).openGraph?.images || []
-  const url = `https://www.turf-professionals.com/blog/${params.slug}`
+  const url = `https://www.atlanticturfspecialist.com/blog/${params.slug}`
 
   return {
-    title: `${post.title} | Turf Professionals Blog`,
+    title: `${post.title} | Atlantic Turf Specialist Blog`,
     description: post.excerpt,
     alternates: {
       canonical: url,
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: BlogPostPageProps, parent: Re
       images: [post.image, ...previousImages],
       type: "article",
       publishedTime: post.date,
-      authors: ["Turf Professionals"],
+      authors: ["Atlantic Turf Specialist"],
       url: url,
     },
     twitter: {
@@ -63,19 +63,19 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     notFound()
   }
 
-  const url = `https://www.turf-professionals.com/blog/${params.slug}`
+  const url = `https://www.atlanticturfspecialist.com/blog/${params.slug}`
   const articleSchema = generateArticleSchema(
     post.title,
     post.excerpt,
-    `https://www.turf-professionals.com${post.image}`,
+    `https://www.atlanticturfspecialist.com${post.image}`,
     post.date,
     post.date,
     url,
   )
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: "https://www.turf-professionals.com" },
-    { name: "Blog", url: "https://www.turf-professionals.com/blog" },
+    { name: "Home", url: "https://www.atlanticturfspecialist.com" },
+    { name: "Blog", url: "https://www.atlanticturfspecialist.com/blog" },
     { name: post.title },
   ])
 

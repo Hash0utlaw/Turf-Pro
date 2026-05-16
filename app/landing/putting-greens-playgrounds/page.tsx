@@ -6,11 +6,11 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Check, Users, Trophy, Heart, Shield, Sparkles, Star, Phone } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Custom Putting Greens & Playground Turf Installation | Turf Pros Charlotte NC",
+  title: "Custom Putting Greens & Playground Turf Installation | Atlantic Turf Specialist Charlotte NC",
   description:
     "Transform your backyard with custom putting greens and safe playground turf. Perfect for families who want recreation and fun at home. Professional installation in Charlotte and surrounding areas. Get your free quote today!",
   openGraph: {
-    title: "Custom Putting Greens & Playground Turf | Turf Pros",
+    title: "Custom Putting Greens & Playground Turf | Atlantic Turf Specialist",
     description: "Bring the fun home with custom putting greens and safe playground turf for your backyard.",
     images: [{ url: "/portfolio/backyard-tennis-court-putting-green-combo.jpg" }],
   },
@@ -208,7 +208,7 @@ export default function PuttingGreensPlaygroundsLanding() {
                     ))}
                   </div>
                   <p className="text-muted-foreground italic mb-4">
-                    "Turf Pros designed an amazing putting green with multiple holes. Professional quality and
+                    "Atlantic Turf Specialist designed an amazing putting green with multiple holes. Professional quality and
                     installation. Highly recommend!"
                   </p>
                   <p className="font-semibold">- David R., Lake Norman</p>

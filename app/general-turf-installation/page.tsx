@@ -3,11 +3,11 @@ import ServicePageTemplate, { type ServicePageTemplateProps } from "@/components
 import { Layers, ShieldCheck, Clock } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Expert Turf Installation Services | The Perfect Foundation | Turf Pros",
+  title: "Expert Turf Installation Services | The Perfect Foundation | Atlantic Turf Specialist",
   description:
     "Learn about our meticulous turf installation process. From ground preparation to the final touches, we guarantee a flawless, long-lasting result for any project.",
   openGraph: {
-    title: "Expert Turf Installation Services | The Perfect Foundation | Turf Pros",
+    title: "Expert Turf Installation Services | The Perfect Foundation | Atlantic Turf Specialist",
     description: "Learn about our meticulous turf installation process, ensuring a flawless and long-lasting result.",
     images: [{ url: "/portfolio/sports-field-aritifical-turf-hero.jpg" }],
   },
@@ -21,7 +21,7 @@ const pageContent: ServicePageTemplateProps = {
     "A perfect lawn starts with a flawless installation. Our certified team uses industry-leading techniques to ensure your turf is beautiful, durable, and long-lasting.",
   heroCtaText: "Discuss Your Installation Project",
 
-  benefitsTitle: "The Turf Pros Installation Difference",
+  benefitsTitle: "The Atlantic Turf Specialist Installation Difference",
   benefitsSubtitle:
     "Our process is refined to guarantee the best possible outcome for your investment. We don't cut corners.",
   benefits: [
@@ -34,7 +34,7 @@ const pageContent: ServicePageTemplateProps = {
   ],
 
   featuresImageSrc: "/portfolio/general-turf-installation.jpg",
-  featuresImageAlt: "A Turf Pros team member applies infill to a new putting green installation.",
+  featuresImageAlt: "A Atlantic Turf Specialist team member applies infill to a new putting green installation.",
   featuresTitle: "Our Meticulous Process",
   featuresText:
     "We follow a rigorous multi-step process. It begins with a detailed site assessment, followed by extensive ground preparation, precise turf laying, and professional finishing touches. This commitment to quality ensures your new lawn is not just installed, but engineered to last.",

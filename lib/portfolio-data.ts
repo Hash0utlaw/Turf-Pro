@@ -61,7 +61,7 @@ export const portfolioItems: PortfolioItem[] = [
     category: "commercial",
     categoryLabel: "Commercial",
     description:
-      "Professional installation of commercial-grade artificial turf for restaurant outdoor dining area, featuring Turf Pro team members in action creating a beautiful, durable entertainment space.",
+      "Professional installation of commercial-grade artificial turf for restaurant outdoor dining area, featuring Atlantic Turf Specialist team members in action creating a beautiful, durable entertainment space.",
     imageUrl: "/portfolio/patio-commercial-turf-2.jpg",
     gallery: ["/portfolio/patio-commercial-turf-2.jpg", "/portfolio/commercial-patio-turf.jpg"],
     details: [
@@ -76,7 +76,7 @@ export const portfolioItems: PortfolioItem[] = [
     category: "commercial",
     categoryLabel: "Commercial",
     description:
-      "Behind-the-scenes look at professional ground preparation and base installation for commercial brewery patio project, showcasing Turf Pro's meticulous installation process.",
+      "Behind-the-scenes look at professional ground preparation and base installation for commercial brewery patio project, showcasing Atlantic Turf Specialist's meticulous installation process.",
     imageUrl: "/portfolio/commercial-patio-turf.jpg",
     details: [
       { label: "Project Type", value: "Commercial Installation Process" },
@@ -90,7 +90,7 @@ export const portfolioItems: PortfolioItem[] = [
     category: "commercial",
     categoryLabel: "Commercial",
     description:
-      "Turf Pro team member in signature bright green uniform professionally installing premium artificial turf around commercial pool area with precision and expertise.",
+      "Atlantic Turf Specialist team member professionally installing premium artificial turf around commercial pool area with precision and expertise.",
     imageUrl: "/portfolio/turf-pro-worker-commercial-pool-installation.jpg",
     details: [
       { label: "Project Type", value: "Commercial Pool Installation" },
@@ -132,7 +132,7 @@ export const portfolioItems: PortfolioItem[] = [
     category: "residential",
     categoryLabel: "Residential",
     description:
-      "Turf Pro specialist showcasing completed residential artificial turf installation with professional landscaping, retaining walls, and mature tree integration.",
+      "Atlantic Turf Specialist showcasing completed residential artificial turf installation with professional landscaping, retaining walls, and mature tree integration.",
     imageUrl: "/portfolio/residential-backyard-artificial-turf-landscaping.jpg",
     details: [
       { label: "Location", value: "Residential Backyard" },
@@ -228,7 +228,7 @@ export const portfolioItems: PortfolioItem[] = [
     category: "putting-greens",
     categoryLabel: "Putting Green",
     description:
-      "A Turf Pros team member carefully applies sand infill to a new putting green, a crucial step for performance and durability.",
+      "An Atlantic Turf Specialist team member carefully applies sand infill to a new putting green, a crucial step for performance and durability.",
     imageUrl: "/portfolio/general-turf-installation.jpg",
     details: [
       { label: "Process", value: "Infill Application" },

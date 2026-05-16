@@ -4,7 +4,7 @@ import { DollarSign, Shield, Zap } from "lucide-react"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Commercial Artificial Turf Charlotte NC | Business Turf Installation | Turf Pros",
+  title: "Commercial Artificial Turf Charlotte NC | Business Turf Installation | Atlantic Turf Specialist",
   description:
     "Professional commercial turf installation in Charlotte NC. Perfect for restaurants, breweries, office parks, apartments & HOAs. Durable, low-maintenance synthetic grass. Serving Uptown, NoDa, South End & beyond.",
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "commercial property turf South End",
   ],
   openGraph: {
-    title: "Commercial Artificial Turf Charlotte NC | Business Turf Installation | Turf Pros",
+    title: "Commercial Artificial Turf Charlotte NC | Business Turf Installation | Atlantic Turf Specialist",
     description:
       "Professional commercial turf installation in Charlotte NC. Perfect for restaurants, breweries, office parks, apartments & HOAs. Durable, low-maintenance synthetic grass.",
     images: [{ url: "/portfolio/rooftop-general-turf-low-maintenance.jpg" }],
