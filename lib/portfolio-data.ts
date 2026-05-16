@@ -55,49 +55,7 @@ export const portfolioItems: PortfolioItem[] = [
       { label: "Area", value: "3,800 sq ft" },
     ],
   },
-  {
-    id: "commercial-restaurant-patio-installation",
-    title: "Commercial Restaurant Patio Installation",
-    category: "commercial",
-    categoryLabel: "Commercial",
-    description:
-      "Professional installation of commercial-grade artificial turf for restaurant outdoor dining area, featuring Atlantic Turf Specialist team members in action creating a beautiful, durable entertainment space.",
-    imageUrl: "/portfolio/patio-commercial-turf-2.jpg",
-    gallery: ["/portfolio/patio-commercial-turf-2.jpg", "/portfolio/commercial-patio-turf.jpg"],
-    details: [
-      { label: "Project Type", value: "Restaurant Patio" },
-      { label: "Features", value: "Professional Installation, Outdoor Dining" },
-      { label: "Area", value: "2,500 sq ft" },
-    ],
-  },
-  {
-    id: "commercial-brewery-before-installation",
-    title: "Commercial Brewery Ground Preparation",
-    category: "commercial",
-    categoryLabel: "Commercial",
-    description:
-      "Behind-the-scenes look at professional ground preparation and base installation for commercial brewery patio project, showcasing Atlantic Turf Specialist's meticulous installation process.",
-    imageUrl: "/portfolio/commercial-patio-turf.jpg",
-    details: [
-      { label: "Project Type", value: "Commercial Installation Process" },
-      { label: "Features", value: "Ground Prep, Base Installation" },
-      { label: "Area", value: "2,200 sq ft" },
-    ],
-  },
-  {
-    id: "turf-pro-commercial-pool-installation",
-    title: "Professional Commercial Pool Installation",
-    category: "commercial",
-    categoryLabel: "Commercial",
-    description:
-      "Atlantic Turf Specialist team member professionally installing premium artificial turf around commercial pool area with precision and expertise.",
-    imageUrl: "/portfolio/turf-pro-worker-commercial-pool-installation.jpg",
-    details: [
-      { label: "Project Type", value: "Commercial Pool Installation" },
-      { label: "Features", value: "Professional Team, Pool Surround" },
-      { label: "Area", value: "3,500 sq ft" },
-    ],
-  },
+
   {
     id: "school-playground-safety-turf-surface",
     title: "School Playground Safety Turf Surface",
@@ -126,20 +84,7 @@ export const portfolioItems: PortfolioItem[] = [
       { label: "Area", value: "1,900 sq ft" },
     ],
   },
-  {
-    id: "residential-backyard-turf-landscaping",
-    title: "Residential Backyard Turf Landscaping",
-    category: "residential",
-    categoryLabel: "Residential",
-    description:
-      "Atlantic Turf Specialist showcasing completed residential artificial turf installation with professional landscaping, retaining walls, and mature tree integration.",
-    imageUrl: "/portfolio/residential-backyard-artificial-turf-landscaping.jpg",
-    details: [
-      { label: "Location", value: "Residential Backyard" },
-      { label: "Features", value: "Landscaping, Retaining Walls" },
-      { label: "Area", value: "4,200 sq ft" },
-    ],
-  },
+
   {
     id: "backyard-tennis-court-putting-green",
     title: "Backyard Tennis Court & Putting Green Combo",
