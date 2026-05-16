@@ -51,8 +51,8 @@ export default function ContactPage() {
     <>
       {googleMapsApiKey && (
         <Script
-          src={`https://maps.googleapis.com/maps/api/js?key=${googleMapsApiKey}&libraries=places`}
-          strategy="beforeInteractive"
+          src={`https://maps.googleapis.com/maps/api/js?key=${googleMapsApiKey}&libraries=places&loading=async`}
+          strategy="afterInteractive"
         />
       )}
 
