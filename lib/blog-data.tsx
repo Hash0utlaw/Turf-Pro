@@ -338,7 +338,7 @@ export const blogPosts: BlogPost[] = [
     title: "The Complete Guide to Artificial Turf Installation in Charlotte, NC and Surrounding Areas: 2025 Edition",
     date: "2025-10-07",
     author: "Atlantic Turf Specialist Team",
-    image: "/portfolio/residential-backyard-artificial-turf-landscaping.jpg",
+    image: "/portfolio/artificial-turf-backyard-install-07.webp",
     excerpt:
       "Discover why Charlotte, NC homeowners are choosing artificial turf for their lawns. This comprehensive guide covers climate considerations, cost savings, installation tips, and local regulations for synthetic grass in Charlotte, Concord, Matthews, Huntersville, and surrounding areas.",
     content: `
