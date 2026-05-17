@@ -78,65 +78,55 @@ export default function PortfolioClient({ allItems }: Props) {
         </AnimatePresence>
       </motion.div>
 
-      {/* Detail dialog */}
+      {/* Lightbox dialog — image only with title */}
       <Dialog open={!!selectedItem} onOpenChange={(open) => !open && setSelectedItem(null)}>
-        <DialogContent className="max-w-[95vw] max-h-[95vh] sm:max-w-[900px] p-0 bg-background rounded-2xl shadow-soft-lg overflow-auto">
+        <DialogContent className="max-w-[95vw] max-h-[95vh] sm:max-w-[900px] p-0 bg-black/95 rounded-2xl shadow-soft-lg overflow-hidden border-0">
           {selectedItem && (
             <>
-              <DialogHeader className="p-4 sm:p-6 pb-0">
-                <DialogTitle className="text-xl sm:text-2xl md:text-3xl font-semibold">
+              {/* Hidden for a11y */}
+              <DialogDescription className="sr-only">{selectedItem.title}</DialogDescription>
+
+              {/* Image */}
+              {selectedItem.gallery?.length ? (
+                <Carousel className="w-full">
+                  <CarouselContent>
+                    {selectedItem.gallery.map((url, i) => (
+                      <CarouselItem key={i}>
+                        <div className="relative w-full aspect-[4/3]">
+                          <Image
+                            src={url}
+                            alt={`${selectedItem.title} — photo ${i + 1}`}
+                            fill
+                            sizes="(max-width: 768px) 95vw, 900px"
+                            className="object-cover"
+                            priority={i === 0}
+                          />
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="left-3 bg-black/50 border-0 text-white hover:bg-black/70" />
+                  <CarouselNext className="right-3 bg-black/50 border-0 text-white hover:bg-black/70" />
+                </Carousel>
+              ) : (
+                <div className="relative w-full aspect-[4/3]">
+                  <Image
+                    src={selectedItem.imageUrl}
+                    alt={selectedItem.title}
+                    fill
+                    sizes="(max-width: 768px) 95vw, 900px"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              )}
+
+              {/* Title bar */}
+              <DialogHeader className="px-5 py-3 bg-black/80">
+                <DialogTitle className="text-white text-base sm:text-lg font-medium tracking-wide">
                   {selectedItem.title}
                 </DialogTitle>
-                <DialogDescription className="text-brand-gray-text mt-2">{selectedItem.description}</DialogDescription>
               </DialogHeader>
-
-              <div className="grid md:grid-cols-2 gap-4 sm:gap-6 p-4 sm:p-6">
-                <div className="order-2 md:order-1">
-                  <h4 className="font-semibold text-lg mb-3">Project Details</h4>
-                  <ul className="space-y-2 text-brand-gray-text">
-                    {selectedItem.details.map((d) => (
-                      <li key={d.label} className="flex justify-between border-b pb-2">
-                        <span className="font-medium text-foreground/80">{d.label}:</span>
-                        <span className="text-right">{d.value}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="order-1 md:order-2">
-                  {selectedItem.gallery?.length ? (
-                    <Carousel className="w-full">
-                      <CarouselContent>
-                        {selectedItem.gallery.map((url, i) => (
-                          <CarouselItem key={i}>
-                            <div className="relative w-full aspect-video">
-                              <Image
-                                src={url || "/placeholder.svg"}
-                                alt={`${selectedItem.title} image ${i + 1}`}
-                                fill
-                                sizes="(max-width: 768px) 95vw, (max-width: 1200px) 50vw, 400px"
-                                className="rounded-lg object-cover"
-                              />
-                            </div>
-                          </CarouselItem>
-                        ))}
-                      </CarouselContent>
-                      <CarouselPrevious className="left-2" />
-                      <CarouselNext className="right-2" />
-                    </Carousel>
-                  ) : (
-                    <div className="relative w-full aspect-video">
-                      <Image
-                        src={selectedItem.imageUrl || "/placeholder.svg"}
-                        alt={selectedItem.title}
-                        fill
-                        sizes="(max-width: 768px) 95vw, (max-width: 1200px) 50vw, 400px"
-                        className="rounded-lg object-cover"
-                      />
-                    </div>
-                  )}
-                </div>
-              </div>
             </>
           )}
         </DialogContent>
