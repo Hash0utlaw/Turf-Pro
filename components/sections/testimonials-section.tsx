@@ -35,7 +35,7 @@ const testimonials = [
   {
     name: "Zack Malal",
     stars: 5,
-    text: "These guys crushed it! Atlantic Turf Specialist made my yard look insanely good. Super chill crew, showed up on time, got it done right.",
+    text: "These guys crushed it! Atlantic Turf Specialists made my yard look insanely good. Super chill crew, showed up on time, got it done right.",
   },
   {
     name: "Austin Schoenbaum",
@@ -65,7 +65,7 @@ export default function TestimonialsSection() {
             What Our Clients Say
           </h2>
           <p className="mt-3 max-w-2xl mx-auto text-lg text-brand-gray-text md:text-xl">
-            Hear from satisfied customers who transformed their spaces with Atlantic Turf Specialist.
+            Hear from satisfied customers who transformed their spaces with Atlantic Turf Specialists.
           </p>
         </div>
         <Carousel

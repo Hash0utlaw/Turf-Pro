@@ -6,7 +6,7 @@ import { Phone, MapPin, Star } from "lucide-react"
 import { StructuredData } from "@/components/structured-data"
 
 export const metadata: Metadata = {
-    title: "Artificial Turf Installation Company Charlotte NC | Atlantic Turf Specialist",
+    title: "Artificial Turf Installation Company Charlotte NC | Atlantic Turf Specialists",
   description:
     "Charlotte's #1 artificial turf installation company. Professional synthetic grass for homes & businesses in Charlotte, Matthews, Huntersville, Lake Norman & surrounding NC areas. Free quotes!",
   keywords: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "Lake Norman turf company",
   ],
   openGraph: {
-  title: "Artificial Turf Installation Company Charlotte NC | Atlantic Turf Specialist",
+  title: "Artificial Turf Installation Company Charlotte NC | Atlantic Turf Specialists",
     description:
       "Charlotte's #1 artificial turf installation company. Professional synthetic grass for homes & businesses.",
     images: [{ url: "/hero-homepage-new.png" }],
@@ -82,7 +82,7 @@ const services = [
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Atlantic Turf Specialist",
+  name: "Atlantic Turf Specialists",
   image: "https://www.atlanticturfspecialist.com/hero-homepage-new.png",
   "@id": "https://www.atlanticturfspecialist.com/charlotte",
   url: "https://www.atlanticturfspecialist.com/charlotte",
@@ -277,7 +277,7 @@ export default function CharlottePage() {
                 </div>
                 <p className="text-gray-700 mb-4">
                   "Best decision we made for our Ballantyne backyard! The kids and dog love it, and we love not having
-                  to mow anymore. Atlantic Turf Specialist did an amazing job."
+                  to mow anymore. Atlantic Turf Specialists did an amazing job."
                 </p>
                 <p className="font-semibold">- Sarah M., Ballantyne</p>
               </CardContent>

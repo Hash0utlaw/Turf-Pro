@@ -3,9 +3,9 @@ import PortfolioClient from "./portfolio-client"
 import { portfolioItems } from "@/lib/portfolio-data"
 
 export const metadata: Metadata = {
-  title: "Portfolio | Artificial Turf Installation Projects Charlotte NC | Atlantic Turf Specialist",
+  title: "Portfolio | Artificial Turf Installation Projects Charlotte NC | Atlantic Turf Specialists",
   description:
-    "Browse our portfolio of completed artificial turf projects in Charlotte NC — residential lawns, commercial spaces, backyard putting greens, pet-friendly turf, and more. See real results from Atlantic Turf Specialist.",
+    "Browse our portfolio of completed artificial turf projects in Charlotte NC — residential lawns, commercial spaces, backyard putting greens, pet-friendly turf, and more. See real results from Atlantic Turf Specialists.",
   keywords: [
     "artificial turf portfolio Charlotte NC",
     "turf installation gallery Charlotte",
@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     canonical: "https://www.atlanticturfspecialist.com/portfolio",
   },
   openGraph: {
-    title: "Portfolio | Artificial Turf Installation Projects Charlotte NC | Atlantic Turf Specialist",
+    title: "Portfolio | Artificial Turf Installation Projects Charlotte NC | Atlantic Turf Specialists",
     description:
       "Browse our portfolio of completed artificial turf projects in Charlotte NC — residential lawns, commercial spaces, backyard putting greens, and more.",
-    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Atlantic Turf Specialist portfolio of completed turf projects" }],
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Atlantic Turf Specialists portfolio of completed turf projects" }],
   },
 }
 

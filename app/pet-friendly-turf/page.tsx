@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Pet-Friendly Artificial Turf Charlotte NC | Dog Turf Installation | Atlantic Turf Specialist",
+    title: "Pet-Friendly Artificial Turf Charlotte NC | Dog Turf Installation | Atlantic Turf Specialists",
     description:
       "Safe, durable pet turf installation in Charlotte NC. Easy-clean dog runs & pet-friendly artificial grass with excellent drainage. Perfect for Charlotte's climate. No mud, no mess!",
     keywords: [
@@ -21,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "synthetic pet grass Charlotte NC",
     ],
     openGraph: {
-      title: "Pet-Friendly Artificial Turf Charlotte NC | Dog Turf Installation | Atlantic Turf Specialist",
+      title: "Pet-Friendly Artificial Turf Charlotte NC | Dog Turf Installation | Atlantic Turf Specialists",
       description:
         "Safe, durable pet turf installation in Charlotte NC. Easy-clean dog runs & pet-friendly artificial grass with excellent drainage. Perfect for Charlotte's climate.",
       images: [
@@ -92,7 +92,7 @@ const petTurfData: ServicePageTemplateProps = {
       alt: "Versatile Charlotte backyard with pet-safe artificial turf and putting green installation",
     },
   ],
-  finalCtaTitle: "Give Your Pet the Best with Atlantic Turf Specialist",
+  finalCtaTitle: "Give Your Pet the Best with Atlantic Turf Specialists",
   finalCtaSubtitle:
     "Contact us for a free consultation on the ideal pet-friendly turf solution for your Charlotte NC yard.",
   finalCtaButtonText: "Get My Pet Turf Quote",

@@ -4,9 +4,9 @@ import type { Metadata } from "next"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "Blog | Artificial Turf Tips & Insights Charlotte NC | Atlantic Turf Specialist",
+  title: "Blog | Artificial Turf Tips & Insights Charlotte NC | Atlantic Turf Specialists",
   description:
-    "Expert articles, installation tips, and insights on artificial turf from Atlantic Turf Specialist. Learn about synthetic grass maintenance, costs, pet-friendly turf, putting greens, and more.",
+    "Expert articles, installation tips, and insights on artificial turf from Atlantic Turf Specialists. Learn about synthetic grass maintenance, costs, pet-friendly turf, putting greens, and more.",
   keywords: [
     "artificial turf blog",
     "synthetic grass tips Charlotte NC",
@@ -20,10 +20,10 @@ export const metadata: Metadata = {
     canonical: "https://www.atlanticturfspecialist.com/blog",
   },
   openGraph: {
-    title: "Blog | Artificial Turf Tips & Insights | Atlantic Turf Specialist",
+    title: "Blog | Artificial Turf Tips & Insights | Atlantic Turf Specialists",
     description:
-      "Expert articles and insights on artificial turf installation, maintenance, and benefits from the specialists at Atlantic Turf Specialist in Charlotte NC.",
-    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Atlantic Turf Specialist blog - Charlotte NC turf experts" }],
+      "Expert articles and insights on artificial turf installation, maintenance, and benefits from the specialists at Atlantic Turf Specialists in Charlotte NC.",
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Atlantic Turf Specialists blog - Charlotte NC turf experts" }],
   },
 }
 
@@ -33,7 +33,7 @@ export default function BlogPage() {
       <header className="relative overflow-hidden py-24">
         <Image
           src="/portfolio/sports-field-aritifical-turf-hero.jpg"
-          alt="Artificial turf sports field installation by Atlantic Turf Specialist"
+          alt="Artificial turf sports field installation by Atlantic Turf Specialists"
           fill
           className="object-cover object-center"
           priority

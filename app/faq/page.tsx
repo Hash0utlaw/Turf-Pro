@@ -6,9 +6,9 @@ import { StructuredData } from "@/components/structured-data"
 import { generateBreadcrumbSchema } from "@/lib/structured-data"
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | Artificial Turf Charlotte NC | Atlantic Turf Specialist",
+  title: "Frequently Asked Questions | Artificial Turf Charlotte NC | Atlantic Turf Specialists",
   description:
-    "Get expert answers to common questions about artificial turf installation, maintenance, costs, and benefits in Charlotte NC. Atlantic Turf Specialist covers everything from how long turf lasts to pet safety.",
+    "Get expert answers to common questions about artificial turf installation, maintenance, costs, and benefits in Charlotte NC. Atlantic Turf Specialists covers everything from how long turf lasts to pet safety.",
   keywords: [
     "artificial turf FAQ Charlotte NC",
     "synthetic grass questions Charlotte",
@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     canonical: "https://www.atlanticturfspecialist.com/faq",
   },
   openGraph: {
-    title: "Frequently Asked Questions | Artificial Turf Charlotte NC | Atlantic Turf Specialist",
+    title: "Frequently Asked Questions | Artificial Turf Charlotte NC | Atlantic Turf Specialists",
     description:
       "Get expert answers to common questions about artificial turf installation, maintenance, costs, and benefits in Charlotte NC.",
-    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Atlantic Turf Specialist FAQ - Charlotte NC artificial turf experts" }],
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Atlantic Turf Specialists FAQ - Charlotte NC artificial turf experts" }],
   },
 }
 
@@ -165,7 +165,7 @@ export default function FAQPage() {
       <section className="relative h-[400px] md:h-[500px] flex items-center justify-center overflow-hidden">
         <Image
           src="/portfolio/backyard-putting-green-genaral-turf.jpg"
-          alt="Completed artificial turf putting green installation by Atlantic Turf Specialist in Charlotte NC"
+          alt="Completed artificial turf putting green installation by Atlantic Turf Specialists in Charlotte NC"
           fill
           sizes="100vw"
           style={{ objectFit: "cover" }}

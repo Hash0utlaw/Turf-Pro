@@ -9,7 +9,7 @@ import { Phone, MapPin, Star, CheckCircle2, Award, Shield, Clock } from "lucide-
 import { StructuredData } from "@/components/structured-data"
 
 export const metadata: Metadata = {
-  title: "Artificial Turf Installation Cornelius NC | Lake Norman Area | Atlantic Turf Specialist",
+  title: "Artificial Turf Installation Cornelius NC | Lake Norman Area | Atlantic Turf Specialists",
   description:
     "Professional artificial turf installation in Cornelius NC on Lake Norman. Beautiful synthetic grass for waterfront homes & commercial properties. Free quotes! Call (704) 995-6265",
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "commercial turf Cornelius",
   ],
   openGraph: {
-    title: "Artificial Turf Installation Cornelius NC | Lake Norman | Atlantic Turf Specialist",
+    title: "Artificial Turf Installation Cornelius NC | Lake Norman | Atlantic Turf Specialists",
     description: "Professional artificial turf installation in Cornelius NC on Lake Norman.",
     images: [{ url: "/hero-homepage-new.png" }],
   },
@@ -56,7 +56,7 @@ const services = [
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Atlantic Turf Specialist - Cornelius NC",
+  name: "Atlantic Turf Specialists - Cornelius NC",
   image: "https://www.atlanticturfspecialist.com/hero-homepage-new.png",
   "@id": "https://www.atlanticturfspecialist.com/cornelius",
   url: "https://www.atlanticturfspecialist.com/cornelius",

@@ -4,11 +4,11 @@ import Script from "next/script"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "Contact Us | Free Turf Quote Charlotte NC | Atlantic Turf Specialist",
+  title: "Contact Us | Free Turf Quote Charlotte NC | Atlantic Turf Specialists",
   description:
-    "Contact Atlantic Turf Specialist for a free artificial turf quote in Charlotte NC. Reach us by phone at (704) 995-6265, email, or our online form. Serving Charlotte, Matthews, Huntersville, Concord & Lake Norman.",
+    "Contact Atlantic Turf Specialists for a free artificial turf quote in Charlotte NC. Reach us by phone at (704) 995-6265, email, or our online form. Serving Charlotte, Matthews, Huntersville, Concord & Lake Norman.",
   keywords: [
-    "contact Atlantic Turf Specialist",
+    "contact Atlantic Turf Specialists",
     "free turf quote Charlotte NC",
     "artificial turf estimate Charlotte",
     "turf installation quote Charlotte",
@@ -18,10 +18,10 @@ export const metadata: Metadata = {
     canonical: "https://www.atlanticturfspecialist.com/contact",
   },
   openGraph: {
-    title: "Contact Us | Free Turf Quote Charlotte NC | Atlantic Turf Specialist",
+    title: "Contact Us | Free Turf Quote Charlotte NC | Atlantic Turf Specialists",
     description:
-      "Get a free artificial turf quote from Atlantic Turf Specialist. Call (704) 995-6265 or submit our online form. Serving Charlotte, NC and surrounding areas.",
-    images: [{ url: "/contact-hero.jpg", width: 1200, height: 630, alt: "Atlantic Turf Specialist contact and service area - Charlotte NC" }],
+      "Get a free artificial turf quote from Atlantic Turf Specialists. Call (704) 995-6265 or submit our online form. Serving Charlotte, NC and surrounding areas.",
+    images: [{ url: "/contact-hero.jpg", width: 1200, height: 630, alt: "Atlantic Turf Specialists contact and service area - Charlotte NC" }],
   },
 }
 
@@ -60,7 +60,7 @@ export default function ContactPage() {
       <div className="relative w-full h-64 md:h-80 lg:h-96 overflow-hidden">
         <Image
           src="/contact-hero.jpg"
-          alt="Premium artificial turf installation by Atlantic Turf Specialist"
+          alt="Premium artificial turf installation by Atlantic Turf Specialists"
           fill
           className="object-cover object-center"
           priority
@@ -146,7 +146,7 @@ export default function ContactPage() {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Atlantic Turf Specialist service area map"
+                    title="Atlantic Turf Specialists service area map"
                   />
                 </div>
               </div>
