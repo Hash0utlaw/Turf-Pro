@@ -24,6 +24,146 @@ export interface PortfolioItem {
 export const portfolioItems: PortfolioItem[] = [
   // --- Newest work (displayed first) ---
   {
+    id: "putting-green-pool-deck-farmhouse-09",
+    title: "Putting Green & Pool Deck — Farmhouse Backyard",
+    category: "putting-greens",
+    categoryLabel: "Putting Greens",
+    description:
+      "Two-hole putting green with flag sticks installed beside a resort-style pool and paver deck, viewed from a grey composite deck overlooking an open countryside property with equestrian fencing.",
+    imageUrl: "/portfolio/artificial-turf-pool-surround-install-09.webp",
+    gallery: ["/portfolio/artificial-turf-pool-surround-install-09.webp"],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Putting Green, Pool Surround, Paver Deck, Composite Deck" },
+    ],
+  },
+  {
+    id: "pool-surround-diamond-pattern-install-11",
+    title: "Pool Surround — Diamond Turf & Travertine Pattern",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Geometric diamond-pattern turf strips woven between large travertine pavers surrounding an infinity-edge pool under construction, with a stone retaining wall backdrop and lush tree line.",
+    imageUrl: "/portfolio/artificial-turf-pool-surround-install-11.webp",
+    gallery: ["/portfolio/artificial-turf-pool-surround-install-11.webp"],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Diamond Pattern, Travertine Pavers, Infinity Pool" },
+    ],
+  },
+  {
+    id: "pool-surround-white-farmhouse-12",
+    title: "Pool Surround — White Farmhouse New Construction",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Fresh artificial turf lawn laid beside an in-ground pool under construction at a modern white and grey farmhouse, with a cedar-clad garage and gravel surrounds on a new-build property.",
+    imageUrl: "/portfolio/artificial-turf-pool-surround-install-12.webp",
+    gallery: ["/portfolio/artificial-turf-pool-surround-install-12.webp"],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Pool Surround, New Construction, Farmhouse Style" },
+    ],
+  },
+  {
+    id: "putting-green-palm-tree-courtyard-02",
+    title: "Multi-Hole Putting Green — Palm Tree Courtyard",
+    category: "putting-greens",
+    categoryLabel: "Putting Greens",
+    description:
+      "Long multi-hole putting green with a sand bunker feature running alongside a river-rock border through a tropical palm tree courtyard, with an outdoor dining area and covered pavilion in the background.",
+    imageUrl: "/portfolio/artificial-turf-putting-green-install-02.webp",
+    gallery: ["/portfolio/artificial-turf-putting-green-install-02.webp"],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Multi-Hole Putting Green, Sand Bunker, River Rock Border" },
+    ],
+  },
+  {
+    id: "pool-surround-diamond-new-build-14",
+    title: "Pool Surround — Diamond Pattern New Build",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Diamond-cut turf between cream square pavers wrapping an empty in-ground pool shell at a new construction site, with a skid-steer in the background and edging grid materials on site.",
+    imageUrl: "/portfolio/artificial-turf-pool-surround-install-14.webp",
+    gallery: ["/portfolio/artificial-turf-pool-surround-install-14.webp"],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Diamond Pattern, Square Pavers, New Construction" },
+    ],
+  },
+  {
+    id: "pool-surround-diamond-finished-13",
+    title: "Pool Surround — Diamond Turf Completed Install",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Completed diamond-pattern turf and white marble paver installation beside a crystal-clear rectangular pool, with manicured boxwood plantings, landscape lighting, and a mulch garden border.",
+    imageUrl: "/portfolio/artificial-turf-pool-surround-install-13.webp",
+    gallery: ["/portfolio/artificial-turf-pool-surround-install-13.webp"],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Diamond Pattern, Marble Pavers, Landscape Lighting, Boxwood Borders" },
+    ],
+  },
+  {
+    id: "pool-surround-large-lawn-08",
+    title: "Large Backyard Lawn & Pool Surround",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Expansive vibrant green artificial lawn wrapping a rectangular pool with white travertine coping, black iron fencing, and a wooded backdrop — a lush full-backyard transformation.",
+    imageUrl: "/portfolio/artificial-turf-pool-surround-install-08.webp",
+    gallery: ["/portfolio/artificial-turf-pool-surround-install-08.webp"],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Full Backyard Lawn, Pool Surround, Iron Fencing" },
+    ],
+  },
+  {
+    id: "pool-surround-modern-farmhouse-07",
+    title: "Modern Farmhouse Pool Surround",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Lush artificial turf flanking both sides of a sleek rectangular pool with large travertine coping at a modern black-and-white farmhouse, with a privacy fence and screened porch.",
+    imageUrl: "/portfolio/artificial-turf-pool-surround-install-07.webp",
+    gallery: ["/portfolio/artificial-turf-pool-surround-install-07.webp"],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Pool Surround, Travertine Coping, Modern Farmhouse" },
+    ],
+  },
+  {
+    id: "pool-surround-install-10",
+    title: "Pool Surround — Travertine Paver Install",
+    category: "residential",
+    categoryLabel: "Residential",
+    description:
+      "Artificial turf bordering a travertine-paved pool surround during active installation, with clean straight edges and a wooded lot backdrop — a precision fit around a complex paver layout.",
+    imageUrl: "/portfolio/artificial-turf-pool-surround-install-10.webp",
+    gallery: ["/portfolio/artificial-turf-pool-surround-install-10.webp"],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Pool Surround, Travertine Pavers" },
+    ],
+  },
+  {
+    id: "putting-green-tropical-courtyard-01",
+    title: "Putting Green — Tropical Walled Courtyard",
+    category: "putting-greens",
+    categoryLabel: "Putting Greens",
+    description:
+      "Full backyard transformation with a large artificial lawn, putting green, and travertine patio inside a grand walled brick courtyard surrounded by tall palm trees, landscape beds, and a basketball goal.",
+    imageUrl: "/portfolio/artificial-turf-putting-green-install-01.webp",
+    gallery: ["/portfolio/artificial-turf-putting-green-install-01.webp"],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Putting Green, Full Lawn, Travertine Patio, Walled Courtyard" },
+    ],
+  },
+  {
     id: "luxury-pool-surround-marble-pavers-04",
     title: "Luxury Pool Surround — Turf & Marble Pavers",
     category: "residential",
