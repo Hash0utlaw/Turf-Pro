@@ -32,10 +32,14 @@ export const metadata: Metadata = {
 }
 
 const galleryImages = [
-  { src: "/large-multi-hole-putting-green-in-luxury-backyard.jpg", alt: "Large multi-hole residential putting green in luxury Charlotte NC backyard" },
-  { src: "/putting-green-with-beautiful-hardscaping.jpg", alt: "Custom putting green with complementary hardscaping and landscape design" },
-  { src: "/putting-green-with-night-lighting.jpg", alt: "Backyard putting green with professional night lighting installation" },
-  { src: "/putting-green-in-wooded-backyard-setting.jpg", alt: "Natural-looking artificial putting green in wooded backyard setting" },
+  { src: "/portfolio/artificial-turf-putting-green-night-02.webp", alt: "Multi-hole putting green with professional pole and perimeter lighting at night — Charlotte NC" },
+  { src: "/portfolio/artificial-turf-putting-green-install-15.webp", alt: "Two-hole putting green with fringe turf and white vinyl fence — Charlotte NC backyard" },
+  { src: "/portfolio/artificial-turf-putting-green-install-13.webp", alt: "Three-hole putting green integrated into full artificial backyard lawn with cedar privacy fence" },
+  { src: "/portfolio/artificial-turf-putting-green-night-01.webp", alt: "Organic-shaped putting green illuminated at dusk beside a pool patio — Charlotte NC" },
+  { src: "/portfolio/artificial-turf-putting-green-install-14.webp", alt: "Estate courtyard putting green with chipping ramp and stacked-stone seating walls" },
+  { src: "/portfolio/artificial-turf-putting-green-install-08.webp", alt: "Multi-hole putting green with fringe turf and landscape lighting at brick farmhouse estate" },
+  { src: "/portfolio/artificial-turf-putting-green-install-06.webp", alt: "Curved putting green lawn bordered by stone retaining wall in wooded Charlotte NC backyard" },
+  { src: "/portfolio/artificial-turf-putting-green-install-05.webp", alt: "Circular putting green atop curved retaining wall at white two-story Charlotte home" },
 ]
 
 const benefits = [
@@ -157,7 +161,7 @@ export default function PuttingGreensPage() {
               Explore custom putting greens we&apos;ve designed and installed for Charlotte NC homeowners.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {galleryImages.map((image, index) => (
               <div key={index} className="aspect-square overflow-hidden rounded-xl border border-turf-green/20">
                 <Image
