@@ -24,6 +24,146 @@ export interface PortfolioItem {
 export const portfolioItems: PortfolioItem[] = [
   // --- Newest work (displayed first) ---
   {
+    id: "putting-green-retaining-wall-wooded-06",
+    title: "Curved Putting Green — Wooded Retaining Wall",
+    category: "putting-greens",
+    categoryLabel: "Putting Greens",
+    description:
+      "Large curved artificial turf lawn and putting area bordered by a sweeping stone retaining wall, nestled among tall trees with dappled sunlight — a dramatic hillside transformation.",
+    imageUrl: "/portfolio/artificial-turf-putting-green-install-06.webp",
+    gallery: ["/portfolio/artificial-turf-putting-green-install-06.webp"],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Curved Putting Green, Stone Retaining Wall, Wooded Setting" },
+    ],
+  },
+  {
+    id: "putting-green-yellow-flags-paver-patio-09",
+    title: "Putting Green — Yellow Flag Backyard Install",
+    category: "putting-greens",
+    categoryLabel: "Putting Greens",
+    description:
+      "Three-hole putting green with yellow flag sticks set beside a grey siding home, surrounded by a decorative paver patio, river-rock border, and black iron fencing with an open countryside view.",
+    imageUrl: "/portfolio/artificial-turf-putting-green-install-09.webp",
+    gallery: ["/portfolio/artificial-turf-putting-green-install-09.webp"],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "3-Hole Putting Green, Paver Patio, River Rock Border, Iron Fencing" },
+    ],
+  },
+  {
+    id: "putting-green-retaining-wall-amphitheater-05",
+    title: "Putting Green — Amphitheater Retaining Wall",
+    category: "putting-greens",
+    categoryLabel: "Putting Greens",
+    description:
+      "Expansive circular putting green set atop a curved stacked-block retaining wall, viewed from the lower yard at a white two-story home with a wooded hillside backdrop in full fall color.",
+    imageUrl: "/portfolio/artificial-turf-putting-green-install-05.webp",
+    gallery: ["/portfolio/artificial-turf-putting-green-install-05.webp"],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Circular Putting Green, Stacked-Block Retaining Wall" },
+    ],
+  },
+  {
+    id: "putting-green-night-install-palm-04",
+    title: "Putting Green — Night Install, Desert Landscape",
+    category: "putting-greens",
+    categoryLabel: "Putting Greens",
+    description:
+      "Organic-shaped putting green completed during a night shift, glowing under equipment lights against a desert-style river-rock landscape with date palms and a travertine patio surround.",
+    imageUrl: "/portfolio/artificial-turf-putting-green-install-04.webp",
+    gallery: ["/portfolio/artificial-turf-putting-green-install-04.webp"],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Custom Putting Green, Night Installation, Desert Landscape, River Rock" },
+    ],
+  },
+  {
+    id: "putting-green-urban-backyard-11",
+    title: "Putting Green & Lawn — Urban Backyard with Deck",
+    category: "putting-greens",
+    categoryLabel: "Putting Greens",
+    description:
+      "Narrow urban backyard converted to a lush artificial lawn with an integrated putting green, bordered by a mulch garden bed with young shrubs, a grey composite deck, and a cedar pergola.",
+    imageUrl: "/portfolio/artificial-turf-putting-green-install-11.webp",
+    gallery: ["/portfolio/artificial-turf-putting-green-install-11.webp"],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Putting Green, Full Lawn, Mulch Borders, Deck Integration" },
+    ],
+  },
+  {
+    id: "putting-green-backyard-fence-03",
+    title: "Putting Green & Backyard Lawn — Fenced Suburban",
+    category: "putting-greens",
+    categoryLabel: "Putting Greens",
+    description:
+      "Seamlessly integrated putting green and full backyard artificial lawn behind a cedar-privacy-fenced suburban home, with a clean concrete step transition and lush shrub plantings along the fence line.",
+    imageUrl: "/portfolio/artificial-turf-putting-green-install-03.webp",
+    gallery: ["/portfolio/artificial-turf-putting-green-install-03.webp"],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Putting Green, Full Backyard Lawn, Privacy Fencing" },
+    ],
+  },
+  {
+    id: "putting-green-night-lit-iron-fence-07",
+    title: "Putting Green — Night Lit, Iron Fence & Fire Pit",
+    category: "putting-greens",
+    categoryLabel: "Putting Greens",
+    description:
+      "Illuminated two-hole putting green photographed at night behind an iron fence, with string lights and a stone fire-pit area visible in the background — a complete outdoor entertainment space.",
+    imageUrl: "/portfolio/artificial-turf-putting-green-install-07.webp",
+    gallery: ["/portfolio/artificial-turf-putting-green-install-07.webp"],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "2-Hole Putting Green, String Lights, Iron Fencing, Fire Pit Area" },
+    ],
+  },
+  {
+    id: "putting-green-round-screened-porch-10",
+    title: "Round Putting Green — Screened Porch Backyard",
+    category: "putting-greens",
+    categoryLabel: "Putting Greens",
+    description:
+      "Classic oval putting green with three holes and yellow flags installed in the side yard of a brick-and-white farmhouse with a large screened porch, landscape lighting, and tall pine tree backdrop.",
+    imageUrl: "/portfolio/artificial-turf-putting-green-install-10.webp",
+    gallery: ["/portfolio/artificial-turf-putting-green-install-10.webp"],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Oval Putting Green, Landscape Lighting, 3 Holes" },
+    ],
+  },
+  {
+    id: "putting-green-brick-farmhouse-08",
+    title: "Putting Green — Brick Farmhouse Estate",
+    category: "putting-greens",
+    categoryLabel: "Putting Greens",
+    description:
+      "Multi-hole putting green with fringe turf set on an expansive estate lawn at a brick-and-white farmhouse with a large sunroom addition, landscape lighting, and tall pine tree surroundings.",
+    imageUrl: "/portfolio/artificial-turf-putting-green-install-08.webp",
+    gallery: ["/portfolio/artificial-turf-putting-green-install-08.webp"],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Multi-Hole Putting Green, Fringe Turf, Landscape Lighting, Estate Setting" },
+    ],
+  },
+  {
+    id: "putting-green-urban-alley-backyard-12",
+    title: "Putting Green & Lawn — Urban Alley Backyard",
+    category: "putting-greens",
+    categoryLabel: "Putting Greens",
+    description:
+      "Long narrow urban backyard fully transformed with artificial turf, an integrated putting green, a curved retaining wall border, and a mulch landscape bed, leading up to a blue cottage with pergola deck.",
+    imageUrl: "/portfolio/artificial-turf-putting-green-install-12.webp",
+    gallery: ["/portfolio/artificial-turf-putting-green-install-12.webp"],
+    details: [
+      { label: "Location", value: "Charlotte, NC" },
+      { label: "Features", value: "Putting Green, Full Lawn, Retaining Wall, Urban Backyard" },
+    ],
+  },
+  {
     id: "putting-green-pool-deck-farmhouse-09",
     title: "Putting Green & Pool Deck — Farmhouse Backyard",
     category: "putting-greens",
