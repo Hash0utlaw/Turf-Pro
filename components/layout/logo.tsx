@@ -21,7 +21,7 @@ export function Logo({ className }: LogoProps) {
         "flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm",
         className,
       )}
-      aria-label="Atlantic Turf Specialist — Home"
+      aria-label="Atlantic Turf Specialists — Home"
     >
       {/* Icon mark: three stacked grass-blade bars */}
       <span className="flex flex-col justify-center gap-[3px] shrink-0" aria-hidden="true">
@@ -36,7 +36,7 @@ export function Logo({ className }: LogoProps) {
           Atlantic Turf
         </span>
         <span className="text-[10px] font-semibold tracking-[0.18em] text-turf-green uppercase">
-          Specialist
+          Specialists
         </span>
       </span>
     </Link>
