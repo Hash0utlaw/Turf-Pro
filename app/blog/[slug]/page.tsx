@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: BlogPostPageProps, parent: Re
   const url = `https://www.atlanticturfspecialist.com/blog/${params.slug}`
 
   return {
-    title: `${post.title} | Atlantic Turf Specialist Blog`,
+    title: `${post.title} | Atlantic Turf Specialists Blog`,
     description: post.excerpt,
     alternates: {
       canonical: url,
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: BlogPostPageProps, parent: Re
       images: [post.image, ...previousImages],
       type: "article",
       publishedTime: post.date,
-      authors: ["Atlantic Turf Specialist"],
+      authors: ["Atlantic Turf Specialists"],
       url: url,
     },
     twitter: {

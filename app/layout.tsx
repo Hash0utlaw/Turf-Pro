@@ -13,15 +13,15 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-    default: "Artificial Turf Installation Charlotte NC | Atlantic Turf Specialist",
-    template: "%s | Atlantic Turf Specialist",
+    default: "Artificial Turf Installation Charlotte NC | Atlantic Turf Specialists",
+    template: "%s | Atlantic Turf Specialists",
   },
   description:
     "Charlotte's premier artificial turf specialists. Professional synthetic grass for residential lawns, commercial properties & putting greens. Serving Charlotte, Matthews, Huntersville, Concord, Lake Norman & surrounding NC areas. Free quotes! Call (704) 956-2687",
   keywords: [
     "artificial turf installation Charlotte NC",
     "synthetic grass Charlotte",
-    "Atlantic Turf Specialist Charlotte",
+    "Atlantic Turf Specialists Charlotte",
     "artificial grass company Charlotte",
     "residential turf Charlotte",
     "commercial turf Charlotte NC",
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     "synthetic turf Huntersville NC",
     "turf installation near me",
   ],
-  authors: [{ name: "Atlantic Turf Specialist" }],
-  creator: "Atlantic Turf Specialist",
-  publisher: "Atlantic Turf Specialist",
+  authors: [{ name: "Atlantic Turf Specialists" }],
+  creator: "Atlantic Turf Specialists",
+  publisher: "Atlantic Turf Specialists",
   formatDetection: {
     email: false,
     address: false,
@@ -56,22 +56,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.atlanticturfspecialist.com",
-    title: "Artificial Turf Installation Charlotte NC | Atlantic Turf Specialist",
+    title: "Artificial Turf Installation Charlotte NC | Atlantic Turf Specialists",
     description:
       "Charlotte's premier artificial turf specialists. Professional synthetic grass for residential lawns, commercial properties & putting greens. Serving Charlotte, Matthews, Huntersville, Concord, Lake Norman & surrounding NC areas.",
-    siteName: "Atlantic Turf Specialist",
+    siteName: "Atlantic Turf Specialists",
     images: [
       {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Atlantic Turf Specialist - Charlotte NC Artificial Turf Installation",
+        alt: "Atlantic Turf Specialists - Charlotte NC Artificial Turf Installation",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Artificial Turf Installation Charlotte NC | Atlantic Turf Specialist",
+    title: "Artificial Turf Installation Charlotte NC | Atlantic Turf Specialists",
     description:
       "Charlotte's premier artificial turf specialists. Professional synthetic grass for residential lawns, commercial properties & putting greens. Serving Charlotte & surrounding NC areas.",
     images: ["/opengraph-image.png"],

@@ -483,7 +483,7 @@ export const portfolioItems: PortfolioItem[] = [
     category: "putting-greens",
     categoryLabel: "Putting Green",
     description:
-      "An Atlantic Turf Specialist team member carefully applies sand infill to a new putting green, a crucial step for performance and durability.",
+      "An Atlantic Turf Specialists team member carefully applies sand infill to a new putting green, a crucial step for performance and durability.",
     imageUrl: "/portfolio/general-turf-installation.jpg",
     details: [
       { label: "Process", value: "Infill Application" },

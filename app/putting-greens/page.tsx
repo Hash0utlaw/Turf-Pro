@@ -5,7 +5,7 @@ import { StructuredData } from "@/components/structured-data"
 import { generateServiceSchema, generateBreadcrumbSchema, generateVideoSchema } from "@/lib/structured-data"
 
 export const metadata: Metadata = {
-  title: "Backyard Putting Green Installation Charlotte NC | Custom Golf Greens | Atlantic Turf Specialist",
+  title: "Backyard Putting Green Installation Charlotte NC | Custom Golf Greens | Atlantic Turf Specialists",
   description:
     "Custom backyard putting green installation in Charlotte NC. Professional-grade synthetic turf with true ball roll. Perfect for Lake Norman, Ballantyne & Myers Park homes. Get your free putting green quote!",
   keywords: [
@@ -24,10 +24,10 @@ export const metadata: Metadata = {
     canonical: "https://www.atlanticturfspecialist.com/putting-greens",
   },
   openGraph: {
-    title: "Backyard Putting Green Installation Charlotte NC | Custom Golf Greens | Atlantic Turf Specialist",
+    title: "Backyard Putting Green Installation Charlotte NC | Custom Golf Greens | Atlantic Turf Specialists",
     description:
       "Custom backyard putting green installation in Charlotte NC. Professional-grade synthetic turf with true ball roll. Perfect for Lake Norman, Ballantyne & Myers Park homes.",
-    images: [{ url: "/putting-green-with-night-lighting.jpg", width: 1200, height: 630, alt: "Custom backyard putting green installation in Charlotte NC by Atlantic Turf Specialist" }],
+    images: [{ url: "/putting-green-with-night-lighting.jpg", width: 1200, height: 630, alt: "Custom backyard putting green installation in Charlotte NC by Atlantic Turf Specialists" }],
   },
 }
 
@@ -60,7 +60,7 @@ export default function PuttingGreensPage() {
   ])
 
   const videoSchema = generateVideoSchema(
-    "Custom Putting Green Installation - Atlantic Turf Specialist",
+    "Custom Putting Green Installation - Atlantic Turf Specialists",
     "Watch how we install professional-quality custom putting greens for residential backyards. Our artificial turf greens offer true ball roll and realistic performance for year-round golf practice at home.",
     "https://www.atlanticturfspecialist.com/putting-green-with-night-lighting.jpg",
     "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/turf-pro-putting-green-residential-home-medium-iB8P1yagGBoib76YM5qXM7kY15ka6A.mp4",

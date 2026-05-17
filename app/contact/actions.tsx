@@ -30,7 +30,7 @@ export async function sendContactEmail(values: ContactFormInputs): Promise<SendC
   const resend = new Resend(RESEND_API_KEY)
 
   const { data, error } = await resend.emails.send({
-    from: "Atlantic Turf Specialist <onboarding@resend.dev>",
+    from: "Atlantic Turf Specialists <onboarding@resend.dev>",
     to: [RECIPIENT],
     reply_to: email,
     subject: `New Inquiry: ${service} — ${location}`,
@@ -59,7 +59,7 @@ export async function sendContactEmail(values: ContactFormInputs): Promise<SendC
           <h3 style="color: #166534; margin-top: 0;">Message</h3>
           <p style="font-size: 14px; color: #333; line-height: 1.6; white-space: pre-wrap;">${message.replace(/\n/g, "<br/>")}</p>
           <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;" />
-          <p style="font-size: 12px; color: #999; text-align: center; margin: 0;">Sent via the Atlantic Turf Specialist contact form</p>
+          <p style="font-size: 12px; color: #999; text-align: center; margin: 0;">Sent via the Atlantic Turf Specialists contact form</p>
         </div>
       </body>
       </html>

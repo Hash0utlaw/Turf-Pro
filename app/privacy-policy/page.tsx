@@ -3,9 +3,9 @@ import Link from "next/link"
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Privacy Policy | Atlantic Turf Specialist",
+    title: "Privacy Policy | Atlantic Turf Specialists",
     description:
-      "Read the Privacy Policy for Atlantic Turf Specialist to understand how we collect, use, and protect your personal data.",
+      "Read the Privacy Policy for Atlantic Turf Specialists to understand how we collect, use, and protect your personal data.",
     robots: {
       // Good practice to ensure search engines can index your policy
       index: true,
@@ -31,7 +31,7 @@ export default function PrivacyPolicyPage() {
       <section className="py-12 md:py-16">
         <div className="container px-4 md:px-6 max-w-3xl mx-auto prose prose-lg prose-headings:text-turf-green-dark prose-a:text-turf-green hover:prose-a:text-turf-green-dark">
           <p>
-            Atlantic Turf Specialist ("us", "we", or "our") operates the [Your Website URL] website (the "Service"). This page
+            Atlantic Turf Specialists ("us", "we", or "our") operates the [Your Website URL] website (the "Service"). This page
             informs you of our policies regarding the collection, use, and disclosure of personal data when you use our
             Service and the choices you have associated with that data.
           </p>
@@ -86,7 +86,7 @@ export default function PrivacyPolicyPage() {
           </ul>
 
           <h2>2. Use of Data</h2>
-          <p>Atlantic Turf Specialist uses the collected data for various purposes:</p>
+          <p>Atlantic Turf Specialists uses the collected data for various purposes:</p>
           <ul>
             <li>To provide and maintain our Service</li>
             <li>To notify you about changes to our Service</li>

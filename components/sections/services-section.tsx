@@ -19,7 +19,7 @@ const services = [
   },
   {
     imageUrl: "/portfolio/putting-green-night-lights.jpg",
-    imageAlt: "Custom backyard putting green with night lighting installed by Atlantic Turf Specialist",
+    imageAlt: "Custom backyard putting green with night lighting installed by Atlantic Turf Specialists",
     title: "Backyard Putting Greens",
     description: "Perfect your short game with a custom-designed putting green that offers a true and realistic roll.",
     href: "/putting-greens",
@@ -41,7 +41,7 @@ const services = [
   },
   {
     imageUrl: "/portfolio/general-turf-installation.jpg",
-    imageAlt: "Professional general artificial turf installation by Atlantic Turf Specialist crew",
+    imageAlt: "Professional general artificial turf installation by Atlantic Turf Specialists crew",
     title: "General Turf Installation",
     description: "Our expert team provides professional, high-quality installation for any type of turf project.",
     href: "/general-turf-installation",

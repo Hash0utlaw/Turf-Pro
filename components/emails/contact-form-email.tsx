@@ -26,7 +26,7 @@ export default function ContactFormEmail({ name, email, phone, service, message 
         </h1>
         
         <p style="color: #333333; font-size: 16px; line-height: 1.5; margin-bottom: 20px;">
-          You've received a new message from your Atlantic Turf Specialist website contact form.
+          You've received a new message from your Atlantic Turf Specialists website contact form.
         </p>
 
         <div style="background-color: #f8f9fa; border: 1px solid #e9ecef; border-radius: 6px; padding: 20px; margin-bottom: 20px;">
@@ -65,7 +65,7 @@ export default function ContactFormEmail({ name, email, phone, service, message 
         </div>
 
         <p style="color: #666666; font-size: 12px; text-align: center; margin-top: 20px; margin-bottom: 0;">
-          This email was sent from your Atlantic Turf Specialist website contact form.
+          This email was sent from your Atlantic Turf Specialists website contact form.
         </p>
         
       </div>

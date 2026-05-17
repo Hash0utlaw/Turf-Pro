@@ -31,10 +31,10 @@ export default function AboutSection() {
           </div>
           <div className="space-y-6 order-1 md:order-2">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
-              About Atlantic Turf Specialist
+              About Atlantic Turf Specialists
             </h2>
             <p className="text-base sm:text-lg text-brand-gray-text leading-relaxed">
-              At Atlantic Turf Specialist, we are passionate about transforming outdoor spaces with high-quality
+              At Atlantic Turf Specialists, we are passionate about transforming outdoor spaces with high-quality
               artificial turf. With years of experience in the industry, our dedicated team combines expertise with a
               commitment to excellence, ensuring every project meets the highest standards of beauty and durability.
             </p>

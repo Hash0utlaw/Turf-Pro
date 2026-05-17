@@ -133,7 +133,7 @@ export function generateOrganizationSchema(): OrganizationSchema {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Atlantic Turf Specialist",
+    name: "Atlantic Turf Specialists",
     description:
       "Professional artificial turf installation services for residential, commercial, and recreational properties in Charlotte, NC and surrounding areas including Matthews, Huntersville, Concord, Lake Norman, and Fort Mill SC.",
     url: "https://www.atlanticturfspecialist.com",
@@ -226,12 +226,12 @@ export function generateArticleSchema(
     dateModified: dateModified,
     author: {
       "@type": "Organization",
-      name: "Atlantic Turf Specialist",
+      name: "Atlantic Turf Specialists",
       url: "https://www.atlanticturfspecialist.com",
     },
     publisher: {
       "@type": "Organization",
-      name: "Atlantic Turf Specialist",
+      name: "Atlantic Turf Specialists",
       url: "https://www.atlanticturfspecialist.com",
       logo: {
         "@type": "ImageObject",
@@ -266,7 +266,7 @@ export function generateServiceSchema(name: string, description: string, service
     description: description,
     provider: {
       "@type": "LocalBusiness",
-      name: "Atlantic Turf Specialist",
+      name: "Atlantic Turf Specialists",
       url: "https://www.atlanticturfspecialist.com",
     },
     areaServed: [
@@ -304,7 +304,7 @@ export function generateVideoSchema(
     duration: duration,
     publisher: {
       "@type": "Organization",
-      name: "Atlantic Turf Specialist",
+      name: "Atlantic Turf Specialists",
       logo: {
         "@type": "ImageObject",
         url: "https://www.atlanticturfspecialist.com/logo.png",

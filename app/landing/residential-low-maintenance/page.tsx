@@ -6,11 +6,11 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Check, Clock, Droplets, Scissors, DollarSign, Sparkles, Star, Phone } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Low Maintenance Artificial Turf for Residential Yards | Atlantic Turf Specialist Charlotte NC",
+  title: "Low Maintenance Artificial Turf for Residential Yards | Atlantic Turf Specialists Charlotte NC",
   description:
     "Transform your yard with beautiful, low-maintenance artificial turf. No mowing, no watering, no hassle. Perfect green lawns year-round in Charlotte and surrounding areas. Get your free quote today!",
   openGraph: {
-    title: "Low Maintenance Artificial Turf for Residential Yards | Atlantic Turf Specialist",
+    title: "Low Maintenance Artificial Turf for Residential Yards | Atlantic Turf Specialists",
     description: "Beautiful, hassle-free lawns with artificial turf. No mowing, no watering, no maintenance.",
     images: [{ url: "/portfolio/residential-backyard-artificial-turf-landscaping.jpg" }],
   },

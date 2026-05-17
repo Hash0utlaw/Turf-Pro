@@ -6,7 +6,7 @@ export interface LogoProps {
 }
 
 /**
- * Atlantic Turf Specialist Logo
+ * Atlantic Turf Specialists Logo
  *
  * • Provides BOTH a named and default export so it can be imported with:
  *      import { Logo } from "@/components/layout/logo"
