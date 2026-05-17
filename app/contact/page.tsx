@@ -81,14 +81,14 @@ export default function ContactPage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
 
-              {/* Left column — form card */}
-              <div className="bg-brand-gray-light border border-turf-green/20 rounded-2xl p-8 shadow-soft-lg">
+              {/* Left column — form card (always first on mobile) */}
+              <div className="order-1 bg-brand-gray-light border border-turf-green/20 rounded-2xl p-8 shadow-soft-lg">
                 <h2 className="text-xl font-bold text-white mb-6">Request a Free Quote</h2>
                 <ContactPageClient />
               </div>
 
-              {/* Right column — contact info + map */}
-              <div className="space-y-8">
+              {/* Right column — contact info + map (second on mobile) */}
+              <div className="order-2 space-y-8">
                 <div>
                   <h2 className="text-2xl font-bold text-white">Get in Touch</h2>
                   <p className="mt-2 text-brand-gray-text leading-relaxed">
