@@ -20,7 +20,7 @@ export default function HeroSection() {
           Charlotte&apos;s Premier Artificial Turf Specialists
         </h1>
         <p className="max-w-3xl mx-auto text-lg text-balance md:text-xl lg:text-2xl text-gray-100 drop-shadow-md [text-shadow:_1px_1px_3px_rgb(0_0_0_/_70%)]">
-          Atlantic Turf Specialist delivers premium synthetic grass for residential lawns, commercial properties, and
+          Atlantic Turf Specialists delivers premium synthetic grass for residential lawns, commercial properties, and
           custom putting greens across Charlotte, Matthews, Huntersville &amp; Lake Norman.
         </p>
         <div>
