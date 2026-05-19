@@ -116,10 +116,10 @@ export default function ContactPage() {
                     <div>
                       <h3 className="text-sm font-semibold text-white uppercase tracking-wide">Email</h3>
                       <a
-                        href="mailto:zach@atlanticturfspecialist.com"
+                        href="mailto:zach@atlanticturfspecialists.com"
                         className="text-brand-gray-text hover:text-turf-green-light transition-colors break-all"
                       >
-                        zach@atlanticturfspecialist.com
+                        zach@atlanticturfspecialists.com
                       </a>
                     </div>
                   </div>
