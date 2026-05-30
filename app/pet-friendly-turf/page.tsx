@@ -79,7 +79,18 @@ const petTurfData: ServicePageTemplateProps = {
       src: "/portfolio/backyard-pet-friendly-general-turf.jpg",
       alt: "Happy dog enjoying spacious and clean pet-friendly artificial turf lawn in Charlotte NC",
     },
-
+    {
+      src: "/portfolio/deck-general-turf-pet-friendly.jpg",
+      alt: "Clean and safe dog turf area next to raised patio - Charlotte NC installation",
+    },
+    {
+      src: "/portfolio/backyard-pool-pet-friendly-general-turf.jpg",
+      alt: "Pet-friendly synthetic grass surrounding beautiful poolside in Charlotte NC backyard",
+    },
+    {
+      src: "/portfolio/pet-friendly-putting-green-backyard-general-turf.jpg",
+      alt: "Versatile Charlotte backyard with pet-safe artificial turf and putting green installation",
+    },
   ],
   finalCtaTitle: "Give Your Pet the Best with Atlantic Turf Specialists",
   finalCtaSubtitle:
