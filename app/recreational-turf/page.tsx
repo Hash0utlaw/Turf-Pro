@@ -26,10 +26,10 @@ export async function generateMetadata(): Promise<Metadata> {
         "Safe playground turf & sports field installation in Charlotte NC. Perfect for schools, daycares, churches & recreation centers.",
       images: [
         {
-          url: "/portfolio/school-playground-field-turf.jpg",
+          url: "/portfolio/grace-covenant-church-playground-04.webp",
           width: 1200,
           height: 630,
-          alt: "Recreational sports turf field in Charlotte NC",
+          alt: "Grace Covenant Church playground turf installation in Huntersville NC by Atlantic Turf Specialists",
         },
       ],
     },
@@ -228,9 +228,67 @@ export default function RecreationalTurfPage() {
 
             <div>
               <img
-                src="/portfolio/playground-putting-green-pet-friendly.jpg"
-                alt="Recreational turf installation"
+                src="/portfolio/grace-covenant-church-playground-06.webp"
+                alt="Grace Covenant Church playground turf installation in Huntersville NC — winding rubber pathway through artificial turf with shade sails overhead"
                 className="rounded-lg shadow-lg w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Grace Covenant Church Gallery */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Featured Project: Grace Covenant Church</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our first commercial playground installation — a full indoor-courtyard turf system for Grace Covenant
+              Church in Huntersville, NC, complete with winding rubber pathways, shade sails, and nature-inspired play
+              equipment.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+            <div className="overflow-hidden rounded-xl aspect-square">
+              <img
+                src="/portfolio/grace-covenant-church-playground-04.webp"
+                alt="Aerial view of Grace Covenant Church full playground courtyard with shade sails, rope net, and winding rubber path — Huntersville NC"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="overflow-hidden rounded-xl aspect-square">
+              <img
+                src="/portfolio/grace-covenant-church-playground-06.webp"
+                alt="Wide view of Grace Covenant Church playground courtyard showing winding rubber pathway, pirate ship, and stepping stone stations"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="overflow-hidden rounded-xl aspect-square">
+              <img
+                src="/portfolio/grace-covenant-church-playground-02.webp"
+                alt="Grace Covenant Church playground turf with pirate ship play structure and winding rubber path — Huntersville NC"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="overflow-hidden rounded-xl aspect-square">
+              <img
+                src="/portfolio/grace-covenant-church-playground-05.webp"
+                alt="Grace Covenant Church covered playground area with small log playhouse and balance beam on artificial turf"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="overflow-hidden rounded-xl aspect-square">
+              <img
+                src="/portfolio/grace-covenant-church-playground-01.webp"
+                alt="Close-up of mushroom stepping platforms and rope climbing equipment on Grace Covenant Church playground turf"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="overflow-hidden rounded-xl aspect-square">
+              <img
+                src="/portfolio/grace-covenant-church-playground-03.webp"
+                alt="Grace Covenant Church playground turf with KOMPAN playhouse and slide beside rubber safety pathway — Huntersville NC"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
           </div>
