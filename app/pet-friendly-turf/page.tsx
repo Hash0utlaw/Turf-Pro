@@ -26,10 +26,10 @@ export async function generateMetadata(): Promise<Metadata> {
         "Safe, durable pet turf installation in Charlotte NC. Easy-clean dog runs & pet-friendly artificial grass with excellent drainage. Perfect for Charlotte's climate.",
       images: [
         {
-          url: "/portfolio/pet-friendly-lawn-turf-hero.jpg",
+          url: "/portfolio/artificial-turf-side-yard-install-02.webp",
           width: 1200,
           height: 630,
-          alt: "Pet-friendly artificial turf lawn in Charlotte NC backyard",
+          alt: "Pet-friendly artificial turf backyard lawn in Charlotte NC",
         },
       ],
     },
@@ -37,9 +37,9 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const petTurfData: ServicePageTemplateProps = {
-  heroImageSrc: "/portfolio/pet-friendly-lawn-turf-hero.jpg",
+  heroImageSrc: "/portfolio/artificial-turf-side-yard-install-02.webp",
   heroImageAlt:
-    "Golden retriever relaxing on pet-friendly artificial turf lawn in Charlotte NC backyard - safe synthetic grass for dogs",
+    "Lush pet-friendly artificial turf backyard and side yard at a Charlotte NC home — clean, safe synthetic grass for dogs by Atlantic Turf Specialists",
   heroTitle: "The Perfect Lawn for Your Furry Friends",
   heroSubtitle: "Discover durable, safe, and easy-to-clean pet-friendly turf solutions for Charlotte NC homes.",
   heroCtaText: "Get a Pet-Friendly Turf Quote",
@@ -54,9 +54,9 @@ const petTurfData: ServicePageTemplateProps = {
     "Reduces pests like fleas and ticks",
     "Hypoallergenic and comfortable for pets",
   ],
-  featuresImageSrc: "/pet-turf-drainage.png",
+  featuresImageSrc: "/portfolio/artificial-turf-side-yard-install-03.webp",
   featuresImageAlt:
-    "Cross-section showing drainage layers of pet-friendly artificial turf system for Charlotte NC dogs",
+    "Clean pet-friendly artificial turf side yard enclosed by vinyl privacy fence — Charlotte NC installation by Atlantic Turf Specialists",
   featuresTitle: "Designed for Pets, Built for Durability",
   featuresText:
     "Our pet turf systems are engineered to withstand the toughest play while ensuring maximum hygiene and comfort for your beloved animals in Charlotte's climate.",

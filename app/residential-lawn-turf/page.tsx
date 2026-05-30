@@ -77,8 +77,8 @@ const pageContent: ServicePageTemplateProps = {
       alt: "Modern poolside patio with checkerboard pattern of synthetic turf and pavers - Charlotte NC project",
     },
     {
-      src: "/portfolio/backyard-turf.jpg",
-      alt: "Expansive artificial turf lawn integrated beautifully into wooded Charlotte property",
+      src: "/portfolio/artificial-turf-side-yard-install-01.webp",
+      alt: "Expansive freshly installed artificial turf backyard at a modern blue craftsman home in Charlotte NC",
     },
   ],
 
