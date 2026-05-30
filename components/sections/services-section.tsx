@@ -18,8 +18,8 @@ const services = [
     href: "/commercial-turf",
   },
   {
-    imageUrl: "/portfolio/putting-green-night-lights.jpg",
-    imageAlt: "Custom backyard putting green with night lighting installed by Atlantic Turf Specialists",
+    imageUrl: "/portfolio/artificial-turf-putting-green-night-02.webp",
+    imageAlt: "Custom multi-hole backyard putting green with professional night lighting installed by Atlantic Turf Specialists",
     title: "Backyard Putting Greens",
     description: "Perfect your short game with a custom-designed putting green that offers a true and realistic roll.",
     href: "/putting-greens",
