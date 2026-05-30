@@ -26,10 +26,10 @@ export async function generateMetadata(): Promise<Metadata> {
         "Safe, durable pet turf installation in Charlotte NC. Easy-clean dog runs & pet-friendly artificial grass with excellent drainage. Perfect for Charlotte's climate.",
       images: [
         {
-          url: "/portfolio/pet-friendly-lawn-turf-hero.jpg",
+          url: "/portfolio/artificial-turf-side-yard-install-02.webp",
           width: 1200,
           height: 630,
-          alt: "Pet-friendly artificial turf lawn in Charlotte NC backyard",
+          alt: "Pet-friendly artificial turf backyard lawn in Charlotte NC",
         },
       ],
     },
@@ -37,9 +37,9 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const petTurfData: ServicePageTemplateProps = {
-  heroImageSrc: "/portfolio/pet-friendly-lawn-turf-hero.jpg",
+  heroImageSrc: "/portfolio/artificial-turf-side-yard-install-02.webp",
   heroImageAlt:
-    "Golden retriever relaxing on pet-friendly artificial turf lawn in Charlotte NC backyard - safe synthetic grass for dogs",
+    "Lush pet-friendly artificial turf backyard and side yard at a Charlotte NC home — clean, safe synthetic grass for dogs by Atlantic Turf Specialists",
   heroTitle: "The Perfect Lawn for Your Furry Friends",
   heroSubtitle: "Discover durable, safe, and easy-to-clean pet-friendly turf solutions for Charlotte NC homes.",
   heroCtaText: "Get a Pet-Friendly Turf Quote",
