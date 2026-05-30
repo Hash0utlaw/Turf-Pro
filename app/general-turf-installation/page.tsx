@@ -48,8 +48,8 @@ const pageContent: ServicePageTemplateProps = {
   gallerySubtitle: "The final result of our meticulous installation process is a beautiful, durable lawn.",
   galleryImages: [
     {
-      src: "/portfolio/basic-turf-installation-backyard.jpg",
-      alt: "A clean and simple rectangular turf installation in an enclosed backyard.",
+      src: "/portfolio/artificial-turf-side-yard-install-01.webp",
+      alt: "Full backyard artificial turf installation at a modern blue craftsman home in Charlotte NC.",
     },
     {
       src: "/portfolio/hardscape-basic-turf-backyard.jpg",

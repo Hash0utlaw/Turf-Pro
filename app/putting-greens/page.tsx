@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Backyard Putting Green Installation Charlotte NC | Custom Golf Greens | Atlantic Turf Specialists",
     description:
       "Custom backyard putting green installation in Charlotte NC. Professional-grade synthetic turf with true ball roll. Perfect for Lake Norman, Ballantyne & Myers Park homes.",
-    images: [{ url: "/putting-green-with-night-lighting.jpg", width: 1200, height: 630, alt: "Custom backyard putting green installation in Charlotte NC by Atlantic Turf Specialists" }],
+    images: [{ url: "/portfolio/artificial-turf-putting-green-night-02.webp", width: 1200, height: 630, alt: "Custom backyard putting green installation in Charlotte NC by Atlantic Turf Specialists" }],
   },
 }
 
@@ -38,8 +38,6 @@ const galleryImages = [
   { src: "/portfolio/artificial-turf-putting-green-night-01.webp", alt: "Organic-shaped putting green illuminated at dusk beside a pool patio — Charlotte NC" },
   { src: "/portfolio/artificial-turf-putting-green-install-14.webp", alt: "Estate courtyard putting green with chipping ramp and stacked-stone seating walls" },
   { src: "/portfolio/artificial-turf-putting-green-install-08.webp", alt: "Multi-hole putting green with fringe turf and landscape lighting at brick farmhouse estate" },
-  { src: "/portfolio/artificial-turf-putting-green-install-06.webp", alt: "Curved putting green lawn bordered by stone retaining wall in wooded Charlotte NC backyard" },
-  { src: "/portfolio/artificial-turf-putting-green-install-05.webp", alt: "Circular putting green atop curved retaining wall at white two-story Charlotte home" },
 ]
 
 const benefits = [
@@ -105,7 +103,7 @@ export default function PuttingGreensPage() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
           aria-hidden="true"
-          poster="/putting-green-with-night-lighting.jpg"
+          poster="/portfolio/artificial-turf-putting-green-night-02.webp"
         >
           <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/turf-pro-putting-green-residential-home-medium-iB8P1yagGBoib76YM5qXM7kY15ka6A.mp4" type="video/mp4" />
         </video>
