@@ -54,9 +54,9 @@ const petTurfData: ServicePageTemplateProps = {
     "Reduces pests like fleas and ticks",
     "Hypoallergenic and comfortable for pets",
   ],
-  featuresImageSrc: "/pet-turf-drainage.png",
+  featuresImageSrc: "/portfolio/artificial-turf-side-yard-install-03.webp",
   featuresImageAlt:
-    "Cross-section showing drainage layers of pet-friendly artificial turf system for Charlotte NC dogs",
+    "Clean pet-friendly artificial turf side yard enclosed by vinyl privacy fence — Charlotte NC installation by Atlantic Turf Specialists",
   featuresTitle: "Designed for Pets, Built for Durability",
   featuresText:
     "Our pet turf systems are engineered to withstand the toughest play while ensuring maximum hygiene and comfort for your beloved animals in Charlotte's climate.",
