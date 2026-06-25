@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     "Huntersville synthetic grass",
     "Lake Norman turf company",
   ],
+  alternates: {
+    canonical: "https://www.atlanticturfspecialists.com/charlotte",
+  },
   openGraph: {
   title: "Artificial Turf Installation Company Charlotte NC | Atlantic Turf Specialists",
     description:

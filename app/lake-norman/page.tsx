@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     "Davidson synthetic grass",
     "Mooresville artificial turf",
   ],
+  alternates: {
+    canonical: "https://www.atlanticturfspecialists.com/lake-norman",
+  },
   openGraph: {
   title: "Artificial Turf Installation Lake Norman NC | Atlantic Turf Specialists",
     description: "Professional artificial turf installation for Lake Norman waterfront homes and properties.",
@@ -76,6 +79,11 @@ const localBusinessSchema = {
     { "@type": "City", name: "Huntersville, NC" },
     { "@type": "City", name: "Mooresville, NC" },
   ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    reviewCount: "50",
+  },
 }
 
 export default function LakeNormanPage() {

@@ -2,6 +2,8 @@ import ServicePageTemplate, { type ServicePageTemplateProps } from "@/components
 import { PawPrint, ShieldCheck, Sparkles, CheckCircle } from "lucide-react"
 import type { Metadata } from "next"
 import Link from "next/link"
+import { StructuredData } from "@/components/structured-data"
+import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/structured-data"
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -32,6 +34,9 @@ export async function generateMetadata(): Promise<Metadata> {
           alt: "Pet-friendly artificial turf backyard lawn in Charlotte NC",
         },
       ],
+    },
+    alternates: {
+      canonical: "https://www.atlanticturfspecialists.com/pet-friendly-turf",
     },
   }
 }
@@ -99,8 +104,19 @@ const petTurfData: ServicePageTemplateProps = {
 }
 
 export default function PetFriendlyTurfPage() {
+  const serviceSchema = generateServiceSchema(
+    "Pet-Friendly Artificial Turf Installation Charlotte NC",
+    "Safe, durable pet turf installation in Charlotte NC. Easy-clean dog runs and pet-friendly artificial grass with excellent drainage.",
+    "Pet-Friendly Artificial Turf Installation",
+  )
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "https://www.atlanticturfspecialists.com" },
+    { name: "Pet-Friendly Turf", url: "https://www.atlanticturfspecialists.com/pet-friendly-turf" },
+  ])
   return (
     <>
+      <StructuredData data={serviceSchema} />
+      <StructuredData data={breadcrumbSchema} />
       <div className="bg-gray-50 py-4 px-4">
         <div className="container mx-auto max-w-4xl text-center text-sm text-gray-600">
           Need other services? View our{" "}

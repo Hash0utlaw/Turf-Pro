@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import ServicePageTemplate, { type ServicePageTemplateProps } from "@/components/service-page-template"
 import { DollarSign, Shield, Zap } from "lucide-react"
 import Link from "next/link"
+import { StructuredData } from "@/components/structured-data"
+import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/structured-data"
 
 export const metadata: Metadata = {
   title: "Commercial Artificial Turf Charlotte NC | Business Turf Installation | Atlantic Turf Specialists",
@@ -19,6 +21,9 @@ export const metadata: Metadata = {
     "brewery patio turf Charlotte",
     "commercial property turf South End",
   ],
+  alternates: {
+    canonical: "https://www.atlanticturfspecialists.com/commercial-turf",
+  },
   openGraph: {
     title: "Commercial Artificial Turf Charlotte NC | Business Turf Installation | Atlantic Turf Specialists",
     description:
@@ -87,8 +92,19 @@ const pageContent: ServicePageTemplateProps = {
 }
 
 export default function CommercialTurfPage() {
+  const serviceSchema = generateServiceSchema(
+    "Commercial Artificial Turf Installation Charlotte NC",
+    "Professional commercial turf installation for restaurants, breweries, office parks, apartments and HOAs in Charlotte NC.",
+    "Commercial Artificial Turf Installation",
+  )
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "https://www.atlanticturfspecialists.com" },
+    { name: "Commercial Turf", url: "https://www.atlanticturfspecialists.com/commercial-turf" },
+  ])
   return (
     <>
+      <StructuredData data={serviceSchema} />
+      <StructuredData data={breadcrumbSchema} />
       <div className="bg-gray-50 py-4 px-4">
         <div className="container mx-auto max-w-4xl text-center text-sm text-gray-600">
           Also offering{" "}

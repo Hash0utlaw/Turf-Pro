@@ -2,6 +2,7 @@ import { ContactPageClient } from "./ContactPageClient"
 import type { Metadata } from "next"
 import Script from "next/script"
 import Image from "next/image"
+import { StructuredData } from "@/components/structured-data"
 
 export const metadata: Metadata = {
   title: "Contact Us | Free Turf Quote Charlotte NC | Atlantic Turf Specialists",
@@ -39,11 +40,47 @@ const MapPinIcon = () => (
   </svg>
 )
 
+const contactSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Atlantic Turf Specialists",
+  url: "https://www.atlanticturfspecialists.com",
+  telephone: "+1-704-995-6265",
+  email: "zach@atlanticturfspecialists.com",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Charlotte",
+    addressRegion: "NC",
+    postalCode: "28202",
+    addressCountry: "US",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:00",
+      closes: "18:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Saturday"],
+      opens: "09:00",
+      closes: "14:00",
+    },
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    reviewCount: "50",
+  },
+}
+
 export default function ContactPage() {
   const googleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY || ""
 
   return (
     <>
+      <StructuredData data={contactSchema} />
       {googleMapsApiKey && (
         <Script
           src={`https://maps.googleapis.com/maps/api/js?key=${googleMapsApiKey}&libraries=places&loading=async`}

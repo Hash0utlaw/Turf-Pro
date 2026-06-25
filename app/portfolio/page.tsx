@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import PortfolioClient from "./portfolio-client"
 import { portfolioItems } from "@/lib/portfolio-data"
+import { StructuredData } from "@/components/structured-data"
 
 export const metadata: Metadata = {
   title: "Portfolio | Artificial Turf Installation Projects Charlotte NC | Atlantic Turf Specialists",
@@ -26,7 +27,26 @@ export const metadata: Metadata = {
   },
 }
 
+const portfolioSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Artificial Turf Portfolio | Atlantic Turf Specialists",
+  description:
+    "Browse completed artificial turf projects in Charlotte NC — residential lawns, commercial spaces, putting greens, and pet-friendly turf installations.",
+  url: "https://www.atlanticturfspecialists.com/portfolio",
+  provider: {
+    "@type": "LocalBusiness",
+    name: "Atlantic Turf Specialists",
+    url: "https://www.atlanticturfspecialists.com",
+  },
+}
+
 export default function PortfolioPage() {
   // Only serialisable data (no functions) is passed to the client
-  return <PortfolioClient allItems={portfolioItems} />
+  return (
+    <>
+      <StructuredData data={portfolioSchema} />
+      <PortfolioClient allItems={portfolioItems} />
+    </>
+  )
 }

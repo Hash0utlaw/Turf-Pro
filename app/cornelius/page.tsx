@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     "residential turf Cornelius",
     "commercial turf Cornelius",
   ],
+  alternates: {
+    canonical: "https://www.atlanticturfspecialists.com/cornelius",
+  },
   openGraph: {
     title: "Artificial Turf Installation Cornelius NC | Lake Norman | Atlantic Turf Specialists",
     description: "Professional artificial turf installation in Cornelius NC on Lake Norman.",
@@ -74,6 +77,11 @@ const localBusinessSchema = {
     { "@type": "City", name: "Lake Norman Area" },
     { "@type": "City", name: "Davidson, NC" },
   ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    reviewCount: "50",
+  },
 }
 
 export default function CorneliusPage() {

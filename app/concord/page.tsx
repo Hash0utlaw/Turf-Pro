@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     "commercial turf Concord",
     "putting green Concord NC",
   ],
+  alternates: {
+    canonical: "https://www.atlanticturfspecialists.com/concord",
+  },
   openGraph: {
   title: "Artificial Turf Installation Concord NC | Atlantic Turf Specialists",
     description:
@@ -82,6 +85,11 @@ const localBusinessSchema = {
     { "@type": "City", name: "Harrisburg, NC" },
     { "@type": "City", name: "Kannapolis, NC" },
   ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    reviewCount: "50",
+  },
 }
 
 export default function ConcordPage() {

@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     "commercial turf Matthews",
     "putting green Matthews NC",
   ],
+  alternates: {
+    canonical: "https://www.atlanticturfspecialists.com/matthews",
+  },
   openGraph: {
   title: "Artificial Turf Installation Matthews NC | Atlantic Turf Specialists",
     description:
@@ -92,6 +95,11 @@ const localBusinessSchema = {
     { "@type": "City", name: "Mint Hill, NC" },
     { "@type": "City", name: "Indian Trail, NC" },
   ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    reviewCount: "50",
+  },
 }
 
 export default function MatthewsPage() {

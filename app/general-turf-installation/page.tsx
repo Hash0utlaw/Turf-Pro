@@ -1,11 +1,16 @@
 import type { Metadata } from "next"
 import ServicePageTemplate, { type ServicePageTemplateProps } from "@/components/service-page-template"
 import { Layers, ShieldCheck, Clock } from "lucide-react"
+import { StructuredData } from "@/components/structured-data"
+import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/structured-data"
 
 export const metadata: Metadata = {
   title: "Expert Turf Installation Services | The Perfect Foundation | Atlantic Turf Specialists",
   description:
     "Learn about our meticulous turf installation process. From ground preparation to the final touches, we guarantee a flawless, long-lasting result for any project.",
+  alternates: {
+    canonical: "https://www.atlanticturfspecialists.com/general-turf-installation",
+  },
   openGraph: {
     title: "Expert Turf Installation Services | The Perfect Foundation | Atlantic Turf Specialists",
     description: "Learn about our meticulous turf installation process, ensuring a flawless and long-lasting result.",
@@ -72,5 +77,20 @@ const pageContent: ServicePageTemplateProps = {
 }
 
 export default function GeneralTurfInstallationPage() {
-  return <ServicePageTemplate {...pageContent} />
+  const serviceSchema = generateServiceSchema(
+    "Expert Turf Installation Services Charlotte NC",
+    "Learn about our meticulous turf installation process. From ground preparation to final touches, we guarantee a flawless, long-lasting result.",
+    "Artificial Turf Installation",
+  )
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "https://www.atlanticturfspecialists.com" },
+    { name: "Turf Installation", url: "https://www.atlanticturfspecialists.com/general-turf-installation" },
+  ])
+  return (
+    <>
+      <StructuredData data={serviceSchema} />
+      <StructuredData data={breadcrumbSchema} />
+      <ServicePageTemplate {...pageContent} />
+    </>
+  )
 }

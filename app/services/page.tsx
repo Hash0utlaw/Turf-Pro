@@ -6,12 +6,17 @@ import { Target, PawPrint, Zap, Users, Wrench, Building } from "lucide-react"
 import type { Metadata } from "next"
 import ContactDialog from "@/components/contact-dialog"
 import { Toaster } from "@/components/ui/toaster"
+import { StructuredData } from "@/components/structured-data"
+import { generateBreadcrumbSchema } from "@/lib/structured-data"
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Our Artificial Turf Services | Atlantic Turf Specialists",
     description:
       "Explore a comprehensive range of artificial turf services from Atlantic Turf Specialists, including putting greens, pet-friendly solutions, recreational turf, and professional installation.",
+    alternates: {
+      canonical: "https://www.atlanticturfspecialists.com/services",
+    },
     keywords: [
       "artificial turf services",
       "synthetic grass solutions",
@@ -83,8 +88,13 @@ const allServicesList = [
 ]
 
 export default function AllServicesPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "https://www.atlanticturfspecialists.com" },
+    { name: "Services", url: "https://www.atlanticturfspecialists.com/services" },
+  ])
   return (
     <>
+      <StructuredData data={breadcrumbSchema} />
       <section className="py-12 md:py-20 bg-brand-gray-light">
         <div className="container px-4 md:px-6 text-center">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-turf-green-dark">

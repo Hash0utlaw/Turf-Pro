@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | Atlantic Turf Specialists",
   },
   description:
-    "Charlotte's premier artificial turf specialists. Professional synthetic grass for residential lawns, commercial properties & putting greens. Serving Charlotte, Matthews, Huntersville, Concord, Lake Norman & surrounding NC areas. Free quotes! Call (704) 956-2687",
+    "Charlotte's premier artificial turf specialists. Professional synthetic grass for residential lawns, commercial properties & putting greens. Serving Charlotte, Matthews, Huntersville, Concord, Lake Norman & surrounding NC areas. Free quotes! Call (704) 995-6265",
   keywords: [
     "artificial turf installation Charlotte NC",
     "synthetic grass Charlotte",
@@ -89,7 +89,6 @@ export const metadata: Metadata = {
   },
   // Add your Google Search Console verification code here when available
   // verification: { google: "your-actual-code" },
-  generator: "v0.dev",
 }
 
 export default function RootLayout({
