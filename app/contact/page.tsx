@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "synthetic grass Charlotte NC contact",
   ],
   alternates: {
-    canonical: "https://www.atlanticturfspecialist.com/contact",
+    canonical: "https://www.atlanticturfspecialists.com/contact",
   },
   openGraph: {
     title: "Contact Us | Free Turf Quote Charlotte NC | Atlantic Turf Specialists",

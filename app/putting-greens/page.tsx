@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "custom golf green Charlotte NC",
   ],
   alternates: {
-    canonical: "https://www.atlanticturfspecialist.com/putting-greens",
+    canonical: "https://www.atlanticturfspecialists.com/putting-greens",
   },
   openGraph: {
     title: "Backyard Putting Green Installation Charlotte NC | Custom Golf Greens | Atlantic Turf Specialists",
@@ -57,14 +57,14 @@ export default function PuttingGreensPage() {
   )
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: "https://www.atlanticturfspecialist.com" },
+    { name: "Home", url: "https://www.atlanticturfspecialists.com" },
     { name: "Putting Greens" },
   ])
 
   const videoSchema = generateVideoSchema(
     "Custom Putting Green Installation - Atlantic Turf Specialists",
     "Watch how we install professional-quality custom putting greens for residential backyards. Our artificial turf greens offer true ball roll and realistic performance for year-round golf practice at home.",
-    "https://www.atlanticturfspecialist.com/putting-green-with-night-lighting.jpg",
+    "https://www.atlanticturfspecialists.com/putting-green-with-night-lighting.jpg",
     "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/turf-pro-putting-green-residential-home-medium-iB8P1yagGBoib76YM5qXM7kY15ka6A.mp4",
     "2024-01-15",
     "PT45S",

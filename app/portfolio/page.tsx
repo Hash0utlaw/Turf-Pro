@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "commercial turf projects Charlotte",
   ],
   alternates: {
-    canonical: "https://www.atlanticturfspecialist.com/portfolio",
+    canonical: "https://www.atlanticturfspecialists.com/portfolio",
   },
   openGraph: {
     title: "Portfolio | Artificial Turf Installation Projects Charlotte NC | Atlantic Turf Specialists",

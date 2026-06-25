@@ -30,7 +30,7 @@ export default function TermsOfServicePage() {
         <div className="container px-4 md:px-6 max-w-3xl mx-auto prose prose-lg prose-headings:text-turf-green-dark prose-a:text-turf-green hover:prose-a:text-turf-green-dark">
           <p>
             Welcome to Atlantic Turf Specialists! These Terms of Service ("Terms", "Terms of Service") govern your use of our
-            website located at https://www.atlanticturfspecialist.com (together or individually "Service") operated by Turf
+            website located at https://www.atlanticturfspecialists.com (together or individually "Service") operated by Turf
             Professionals ("us", "we", or "our").
           </p>
           <p>
@@ -184,7 +184,7 @@ export default function TermsOfServicePage() {
           <h2>10. Contact Us</h2>
           <p>If you have any questions about these Terms, please contact us:</p>
           <ul>
-            <li>By email: contact@atlanticturfspecialist.com</li>
+            <li>By email: contact@atlanticturfspecialists.com</li>
             <li>
               By visiting this page on our website: <Link href="/contact">Contact Us</Link>
             </li>

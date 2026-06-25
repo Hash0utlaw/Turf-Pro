@@ -58,9 +58,9 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Atlantic Turf Specialists - Lake Norman NC",
-  image: "https://www.atlanticturfspecialist.com/hero-homepage-new.png",
-  "@id": "https://www.atlanticturfspecialist.com/lake-norman",
-  url: "https://www.atlanticturfspecialist.com/lake-norman",
+  image: "https://www.atlanticturfspecialists.com/hero-homepage-new.png",
+  "@id": "https://www.atlanticturfspecialists.com/lake-norman",
+  url: "https://www.atlanticturfspecialists.com/lake-norman",
   telephone: "+1-704-995-6265",
   priceRange: "$$-$$$",
   address: {

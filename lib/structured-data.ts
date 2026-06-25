@@ -136,9 +136,9 @@ export function generateOrganizationSchema(): OrganizationSchema {
     name: "Atlantic Turf Specialists",
     description:
       "Professional artificial turf installation services for residential, commercial, and recreational properties in Charlotte, NC and surrounding areas including Matthews, Huntersville, Concord, Lake Norman, and Fort Mill SC.",
-    url: "https://www.atlanticturfspecialist.com",
+    url: "https://www.atlanticturfspecialists.com",
     telephone: "+1-704-956-2687",
-    email: "info@atlanticturfspecialist.com",
+    email: "info@atlanticturfspecialists.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Charlotte",
@@ -227,15 +227,15 @@ export function generateArticleSchema(
     author: {
       "@type": "Organization",
       name: "Atlantic Turf Specialists",
-      url: "https://www.atlanticturfspecialist.com",
+      url: "https://www.atlanticturfspecialists.com",
     },
     publisher: {
       "@type": "Organization",
       name: "Atlantic Turf Specialists",
-      url: "https://www.atlanticturfspecialist.com",
+      url: "https://www.atlanticturfspecialists.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.atlanticturfspecialist.com/logo.png",
+        url: "https://www.atlanticturfspecialists.com/logo.png",
       },
     },
     mainEntityOfPage: {
@@ -267,7 +267,7 @@ export function generateServiceSchema(name: string, description: string, service
     provider: {
       "@type": "LocalBusiness",
       name: "Atlantic Turf Specialists",
-      url: "https://www.atlanticturfspecialist.com",
+      url: "https://www.atlanticturfspecialists.com",
     },
     areaServed: [
       { "@type": "City", name: "Charlotte" },
@@ -307,7 +307,7 @@ export function generateVideoSchema(
       name: "Atlantic Turf Specialists",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.atlanticturfspecialist.com/logo.png",
+        url: "https://www.atlanticturfspecialists.com/logo.png",
       },
     },
   }

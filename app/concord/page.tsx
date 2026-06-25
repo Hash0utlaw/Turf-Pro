@@ -65,9 +65,9 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Atlantic Turf Specialists - Concord NC",
-  image: "https://www.atlanticturfspecialist.com/hero-homepage-new.png",
-  "@id": "https://www.atlanticturfspecialist.com/concord",
-  url: "https://www.atlanticturfspecialist.com/concord",
+  image: "https://www.atlanticturfspecialists.com/hero-homepage-new.png",
+  "@id": "https://www.atlanticturfspecialists.com/concord",
+  url: "https://www.atlanticturfspecialists.com/concord",
   telephone: "+1-704-995-6265",
   priceRange: "$$-$$$",
   address: {

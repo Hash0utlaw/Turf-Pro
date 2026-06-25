@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "turf cost guide Charlotte",
   ],
   alternates: {
-    canonical: "https://www.atlanticturfspecialist.com/blog",
+    canonical: "https://www.atlanticturfspecialists.com/blog",
   },
   openGraph: {
     title: "Blog | Artificial Turf Tips & Insights | Atlantic Turf Specialists",

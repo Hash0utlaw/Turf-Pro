@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "artificial grass warranty",
   ],
   alternates: {
-    canonical: "https://www.atlanticturfspecialist.com/faq",
+    canonical: "https://www.atlanticturfspecialists.com/faq",
   },
   openGraph: {
     title: "Frequently Asked Questions | Artificial Turf Charlotte NC | Atlantic Turf Specialists",
@@ -152,7 +152,7 @@ function generateFaqSchema() {
 
 export default function FAQPage() {
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: "https://www.atlanticturfspecialist.com" },
+    { name: "Home", url: "https://www.atlanticturfspecialists.com" },
     { name: "FAQ" },
   ])
 

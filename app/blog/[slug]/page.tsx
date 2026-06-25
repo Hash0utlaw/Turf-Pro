@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: BlogPostPageProps, parent: Re
   }
 
   const previousImages = (await parent).openGraph?.images || []
-  const url = `https://www.atlanticturfspecialist.com/blog/${params.slug}`
+  const url = `https://www.atlanticturfspecialists.com/blog/${params.slug}`
 
   return {
     title: `${post.title} | Atlantic Turf Specialists Blog`,
@@ -63,19 +63,19 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     notFound()
   }
 
-  const url = `https://www.atlanticturfspecialist.com/blog/${params.slug}`
+  const url = `https://www.atlanticturfspecialists.com/blog/${params.slug}`
   const articleSchema = generateArticleSchema(
     post.title,
     post.excerpt,
-    `https://www.atlanticturfspecialist.com${post.image}`,
+    `https://www.atlanticturfspecialists.com${post.image}`,
     post.date,
     post.date,
     url,
   )
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: "https://www.atlanticturfspecialist.com" },
-    { name: "Blog", url: "https://www.atlanticturfspecialist.com/blog" },
+    { name: "Home", url: "https://www.atlanticturfspecialists.com" },
+    { name: "Blog", url: "https://www.atlanticturfspecialists.com/blog" },
     { name: post.title },
   ])
 

@@ -57,9 +57,9 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Atlantic Turf Specialists - Cornelius NC",
-  image: "https://www.atlanticturfspecialist.com/hero-homepage-new.png",
-  "@id": "https://www.atlanticturfspecialist.com/cornelius",
-  url: "https://www.atlanticturfspecialist.com/cornelius",
+  image: "https://www.atlanticturfspecialists.com/hero-homepage-new.png",
+  "@id": "https://www.atlanticturfspecialists.com/cornelius",
+  url: "https://www.atlanticturfspecialists.com/cornelius",
   telephone: "+1-704-995-6265",
   priceRange: "$$-$$$",
   address: {

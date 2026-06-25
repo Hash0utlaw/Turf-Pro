@@ -83,9 +83,9 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Atlantic Turf Specialists",
-  image: "https://www.atlanticturfspecialist.com/hero-homepage-new.png",
-  "@id": "https://www.atlanticturfspecialist.com/charlotte",
-  url: "https://www.atlanticturfspecialist.com/charlotte",
+  image: "https://www.atlanticturfspecialists.com/hero-homepage-new.png",
+  "@id": "https://www.atlanticturfspecialists.com/charlotte",
+  url: "https://www.atlanticturfspecialists.com/charlotte",
   telephone: "+1-704-995-6265",
   priceRange: "$$-$$$",
   address: {

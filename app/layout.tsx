@@ -48,14 +48,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://www.atlanticturfspecialist.com"),
+  metadataBase: new URL("https://www.atlanticturfspecialists.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.atlanticturfspecialist.com",
+    url: "https://www.atlanticturfspecialists.com",
     title: "Artificial Turf Installation Charlotte NC | Atlantic Turf Specialists",
     description:
       "Charlotte's premier artificial turf specialists. Professional synthetic grass for residential lawns, commercial properties & putting greens. Serving Charlotte, Matthews, Huntersville, Concord, Lake Norman & surrounding NC areas.",

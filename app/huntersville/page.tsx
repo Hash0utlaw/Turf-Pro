@@ -57,9 +57,9 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Atlantic Turf Specialists - Huntersville NC",
-  image: "https://www.atlanticturfspecialist.com/hero-homepage-new.png",
-  "@id": "https://www.atlanticturfspecialist.com/huntersville",
-  url: "https://www.atlanticturfspecialist.com/huntersville",
+  image: "https://www.atlanticturfspecialists.com/hero-homepage-new.png",
+  "@id": "https://www.atlanticturfspecialists.com/huntersville",
+  url: "https://www.atlanticturfspecialists.com/huntersville",
   telephone: "+1-704-995-6265",
   priceRange: "$$-$$$",
   address: {

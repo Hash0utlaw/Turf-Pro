@@ -44,14 +44,14 @@ export default function RecreationalTurfPage() {
   )
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: "https://www.atlanticturfspecialist.com" },
+    { name: "Home", url: "https://www.atlanticturfspecialists.com" },
     { name: "Recreational & Sports Turf" },
   ])
 
   const videoSchema = generateVideoSchema(
     "Recreational & Sports Turf Installation - Atlantic Turf Specialists",
     "Discover our high-performance recreational turf solutions for sports fields, playgrounds, and active play areas. Safe, durable, and perfect for year-round use in residential and commercial settings.",
-    "https://www.atlanticturfspecialist.com/portfolio/school-playground-field-turf.jpg",
+    "https://www.atlanticturfspecialists.com/portfolio/school-playground-field-turf.jpg",
     "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/turf-pro-putting-green-residential-home-medium-iB8P1yagGBoib76YM5qXM7kY15ka6A.mp4",
     "2024-01-15",
     "PT45S",
