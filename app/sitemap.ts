@@ -107,6 +107,45 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
+  const locationUrls = [
+    {
+      url: `${baseUrl}/charlotte`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/huntersville`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/cornelius`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/concord`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/matthews`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/lake-norman`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+  ]
+
   const landingPageUrls = [
     {
       url: `${baseUrl}/landing/residential-low-maintenance`,
@@ -130,7 +169,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   // Combine all URLs and sort by priority (highest first) for better SEO
-  const allUrls = [...staticUrls, ...serviceUrls, ...landingPageUrls, ...postUrls, ...portfolioImageUrls]
+  const allUrls = [...staticUrls, ...serviceUrls, ...locationUrls, ...landingPageUrls, ...postUrls, ...portfolioImageUrls]
 
   return allUrls.sort((a, b) => b.priority - a.priority)
 }
