@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ContactPageClient } from "@/app/contact/ContactPageClient"
 import { StructuredData } from "@/components/structured-data"
-import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
   title: "Artificial Turf Subcontractor Charlotte NC | General Contractors | Atlantic Turf Specialists",
@@ -42,12 +41,7 @@ const structuredData = {
     {
       "@type": "BreadcrumbList",
       itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: "https://www.atlanticturfspecialists.com",
-        },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.atlanticturfspecialists.com" },
         {
           "@type": "ListItem",
           position: 2,
@@ -69,88 +63,88 @@ const structuredData = {
         addressCountry: "US",
       },
       areaServed: ["Charlotte, NC", "Huntersville, NC", "Matthews, NC", "Concord, NC", "Lake Norman, NC"],
-      description:
-        "Charlotte's preferred artificial turf subcontractor for general contractors and developers. Commercial-grade crew, 48-hour quotes, licensed and insured.",
     },
   ],
 }
 
 const stats = [
+  { value: "48 hrs", label: "Quote Turnaround" },
+  { value: "500+", label: "Projects Completed" },
+  { value: "5★", label: "Google Rating" },
+  { value: "100%", label: "Licensed & Insured" },
+]
+
+const reasons = [
   {
-    value: "PLACEHOLDER",
-    label: "Largest Commercial Install (sq ft)",
-    note: "— client to supply",
+    number: "01",
+    title: "48-Hour Sub Bid",
+    body: "Send us the plans. We scope the job and return a detailed sub bid within 48 hours — no chasing, no delays.",
   },
   {
-    value: "PLACEHOLDER",
-    label: "Commercial Projects Completed",
-    note: "— client to supply",
+    number: "02",
+    title: "Commercial-Grade Crew",
+    body: "Our installation team is built for commercial volumes, tight timelines, and demanding specs. We show up and we deliver.",
   },
   {
-    value: "PLACEHOLDER",
-    label: "GC Partners to Date",
-    note: "— client to supply",
+    number: "03",
+    title: "Fully Licensed & Insured",
+    body: "We carry the coverage your project requires. Certificate of insurance on request — no surprises.",
   },
   {
-    value: "48 hrs",
-    label: "Average Quote Turnaround",
-    note: "",
+    number: "04",
+    title: "Local Charlotte Portfolio",
+    body: "We are not a national franchise. We are a Charlotte crew. You can see our work in your market and talk to the owners who hired us.",
   },
 ]
 
-const portfolioProjects = [
+const portfolioItems = [
   {
     src: "/portfolio/grace-covenant-church-playground-04.webp",
     alt: "Grace Covenant Church playground — Huntersville, NC",
-    caption: "Commercial Playground — PLACEHOLDER sq ft",
+    label: "Church Playground — Huntersville, NC",
+    span: "col-span-2 row-span-2",
   },
   {
     src: "/portfolio/grace-covenant-church-playground-06.webp",
-    alt: "Grace Covenant Church courtyard pathway — Huntersville, NC",
-    caption: "Church Courtyard — PLACEHOLDER sq ft",
+    alt: "Grace Covenant Church courtyard — Huntersville, NC",
+    label: "Church Courtyard — Huntersville, NC",
+    span: "",
+  },
+  {
+    src: "/portfolio/grace-covenant-church-playground-02.webp",
+    alt: "Church playground turf detail — Huntersville, NC",
+    label: "Playground Turf Detail",
+    span: "",
   },
   {
     src: "/portfolio/artificial-turf-sports-field-install-01.webp",
-    alt: "Backyard sports field artificial turf — Charlotte, NC",
-    caption: "Sports Field Install — PLACEHOLDER sq ft",
+    alt: "Backyard sports field — Charlotte, NC",
+    label: "Sports Field — Charlotte, NC",
+    span: "",
   },
   {
     src: "/portfolio/artificial-turf-side-yard-install-01.webp",
-    alt: "Full backyard turf at modern craftsman home — Charlotte, NC",
-    caption: "Residential New Construction — PLACEHOLDER sq ft",
+    alt: "Full backyard new construction — Charlotte, NC",
+    label: "New Construction — Charlotte, NC",
+    span: "",
   },
 ]
 
 const steps = [
   {
     number: "01",
-    title: "Request a Quote",
-    body: "Submit the form below or call us directly. Share your plans, scope, and timeline.",
+    title: "Submit Your Scope",
+    body: "Fill out the form below or call us directly. Share your plans, square footage, and timeline.",
   },
   {
     number: "02",
-    title: "We Scope & Quote in 48 Hours",
-    body: "Our team reviews your commercial scope and returns a detailed sub bid within 48 hours.",
+    title: "Receive Your Sub Bid",
+    body: "We review your commercial scope and return a detailed, line-item sub bid within 48 hours.",
   },
   {
     number: "03",
-    title: "We Install",
-    body: "Our licensed, insured crew shows up on schedule, delivers a clean install, and gets out of your way.",
-  },
-]
-
-const testimonials = [
-  {
-    quote:
-      "PLACEHOLDER — We've worked with a lot of turf subs, and Atlantic is one of the few that actually hits their schedule and delivers what was sampled. Replace with real GC testimonial before launch.",
-    name: "PLACEHOLDER GC Name",
-    company: "PLACEHOLDER Construction Co.",
-  },
-  {
-    quote:
-      "PLACEHOLDER — Got a quote back in less than 48 hours and the finished product was exactly what we needed for our client. Replace with real testimonial before launch.",
-    name: "PLACEHOLDER Project Manager",
-    company: "PLACEHOLDER Development LLC",
+    title: "We Install. You Move On.",
+    body: "Our crew arrives on schedule, installs to spec, cleans up, and clears the site. No babysitting required.",
   },
 ]
 
@@ -159,192 +153,158 @@ export default function GeneralContractorsPage() {
     <>
       <StructuredData data={structuredData} />
 
-      {/* Hero */}
-      <section className="relative bg-background py-24 md:py-32 border-b border-turf-green/10">
-        <div className="container mx-auto px-4 max-w-5xl text-center">
-          <p className="text-turf-green font-semibold tracking-widest text-sm uppercase mb-4">
-            For General Contractors & Developers
-          </p>
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white text-balance leading-tight">
-            {"Charlotte's"} Preferred Artificial Turf Subcontractor
-          </h1>
-          <p className="mt-6 text-lg md:text-xl text-brand-gray-text max-w-2xl mx-auto text-pretty">
-            Fast commercial quotes, a licensed and insured crew, and a local Charlotte portfolio — so you can add us to
-            your sub list with confidence.
-          </p>
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button asChild size="lg" className="text-base px-8">
-              <a href="#sub-bid">Request a Sub Bid</a>
-            </Button>
-            <a
-              href="tel:+17049956265"
-              className="text-turf-green-light hover:text-turf-green font-semibold text-base transition-colors"
-            >
-              (704) 995-6265
-            </a>
-          </div>
+      {/* ── HERO ─────────────────────────────────────────────── */}
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-black">
+        {/* Background photo */}
+        <div className="absolute inset-0">
+          <img
+            src="/portfolio/grace-covenant-church-playground-04.webp"
+            alt="Commercial artificial turf installation — Grace Covenant Church Huntersville NC"
+            className="w-full h-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
         </div>
-      </section>
 
-      {/* The Problem */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-3xl text-center">
-          <h2 className="text-3xl font-bold mb-6">The Problem with Most Turf Subs</h2>
-          <p className="text-gray-600 text-lg leading-relaxed">
-            GCs get burned by turf subcontractors who bail mid-project, take two weeks to return a quote, or deliver a
-            finished product that {"doesn't"} match the sample the client approved. That kills your timeline, your
-            margin, and your relationship with the owner.
-          </p>
-        </div>
-      </section>
-
-      {/* Our Solution */}
-      <section className="py-16 bg-background border-y border-turf-green/10">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white">Why GCs Choose Atlantic Turf</h2>
-          </div>
-          <div className="grid sm:grid-cols-2 gap-6">
-            {[
-              {
-                title: "48-Hour Quote Turnaround",
-                body: "We review commercial scopes and return a detailed sub bid within 48 hours — so your schedule never waits on us.",
-              },
-              {
-                title: "Commercial-Grade Crew & Materials",
-                body: "Our installation crew and product line are built for commercial volumes, high-traffic areas, and demanding specs.",
-              },
-              {
-                title: "Fully Licensed & Insured",
-                body: "We carry the coverage your project requires. No surprises on your certificate of insurance request.",
-              },
-              {
-                title: "Local Charlotte Portfolio",
-                body: "We are a Charlotte-based crew, not a national franchise. You can see our work in the market and talk to owners who hired us.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="bg-brand-gray-light border border-turf-green/20 rounded-xl p-6 shadow-soft"
+        {/* Content */}
+        <div className="relative container mx-auto px-4 max-w-6xl py-24">
+          <div className="max-w-3xl">
+            <p className="text-primary font-bold tracking-[0.2em] text-xs uppercase mb-6">
+              For General Contractors &amp; Developers — Charlotte, NC
+            </p>
+            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.05] text-balance">
+              The Turf Sub That{" "}
+              <span className="text-primary">Hits Your Schedule.</span>
+            </h1>
+            <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
+              48-hour sub bids. Commercial-grade crew. Fully licensed and insured.
+              Add us to your sub list and never chase a turf contractor again.
+            </p>
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+              <a
+                href="#sub-bid"
+                className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold px-8 py-4 rounded-lg text-base transition-colors"
               >
-                <div className="flex items-start gap-3">
-                  <span className="mt-1 h-2.5 w-2.5 rounded-full bg-turf-green flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-white mb-1">{item.title}</h3>
-                    <p className="text-brand-gray-text text-sm leading-relaxed">{item.body}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Proof of Scale — Stats */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold">Proof of Scale</h2>
-            <p className="mt-2 text-gray-500 text-sm italic">
-              Placeholder numbers below — client to supply real figures before launch.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center p-6 bg-white rounded-xl border border-gray-200 shadow-sm">
-                <p className="text-3xl font-bold text-turf-green">{stat.value}</p>
-                <p className="mt-2 text-sm font-medium text-gray-700">{stat.label}</p>
-                {stat.note && <p className="text-xs text-gray-400 mt-1">{stat.note}</p>}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio Highlights */}
-      <section className="py-16 bg-background border-y border-turf-green/10">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white">Portfolio Highlights</h2>
-            <p className="mt-3 text-brand-gray-text max-w-2xl mx-auto">
-              Real commercial and recreational projects completed in the Charlotte market. Client to add sq footage and
-              additional commercial photos before launch.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {portfolioProjects.map((project) => (
-              <div key={project.src} className="group overflow-hidden rounded-xl border border-turf-green/20">
-                <div className="aspect-square overflow-hidden">
-                  <img
-                    src={project.src}
-                    alt={project.alt}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-3 bg-brand-gray-light">
-                  <p className="text-xs text-brand-gray-text">{project.caption}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 text-center">
-            <Button asChild variant="outline" size="lg">
-              <Link href="/portfolio">View Full Portfolio</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold">How It Works</h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {steps.map((step, index) => (
-              <div key={step.number} className="relative text-center">
-                {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-8 left-[calc(50%+2.5rem)] right-[-calc(50%-2.5rem)] h-px bg-turf-green/30" />
-                )}
-                <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-turf-green text-white text-xl font-bold mb-4">
-                  {step.number}
-                </div>
-                <h3 className="font-semibold text-gray-900 mb-2">{step.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{step.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-16 bg-background border-y border-turf-green/10">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white">What GCs Are Saying</h2>
-            <p className="mt-2 text-brand-gray-text text-sm italic">
-              Placeholder testimonials — client to supply real GC quotes before launch.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {testimonials.map((t) => (
-              <div
-                key={t.name}
-                className="bg-brand-gray-light border border-turf-green/20 rounded-2xl p-8 shadow-soft"
-              >
-                <svg
-                  className="h-8 w-8 text-turf-green/40 mb-4"
-                  fill="currentColor"
-                  viewBox="0 0 32 32"
-                  aria-hidden="true"
-                >
-                  <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                Request a Sub Bid
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-                <p className="text-brand-gray-text leading-relaxed mb-6 text-sm italic">{t.quote}</p>
-                <div>
-                  <p className="font-semibold text-white text-sm">{t.name}</p>
-                  <p className="text-turf-green text-xs">{t.company}</p>
+              </a>
+              <a
+                href="tel:+17049956265"
+                className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-white/40 text-white font-semibold px-8 py-4 rounded-lg text-base transition-colors"
+              >
+                <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                (704) 995-6265
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── STATS BAR ────────────────────────────────────────── */}
+      <section className="bg-primary">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/20">
+            {stats.map((stat) => (
+              <div key={stat.label} className="px-6 py-6 text-center">
+                <p className="text-3xl md:text-4xl font-extrabold text-white">{stat.value}</p>
+                <p className="text-xs font-semibold uppercase tracking-widest text-white/70 mt-1">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── THE PROBLEM ──────────────────────────────────────── */}
+      <section className="py-20 bg-card border-b border-border">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-primary font-bold tracking-widest text-xs uppercase mb-4">The Problem</p>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-foreground leading-tight text-balance">
+                Most Turf Subs Burn Your Timeline
+              </h2>
+            </div>
+            <div className="space-y-4">
+              {[
+                "Two weeks to return a quote — if they return it at all.",
+                "Product delivered that doesn't match the approved sample.",
+                "Crew no-shows that push your punch list by weeks.",
+                "No commercial insurance on your certificate request.",
+              ].map((pain) => (
+                <div key={pain} className="flex items-start gap-3">
+                  <svg className="h-5 w-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{pain}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHY ATLANTIC TURF ────────────────────────────────── */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-14">
+            <p className="text-primary font-bold tracking-widest text-xs uppercase mb-3">Why GCs Choose Us</p>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-foreground text-balance">
+              Built for Commercial Work
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {reasons.map((r) => (
+              <div
+                key={r.number}
+                className="bg-card border border-border rounded-2xl p-7 hover:border-primary/50 transition-colors group"
+              >
+                <p className="text-5xl font-extrabold text-primary/20 group-hover:text-primary/40 transition-colors leading-none mb-4">
+                  {r.number}
+                </p>
+                <h3 className="font-bold text-foreground mb-2 text-lg">{r.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{r.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── PORTFOLIO ────────────────────────────────────────── */}
+      <section className="py-20 bg-card border-y border-border">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
+            <div>
+              <p className="text-primary font-bold tracking-widest text-xs uppercase mb-3">Our Work</p>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-foreground text-balance leading-tight">
+                Charlotte Projects,<br />Real Results
+              </h2>
+            </div>
+            <Link
+              href="/portfolio"
+              className="text-primary font-semibold text-sm hover:underline underline-offset-4 transition-colors flex items-center gap-1"
+            >
+              View Full Portfolio
+              <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-3 h-[480px]">
+            {portfolioItems.map((item) => (
+              <div
+                key={item.src}
+                className={`relative overflow-hidden rounded-xl group ${item.span}`}
+              >
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <p className="text-white text-xs font-semibold">{item.label}</p>
                 </div>
               </div>
             ))}
@@ -352,17 +312,98 @@ export default function GeneralContractorsPage() {
         </div>
       </section>
 
-      {/* Request a Sub Bid — Form */}
-      <section id="sub-bid" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-2xl">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold">Request a Sub Bid</h2>
-            <p className="mt-3 text-gray-600">
-              Fill out the form and {"we'll"} get back to you with a commercial scope and quote within 48 hours.
-            </p>
+      {/* ── HOW IT WORKS ─────────────────────────────────────── */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-14">
+            <p className="text-primary font-bold tracking-widest text-xs uppercase mb-3">The Process</p>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-foreground text-balance">
+              Simple. Fast. Done Right.
+            </h2>
           </div>
-          <div className="bg-brand-gray-light border border-turf-green/20 rounded-2xl p-8 shadow-soft-lg">
-            <ContactPageClient />
+          <div className="grid md:grid-cols-3 gap-6">
+            {steps.map((step, i) => (
+              <div key={step.number} className="relative bg-card border border-border rounded-2xl p-8">
+                {i < steps.length - 1 && (
+                  <div className="hidden md:block absolute top-14 -right-3 z-10">
+                    <svg className="h-6 w-6 text-primary/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                )}
+                <p className="text-6xl font-extrabold text-primary/15 leading-none mb-5">{step.number}</p>
+                <h3 className="font-bold text-foreground text-lg mb-2">{step.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{step.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── TRUST BAR ────────────────────────────────────────── */}
+      <section className="py-12 bg-primary/10 border-y border-primary/20">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
+            {[
+              { icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", label: "Licensed & Insured" },
+              { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", label: "48-Hour Quote Turnaround" },
+              { icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z", label: "Charlotte-Based Crew" },
+              { icon: "M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z", label: "5-Star Google Reviews" },
+            ].map((item) => (
+              <div key={item.label} className="flex items-center gap-2.5 text-foreground">
+                <svg className="h-5 w-5 text-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
+                </svg>
+                <span className="font-semibold text-sm">{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SUB BID FORM ─────────────────────────────────────── */}
+      <section id="sub-bid" className="py-24 bg-background">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            {/* Left — copy */}
+            <div className="lg:sticky lg:top-24">
+              <p className="text-primary font-bold tracking-widest text-xs uppercase mb-4">Ready to Partner?</p>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight text-balance mb-6">
+                Request Your Sub Bid
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-10">
+                Fill out the form and we will respond with a full commercial scope and quote within 48 hours.
+                No obligation, no runaround.
+              </p>
+              <div className="space-y-5">
+                {[
+                  "Detailed line-item sub bid within 48 hours",
+                  "Commercial COI available on request",
+                  "Crew available across the greater Charlotte market",
+                  "Direct line to the owner — not a call center",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <div className="h-5 w-5 rounded-full bg-primary flex-shrink-0 flex items-center justify-center mt-0.5">
+                      <svg className="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p className="text-foreground text-sm leading-relaxed">{item}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-10 p-5 bg-card border border-border rounded-xl">
+                <p className="text-xs text-muted-foreground uppercase tracking-widest font-semibold mb-2">Prefer to call?</p>
+                <a href="tel:+17049956265" className="text-xl font-bold text-primary hover:text-primary/80 transition-colors">
+                  (704) 995-6265
+                </a>
+              </div>
+            </div>
+
+            {/* Right — form */}
+            <div className="bg-card border border-border rounded-2xl p-8 shadow-xl">
+              <ContactPageClient />
+            </div>
           </div>
         </div>
       </section>
