@@ -1,7 +1,6 @@
 "use client"
 
 import React from "react"
-import { Card, CardContent } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
 import { Star } from "lucide-react"
@@ -15,7 +14,7 @@ const testimonials = [
   {
     name: "Athanasios Muder",
     stars: 5,
-    text: "Great job guys, I came home to beautiful turf installed in the front and back yard. Couldn't have asked for a better experience. Now it's time for our family and pups to enjoy our new yard",
+    text: "Great job guys, I came home to beautiful turf installed in the front and back yard. Couldn't have asked for a better experience. Now it's time for our family and pups to enjoy our new yard.",
   },
   {
     name: "Mike Bradley",
@@ -25,12 +24,12 @@ const testimonials = [
   {
     name: "Annastacia Slater",
     stars: 5,
-    text: "Very trustworthy crew, and very attentive to detail",
+    text: "Very trustworthy crew, and very attentive to detail.",
   },
   {
     name: "Sergey Gorelyshev",
     stars: 5,
-    text: "Beautiful turf installed for my pup :) Fast, reliable and fair priced",
+    text: "Beautiful turf installed for my pup. Fast, reliable and fair priced.",
   },
   {
     name: "Zack Malal",
@@ -54,62 +53,69 @@ const testimonials = [
   },
 ]
 
+function StarRow({ count }: { count: number }) {
+  return (
+    <div className="flex gap-0.5 mb-4">
+      {Array(5).fill(0).map((_, i) => (
+        <Star
+          key={i}
+          className={`h-4 w-4 ${i < count ? "text-yellow-400 fill-yellow-400" : "text-gray-600"}`}
+        />
+      ))}
+    </div>
+  )
+}
+
 export default function TestimonialsSection() {
-  const plugin = React.useRef(Autoplay({ delay: 5000, stopOnInteraction: true }))
+  const plugin = React.useRef(Autoplay({ delay: 4500, stopOnInteraction: true }))
 
   return (
-    <section id="testimonials" className="py-16 md:py-24 bg-brand-gray-light">
-      <div className="container px-4 md:px-6">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-foreground">
-            What Our Clients Say
-          </h2>
-          <p className="mt-3 max-w-2xl mx-auto text-lg text-brand-gray-text md:text-xl">
-            Hear from satisfied customers who transformed their spaces with Atlantic Turf Specialists.
-          </p>
+    <section id="testimonials" className="py-16 md:py-28 bg-card border-y border-border overflow-hidden">
+      <div className="container px-4 md:px-8">
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
+          <div>
+            <p className="text-turf-green text-sm font-semibold tracking-[0.2em] uppercase mb-2">Real Reviews</p>
+            <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl text-foreground text-balance">
+              Don&apos;t Take Our Word For It
+            </h2>
+          </div>
+          <div className="flex items-center gap-3 shrink-0">
+            <div className="flex gap-0.5">
+              {Array(5).fill(0).map((_, i) => (
+                <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
+              ))}
+            </div>
+            <span className="text-foreground font-bold text-lg">5.0</span>
+            <span className="text-brand-gray-text text-sm">on Google</span>
+          </div>
         </div>
+
+        {/* Carousel */}
         <Carousel
           plugins={[plugin.current]}
-          className="w-full max-w-4xl mx-auto"
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.reset}
-          opts={{
-            align: "start",
-            loop: true,
-          }}
+          opts={{ align: "start", loop: true }}
+          className="w-full"
         >
-          <CarouselContent>
-            {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
-                {" "}
-                {/* Show 2 on medium, 2 on large */}
-                <div className="p-1">
-                  <Card className="bg-card text-card-foreground rounded-2xl shadow-soft h-full flex flex-col">
-                    <CardContent className="flex flex-col items-center text-center p-6 md:p-8 flex-grow">
-                      <h3 className="text-xl font-semibold text-foreground mb-2">{testimonial.name}</h3>
-                      <div className="flex justify-center my-4">
-                        {Array(testimonial.stars)
-                          .fill(0)
-                          .map((_, i) => (
-                            <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
-                          ))}
-                        {Array(5 - testimonial.stars)
-                          .fill(0)
-                          .map((_, i) => (
-                            <Star key={i + testimonial.stars} className="h-5 w-5 text-gray-300" />
-                          ))}
-                      </div>
-                      <p className="text-brand-gray-text text-base leading-relaxed italic flex-grow">
-                        &ldquo;{testimonial.text}&rdquo;
-                      </p>
-                    </CardContent>
-                  </Card>
+          <CarouselContent className="-ml-4">
+            {testimonials.map((t, index) => (
+              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <div className="bg-background border border-border rounded-2xl p-6 h-full flex flex-col hover:border-turf-green/40 transition-colors">
+                  <StarRow count={t.stars} />
+                  <p className="text-brand-gray-text text-base leading-relaxed flex-grow">
+                    &ldquo;{t.text}&rdquo;
+                  </p>
+                  <p className="text-foreground font-semibold text-sm mt-5 pt-5 border-t border-border">
+                    {t.name}
+                  </p>
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden sm:flex bg-background/80 hover:bg-accent text-foreground shadow-soft" />
-          <CarouselNext className="hidden sm:flex bg-background/80 hover:bg-accent text-foreground shadow-soft" />
+          <CarouselPrevious className="hidden sm:flex -left-4 bg-card border-border text-foreground hover:bg-accent" />
+          <CarouselNext className="hidden sm:flex -right-4 bg-card border-border text-foreground hover:bg-accent" />
         </Carousel>
       </div>
     </section>
