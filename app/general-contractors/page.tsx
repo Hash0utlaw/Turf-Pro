@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Script from "next/script"
 import { ContactPageClient } from "@/app/contact/ContactPageClient"
 import { StructuredData } from "@/components/structured-data"
 
@@ -178,9 +179,17 @@ const reviews = [
 ]
 
 export default function GeneralContractorsPage() {
+  const googleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY || ""
+
   return (
     <>
       <StructuredData data={structuredData} />
+      {googleMapsApiKey && (
+        <Script
+          src={`https://maps.googleapis.com/maps/api/js?key=${googleMapsApiKey}&libraries=places&loading=async`}
+          strategy="afterInteractive"
+        />
+      )}
 
       {/* ── HERO ──────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex flex-col justify-end overflow-hidden bg-black">

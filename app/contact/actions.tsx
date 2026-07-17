@@ -23,7 +23,7 @@ export async function sendContactEmail(values: ContactFormInputs): Promise<SendC
     return { success: false, message: "Validation failed. Please check your inputs." }
   }
 
-  const { name, email, phone, service, message, address, street, city, state, zipCode } = parsed.data
+  const { name, email, phone, message, address, street, city, state, zipCode } = parsed.data
 
   const location = city && state ? `${city}, ${state}` : state || city || "Address Provided"
 
@@ -33,7 +33,7 @@ export async function sendContactEmail(values: ContactFormInputs): Promise<SendC
     from: "Atlantic Turf Specialists <onboarding@resend.dev>",
     to: [RECIPIENT],
     reply_to: email,
-    subject: `New Inquiry: ${service} — ${location}`,
+    subject: `New Inquiry from ${name} — ${location}`,
     html: `
       <!DOCTYPE html>
       <html>
@@ -42,9 +42,8 @@ export async function sendContactEmail(values: ContactFormInputs): Promise<SendC
           <h2 style="color: #166534; margin-top: 0;">New Contact Form Submission</h2>
           <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #333;">
             <tr><td style="padding: 8px 0; font-weight: bold; width: 140px;">Name</td><td>${name}</td></tr>
+            <tr><td style="padding: 8px 0; font-weight: bold;">Phone</td><td>${phone}</td></tr>
             <tr><td style="padding: 8px 0; font-weight: bold;">Email</td><td><a href="mailto:${email}">${email}</a></td></tr>
-            ${phone ? `<tr><td style="padding: 8px 0; font-weight: bold;">Phone</td><td>${phone}</td></tr>` : ""}
-            <tr><td style="padding: 8px 0; font-weight: bold;">Service</td><td>${service}</td></tr>
           </table>
           <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;" />
           <h3 style="color: #166534; margin-top: 0;">Project Address</h3>
@@ -55,16 +54,18 @@ export async function sendContactEmail(values: ContactFormInputs): Promise<SendC
             ${state ? `<tr><td style="padding: 8px 0; font-weight: bold;">State</td><td>${state}</td></tr>` : ""}
             ${zipCode ? `<tr><td style="padding: 8px 0; font-weight: bold;">Zip Code</td><td>${zipCode}</td></tr>` : ""}
           </table>
+          ${message ? `
           <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;" />
           <h3 style="color: #166534; margin-top: 0;">Message</h3>
           <p style="font-size: 14px; color: #333; line-height: 1.6; white-space: pre-wrap;">${message.replace(/\n/g, "<br/>")}</p>
+          ` : ""}
           <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;" />
           <p style="font-size: 12px; color: #999; text-align: center; margin: 0;">Sent via the Atlantic Turf Specialists contact form</p>
         </div>
       </body>
       </html>
     `,
-    text: `New contact form submission from ${name} (${email}).\n\nService: ${service}\nPhone: ${phone || "Not provided"}\nAddress: ${address}${street ? `\nStreet: ${street}` : ""}${city ? `\nCity: ${city}` : ""}${state ? `\nState: ${state}` : ""}${zipCode ? `\nZip: ${zipCode}` : ""}\n\nMessage:\n${message}`,
+    text: `New contact form submission from ${name}.\n\nPhone: ${phone}\nEmail: ${email}\nAddress: ${address}${street ? `\nStreet: ${street}` : ""}${city ? `\nCity: ${city}` : ""}${state ? `\nState: ${state}` : ""}${zipCode ? `\nZip: ${zipCode}` : ""}${message ? `\n\nMessage:\n${message}` : ""}`,
   })
 
   if (error) {
