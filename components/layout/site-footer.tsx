@@ -84,8 +84,13 @@ function SiteFooter() {
                     </Link>
                   </li>
                   <li>
+                    <Link href="/homeowner-landing" className="text-base text-brand-gray-text hover:text-turf-green">
+                      Homeowner Landing
+                    </Link>
+                  </li>
+                  <li>
                     <Link href="/general-contractors" className="text-base text-brand-gray-text hover:text-turf-green">
-                      General Contractors
+                      GC Landing
                     </Link>
                   </li>
                 </ul>

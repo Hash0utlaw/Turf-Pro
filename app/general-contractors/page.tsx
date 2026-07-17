@@ -1,36 +1,35 @@
 import type { Metadata } from "next"
-import Link from "next/link"
 import Script from "next/script"
 import { ContactPageClient } from "@/app/contact/ContactPageClient"
 import { StructuredData } from "@/components/structured-data"
 
 export const metadata: Metadata = {
-  title: "Premium Artificial Turf Installation Charlotte NC | Atlantic Turf Specialists",
+  title: "Turf Subcontractor for General Contractors Charlotte NC | Atlantic Turf Specialists",
   description:
-    "Transform your Charlotte backyard into a luxury outdoor living space with Atlantic Turf Specialists. Custom putting greens, pool surrounds, and full lawn installs. Get your free quote today.",
+    "Atlantic Turf Specialists is Charlotte's trusted artificial turf subcontractor for general contractors, custom home builders, and commercial developers. Licensed, insured, bid-ready.",
   keywords: [
-    "artificial turf Charlotte NC",
-    "luxury backyard turf Charlotte",
-    "premium putting green Charlotte NC",
-    "pool surround turf Charlotte",
-    "backyard turf installation Charlotte NC",
-    "Atlantic Turf Specialists",
-    "artificial grass Charlotte NC",
-    "backyard transformation Charlotte",
+    "artificial turf subcontractor Charlotte NC",
+    "turf installer for general contractors Charlotte",
+    "commercial turf installation Charlotte NC",
+    "turf sub bid Charlotte",
+    "artificial turf GC Charlotte NC",
+    "Atlantic Turf Specialists subcontractor",
+    "turf installation contractor Charlotte",
+    "commercial artificial grass Charlotte NC",
   ],
   alternates: {
     canonical: "https://www.atlanticturfspecialists.com/general-contractors",
   },
   openGraph: {
-    title: "Premium Artificial Turf Installation Charlotte NC | Atlantic Turf Specialists",
+    title: "Turf Subcontractor for General Contractors | Atlantic Turf Specialists — Charlotte NC",
     description:
-      "Transform your Charlotte backyard with premium artificial turf. Custom putting greens, pool surrounds, and full lawn installs by Atlantic Turf Specialists.",
+      "Fast, reliable artificial turf subcontractor for GCs and builders across Charlotte NC. Licensed, insured, and experienced on commercial and residential scopes.",
     images: [
       {
-        url: "/portfolio/artificial-turf-luxury-estate-install-01.webp",
+        url: "/portfolio/artificial-turf-commercial-install-01.webp",
         width: 1200,
         height: 630,
-        alt: "Luxury backyard artificial turf installation by Atlantic Turf Specialists — Charlotte NC",
+        alt: "Commercial artificial turf installation by Atlantic Turf Specialists — Charlotte NC",
       },
     ],
   },
@@ -46,7 +45,7 @@ const structuredData = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Get a Quote",
+          name: "General Contractors",
           item: "https://www.atlanticturfspecialists.com/general-contractors",
         },
       ],
@@ -67,118 +66,128 @@ const structuredData = {
   ],
 }
 
-const stats = [
-  { value: "500+", label: "Backyards Transformed" },
+const credentials = [
+  { value: "Licensed", label: "& Insured in NC" },
+  { value: "48hr", label: "Bid Turnaround" },
+  { value: "500+", label: "Projects Delivered" },
   { value: "5.0★", label: "Google Rating" },
-  { value: "15+", label: "Years Experience" },
-  { value: "100%", label: "Licensed & Insured" },
 ]
 
-const transformations = [
+const painPoints = [
   {
-    title: "Custom Putting Greens",
-    description: "Play championship-quality golf steps from your back door. We design and install multi-hole greens that fit your yard, your vision, and your game.",
-    src: "/portfolio/artificial-turf-putting-green-night-02.webp",
-    alt: "Custom multi-hole putting green with night lighting — Charlotte NC",
+    problem: "Sub no-shows on deadline day",
+    solution: "We show up. Every time. Your schedule is our schedule.",
   },
   {
-    title: "Luxury Pool Surrounds",
-    description: "Frame your pool in lush, perfectly maintained turf that stays cool, drains instantly, and looks flawless season after season.",
-    src: "/portfolio/artificial-turf-pool-surround-install-01.webp",
-    alt: "Luxury pool surround artificial turf installation — Charlotte NC",
+    problem: "Sloppy seams and bad installs",
+    solution: "Commercial-grade precision cuts, tight seams, clean borders.",
   },
   {
-    title: "Full Backyard Lawns",
-    description: "Replace high-maintenance grass with a premium lawn that stays green year-round — no mowing, no irrigation, no brown patches.",
-    src: "/portfolio/artificial-turf-side-yard-install-02.webp",
-    alt: "Full backyard artificial turf lawn at luxury home — Charlotte NC",
+    problem: "Can't verify licensing or insurance",
+    solution: "Fully licensed and insured. COI available same-day on request.",
   },
   {
-    title: "Sports & Recreation",
-    description: "From bocce courts to soccer fields to playground surfaces — we build outdoor spaces your family will live in.",
-    src: "/portfolio/artificial-turf-sports-field-install-01.webp",
-    alt: "Backyard sports field artificial turf — Charlotte NC",
+    problem: "Slow bids that hold up the project",
+    solution: "Detailed scoped bids returned within 48 hours, guaranteed.",
+  },
+]
+
+const scopes = [
+  {
+    title: "Residential New Construction",
+    body: "We work with custom home builders to spec and install premium backyard turf — putting greens, pool surrounds, full lawns — as a seamless part of your project closeout.",
+    src: "/portfolio/artificial-turf-luxury-estate-install-01.webp",
+    alt: "Luxury residential new construction turf install — Charlotte NC",
+  },
+  {
+    title: "Commercial Developments",
+    body: "From mixed-use courtyards to HOA common areas to corporate campuses — we deliver commercial-grade installations that hold up under heavy traffic and scrutiny.",
+    src: "/portfolio/artificial-turf-commercial-install-02.webp",
+    alt: "Commercial turf installation at a Charlotte NC development",
+  },
+  {
+    title: "Playground & Recreational",
+    body: "ADA-compliant playground surfacing, sports fields, and recreational spaces. We have direct experience on church campuses, schools, and multi-use recreational properties.",
+    src: "/portfolio/grace-covenant-church-playground-04.webp",
+    alt: "Church playground artificial turf installation — Huntersville NC",
+  },
+  {
+    title: "Hardscape Integration",
+    body: "We coordinate directly with your concrete, pavers, and landscaping trades to ensure clean transitions, proper drainage, and a finished product that makes your whole job look great.",
+    src: "/portfolio/artificial-turf-side-yard-pathway-install-01.webp",
+    alt: "Turf integrated with hardscape and river rock pathway — Charlotte NC",
+  },
+]
+
+const proofPhotos = [
+  {
+    src: "/portfolio/artificial-turf-installation-in-progress-01.webp",
+    alt: "Atlantic Turf Specialists crew installing commercial turf on site",
+    label: "In Progress — Charlotte, NC",
+    className: "col-span-2 row-span-2",
+  },
+  {
+    src: "/portfolio/artificial-turf-commercial-install-03.webp",
+    alt: "Completed commercial turf installation — Charlotte NC",
+    label: "Commercial Install — Charlotte, NC",
+    className: "",
+  },
+  {
+    src: "/portfolio/grace-covenant-church-playground-06.webp",
+    alt: "Grace Covenant Church playground turf — Huntersville NC",
+    label: "Church Playground — Huntersville, NC",
+    className: "",
+  },
+  {
+    src: "/portfolio/artificial-turf-aerial-backyard-drone-01.webp",
+    alt: "Aerial drone shot of completed turf installation — Charlotte NC",
+    label: "Aerial View — Charlotte, NC",
+    className: "",
+  },
+  {
+    src: "/portfolio/artificial-turf-courtyard-install-01.webp",
+    alt: "Courtyard turf installation — Charlotte NC",
+    label: "Courtyard Install — Charlotte, NC",
+    className: "",
   },
 ]
 
 const whyUs = [
   {
     number: "01",
-    title: "Precision Installation",
-    body: "Every edge, seam, and border is cut and finished to exacting standards. We treat your property like it is our own.",
+    title: "We Work to Your Timeline",
+    body: "We understand that turf is often one of the last trades on site. We build our schedule around yours and communicate proactively — no chasing required.",
   },
   {
     number: "02",
-    title: "Premium Materials Only",
-    body: "We source commercial-grade turf products that look realistic, drain fast, and hold up for years under heavy use.",
+    title: "Clean Jobsite Standards",
+    body: "Our crew respects your site. We bring everything we need, stage materials properly, and leave every workday clean so other trades aren't impacted.",
   },
   {
     number: "03",
-    title: "Charlotte-Based & Owner-Led",
-    body: "You work directly with the owner — not a sales rep. We know the Charlotte climate, the soil, and the neighborhoods.",
+    title: "Scope Flexibility",
+    body: "Whether it's 200 sq ft or 20,000 sq ft, a single residential lot or a multi-phase commercial development — we can scope it, price it, and deliver it.",
   },
   {
     number: "04",
-    title: "Zero-Maintenance Results",
-    body: "No watering. No mowing. No fertilizing. Just a beautiful outdoor space every single day of the year.",
+    title: "Owner-Direct Communication",
+    body: "You talk to the owner, not a sales rep. Decisions get made fast, problems get solved on the spot, and nothing falls through the cracks.",
   },
 ]
 
-const portfolioGrid = [
-  {
-    src: "/portfolio/artificial-turf-aerial-estate-drone-05.webp",
-    alt: "Aerial view of luxury estate turf installation — Charlotte NC",
-    label: "Estate Lawn — Charlotte, NC",
-    className: "col-span-2 row-span-2",
-  },
-  {
-    src: "/portfolio/artificial-turf-putting-green-install-15.webp",
-    alt: "Putting green with fringe turf — Charlotte NC",
-    label: "Putting Green — Charlotte, NC",
-    className: "",
-  },
-  {
-    src: "/portfolio/artificial-turf-pool-surround-install-03.webp",
-    alt: "Pool surround turf install — Charlotte NC",
-    label: "Pool Surround — Charlotte, NC",
-    className: "",
-  },
-  {
-    src: "/portfolio/artificial-turf-putting-green-night-01.webp",
-    alt: "Night-lit putting green beside pool patio — Charlotte NC",
-    label: "Night-Lit Putting Green — Charlotte, NC",
-    className: "",
-  },
-  {
-    src: "/portfolio/artificial-turf-side-yard-pathway-install-01.webp",
-    alt: "Side yard turf with river rock pathway — Charlotte NC",
-    label: "Side Yard & Pathway — Charlotte, NC",
-    className: "",
-  },
-]
+const CheckIcon = () => (
+  <svg className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+  </svg>
+)
 
-const reviews = [
-  {
-    name: "Michael T.",
-    location: "Myers Park, Charlotte NC",
-    text: "The putting green they built for us is absolutely stunning. Our neighbors cannot stop asking about it. Atlantic Turf showed up on time, worked clean, and the finished product exceeded every expectation.",
-    stars: 5,
-  },
-  {
-    name: "Sarah & James K.",
-    location: "Ballantyne, Charlotte NC",
-    text: "We replaced our entire backyard lawn and added a pool surround. The transformation is unbelievable. It looks better than real grass and we have not touched it once since installation.",
-    stars: 5,
-  },
-  {
-    name: "David R.",
-    location: "Lake Norman, NC",
-    text: "From the first quote to the final cleanup, everything was professional and seamless. The crew was respectful of our property and the result is stunning. Highly recommend to anyone in the area.",
-    stars: 5,
-  },
-]
+const XIcon = () => (
+  <svg className="h-5 w-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+  </svg>
+)
 
-export default function GeneralContractorsPage() {
+export default function GeneralContractorsLandingPage() {
   const googleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY || ""
 
   return (
@@ -191,124 +200,151 @@ export default function GeneralContractorsPage() {
         />
       )}
 
-      {/* ── HERO ──────────────────────────────────────────────── */}
+      {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex flex-col justify-end overflow-hidden bg-black">
         <div className="absolute inset-0">
           <img
-            src="/portfolio/artificial-turf-aerial-estate-drone-05.webp"
-            alt="Luxury backyard turf estate installation by Atlantic Turf Specialists — Charlotte NC"
-            className="w-full h-full object-cover opacity-60"
+            src="/portfolio/artificial-turf-installation-in-progress-02.webp"
+            alt="Atlantic Turf Specialists crew installing commercial-grade artificial turf on a Charlotte NC job site"
+            className="w-full h-full object-cover opacity-50"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/10" />
+        </div>
+
+        {/* Top trust bar */}
+        <div className="absolute top-0 left-0 right-0 z-10 border-b border-white/10 bg-black/60 backdrop-blur-sm">
+          <div className="container mx-auto px-4 max-w-6xl py-3 flex flex-wrap items-center justify-between gap-3">
+            <div className="flex items-center gap-6 text-xs text-white/60 font-medium tracking-wide uppercase">
+              <span className="flex items-center gap-1.5"><CheckIcon /> Licensed & Insured NC</span>
+              <span className="flex items-center gap-1.5"><CheckIcon /> COI Available Same-Day</span>
+              <span className="flex items-center gap-1.5"><CheckIcon /> 48-Hour Bid Turnaround</span>
+            </div>
+            <a
+              href="mailto:zach@atlanticturfspecialists.com"
+              className="text-xs text-primary font-semibold hover:underline underline-offset-2 tracking-wide"
+            >
+              zach@atlanticturfspecialists.com
+            </a>
+          </div>
         </div>
 
         <div className="relative container mx-auto px-4 max-w-6xl pb-20 pt-48">
-          <p className="text-primary font-semibold tracking-[0.25em] text-xs uppercase mb-5">
-            Charlotte&apos;s Premium Turf Installer
+          <p className="text-primary font-bold tracking-[0.3em] text-xs uppercase mb-5">
+            Turf Subcontractor — Charlotte, NC
           </p>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-white leading-[0.95] text-balance mb-8 max-w-4xl">
-            Your Backyard,{" "}
-            <span className="text-primary">Elevated.</span>
+          <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-extrabold tracking-tight text-white leading-[0.93] text-balance mb-8 max-w-4xl">
+            The Turf Sub{" "}
+            <span className="text-primary">GCs Can Count On.</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/70 max-w-xl leading-relaxed mb-10">
-            Premium artificial turf installations for Charlotte homeowners who expect the best.
-            Putting greens, pool surrounds, and luxury lawns — designed for your property,
-            installed to last.
+          <p className="text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed mb-10">
+            Atlantic Turf Specialists is Charlotte&apos;s go-to artificial turf subcontractor for
+            general contractors, custom builders, and commercial developers. We deliver on scope,
+            on schedule, and on budget — every single time.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="#get-quote"
+              href="#sub-bid"
               className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold px-8 py-4 rounded-lg text-base transition-colors"
             >
-              Get Your Free Quote
+              Request a Sub Bid
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
-            <Link
-              href="/portfolio"
+            <a
+              href="mailto:zach@atlanticturfspecialists.com"
               className="inline-flex items-center justify-center gap-2 border border-white/30 hover:border-white/60 text-white font-semibold px-8 py-4 rounded-lg text-base transition-colors"
             >
-              View Our Work
-            </Link>
+              Email Directly
+            </a>
           </div>
         </div>
       </section>
 
-      {/* ── STATS BAR ──────────────────────────────────────────── */}
+      {/* ── CREDENTIAL BAR ────────────────────────────────────────── */}
       <section className="bg-primary">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/20">
-            {stats.map((stat) => (
-              <div key={stat.label} className="px-6 py-6 text-center">
-                <p className="text-3xl md:text-4xl font-extrabold text-white">{stat.value}</p>
-                <p className="text-xs font-semibold uppercase tracking-widest text-white/70 mt-1">{stat.label}</p>
+            {credentials.map((c) => (
+              <div key={c.label} className="px-6 py-5 text-center">
+                <p className="text-3xl md:text-4xl font-extrabold text-white">{c.value}</p>
+                <p className="text-xs font-semibold uppercase tracking-widest text-white/70 mt-1">{c.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── INTRO ──────────────────────────────────────────────── */}
-      <section className="py-24 bg-background">
+      {/* ── THE PROBLEM ───────────────────────────────────────────── */}
+      <section className="py-24 bg-[#0f0f0f]">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-primary font-semibold tracking-widest text-xs uppercase mb-4">Who We Are</p>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight text-balance mb-6">
-                Charlotte&apos;s Most Trusted Turf Installer
+              <p className="text-primary font-bold tracking-[0.3em] text-xs uppercase mb-4">Sound Familiar?</p>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight text-balance mb-6">
+                Tired of Turf Subs That Let You Down?
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-                Atlantic Turf Specialists has transformed hundreds of Charlotte backyards into
-                stunning outdoor living spaces. We work directly with homeowners, architects, and
-                luxury builders who demand a higher standard — and we deliver it every time.
+              <p className="text-white/60 text-lg leading-relaxed mb-10">
+                Bad subcontractors cost you time, money, and client relationships. We built our
+                business around being the kind of trade partner GCs actually want on their roster.
               </p>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                Whether you want a championship putting green, a resort-style pool surround, or a
-                perfectly manicured lawn that never needs maintenance — our owner-led team brings
-                the craft, the materials, and the attention to detail to make it happen.
-              </p>
-              <p className="text-sm text-muted-foreground/60 italic">
-                Also serving general contractors and luxury builders as a preferred turf subcontractor across the greater Charlotte market.
-              </p>
+              <div className="space-y-5">
+                {painPoints.map((p) => (
+                  <div key={p.problem} className="grid grid-cols-[auto_1fr] gap-4 items-start border border-white/10 rounded-xl p-5 bg-white/5">
+                    <div className="space-y-1 col-span-2">
+                      <div className="flex items-start gap-3">
+                        <XIcon />
+                        <p className="text-white/50 text-sm font-medium line-through">{p.problem}</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckIcon />
+                        <p className="text-white text-sm font-semibold">{p.solution}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
             <div className="relative">
               <img
-                src="/portfolio/artificial-turf-luxury-estate-install-01.webp"
-                alt="Luxury turf installation at Charlotte NC estate home"
-                className="w-full h-96 object-cover rounded-2xl shadow-2xl"
+                src="/portfolio/artificial-turf-commercial-install-01.webp"
+                alt="Atlantic Turf Specialists commercial installation — Charlotte NC"
+                className="w-full h-[520px] object-cover rounded-2xl"
               />
-              <div className="absolute -bottom-6 -left-6 bg-primary text-white rounded-xl px-6 py-4 shadow-xl">
-                <p className="text-3xl font-extrabold">500+</p>
-                <p className="text-xs font-semibold uppercase tracking-wider text-white/80">Projects Completed</p>
+              <div className="absolute -bottom-6 -right-6 bg-primary text-white rounded-xl px-6 py-5 shadow-2xl max-w-[200px]">
+                <p className="text-4xl font-extrabold leading-none">48hr</p>
+                <p className="text-xs font-semibold uppercase tracking-wider text-white/80 mt-1">Guaranteed Bid Turnaround</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── TRANSFORMATIONS ────────────────────────────────────── */}
-      <section className="py-24 bg-card border-y border-border">
+      {/* ── SCOPE OF WORK ─────────────────────────────────────────── */}
+      <section className="py-24 bg-[#141414] border-y border-white/5">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
-            <p className="text-primary font-semibold tracking-widest text-xs uppercase mb-4">What We Build</p>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-foreground text-balance">
-              Every Backyard, Transformed
+            <p className="text-primary font-bold tracking-[0.3em] text-xs uppercase mb-4">What We Cover</p>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white text-balance">
+              We Handle Any Scope
             </h2>
+            <p className="text-white/50 text-lg max-w-2xl mx-auto mt-4 leading-relaxed">
+              Residential new construction to large commercial developments — we have the crew, equipment, and experience to execute.
+            </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {transformations.map((item) => (
-              <div key={item.title} className="group relative overflow-hidden rounded-2xl bg-background border border-border hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                <div className="aspect-[4/3] overflow-hidden">
+          <div className="grid md:grid-cols-2 gap-6">
+            {scopes.map((item) => (
+              <div key={item.title} className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 hover:border-primary/40 transition-all duration-300">
+                <div className="aspect-video overflow-hidden">
                   <img
                     src={item.src}
                     alt={item.alt}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="font-bold text-foreground text-lg mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+                <div className="p-7">
+                  <h3 className="font-bold text-white text-xl mb-3">{item.title}</h3>
+                  <p className="text-white/55 text-sm leading-relaxed">{item.body}</p>
                 </div>
               </div>
             ))}
@@ -316,28 +352,19 @@ export default function GeneralContractorsPage() {
         </div>
       </section>
 
-      {/* ── PORTFOLIO GRID ─────────────────────────────────────── */}
-      <section className="py-24 bg-background">
+      {/* ── PHOTO PROOF ───────────────────────────────────────────── */}
+      <section className="py-24 bg-[#0f0f0f]">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="flex items-end justify-between mb-12 flex-wrap gap-4">
             <div>
-              <p className="text-primary font-semibold tracking-widest text-xs uppercase mb-3">Our Portfolio</p>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-foreground text-balance leading-tight">
-                Real Projects.<br />Real Results.
+              <p className="text-primary font-bold tracking-[0.3em] text-xs uppercase mb-3">On the Job</p>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-white text-balance leading-tight">
+                Proven on Job Sites<br />Across Charlotte.
               </h2>
             </div>
-            <Link
-              href="/portfolio"
-              className="text-primary font-semibold text-sm hover:underline underline-offset-4 flex items-center gap-1"
-            >
-              View Full Portfolio
-              <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-3 h-[520px]">
-            {portfolioGrid.map((item) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-3 h-[500px]">
+            {proofPhotos.map((item) => (
               <div key={item.src} className={`relative overflow-hidden rounded-xl group ${item.className}`}>
                 <img
                   src={item.src}
@@ -353,104 +380,97 @@ export default function GeneralContractorsPage() {
         </div>
       </section>
 
-      {/* ── WHY ATLANTIC TURF ──────────────────────────────────── */}
-      <section className="py-24 bg-card border-y border-border">
+      {/* ── WHY ATLANTIC TURF ─────────────────────────────────────── */}
+      <section className="py-24 bg-[#141414] border-y border-white/5">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
-            <p className="text-primary font-semibold tracking-widest text-xs uppercase mb-4">The Difference</p>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-foreground text-balance">
-              Why Charlotte Homeowners Choose Us
+            <p className="text-primary font-bold tracking-[0.3em] text-xs uppercase mb-4">Why We Work</p>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white text-balance">
+              Built for the Way GCs Operate
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {whyUs.map((r) => (
               <div
                 key={r.number}
-                className="bg-background border border-border rounded-2xl p-8 hover:border-primary/50 transition-colors group"
+                className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-primary/50 transition-colors group"
               >
-                <p className="text-6xl font-extrabold text-primary/15 group-hover:text-primary/30 transition-colors leading-none mb-5">
+                <p className="text-6xl font-extrabold text-primary/20 group-hover:text-primary/40 transition-colors leading-none mb-5">
                   {r.number}
                 </p>
-                <h3 className="font-bold text-foreground mb-3 text-lg">{r.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{r.body}</p>
+                <h3 className="font-bold text-white mb-3 text-lg">{r.title}</h3>
+                <p className="text-white/50 text-sm leading-relaxed">{r.body}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── REVIEWS ────────────────────────────────────────────── */}
-      <section className="py-24 bg-background">
+      {/* ── TRUST SIGNALS ─────────────────────────────────────────── */}
+      <section className="py-12 bg-primary/10 border-b border-white/5">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center mb-16">
-            <p className="text-primary font-semibold tracking-widest text-xs uppercase mb-4">5-Star Reviews</p>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-foreground text-balance">
-              What Our Clients Say
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {reviews.map((review) => (
-              <div key={review.name} className="bg-card border border-border rounded-2xl p-8">
-                <div className="flex gap-0.5 mb-5">
-                  {Array.from({ length: review.stars }).map((_, i) => (
-                    <svg key={i} className="h-4 w-4 text-primary fill-primary" viewBox="0 0 24 24">
-                      <path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-6 italic">&ldquo;{review.text}&rdquo;</p>
-                <div>
-                  <p className="font-bold text-foreground text-sm">{review.name}</p>
-                  <p className="text-xs text-muted-foreground">{review.location}</p>
-                </div>
+          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-4">
+            {[
+              "Licensed & Insured in NC",
+              "COI Available Same-Day",
+              "48-Hour Bid Turnaround",
+              "500+ Projects Completed",
+              "5-Star Google Rating",
+              "Owner-Direct Communication",
+            ].map((item) => (
+              <div key={item} className="flex items-center gap-2 text-white/70 text-sm font-medium">
+                <CheckIcon />
+                {item}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── QUOTE FORM ─────────────────────────────────────────── */}
-      <section id="get-quote" className="py-24 bg-card border-t border-border">
+      {/* ── SUB BID FORM ──────────────────────────────────────────── */}
+      <section id="sub-bid" className="py-24 bg-[#0f0f0f]">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
+
             {/* Left — copy */}
             <div className="lg:sticky lg:top-24">
-              <p className="text-primary font-semibold tracking-widest text-xs uppercase mb-4">Free Consultation</p>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight text-balance mb-6">
-                Ready to Transform Your Backyard?
+              <p className="text-primary font-bold tracking-[0.3em] text-xs uppercase mb-4">Request a Sub Bid</p>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight text-balance mb-6">
+                Ready to Add Us to Your Roster?
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-                Tell us about your project and we will get back to you with a detailed, no-obligation
-                quote within 48 hours. Our owner will personally review your scope and reach out directly.
+              <p className="text-white/60 text-lg leading-relaxed mb-10">
+                Send us the project address, your contact info, and any notes — we will get you a
+                detailed, scoped bid back within 48 hours. No back-and-forth. No fluff.
               </p>
-              <div className="space-y-5 mb-10">
+
+              <div className="space-y-4 mb-10">
                 {[
-                  "Free, no-obligation design consultation",
-                  "Detailed quote within 48 hours",
-                  "Premium commercial-grade materials",
-                  "Direct access to the owner — not a call center",
-                  "Fully licensed & insured in North Carolina",
+                  "Bids returned within 48 hours",
+                  "COI and licensing docs on request",
+                  "Works within your project schedule",
+                  "All scopes: residential, commercial, recreational",
+                  "Charlotte-based — we know the local codes",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
-                    <div className="h-5 w-5 rounded-full bg-primary flex-shrink-0 flex items-center justify-center mt-0.5">
-                      <svg className="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <p className="text-foreground text-sm leading-relaxed">{item}</p>
+                    <CheckIcon />
+                    <span className="text-white/70 text-sm">{item}</span>
                   </div>
                 ))}
               </div>
-              <div className="p-5 bg-background border border-border rounded-xl">
-                <p className="text-xs text-muted-foreground uppercase tracking-widest font-semibold mb-1">Email Us Directly</p>
-                <a href="mailto:zach@atlanticturfspecialists.com" className="text-lg font-bold text-primary hover:text-primary/80 transition-colors">
+
+              <div className="border-t border-white/10 pt-8">
+                <p className="text-white/40 text-xs uppercase tracking-widest font-semibold mb-3">Prefer to reach out directly?</p>
+                <a
+                  href="mailto:zach@atlanticturfspecialists.com"
+                  className="text-primary font-semibold text-base hover:underline underline-offset-4"
+                >
                   zach@atlanticturfspecialists.com
                 </a>
               </div>
             </div>
 
             {/* Right — form */}
-            <div className="bg-background border border-border rounded-2xl p-8 shadow-xl">
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 md:p-10">
               <ContactPageClient />
             </div>
           </div>
