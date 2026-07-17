@@ -13,7 +13,6 @@ import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 declare global {
   interface Window {
@@ -21,15 +20,6 @@ declare global {
     initAutocomplete?: () => void
   }
 }
-
-const services = [
-  "Residential Lawn Turf",
-  "Commercial Turf",
-  "Pet-Friendly Turf",
-  "Backyard Putting Greens",
-  "Recreational & Sports Turf",
-  "General Turf Installation",
-] as const
 
 export function ContactPageClient() {
   const [isAutocompleteReady, setIsAutocompleteReady] = useState(false)
@@ -44,7 +34,6 @@ export function ContactPageClient() {
       name: "",
       email: "",
       phone: "",
-      service: undefined,
       address: "",
       street: "",
       city: "",
@@ -59,13 +48,11 @@ export function ContactPageClient() {
   }, [])
 
   useEffect(() => {
-    // Prevent re-initialization if already set up
     if (autocompleteRef.current) return
 
     const initializeAutocomplete = () => {
       if (!window.google?.maps?.places) return
       if (!addressInputRef.current) return
-      // Already initialized
       if (autocompleteRef.current) return
 
       try {
@@ -92,22 +79,11 @@ export function ContactPageClient() {
 
           place.address_components.forEach((component) => {
             const types = component.types
-
-            if (types.includes("street_number")) {
-              street = component.long_name + " "
-            }
-            if (types.includes("route")) {
-              street += component.long_name
-            }
-            if (types.includes("locality")) {
-              city = component.long_name
-            }
-            if (types.includes("administrative_area_level_1")) {
-              state = component.short_name
-            }
-            if (types.includes("postal_code")) {
-              zipCode = component.long_name
-            }
+            if (types.includes("street_number")) street = component.long_name + " "
+            if (types.includes("route")) street += component.long_name
+            if (types.includes("locality")) city = component.long_name
+            if (types.includes("administrative_area_level_1")) state = component.short_name
+            if (types.includes("postal_code")) zipCode = component.long_name
           })
 
           if (!street || !city || !state || !zipCode) {
@@ -134,7 +110,6 @@ export function ContactPageClient() {
       }
     }
 
-    // Poll every 150ms until the Google Maps Places library is available (max 15s)
     const checkGoogleMaps = setInterval(() => {
       if (window.google?.maps?.places) {
         clearInterval(checkGoogleMaps)
@@ -156,9 +131,7 @@ export function ContactPageClient() {
 
   const onSubmit = async (values: ContactFormInputs) => {
     setSubmitSuccess(false)
-    
-    // If Google autocomplete is available but user hasn't selected from dropdown,
-    // show a warning but still allow manual entry
+
     if (isAutocompleteReady && (!values.street || !values.city || !values.state || !values.zipCode)) {
       toast.warning("For best results, please select an address from the suggestions", {
         description: "We'll process your manually entered address.",
@@ -209,6 +182,7 @@ export function ContactPageClient() {
             </div>
           </div>
         )}
+
         <FormField
           control={form.control}
           name="name"
@@ -222,6 +196,21 @@ export function ContactPageClient() {
             </FormItem>
           )}
         />
+
+        <FormField
+          control={form.control}
+          name="phone"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Phone Number</FormLabel>
+              <FormControl>
+                <Input placeholder="(704) 555-1234" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
         <FormField
           control={form.control}
           name="email"
@@ -235,19 +224,7 @@ export function ContactPageClient() {
             </FormItem>
           )}
         />
-        <FormField
-          control={form.control}
-          name="phone"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Phone Number (Optional)</FormLabel>
-              <FormControl>
-                <Input placeholder="(555) 123-4567" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+
         <FormField
           control={form.control}
           name="address"
@@ -263,9 +240,7 @@ export function ContactPageClient() {
                   {...field}
                   ref={(node) => {
                     setAddressInputRef(node)
-                    if (typeof field.ref === "function") {
-                      field.ref(node)
-                    }
+                    if (typeof field.ref === "function") field.ref(node)
                   }}
                   onChange={(e) => {
                     field.onChange(e)
@@ -285,41 +260,18 @@ export function ContactPageClient() {
             </FormItem>
           )}
         />
-        {/* Hidden fields for parsed address components */}
+        {/* Hidden parsed address component fields */}
         <input type="hidden" {...form.register("street")} />
         <input type="hidden" {...form.register("city")} />
         <input type="hidden" {...form.register("state")} />
         <input type="hidden" {...form.register("zipCode")} />
-        <FormField
-          control={form.control}
-          name="service"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Service Category</FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
-                <FormControl>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select a service you're interested in" />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  {services.map((service) => (
-                    <SelectItem key={service} value={service}>
-                      {service}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+
         <FormField
           control={form.control}
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>Message <span className="text-muted-foreground font-normal">(Optional)</span></FormLabel>
               <FormControl>
                 <Textarea placeholder="Tell us about your project..." className="min-h-[120px]" {...field} />
               </FormControl>
@@ -327,6 +279,7 @@ export function ContactPageClient() {
             </FormItem>
           )}
         />
+
         <Button type="submit" className="w-full" disabled={form.formState.isSubmitting}>
           {form.formState.isSubmitting ? "Sending..." : "Send Message"}
         </Button>
