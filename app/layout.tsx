@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import Script from "next/script"
 import "./globals.css"
 import { SiteHeader } from "@/components/layout/site-header"
 import { SiteFooter } from "@/components/layout/site-footer"
@@ -109,6 +110,19 @@ export default function RootLayout({
         </div>
         <Toaster />
         <CookieConsentBanner />
+        {/* Google Ads tag */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18267249230"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-config" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18267249230');
+          `}
+        </Script>
       </body>
     </html>
   )
