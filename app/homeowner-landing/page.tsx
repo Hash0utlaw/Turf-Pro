@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "backyard transformation Charlotte",
   ],
   alternates: {
-    canonical: "https://www.atlanticturfspecialists.com/general-contractors",
+    canonical: "https://www.atlanticturfspecialists.com/homeowner-landing",
   },
   openGraph: {
     title: "Premium Artificial Turf Installation Charlotte NC | Atlantic Turf Specialists",
@@ -47,7 +47,7 @@ const structuredData = {
           "@type": "ListItem",
           position: 2,
           name: "Get a Quote",
-          item: "https://www.atlanticturfspecialists.com/general-contractors",
+          item: "https://www.atlanticturfspecialists.com/homeowner-landing",
         },
       ],
     },
