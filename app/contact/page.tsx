@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import Script from "next/script"
 import Image from "next/image"
 import { StructuredData } from "@/components/structured-data"
+import { PhoneLink } from "@/components/phone-link"
 
 export const metadata: Metadata = {
   title: "Contact Us | Free Turf Quote Charlotte NC | Atlantic Turf Specialists",
@@ -26,6 +27,12 @@ export const metadata: Metadata = {
   },
 }
 
+
+const PhoneIcon = () => (
+  <svg className="h-5 w-5 text-turf-green flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+  </svg>
+)
 
 const MailIcon = () => (
   <svg className="h-5 w-5 text-turf-green flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -130,6 +137,19 @@ export default function ContactPage() {
                 </div>
 
                 <div className="space-y-5">
+                  <div className="flex items-start gap-3">
+                    <PhoneIcon />
+                    <div>
+                      <h3 className="text-sm font-semibold text-white uppercase tracking-wide">Phone</h3>
+                      <PhoneLink
+                        href="tel:+17049956265"
+                        className="text-brand-gray-text hover:text-turf-green-light transition-colors"
+                      >
+                        (704) 995-6265
+                      </PhoneLink>
+                    </div>
+                  </div>
+
                   <div className="flex items-start gap-3">
                     <MailIcon />
                     <div>
