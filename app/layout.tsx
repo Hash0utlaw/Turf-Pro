@@ -120,19 +120,6 @@ export default function RootLayout({
         <div className="relative flex min-h-screen flex-col">{children}</div>
         <Toaster />
         <CookieConsentBanner />
-        {/* Google Ads tag */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18267249230"
-          strategy="afterInteractive"
-        />
-        <Script id="google-ads-config" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-18267249230');
-          `}
-        </Script>
       </body>
     </html>
   )
