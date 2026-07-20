@@ -261,12 +261,6 @@ export default function GeneralContractorsLandingPage() {
               </svg>
               (704) 995-6265
             </PhoneLink>
-            <a
-              href="mailto:zach@atlanticturfspecialists.com"
-              className="inline-flex items-center justify-center gap-2 border border-white/30 hover:border-white/60 text-white font-semibold px-8 py-4 rounded-lg text-base transition-colors"
-            >
-              Email Directly
-            </a>
           </div>
         </div>
       </section>
