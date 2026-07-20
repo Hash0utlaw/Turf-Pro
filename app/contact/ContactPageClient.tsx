@@ -8,6 +8,7 @@ import type { google } from "googlemaps"
 
 import { contactFormSchema, type ContactFormInputs } from "@/lib/contact-form-schema"
 import { sendContactEmail, type SendContactEmailResult } from "./actions"
+import { trackFormConversion } from "@/lib/gtag"
 
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
@@ -141,6 +142,7 @@ export function ContactPageClient() {
     const result: SendContactEmailResult = await sendContactEmail(values)
 
     if (result.success) {
+      trackFormConversion()
       setSubmitSuccess(true)
       toast.success("Message Sent Successfully!", {
         description: "We'll get back to you within 24 hours.",

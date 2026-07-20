@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Phone, MapPin, Star } from "lucide-react"
 import { StructuredData } from "@/components/structured-data"
+import { PhoneLink } from "@/components/phone-link"
 
 export const metadata: Metadata = {
     title: "Artificial Turf Installation Company Charlotte NC | Atlantic Turf Specialists",
@@ -173,10 +174,10 @@ export default function CharlottePage() {
                 variant="outline"
                 className="bg-transparent border-white text-white hover:bg-white/10"
               >
-                <Link href="tel:+17049956265">
+                <PhoneLink href="tel:+17049956265">
                   <Phone className="mr-2 h-5 w-5" />
                   (704) 995-6265
-                </Link>
+                </PhoneLink>
               </Button>
             </div>
           </div>
@@ -337,10 +338,10 @@ export default function CharlottePage() {
               variant="outline"
               className="bg-transparent border-white text-white hover:bg-white/10"
             >
-              <Link href="tel:+17049956265">
+              <PhoneLink href="tel:+17049956265">
                 <Phone className="mr-2 h-5 w-5" />
                 Call (704) 995-6265
-              </Link>
+              </PhoneLink>
             </Button>
           </div>
         </div>

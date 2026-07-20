@@ -4,6 +4,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Check, Clock, Droplets, Scissors, DollarSign, Sparkles, Star, Phone } from "lucide-react"
+import { PhoneLink } from "@/components/phone-link"
 
 export const metadata: Metadata = {
   title: "Low Maintenance Artificial Turf for Residential Yards | Atlantic Turf Specialists Charlotte NC",
@@ -55,10 +56,10 @@ export default function ResidentialLowMaintenanceLanding() {
               variant="outline"
               className="bg-white/95 hover:bg-white text-gray-900 border-2 border-white px-8 py-6 h-auto text-lg rounded-lg shadow-lg hover:shadow-xl transition-all font-semibold"
             >
-              <Link href="tel:704-956-2687">
+              <PhoneLink href="tel:704-956-2687">
                 <Phone className="mr-2 h-5 w-5" />
                 Call: (704) 956-2687
-              </Link>
+              </PhoneLink>
             </Button>
           </div>
           <p className="text-sm text-gray-200 pt-2">Free consultation • No obligation • Same-day quotes available</p>
@@ -350,10 +351,10 @@ export default function ResidentialLowMaintenanceLanding() {
                 variant="outline"
                 className="bg-transparent hover:bg-white/10 text-white border-2 border-white px-8 py-6 h-auto text-lg rounded-lg transition-all font-semibold"
               >
-                <Link href="tel:704-956-2687">
+                <PhoneLink href="tel:704-956-2687">
                   <Phone className="mr-2 h-5 w-5" />
                   (704) 956-2687
-                </Link>
+                </PhoneLink>
               </Button>
             </div>
             <div className="pt-6 space-y-2">
@@ -386,10 +387,10 @@ export default function ResidentialLowMaintenanceLanding() {
                 variant="outline"
                 className="bg-transparent hover:bg-white/10 text-white border-2 border-white px-6 py-3 h-auto font-bold transition-all"
               >
-                <Link href="tel:704-956-2687">
+                <PhoneLink href="tel:704-956-2687">
                   <Phone className="mr-2 h-4 w-4" />
                   Call Now
-                </Link>
+                </PhoneLink>
               </Button>
             </div>
           </div>

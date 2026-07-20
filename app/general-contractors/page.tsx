@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Script from "next/script"
 import { ContactPageClient } from "@/app/contact/ContactPageClient"
 import { StructuredData } from "@/components/structured-data"
+import { PhoneLink } from "@/components/phone-link"
 
 export const metadata: Metadata = {
   title: "Turf Subcontractor for General Contractors Charlotte NC | Atlantic Turf Specialists",
@@ -251,6 +252,15 @@ export default function GeneralContractorsLandingPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
+            <PhoneLink
+              href="tel:+17049956265"
+              className="inline-flex items-center justify-center gap-2 border border-white/30 hover:border-white/60 text-white font-semibold px-8 py-4 rounded-lg text-base transition-colors"
+            >
+              <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              (704) 995-6265
+            </PhoneLink>
             <a
               href="mailto:zach@atlanticturfspecialists.com"
               className="inline-flex items-center justify-center gap-2 border border-white/30 hover:border-white/60 text-white font-semibold px-8 py-4 rounded-lg text-base transition-colors"
@@ -466,6 +476,12 @@ export default function GeneralContractorsLandingPage() {
                 >
                   zach@atlanticturfspecialists.com
                 </a>
+                <PhoneLink
+                  href="tel:+17049956265"
+                  className="block mt-2 text-primary font-semibold text-base hover:underline underline-offset-4"
+                >
+                  (704) 995-6265
+                </PhoneLink>
               </div>
             </div>
 
