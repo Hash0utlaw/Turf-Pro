@@ -4,6 +4,7 @@ import Link from "next/link"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { StructuredData } from "@/components/structured-data"
 import { generateBreadcrumbSchema } from "@/lib/structured-data"
+import { PhoneLink } from "@/components/phone-link"
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions | Artificial Turf Charlotte NC | Atlantic Turf Specialists",
@@ -234,12 +235,12 @@ export default function FAQPage() {
               >
                 Get a Free Consultation
               </Link>
-              <a
+              <PhoneLink
                 href="tel:+17049956265"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-turf-green text-base font-semibold text-turf-green-light hover:bg-turf-green/10 transition-colors"
               >
                 Call (704) 995-6265
-              </a>
+              </PhoneLink>
             </div>
           </div>
         </div>

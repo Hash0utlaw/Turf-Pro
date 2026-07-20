@@ -123,6 +123,25 @@ export default function RootLayout({
             gtag('config', 'AW-18267249230');
           `}
         </Script>
+        <Script id="google-ads-conversion" strategy="afterInteractive">
+          {`
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', {
+                'send_to': 'AW-18267249230/xbipCOOrp9McEM60wIZE',
+                'value': 1.0,
+                'currency': 'USD',
+                'event_callback': callback
+              });
+              return false;
+            }
+            window.gtag_report_conversion = gtag_report_conversion;
+          `}
+        </Script>
       </body>
     </html>
   )

@@ -1,3 +1,4 @@
+import { PhoneLink } from "@/components/phone-link"
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
@@ -127,10 +128,10 @@ export default function MintHillPage() {
                 variant="outline"
                 className="bg-white/90 backdrop-blur-sm border-2 border-white text-turf-green hover:bg-white text-lg px-8"
               >
-                <Link href="tel:+17049956265">
+                <PhoneLink href="tel:+17049956265">
                   <Phone className="mr-2 h-5 w-5" />
                   (704) 995-6265
-                </Link>
+                </PhoneLink>
               </Button>
             </div>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-white">
@@ -398,10 +399,10 @@ export default function MintHillPage() {
               variant="outline"
               className="bg-transparent border-2 border-white text-white hover:bg-white/10 text-lg px-8"
             >
-              <Link href="tel:+17049956265">
+              <PhoneLink href="tel:+17049956265">
                 <Phone className="mr-2 h-5 w-5" />
                 Call (704) 995-6265
-              </Link>
+              </PhoneLink>
             </Button>
           </div>
           <p className="text-sm text-gray-100">Call now for same-day quotes • Free site evaluation</p>
