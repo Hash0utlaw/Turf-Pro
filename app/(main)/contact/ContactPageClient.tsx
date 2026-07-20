@@ -15,6 +15,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { PhoneLink } from "@/components/phone-link"
 
 declare global {
   interface Window {
@@ -26,6 +27,7 @@ declare global {
 export function ContactPageClient({ showProjectDetails = false }: { showProjectDetails?: boolean } = {}) {
   const [isAutocompleteReady, setIsAutocompleteReady] = useState(false)
   const [addressValidated, setAddressValidated] = useState<boolean | null>(null)
+  const [outOfServiceArea, setOutOfServiceArea] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
   const addressInputRef = useRef<HTMLInputElement>(null)
   const autocompleteRef = useRef<google.maps.places.Autocomplete | null>(null)
@@ -94,6 +96,7 @@ export function ContactPageClient({ showProjectDetails = false }: { showProjectD
 
           if (!street || !city || !state || !zipCode) {
             setAddressValidated(false)
+            setOutOfServiceArea(false)
             toast.error("Please select a complete address with street, city, state, and zip code")
             return
           }
@@ -104,7 +107,17 @@ export function ContactPageClient({ showProjectDetails = false }: { showProjectD
           form.setValue("state", state)
           form.setValue("zipCode", zipCode)
 
+          if (state.trim().toUpperCase() !== "NC") {
+            setAddressValidated(false)
+            setOutOfServiceArea(true)
+            toast.error("That address is outside our North Carolina service area", {
+              description: "Please call or email us directly instead.",
+            })
+            return
+          }
+
           setAddressValidated(true)
+          setOutOfServiceArea(false)
           toast.success("Address validated successfully")
         })
 
@@ -135,6 +148,12 @@ export function ContactPageClient({ showProjectDetails = false }: { showProjectD
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [form])
 
+  const onInvalid = (errors: typeof form.formState.errors) => {
+    if (errors.state) {
+      setOutOfServiceArea(true)
+    }
+  }
+
   const onSubmit = async (values: ContactFormInputs) => {
     setSubmitSuccess(false)
 
@@ -164,7 +183,7 @@ export function ContactPageClient({ showProjectDetails = false }: { showProjectD
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form onSubmit={form.handleSubmit(onSubmit, onInvalid)} className="space-y-6">
         {submitSuccess && (
           <div className="rounded-lg bg-turf-green-extralight p-4 border border-turf-green/40">
             <div className="flex items-start gap-3">
@@ -252,6 +271,7 @@ export function ContactPageClient({ showProjectDetails = false }: { showProjectD
                   onChange={(e) => {
                     field.onChange(e)
                     setAddressValidated(null)
+                    setOutOfServiceArea(false)
                   }}
                   className={`flex h-10 w-full rounded-md border bg-background px-3 py-2 text-sm text-foreground ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${
                     addressValidated === true
@@ -267,6 +287,32 @@ export function ContactPageClient({ showProjectDetails = false }: { showProjectD
             </FormItem>
           )}
         />
+
+        {outOfServiceArea && (
+          <div className="rounded-lg bg-destructive/10 border border-destructive/30 p-4">
+            <p className="text-sm font-semibold text-foreground">
+              We currently only serve North Carolina addresses.
+            </p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Please reach out directly and we&apos;ll be happy to help:
+            </p>
+            <div className="mt-3 flex flex-wrap items-center gap-4">
+              <PhoneLink
+                href="tel:+17049956265"
+                className="text-sm font-semibold text-primary hover:underline underline-offset-4"
+              >
+                (704) 995-6265
+              </PhoneLink>
+              <a
+                href="mailto:zach@atlanticturfspecialists.com"
+                className="text-sm font-semibold text-primary hover:underline underline-offset-4"
+              >
+                zach@atlanticturfspecialists.com
+              </a>
+            </div>
+          </div>
+        )}
+
         {/* Hidden parsed address component fields */}
         <input type="hidden" {...form.register("street")} />
         <input type="hidden" {...form.register("city")} />
@@ -341,7 +387,7 @@ export function ContactPageClient({ showProjectDetails = false }: { showProjectD
           )}
         />
 
-        <Button type="submit" className="w-full" disabled={form.formState.isSubmitting}>
+        <Button type="submit" className="w-full" disabled={form.formState.isSubmitting || outOfServiceArea}>
           {form.formState.isSubmitting ? "Sending..." : "Send Message"}
         </Button>
       </form>

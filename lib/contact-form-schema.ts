@@ -1,6 +1,18 @@
 import { z } from "zod"
 
-export const contactFormSchema = z.object({
+const NC_STATE_VALUES = new Set(["nc", "north carolina"])
+
+function ncOnlyRefinement(data: { state: string }, ctx: z.RefinementCtx) {
+  if (!NC_STATE_VALUES.has(data.state.trim().toLowerCase())) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ["state"],
+      message: "We currently only serve North Carolina — please call or email us directly.",
+    })
+  }
+}
+
+const contactFormObjectSchema = z.object({
   name: z.string().min(2, {
     message: "Name must be at least 2 characters.",
   }),
@@ -22,9 +34,11 @@ export const contactFormSchema = z.object({
   message: z.string().optional(),
 })
 
-export type ContactFormInputs = z.infer<typeof contactFormSchema>
+export const contactFormSchema = contactFormObjectSchema.superRefine(ncOnlyRefinement)
 
-export const homeownerContactFormSchema = contactFormSchema.extend({
+export type ContactFormInputs = z.infer<typeof contactFormObjectSchema>
+
+const homeownerContactFormObjectSchema = contactFormObjectSchema.extend({
   projectType: z.string().min(1, {
     message: "Please select a project type.",
   }),
@@ -33,4 +47,6 @@ export const homeownerContactFormSchema = contactFormSchema.extend({
   }),
 })
 
-export type HomeownerContactFormInputs = z.infer<typeof homeownerContactFormSchema>
+export const homeownerContactFormSchema = homeownerContactFormObjectSchema.superRefine(ncOnlyRefinement)
+
+export type HomeownerContactFormInputs = z.infer<typeof homeownerContactFormObjectSchema>
