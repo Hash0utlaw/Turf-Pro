@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Script from "next/script"
-import { ContactPageClient } from "@/app/contact/ContactPageClient"
+import { ContactPageClient } from "@/app/(main)/contact/ContactPageClient"
 import { StructuredData } from "@/components/structured-data"
 import { PhoneLink } from "@/components/phone-link"
 
@@ -96,7 +96,7 @@ const transformations = [
   },
   {
     title: "Sports & Recreation",
-    description: "From bocce courts to soccer fields to playground surfaces — we build outdoor spaces your family will live in.",
+    description: "From bocce courts to play areas and family spaces to playground surfaces — we build outdoor spaces your family will live in.",
     src: "/portfolio/artificial-turf-sports-field-install-01.webp",
     alt: "Backyard sports field artificial turf — Charlotte NC",
   },
@@ -467,7 +467,7 @@ export default function GeneralContractorsPage() {
 
             {/* Right — form */}
             <div className="bg-background border border-border rounded-2xl p-8 shadow-xl">
-              <ContactPageClient />
+              <ContactPageClient showProjectDetails />
             </div>
           </div>
         </div>

@@ -3,8 +3,6 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import Script from "next/script"
 import "./globals.css"
-import { SiteHeader } from "@/components/layout/site-header"
-import { SiteFooter } from "@/components/layout/site-footer"
 import { Toaster } from "@/components/ui/toaster"
 import { CookieConsentBanner } from "@/components/cookie-consent-banner"
 import { StructuredData } from "@/components/structured-data"
@@ -119,11 +117,7 @@ export default function RootLayout({
         )}
       </head>
       <body className={inter.className}>
-        <div className="relative flex min-h-screen flex-col">
-          <SiteHeader />
-          <main className="flex-1">{children}</main>
-          <SiteFooter />
-        </div>
+        <div className="relative flex min-h-screen flex-col">{children}</div>
         <Toaster />
         <CookieConsentBanner />
         {/* Google Ads tag */}

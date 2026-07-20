@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Script from "next/script"
-import { ContactPageClient } from "@/app/contact/ContactPageClient"
+import { ContactPageClient } from "@/app/(main)/contact/ContactPageClient"
 import { StructuredData } from "@/components/structured-data"
 import { PhoneLink } from "@/components/phone-link"
 

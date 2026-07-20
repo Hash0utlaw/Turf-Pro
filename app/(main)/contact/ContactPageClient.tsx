@@ -1,12 +1,12 @@
 "use client"
 
-import { useForm } from "react-hook-form"
+import { useForm, type Resolver } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { toast } from "sonner"
 import { useEffect, useRef, useState, useCallback } from "react"
 import type { google } from "googlemaps"
 
-import { contactFormSchema, type ContactFormInputs } from "@/lib/contact-form-schema"
+import { contactFormSchema, homeownerContactFormSchema, type ContactFormInputs } from "@/lib/contact-form-schema"
 import { sendContactEmail, type SendContactEmailResult } from "./actions"
 import { trackFormConversion } from "@/lib/gtag"
 
@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 declare global {
   interface Window {
@@ -22,7 +23,7 @@ declare global {
   }
 }
 
-export function ContactPageClient() {
+export function ContactPageClient({ showProjectDetails = false }: { showProjectDetails?: boolean } = {}) {
   const [isAutocompleteReady, setIsAutocompleteReady] = useState(false)
   const [addressValidated, setAddressValidated] = useState<boolean | null>(null)
   const [submitSuccess, setSubmitSuccess] = useState(false)
@@ -30,7 +31,9 @@ export function ContactPageClient() {
   const autocompleteRef = useRef<google.maps.places.Autocomplete | null>(null)
 
   const form = useForm<ContactFormInputs>({
-    resolver: zodResolver(contactFormSchema),
+    resolver: zodResolver(
+      showProjectDetails ? homeownerContactFormSchema : contactFormSchema,
+    ) as Resolver<ContactFormInputs>,
     defaultValues: {
       name: "",
       email: "",
@@ -40,6 +43,8 @@ export function ContactPageClient() {
       city: "",
       state: "",
       zipCode: "",
+      projectType: "",
+      budget: "",
       message: "",
     },
   })
@@ -267,6 +272,60 @@ export function ContactPageClient() {
         <input type="hidden" {...form.register("city")} />
         <input type="hidden" {...form.register("state")} />
         <input type="hidden" {...form.register("zipCode")} />
+
+        {showProjectDetails && (
+          <>
+            <FormField
+              control={form.control}
+              name="projectType"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Project Type</FormLabel>
+                  <Select onValueChange={field.onChange} value={field.value}>
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select a project type" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      <SelectItem value="Backyard lawn">Backyard lawn</SelectItem>
+                      <SelectItem value="Putting green">Putting green</SelectItem>
+                      <SelectItem value="Pool surround">Pool surround</SelectItem>
+                      <SelectItem value="Pet area">Pet area</SelectItem>
+                      <SelectItem value="Other">Other</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="budget"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Approximate Budget</FormLabel>
+                  <Select onValueChange={field.onChange} value={field.value}>
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select a budget range" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      <SelectItem value="Under $5,000">Under $5,000</SelectItem>
+                      <SelectItem value="$5,000–$15,000">$5,000–$15,000</SelectItem>
+                      <SelectItem value="$15,000–$30,000">$15,000–$30,000</SelectItem>
+                      <SelectItem value="$30,000+">$30,000+</SelectItem>
+                      <SelectItem value="Not sure yet">Not sure yet</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </>
+        )}
 
         <FormField
           control={form.control}

@@ -17,7 +17,20 @@ export const contactFormSchema = z.object({
   city: z.string().default(""),
   state: z.string().default(""),
   zipCode: z.string().default(""),
+  projectType: z.string().optional(),
+  budget: z.string().optional(),
   message: z.string().optional(),
 })
 
 export type ContactFormInputs = z.infer<typeof contactFormSchema>
+
+export const homeownerContactFormSchema = contactFormSchema.extend({
+  projectType: z.string().min(1, {
+    message: "Please select a project type.",
+  }),
+  budget: z.string().min(1, {
+    message: "Please select a budget range.",
+  }),
+})
+
+export type HomeownerContactFormInputs = z.infer<typeof homeownerContactFormSchema>

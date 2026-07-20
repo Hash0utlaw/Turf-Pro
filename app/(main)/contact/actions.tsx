@@ -23,7 +23,7 @@ export async function sendContactEmail(values: ContactFormInputs): Promise<SendC
     return { success: false, message: "Validation failed. Please check your inputs." }
   }
 
-  const { name, email, phone, message, address, street, city, state, zipCode } = parsed.data
+  const { name, email, phone, message, address, street, city, state, zipCode, projectType, budget } = parsed.data
 
   const location = city && state ? `${city}, ${state}` : state || city || "Address Provided"
 
@@ -54,6 +54,14 @@ export async function sendContactEmail(values: ContactFormInputs): Promise<SendC
             ${state ? `<tr><td style="padding: 8px 0; font-weight: bold;">State</td><td>${state}</td></tr>` : ""}
             ${zipCode ? `<tr><td style="padding: 8px 0; font-weight: bold;">Zip Code</td><td>${zipCode}</td></tr>` : ""}
           </table>
+          ${projectType || budget ? `
+          <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;" />
+          <h3 style="color: #166534; margin-top: 0;">Project Details</h3>
+          <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #333;">
+            ${projectType ? `<tr><td style="padding: 8px 0; font-weight: bold; width: 140px;">Project Type</td><td>${projectType}</td></tr>` : ""}
+            ${budget ? `<tr><td style="padding: 8px 0; font-weight: bold;">Approximate Budget</td><td>${budget}</td></tr>` : ""}
+          </table>
+          ` : ""}
           ${message ? `
           <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;" />
           <h3 style="color: #166534; margin-top: 0;">Message</h3>
@@ -65,7 +73,7 @@ export async function sendContactEmail(values: ContactFormInputs): Promise<SendC
       </body>
       </html>
     `,
-    text: `New contact form submission from ${name}.\n\nPhone: ${phone}\nEmail: ${email}\nAddress: ${address}${street ? `\nStreet: ${street}` : ""}${city ? `\nCity: ${city}` : ""}${state ? `\nState: ${state}` : ""}${zipCode ? `\nZip: ${zipCode}` : ""}${message ? `\n\nMessage:\n${message}` : ""}`,
+    text: `New contact form submission from ${name}.\n\nPhone: ${phone}\nEmail: ${email}\nAddress: ${address}${street ? `\nStreet: ${street}` : ""}${city ? `\nCity: ${city}` : ""}${state ? `\nState: ${state}` : ""}${zipCode ? `\nZip: ${zipCode}` : ""}${projectType ? `\nProject Type: ${projectType}` : ""}${budget ? `\nApproximate Budget: ${budget}` : ""}${message ? `\n\nMessage:\n${message}` : ""}`,
   })
 
   if (error) {
