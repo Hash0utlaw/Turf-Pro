@@ -1,30 +1,26 @@
 "use client"
 
-import type React from "react"
+import * as React from "react"
+import Link from "next/link"
 
-interface PhoneLinkProps {
-  href: string
-  className?: string
-  children: React.ReactNode
-}
+import { trackPhoneConversion } from "@/lib/gtag"
 
-declare global {
-  interface Window {
-    gtag_report_conversion?: (url?: string) => boolean
-  }
-}
+type PhoneLinkProps = React.ComponentPropsWithoutRef<typeof Link>
 
-export function PhoneLink({ href, className, children }: PhoneLinkProps) {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (typeof window !== "undefined" && typeof window.gtag_report_conversion === "function") {
-      e.preventDefault()
-      window.gtag_report_conversion(href)
-    }
-  }
-
-  return (
-    <a href={href} className={className} onClick={handleClick}>
-      {children}
-    </a>
-  )
-}
+export const PhoneLink = React.forwardRef<HTMLAnchorElement, PhoneLinkProps>(
+  ({ onClick, children, ...props }, ref) => {
+    return (
+      <Link
+        ref={ref}
+        onClick={(event) => {
+          trackPhoneConversion()
+          onClick?.(event)
+        }}
+        {...props}
+      >
+        {children}
+      </Link>
+    )
+  },
+)
+PhoneLink.displayName = "PhoneLink"

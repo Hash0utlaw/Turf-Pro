@@ -3,8 +3,6 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import Script from "next/script"
 import "./globals.css"
-import { SiteHeader } from "@/components/layout/site-header"
-import { SiteFooter } from "@/components/layout/site-footer"
 import { Toaster } from "@/components/ui/toaster"
 import { CookieConsentBanner } from "@/components/cookie-consent-banner"
 import { StructuredData } from "@/components/structured-data"
@@ -101,47 +99,27 @@ export default function RootLayout({
     <html lang="en" className="bg-background">
       <head>
         <StructuredData data={generateOrganizationSchema()} />
+        {process.env.NEXT_PUBLIC_GOOGLE_ADS_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ADS_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-ads-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ADS_ID}');
+              `}
+            </Script>
+          </>
+        )}
       </head>
       <body className={inter.className}>
-        <div className="relative flex min-h-screen flex-col">
-          <SiteHeader />
-          <main className="flex-1">{children}</main>
-          <SiteFooter />
-        </div>
+        <div className="relative flex min-h-screen flex-col">{children}</div>
         <Toaster />
         <CookieConsentBanner />
-        {/* Google Ads tag */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18267249230"
-          strategy="afterInteractive"
-        />
-        <Script id="google-ads-config" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-18267249230');
-          `}
-        </Script>
-        <Script id="google-ads-conversion" strategy="afterInteractive">
-          {`
-            function gtag_report_conversion(url) {
-              var callback = function () {
-                if (typeof(url) != 'undefined') {
-                  window.location = url;
-                }
-              };
-              gtag('event', 'conversion', {
-                'send_to': 'AW-18267249230/xbipCOOrp9McEM60wIZE',
-                'value': 1.0,
-                'currency': 'USD',
-                'event_callback': callback
-              });
-              return false;
-            }
-            window.gtag_report_conversion = gtag_report_conversion;
-          `}
-        </Script>
       </body>
     </html>
   )

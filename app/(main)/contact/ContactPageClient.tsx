@@ -1,0 +1,396 @@
+"use client"
+
+import { useForm, type Resolver } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { toast } from "sonner"
+import { useEffect, useRef, useState, useCallback } from "react"
+import type { google } from "googlemaps"
+
+import { contactFormSchema, homeownerContactFormSchema, type ContactFormInputs } from "@/lib/contact-form-schema"
+import { sendContactEmail, type SendContactEmailResult } from "./actions"
+import { trackFormConversion } from "@/lib/gtag"
+
+import { Button } from "@/components/ui/button"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { PhoneLink } from "@/components/phone-link"
+
+declare global {
+  interface Window {
+    google: typeof google
+    initAutocomplete?: () => void
+  }
+}
+
+export function ContactPageClient({ showProjectDetails = false }: { showProjectDetails?: boolean } = {}) {
+  const [isAutocompleteReady, setIsAutocompleteReady] = useState(false)
+  const [addressValidated, setAddressValidated] = useState<boolean | null>(null)
+  const [outOfServiceArea, setOutOfServiceArea] = useState(false)
+  const [submitSuccess, setSubmitSuccess] = useState(false)
+  const addressInputRef = useRef<HTMLInputElement>(null)
+  const autocompleteRef = useRef<google.maps.places.Autocomplete | null>(null)
+
+  const form = useForm<ContactFormInputs>({
+    resolver: zodResolver(
+      showProjectDetails ? homeownerContactFormSchema : contactFormSchema,
+    ) as Resolver<ContactFormInputs>,
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      address: "",
+      street: "",
+      city: "",
+      state: "",
+      zipCode: "",
+      projectType: "",
+      budget: "",
+      message: "",
+    },
+  })
+
+  const setAddressInputRef = useCallback((node: HTMLInputElement | null) => {
+    addressInputRef.current = node
+  }, [])
+
+  useEffect(() => {
+    if (autocompleteRef.current) return
+
+    const initializeAutocomplete = () => {
+      if (!window.google?.maps?.places) return
+      if (!addressInputRef.current) return
+      if (autocompleteRef.current) return
+
+      try {
+        const autocomplete = new window.google.maps.places.Autocomplete(addressInputRef.current, {
+          types: ["address"],
+          componentRestrictions: { country: "us" },
+        })
+
+        autocomplete.setFields(["address_components", "formatted_address"])
+
+        autocomplete.addListener("place_changed", () => {
+          const place = autocomplete.getPlace()
+
+          if (!place.address_components) {
+            setAddressValidated(false)
+            toast.error("Please select a valid address from the dropdown")
+            return
+          }
+
+          let street = ""
+          let city = ""
+          let state = ""
+          let zipCode = ""
+
+          place.address_components.forEach((component) => {
+            const types = component.types
+            if (types.includes("street_number")) street = component.long_name + " "
+            if (types.includes("route")) street += component.long_name
+            if (types.includes("locality")) city = component.long_name
+            if (types.includes("administrative_area_level_1")) state = component.short_name
+            if (types.includes("postal_code")) zipCode = component.long_name
+          })
+
+          if (!street || !city || !state || !zipCode) {
+            setAddressValidated(false)
+            setOutOfServiceArea(false)
+            toast.error("Please select a complete address with street, city, state, and zip code")
+            return
+          }
+
+          form.setValue("address", place.formatted_address || "")
+          form.setValue("street", street)
+          form.setValue("city", city)
+          form.setValue("state", state)
+          form.setValue("zipCode", zipCode)
+
+          if (state.trim().toUpperCase() !== "NC") {
+            setAddressValidated(false)
+            setOutOfServiceArea(true)
+            toast.error("That address is outside our North Carolina service area", {
+              description: "Please call or email us directly instead.",
+            })
+            return
+          }
+
+          setAddressValidated(true)
+          setOutOfServiceArea(false)
+          toast.success("Address validated successfully")
+        })
+
+        autocompleteRef.current = autocomplete
+        setIsAutocompleteReady(true)
+      } catch (error) {
+        console.error("Error initializing autocomplete:", error)
+        setIsAutocompleteReady(false)
+      }
+    }
+
+    const checkGoogleMaps = setInterval(() => {
+      if (window.google?.maps?.places) {
+        clearInterval(checkGoogleMaps)
+        clearTimeout(timeout)
+        initializeAutocomplete()
+      }
+    }, 150)
+
+    const timeout = setTimeout(() => {
+      clearInterval(checkGoogleMaps)
+    }, 15000)
+
+    return () => {
+      clearInterval(checkGoogleMaps)
+      clearTimeout(timeout)
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [form])
+
+  const onInvalid = (errors: typeof form.formState.errors) => {
+    if (errors.state) {
+      setOutOfServiceArea(true)
+    }
+  }
+
+  const onSubmit = async (values: ContactFormInputs) => {
+    setSubmitSuccess(false)
+
+    if (isAutocompleteReady && (!values.street || !values.city || !values.state || !values.zipCode)) {
+      toast.warning("For best results, please select an address from the suggestions", {
+        description: "We'll process your manually entered address.",
+      })
+    }
+
+    const result: SendContactEmailResult = await sendContactEmail(values)
+
+    if (result.success) {
+      trackFormConversion()
+      setSubmitSuccess(true)
+      toast.success("Message Sent Successfully!", {
+        description: "We'll get back to you within 24 hours.",
+        duration: 5000,
+      })
+      form.reset()
+      setAddressValidated(null)
+    } else {
+      toast.error("Something went wrong", {
+        description: result.message,
+      })
+    }
+  }
+
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit, onInvalid)} className="space-y-6">
+        {submitSuccess && (
+          <div className="rounded-lg bg-turf-green-extralight p-4 border border-turf-green/40">
+            <div className="flex items-start gap-3">
+              <svg
+                className="h-5 w-5 text-turf-green-light flex-shrink-0 mt-0.5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <div>
+                <h3 className="text-sm font-semibold text-white">Message sent successfully!</h3>
+                <p className="mt-1 text-sm text-brand-gray-text">
+                  Thank you for contacting us. We&apos;ll review your message and get back to you within 24 hours.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        <FormField
+          control={form.control}
+          name="name"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Full Name</FormLabel>
+              <FormControl>
+                <Input placeholder="John Doe" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="phone"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Phone Number</FormLabel>
+              <FormControl>
+                <Input placeholder="(704) 555-1234" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="email"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Email Address</FormLabel>
+              <FormControl>
+                <Input placeholder="you@example.com" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="address"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Project Address</FormLabel>
+              <FormControl>
+                <input
+                  type="text"
+                  placeholder={
+                    isAutocompleteReady ? "Start typing your address..." : "Enter your full address with zip code"
+                  }
+                  {...field}
+                  ref={(node) => {
+                    setAddressInputRef(node)
+                    if (typeof field.ref === "function") field.ref(node)
+                  }}
+                  onChange={(e) => {
+                    field.onChange(e)
+                    setAddressValidated(null)
+                    setOutOfServiceArea(false)
+                  }}
+                  className={`flex h-10 w-full rounded-md border bg-background px-3 py-2 text-sm text-foreground ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${
+                    addressValidated === true
+                      ? "border-turf-green focus-visible:ring-turf-green"
+                      : addressValidated === false
+                        ? "border-destructive focus-visible:ring-destructive"
+                        : "border-input"
+                  }`}
+                  autoComplete="off"
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        {outOfServiceArea && (
+          <div className="rounded-lg bg-destructive/10 border border-destructive/30 p-4">
+            <p className="text-sm font-semibold text-foreground">
+              We currently only serve North Carolina addresses.
+            </p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Please reach out directly and we&apos;ll be happy to help:
+            </p>
+            <div className="mt-3 flex flex-wrap items-center gap-4">
+              <PhoneLink
+                href="tel:+17049956265"
+                className="text-sm font-semibold text-primary hover:underline underline-offset-4"
+              >
+                (704) 995-6265
+              </PhoneLink>
+              <a
+                href="mailto:zach@atlanticturfspecialists.com"
+                className="text-sm font-semibold text-primary hover:underline underline-offset-4"
+              >
+                zach@atlanticturfspecialists.com
+              </a>
+            </div>
+          </div>
+        )}
+
+        {/* Hidden parsed address component fields */}
+        <input type="hidden" {...form.register("street")} />
+        <input type="hidden" {...form.register("city")} />
+        <input type="hidden" {...form.register("state")} />
+        <input type="hidden" {...form.register("zipCode")} />
+
+        {showProjectDetails && (
+          <>
+            <FormField
+              control={form.control}
+              name="projectType"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Project Type</FormLabel>
+                  <Select onValueChange={field.onChange} value={field.value}>
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select a project type" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      <SelectItem value="Backyard lawn">Backyard lawn</SelectItem>
+                      <SelectItem value="Putting green">Putting green</SelectItem>
+                      <SelectItem value="Pool surround">Pool surround</SelectItem>
+                      <SelectItem value="Pet area">Pet area</SelectItem>
+                      <SelectItem value="Other">Other</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="budget"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Approximate Budget</FormLabel>
+                  <Select onValueChange={field.onChange} value={field.value}>
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select a budget range" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      <SelectItem value="Under $5,000">Under $5,000</SelectItem>
+                      <SelectItem value="$5,000–$15,000">$5,000–$15,000</SelectItem>
+                      <SelectItem value="$15,000–$30,000">$15,000–$30,000</SelectItem>
+                      <SelectItem value="$30,000+">$30,000+</SelectItem>
+                      <SelectItem value="Not sure yet">Not sure yet</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </>
+        )}
+
+        <FormField
+          control={form.control}
+          name="message"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Message <span className="text-muted-foreground font-normal">(Optional)</span></FormLabel>
+              <FormControl>
+                <Textarea placeholder="Tell us about your project..." className="min-h-[120px]" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <Button type="submit" className="w-full" disabled={form.formState.isSubmitting || outOfServiceArea}>
+          {form.formState.isSubmitting ? "Sending..." : "Send Message"}
+        </Button>
+      </form>
+    </Form>
+  )
+}
