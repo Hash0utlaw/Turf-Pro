@@ -1,3 +1,5 @@
+import { localSeoBlogPosts } from "./blog-posts-local-seo"
+
 export interface BlogPost {
   slug: string
   title: string
@@ -12,6 +14,8 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  // Newest local-SEO posts first so they surface at the top of /blog
+  ...localSeoBlogPosts,
   {
     slug: "custom-putting-greens-charlotte-nc-complete-guide-2025",
     title: "Custom Putting Greens in Charlotte, NC: The Complete 2025 Guide to Backyard Golf Paradise",

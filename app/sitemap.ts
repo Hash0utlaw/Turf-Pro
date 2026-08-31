@@ -5,14 +5,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.atlanticturfspecialists.com"
   const currentDate = new Date()
 
-  const postUrls = blogPosts
+  // Published blog posts, newest first. The six most recent articles get a small
+  // priority boost so crawlers pick up fresh content faster.
+  const publishedPosts = blogPosts
     .filter((post) => post.isPublished)
-    .map((post) => ({
-      url: `${baseUrl}/blog/${post.slug}`,
-      lastModified: new Date(post.publishedAt),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    }))
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+
+  const postUrls = publishedPosts.map((post, index) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.publishedAt),
+    changeFrequency: (index < 6 ? "weekly" : "monthly") as "weekly" | "monthly",
+    priority: index < 6 ? 0.8 : 0.7,
+  }))
 
   // Main static pages of the site with proper priorities and change frequencies
   const staticUrls = [
@@ -100,6 +104,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/general-turf-installation`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/general-contractors`,
       lastModified: currentDate,
       changeFrequency: "monthly" as const,
       priority: 0.9,
