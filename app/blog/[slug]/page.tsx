@@ -9,9 +9,9 @@ import { StructuredData } from "@/components/structured-data"
 import { generateArticleSchema, generateBreadcrumbSchema } from "@/lib/structured-data"
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export async function generateStaticParams() {
@@ -21,7 +21,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps, parent: ResolvingMetadata): Promise<Metadata> {
-  const post = blogPosts.find((p) => p.slug === params.slug)
+  const { slug } = await params
+  const post = blogPosts.find((p) => p.slug === slug)
 
   if (!post) {
     return {
@@ -30,10 +31,12 @@ export async function generateMetadata({ params }: BlogPostPageProps, parent: Re
   }
 
   const previousImages = (await parent).openGraph?.images || []
-  const url = `https://www.atlanticturfspecialists.com/blog/${params.slug}`
+  const url = `https://www.atlanticturfspecialists.com/blog/${slug}`
 
   return {
-    title: `${post.title} | Atlantic Turf Specialists Blog`,
+    // The root layout applies the "%s | Atlantic Turf Specialists" template,
+    // so the brand must not be repeated here.
+    title: post.title,
     description: post.excerpt,
     alternates: {
       canonical: url,
@@ -56,14 +59,15 @@ export async function generateMetadata({ params }: BlogPostPageProps, parent: Re
   }
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = blogPosts.find((p) => p.slug === params.slug)
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { slug } = await params
+  const post = blogPosts.find((p) => p.slug === slug)
 
   if (!post) {
     notFound()
   }
 
-  const url = `https://www.atlanticturfspecialists.com/blog/${params.slug}`
+  const url = `https://www.atlanticturfspecialists.com/blog/${slug}`
   const articleSchema = generateArticleSchema(
     post.title,
     post.excerpt,

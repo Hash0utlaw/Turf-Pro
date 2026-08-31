@@ -4,7 +4,8 @@ import type { Metadata } from "next"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "Blog | Artificial Turf Tips & Insights Charlotte NC | Atlantic Turf Specialists",
+  // The root layout appends "| Atlantic Turf Specialists" via its title template.
+  title: "Artificial Turf Tips & Insights for Charlotte NC",
   description:
     "Expert articles, installation tips, and insights on artificial turf from Atlantic Turf Specialists. Learn about synthetic grass maintenance, costs, pet-friendly turf, putting greens, and more.",
   keywords: [
