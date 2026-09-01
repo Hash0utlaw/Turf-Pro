@@ -34,10 +34,21 @@ import TestimonialsSection from "@/components/sections/testimonials-section"
 import FaqSection from "@/components/sections/faq-section"
 import CtaBanner from "@/components/sections/cta-banner"
 import { Toaster } from "@/components/ui/toaster" // Needed for ContactDialog notifications
+import { StructuredData } from "@/components/structured-data"
+import { generateBreadcrumbSchema, generateServiceSchema } from "@/lib/structured-data"
 
 export default function HomePage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([{ name: "Home", url: "https://www.atlanticturfspecialists.com" }])
+  const serviceSchema = generateServiceSchema(
+    "Artificial Turf Installation",
+    "Professional artificial turf installation for residential lawns, backyard putting greens, pet-friendly turf, and commercial properties in Charlotte NC and surrounding areas.",
+    "Artificial Turf Installation",
+  )
+
   return (
     <>
+      <StructuredData data={breadcrumbSchema} />
+      <StructuredData data={serviceSchema} />
       <HeroSection />
       <ServicesSection />
       <PortfolioSection />

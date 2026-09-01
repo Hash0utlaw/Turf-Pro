@@ -27,11 +27,6 @@ export interface OrganizationSchema {
   }>
   priceRange?: string
   openingHours?: string[]
-  aggregateRating?: {
-    "@type": "AggregateRating"
-    ratingValue: string
-    reviewCount: string
-  }
   hasOfferCatalog?: {
     "@type": "OfferCatalog"
     name: string
@@ -87,6 +82,19 @@ export interface BreadcrumbSchema {
   }>
 }
 
+export interface FaqSchema {
+  "@context": "https://schema.org"
+  "@type": "FAQPage"
+  mainEntity: Array<{
+    "@type": "Question"
+    name: string
+    acceptedAnswer: {
+      "@type": "Answer"
+      text: string
+    }
+  }>
+}
+
 export interface ServiceSchema {
   "@context": "https://schema.org"
   "@type": "Service"
@@ -138,7 +146,7 @@ export function generateOrganizationSchema(): OrganizationSchema {
       "Professional artificial turf installation services for residential, commercial, and recreational properties in Charlotte, NC and surrounding areas including Matthews, Huntersville, Concord, Lake Norman, and Fort Mill SC.",
     url: "https://www.atlanticturfspecialists.com",
     telephone: "+1-704-995-6265",
-    email: "info@atlanticturfspecialists.com",
+    email: "zach@atlanticturfspecialists.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Charlotte",
@@ -169,11 +177,6 @@ export function generateOrganizationSchema(): OrganizationSchema {
     ],
     priceRange: "$$-$$$",
     openingHours: ["Monday-Friday 08:00-18:00", "Saturday 09:00-14:00"],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      reviewCount: "50",
-    },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Artificial Turf Services",
@@ -254,6 +257,21 @@ export function generateBreadcrumbSchema(items: Array<{ name: string; url?: stri
       position: index + 1,
       name: item.name,
       item: item.url,
+    })),
+  }
+}
+
+export function generateFaqSchema(questions: Array<{ question: string; answer: string }>): FaqSchema {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: questions.map((q) => ({
+      "@type": "Question",
+      name: q.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: q.answer,
+      },
     })),
   }
 }

@@ -184,7 +184,7 @@ export default function TermsOfServicePage() {
           <h2>10. Contact Us</h2>
           <p>If you have any questions about these Terms, please contact us:</p>
           <ul>
-            <li>By email: contact@atlanticturfspecialists.com</li>
+            <li>By email: zach@atlanticturfspecialists.com</li>
             <li>
               By visiting this page on our website: <Link href="/contact">Contact Us</Link>
             </li>

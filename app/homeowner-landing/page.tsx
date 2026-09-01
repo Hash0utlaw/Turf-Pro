@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import Script from "next/script"
 import { ContactPageClient } from "@/app/(main)/contact/ContactPageClient"
@@ -195,10 +196,13 @@ export default function GeneralContractorsPage() {
       {/* ── HERO ──────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex flex-col justify-end overflow-hidden bg-black">
         <div className="absolute inset-0">
-          <img
+          <Image
             src="/portfolio/artificial-turf-aerial-estate-drone-05.webp"
             alt="Luxury backyard turf estate installation by Atlantic Turf Specialists — Charlotte NC"
-            className="w-full h-full object-cover opacity-60"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-60"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
         </div>
@@ -283,11 +287,15 @@ export default function GeneralContractorsPage() {
               </p>
             </div>
             <div className="relative">
-              <img
-                src="/portfolio/artificial-turf-luxury-estate-install-01.webp"
-                alt="Luxury turf installation at Charlotte NC estate home"
-                className="w-full h-96 object-cover rounded-2xl shadow-2xl"
-              />
+              <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/portfolio/artificial-turf-luxury-estate-install-01.webp"
+                  alt="Luxury turf installation at Charlotte NC estate home"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
               <div className="absolute -bottom-6 -left-6 bg-primary text-white rounded-xl px-6 py-4 shadow-xl">
                 <p className="text-3xl font-extrabold">500+</p>
                 <p className="text-xs font-semibold uppercase tracking-wider text-white/80">Projects Completed</p>
@@ -309,11 +317,13 @@ export default function GeneralContractorsPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {transformations.map((item) => (
               <div key={item.title} className="group relative overflow-hidden rounded-2xl bg-background border border-border hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
                     src={item.src}
                     alt={item.alt}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
@@ -349,10 +359,12 @@ export default function GeneralContractorsPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-3 h-[520px]">
             {portfolioGrid.map((item) => (
               <div key={item.src} className={`relative overflow-hidden rounded-xl group ${item.className}`}>
-                <img
+                <Image
                   src={item.src}
                   alt={item.alt}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                   <p className="text-white text-xs font-semibold">{item.label}</p>

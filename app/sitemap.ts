@@ -193,6 +193,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const landingPageUrls = [
     {
+      url: `${baseUrl}/homeowner-landing`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/landing/residential-low-maintenance`,
       lastModified: currentDate,
       changeFrequency: "monthly" as const,

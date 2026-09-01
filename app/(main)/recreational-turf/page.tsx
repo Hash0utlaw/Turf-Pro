@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { StructuredData } from "@/components/structured-data"
 import { generateServiceSchema, generateBreadcrumbSchema, generateVideoSchema } from "@/lib/structured-data"
@@ -226,11 +227,13 @@ export default function RecreationalTurfPage() {
               </div>
             </div>
 
-            <div>
-              <img
+            <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+              <Image
                 src="/portfolio/grace-covenant-church-playground-06.webp"
                 alt="Grace Covenant Church playground turf installation in Huntersville NC — winding rubber pathway through artificial turf with shade sails overhead"
-                className="rounded-lg shadow-lg w-full"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
               />
             </div>
           </div>
@@ -249,46 +252,58 @@ export default function RecreationalTurfPage() {
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
-            <div className="overflow-hidden rounded-xl aspect-square">
-              <img
+            <div className="relative overflow-hidden rounded-xl aspect-square">
+              <Image
                 src="/portfolio/grace-covenant-church-playground-04.webp"
                 alt="Aerial view of Grace Covenant Church full playground courtyard with shade sails, rope net, and winding rubber path — Huntersville NC"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                fill
+                sizes="(max-width: 768px) 50vw, 33vw"
+                className="object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="overflow-hidden rounded-xl aspect-square">
-              <img
+            <div className="relative overflow-hidden rounded-xl aspect-square">
+              <Image
                 src="/portfolio/grace-covenant-church-playground-06.webp"
                 alt="Wide view of Grace Covenant Church playground courtyard showing winding rubber pathway, pirate ship, and stepping stone stations"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                fill
+                sizes="(max-width: 768px) 50vw, 33vw"
+                className="object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="overflow-hidden rounded-xl aspect-square">
-              <img
+            <div className="relative overflow-hidden rounded-xl aspect-square">
+              <Image
                 src="/portfolio/grace-covenant-church-playground-02.webp"
                 alt="Grace Covenant Church playground turf with pirate ship play structure and winding rubber path — Huntersville NC"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                fill
+                sizes="(max-width: 768px) 50vw, 33vw"
+                className="object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="overflow-hidden rounded-xl aspect-square">
-              <img
+            <div className="relative overflow-hidden rounded-xl aspect-square">
+              <Image
                 src="/portfolio/grace-covenant-church-playground-05.webp"
                 alt="Grace Covenant Church covered playground area with small log playhouse and balance beam on artificial turf"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                fill
+                sizes="(max-width: 768px) 50vw, 33vw"
+                className="object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="overflow-hidden rounded-xl aspect-square">
-              <img
+            <div className="relative overflow-hidden rounded-xl aspect-square">
+              <Image
                 src="/portfolio/grace-covenant-church-playground-01.webp"
                 alt="Close-up of mushroom stepping platforms and rope climbing equipment on Grace Covenant Church playground turf"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                fill
+                sizes="(max-width: 768px) 50vw, 33vw"
+                className="object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="overflow-hidden rounded-xl aspect-square">
-              <img
+            <div className="relative overflow-hidden rounded-xl aspect-square">
+              <Image
                 src="/portfolio/grace-covenant-church-playground-03.webp"
                 alt="Grace Covenant Church playground turf with KOMPAN playhouse and slide beside rubber safety pathway — Huntersville NC"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                fill
+                sizes="(max-width: 768px) 50vw, 33vw"
+                className="object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
           </div>

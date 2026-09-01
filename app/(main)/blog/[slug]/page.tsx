@@ -15,14 +15,16 @@ interface BlogPostPageProps {
 }
 
 export async function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    slug: post.slug,
-  }))
+  return blogPosts
+    .filter((post) => post.isPublished)
+    .map((post) => ({
+      slug: post.slug,
+    }))
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps, parent: ResolvingMetadata): Promise<Metadata> {
   const { slug } = await params
-  const post = blogPosts.find((p) => p.slug === slug)
+  const post = blogPosts.find((p) => p.slug === slug && p.isPublished)
 
   if (!post) {
     return {
@@ -61,7 +63,7 @@ export async function generateMetadata({ params }: BlogPostPageProps, parent: Re
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params
-  const post = blogPosts.find((p) => p.slug === slug)
+  const post = blogPosts.find((p) => p.slug === slug && p.isPublished)
 
   if (!post) {
     notFound()

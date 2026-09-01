@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { StructuredData } from "@/components/structured-data"
-import { generateBreadcrumbSchema } from "@/lib/structured-data"
+import { generateBreadcrumbSchema, generateFaqSchema } from "@/lib/structured-data"
 import { PhoneLink } from "@/components/phone-link"
 
 export const metadata: Metadata = {
@@ -134,32 +134,16 @@ const faqData = [
   },
 ]
 
-// FAQPage structured data for Google rich results
-function generateFaqSchema() {
-  const allQuestions = faqData.flatMap((cat) => cat.questions)
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: allQuestions.map((q) => ({
-      "@type": "Question",
-      name: q.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: q.answer,
-      },
-    })),
-  }
-}
-
 export default function FAQPage() {
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Home", url: "https://www.atlanticturfspecialists.com" },
     { name: "FAQ" },
   ])
+  const faqSchema = generateFaqSchema(faqData.flatMap((cat) => cat.questions))
 
   return (
     <div className="min-h-screen bg-background">
-      <StructuredData data={generateFaqSchema()} />
+      <StructuredData data={faqSchema} />
       <StructuredData data={breadcrumbSchema} />
 
       {/* Hero Section */}

@@ -49,7 +49,7 @@ export default function BlogPage() {
 
       <main className="container mx-auto px-4 py-12 sm:py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post) => (
+          {blogPosts.filter((post) => post.isPublished).map((post) => (
             <BlogPostCard key={post.slug} post={post} />
           ))}
         </div>

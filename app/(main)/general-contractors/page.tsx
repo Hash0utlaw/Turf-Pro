@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Script from "next/script"
 import { ContactPageClient } from "@/app/(main)/contact/ContactPageClient"
 import { StructuredData } from "@/components/structured-data"
@@ -204,10 +205,13 @@ export default function GeneralContractorsLandingPage() {
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex flex-col justify-end overflow-hidden bg-black">
         <div className="absolute inset-0">
-          <img
+          <Image
             src="/portfolio/artificial-turf-installation-in-progress-02.webp"
             alt="Atlantic Turf Specialists crew installing commercial-grade artificial turf on a Charlotte NC job site"
-            className="w-full h-full object-cover opacity-50"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-50"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/10" />
         </div>
@@ -310,11 +314,15 @@ export default function GeneralContractorsLandingPage() {
               </div>
             </div>
             <div className="relative">
-              <img
-                src="/portfolio/artificial-turf-commercial-install-01.webp"
-                alt="Atlantic Turf Specialists commercial installation — Charlotte NC"
-                className="w-full h-[520px] object-cover rounded-2xl"
-              />
+              <div className="relative h-[520px] rounded-2xl overflow-hidden">
+                <Image
+                  src="/portfolio/artificial-turf-commercial-install-01.webp"
+                  alt="Atlantic Turf Specialists commercial installation — Charlotte NC"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
               <div className="absolute -bottom-6 -right-6 bg-primary text-white rounded-xl px-6 py-5 shadow-2xl max-w-[200px]">
                 <p className="text-4xl font-extrabold leading-none">48hr</p>
                 <p className="text-xs font-semibold uppercase tracking-wider text-white/80 mt-1">Guaranteed Bid Turnaround</p>
@@ -339,11 +347,13 @@ export default function GeneralContractorsLandingPage() {
           <div className="grid md:grid-cols-2 gap-6">
             {scopes.map((item) => (
               <div key={item.title} className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 hover:border-primary/40 transition-all duration-300">
-                <div className="aspect-video overflow-hidden">
-                  <img
+                <div className="relative aspect-video overflow-hidden">
+                  <Image
                     src={item.src}
                     alt={item.alt}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
                   />
                 </div>
                 <div className="p-7">
@@ -370,10 +380,12 @@ export default function GeneralContractorsLandingPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-3 h-[500px]">
             {proofPhotos.map((item) => (
               <div key={item.src} className={`relative overflow-hidden rounded-xl group ${item.className}`}>
-                <img
+                <Image
                   src={item.src}
                   alt={item.alt}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                   <p className="text-white text-xs font-semibold">{item.label}</p>
