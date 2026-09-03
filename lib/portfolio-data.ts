@@ -24,6 +24,26 @@ export interface PortfolioItem {
 export const portfolioItems: PortfolioItem[] = [
   // --- Newest work (displayed first) ---
   {
+    id: "putting-green-lakefront-estate-01",
+    title: "Multi-Hole Putting Green — Lakefront Estate",
+    category: "putting-greens",
+    categoryLabel: "Putting Greens",
+    description:
+      "Sprawling multi-hole putting green wrapping a lakefront backyard, with flag-marked holes, a river-rock drainage border, and mature shade trees framing open water views from the screened porch and dock.",
+    imageUrl: "/portfolio/artificial-turf-putting-green-lakefront-01.webp",
+    gallery: [
+      "/portfolio/artificial-turf-putting-green-lakefront-01.webp",
+      "/portfolio/artificial-turf-putting-green-lakefront-02.webp",
+      "/portfolio/artificial-turf-putting-green-lakefront-03.webp",
+      "/portfolio/artificial-turf-putting-green-lakefront-04.webp",
+      "/portfolio/artificial-turf-putting-green-lakefront-05.webp",
+    ],
+    details: [
+      { label: "Location", value: "Lake Norman, NC" },
+      { label: "Features", value: "Multi-Hole Putting Green, Waterfront Setting, River Rock Drainage, Mature Tree Canopy" },
+    ],
+  },
+  {
     id: "putting-green-pool-patio-night-01",
     title: "Putting Green — Pool-Side Patio, Dusk Install",
     category: "putting-greens",
