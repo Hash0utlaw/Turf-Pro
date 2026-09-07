@@ -148,12 +148,6 @@ export function ContactPageClient({ showProjectDetails = false }: { showProjectD
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [form])
 
-  const onInvalid = (errors: typeof form.formState.errors) => {
-    if (errors.state) {
-      setOutOfServiceArea(true)
-    }
-  }
-
   const onSubmit = async (values: ContactFormInputs) => {
     setSubmitSuccess(false)
 
@@ -183,7 +177,7 @@ export function ContactPageClient({ showProjectDetails = false }: { showProjectD
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit, onInvalid)} className="space-y-6">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
         {submitSuccess && (
           <div className="rounded-lg bg-turf-green-extralight p-4 border border-turf-green/40">
             <div className="flex items-start gap-3">
@@ -387,7 +381,7 @@ export function ContactPageClient({ showProjectDetails = false }: { showProjectD
           )}
         />
 
-        <Button type="submit" className="w-full" disabled={form.formState.isSubmitting || outOfServiceArea}>
+        <Button type="submit" className="w-full" disabled={form.formState.isSubmitting}>
           {form.formState.isSubmitting ? "Sending..." : "Send Message"}
         </Button>
       </form>
