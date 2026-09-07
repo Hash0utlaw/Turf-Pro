@@ -270,6 +270,13 @@ export default function HuntersvillePage() {
               ))}
             </div>
           </div>
+          <p className="text-center text-gray-600">
+            Curious what it costs? Read our{" "}
+            <Link href="/blog/artificial-turf-cost-huntersville-nc" className="text-turf-green hover:underline font-medium">
+              Huntersville artificial turf pricing guide
+            </Link>
+            .
+          </p>
         </div>
       </section>
 
