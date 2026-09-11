@@ -13,10 +13,10 @@ export function MinimalFooter() {
               (704) 995-6265
             </PhoneLink>
             <a
-              href="mailto:zach@atlanticturfspecialists.com"
+              href="mailto:joe@atlanticturfspecialists.com"
               className="text-brand-gray-text hover:text-turf-green-light transition-colors"
             >
-              zach@atlanticturfspecialists.com
+              joe@atlanticturfspecialists.com
             </a>
           </div>
 

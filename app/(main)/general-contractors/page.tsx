@@ -56,7 +56,7 @@ const structuredData = {
       "@type": "LocalBusiness",
       name: "Atlantic Turf Specialists",
       url: "https://www.atlanticturfspecialists.com",
-      email: "zach@atlanticturfspecialists.com",
+      email: "joe@atlanticturfspecialists.com",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Charlotte",
@@ -225,10 +225,10 @@ export default function GeneralContractorsLandingPage() {
               <span className="flex items-center gap-1.5"><CheckIcon /> 48-Hour Bid Turnaround</span>
             </div>
             <a
-              href="mailto:zach@atlanticturfspecialists.com"
+              href="mailto:joe@atlanticturfspecialists.com"
               className="text-xs text-primary font-semibold hover:underline underline-offset-2 tracking-wide"
             >
-              zach@atlanticturfspecialists.com
+                  joe@atlanticturfspecialists.com
             </a>
           </div>
         </div>
@@ -477,10 +477,10 @@ export default function GeneralContractorsLandingPage() {
               <div className="border-t border-white/10 pt-8">
                 <p className="text-white/40 text-xs uppercase tracking-widest font-semibold mb-3">Prefer to reach out directly?</p>
                 <a
-                  href="mailto:zach@atlanticturfspecialists.com"
+                  href="mailto:joe@atlanticturfspecialists.com"
                   className="text-primary font-semibold text-base hover:underline underline-offset-4"
                 >
-                  zach@atlanticturfspecialists.com
+                  joe@atlanticturfspecialists.com
                 </a>
                 <PhoneLink
                   href="tel:+17049956265"

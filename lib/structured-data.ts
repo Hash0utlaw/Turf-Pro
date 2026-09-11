@@ -146,7 +146,7 @@ export function generateOrganizationSchema(): OrganizationSchema {
       "Professional artificial turf installation services for residential, commercial, and recreational properties in Charlotte, NC and surrounding areas including Matthews, Huntersville, Concord, Lake Norman, and Fort Mill SC.",
     url: "https://www.atlanticturfspecialists.com",
     telephone: "+1-704-995-6265",
-    email: "zach@atlanticturfspecialists.com",
+    email: "joe@atlanticturfspecialists.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Charlotte",

@@ -304,10 +304,10 @@ export function ContactPageClient({ showProjectDetails = false }: { showProjectD
                 (704) 995-6265
               </PhoneLink>
               <a
-                href="mailto:zach@atlanticturfspecialists.com"
+                href="mailto:joe@atlanticturfspecialists.com"
                 className="text-sm font-semibold text-primary hover:underline underline-offset-4"
               >
-                zach@atlanticturfspecialists.com
+                joe@atlanticturfspecialists.com
               </a>
             </div>
           </div>

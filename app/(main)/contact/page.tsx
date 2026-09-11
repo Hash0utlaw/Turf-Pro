@@ -53,7 +53,7 @@ const contactSchema = {
   name: "Atlantic Turf Specialists",
   url: "https://www.atlanticturfspecialists.com",
   telephone: "+1-704-995-6265",
-  email: "zach@atlanticturfspecialists.com",
+  email: "joe@atlanticturfspecialists.com",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Charlotte",
@@ -155,10 +155,10 @@ export default function ContactPage() {
                     <div>
                       <h3 className="text-sm font-semibold text-white uppercase tracking-wide">Email</h3>
                       <a
-                        href="mailto:zach@atlanticturfspecialists.com"
+                        href="mailto:joe@atlanticturfspecialists.com"
                         className="text-brand-gray-text hover:text-turf-green-light transition-colors break-all"
                       >
-                        zach@atlanticturfspecialists.com
+                        joe@atlanticturfspecialists.com
                       </a>
                     </div>
                   </div>

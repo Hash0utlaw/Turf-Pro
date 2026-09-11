@@ -57,7 +57,7 @@ const structuredData = {
       "@type": "LocalBusiness",
       name: "Atlantic Turf Specialists",
       url: "https://www.atlanticturfspecialists.com",
-      email: "zach@atlanticturfspecialists.com",
+      email: "joe@atlanticturfspecialists.com",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Charlotte",
@@ -465,8 +465,8 @@ export default function GeneralContractorsPage() {
               </div>
               <div className="p-5 bg-background border border-border rounded-xl">
                 <p className="text-xs text-muted-foreground uppercase tracking-widest font-semibold mb-1">Reach Us Directly</p>
-                <a href="mailto:zach@atlanticturfspecialists.com" className="text-lg font-bold text-primary hover:text-primary/80 transition-colors">
-                  zach@atlanticturfspecialists.com
+<a href="mailto:joe@atlanticturfspecialists.com" className="text-lg font-bold text-primary hover:text-primary/80 transition-colors">
+                joe@atlanticturfspecialists.com
                 </a>
                 <PhoneLink
                   href="tel:+17049956265"
