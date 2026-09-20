@@ -1,4 +1,4 @@
-import { ContactPageClient } from "./ContactPageClient"
+import { ContactForm } from "./ContactForm"
 import type { Metadata } from "next"
 import Script from "next/script"
 import Image from "next/image"
@@ -123,7 +123,7 @@ export default function ContactPage() {
               {/* Left column — form card (always first on mobile) */}
               <div className="order-1 bg-brand-gray-light border border-turf-green/20 rounded-2xl p-8 shadow-soft-lg">
                 <h2 className="text-xl font-bold text-white mb-6">Request a Free Quote</h2>
-                <ContactPageClient />
+                <ContactForm />
               </div>
 
               {/* Right column — contact info + map (second on mobile) */}
