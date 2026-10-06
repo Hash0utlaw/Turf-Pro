@@ -11,8 +11,140 @@ import type { BlogPost } from "./blog-data"
  *  - Builder / general contractor subcontracting (supports the GC ad group)
  *  - Huntersville turf pricing (first dedicated post for a non-Charlotte service area)
  *  - Dog urine / odor on turf in Charlotte's climate (narrow pet-owner angle, complements the general pet guide)
+ *  - Mooresville turf pricing (Lake Norman waterfront angle, sister to the Huntersville pricing guide)
  */
 export const localSeoBlogPosts: BlogPost[] = [
+  {
+    slug: "artificial-turf-cost-mooresville-nc",
+    title: "How Much Does Artificial Turf Cost in Mooresville, NC? 2026 Lake Norman Pricing Guide",
+    date: "2026-10-06",
+    author: "Atlantic Turf Specialists Team",
+    image: "/portfolio/artificial-turf-aerial-estate-drone-05.webp",
+    excerpt:
+      "Artificial turf in Mooresville, NC costs $8–$15 per sq ft installed. See 2026 pricing for Lake Norman waterfront lots, putting greens, and what moves your quote.",
+    content: `
+    <p>If you are pricing artificial turf cost in Mooresville, NC, you have probably found that online calculators do not match the quotes you are getting. That is because Mooresville is not a typical suburban market. A big share of the homes we quote sit on Lake Norman or close to it: lots that slope down to the water, peninsula properties along Brawley School Road with limited equipment access, and backyards that have to work around a dock, a boathouse, a pool, or a retaining wall. A national per-square-foot average does not account for any of that.</p>
+
+    <p>This guide covers what artificial turf actually costs in Mooresville in 2026, what makes a Lake Norman waterfront lot different from an inland yard, and how to compare bids so you know what you are paying for.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">What Drives Artificial Turf Pricing in Mooresville</h2>
+
+    <p>Every turf quote is expressed per square foot, but that number is a bundle of five separate costs. In Mooresville, the first and third items below move the most.</p>
+
+    <h3 class="text-xl font-semibold mt-4 mb-2">1. Base Preparation on Slopes and Clay</h3>
+    <p>Much of Iredell County sits on the same dense Piedmont clay found across the Charlotte region, and many Mooresville lots add a grade on top of it. A sloped yard needs more excavation, more aggregate, and sometimes terracing or a small retaining edge to keep the base stable. Our guide to <a href="/blog/artificial-turf-charlotte-red-clay-soil-base-preparation" class="text-green-600 hover:text-green-700 underline">red clay soil and base preparation</a> explains why this step decides how long your turf lasts.</p>
+
+    <h3 class="text-xl font-semibold mt-4 mb-2">2. Turf Grade and Face Weight</h3>
+    <p>Face weight (yarn density per square yard), pile height, and fiber shape all affect how natural the turf looks and how well it stands up to traffic. Lakefront yards that host guests, kids, and dogs all summer benefit from a denser, more resilient product.</p>
+
+    <h3 class="text-xl font-semibold mt-4 mb-2">3. Drainage Planned Around the Shoreline</h3>
+    <p>On a waterfront lot, water does not just need to drain. It needs to drain in the right direction without washing base material toward the lake. That can mean extra grading, a perimeter drain, or tying into existing drainage. It is a legitimate cost, and skipping it is one of the most common ways a low bid stays low.</p>
+
+    <h3 class="text-xl font-semibold mt-4 mb-2">4. Edges, Docks, Walls, and Hardscape</h3>
+    <p>A flat rectangle is the cheapest shape to install. Mooresville backyards rarely are one. Transitions to pool coping, paver patios, dock walkways, retaining walls, and landscape beds all take extra labor to finish cleanly.</p>
+
+    <h3 class="text-xl font-semibold mt-4 mb-2">5. Infill Type</h3>
+    <p>Standard silica sand is the budget option. Antimicrobial infill for pet households and cooling infill for yards in full afternoon sun both cost more, and both are worth considering on a west-facing lake lot that bakes all summer.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Mooresville Artificial Turf Cost Per Square Foot in 2026</h2>
+
+    <p>Across the projects we quote and install around Lake Norman, professional artificial turf installation in Mooresville runs <strong>$8 to $15 per square foot</strong>, fully installed. That includes base preparation, drainage, turf, infill, and labor, not just the turf product.</p>
+
+    <ul class="list-disc list-inside space-y-2 my-4">
+      <li><strong>Dog run or side yard (200–400 sq ft):</strong> $1,600–$6,000</li>
+      <li><strong>Typical inland backyard (800–1,500 sq ft):</strong> $6,400–$22,500</li>
+      <li><strong>Lakefront backyard (1,500–3,000 sq ft):</strong> $12,000–$45,000</li>
+      <li><strong>Full estate lawn, front and back (4,000+ sq ft):</strong> $32,000 and up</li>
+    </ul>
+
+    <p>For a worked example: a 1,500-square-foot lakefront backyard on a gentle slope typically lands between <strong>$13,500 and $22,500</strong>. A flat inland yard of the same size often comes in toward the lower end of the range, while a steeper lot with retaining work, a long dock transition, or tight peninsula access lands toward the top. Waterfront lots rarely cost more per square foot for the turf itself. What changes is the scope: more grading, more drainage, and more edge work.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Cost by Project Type</h2>
+
+    <h3 class="text-xl font-semibold mt-4 mb-2">Backyard Lawn Replacement</h3>
+    <p>The most common Mooresville project is replacing a worn or shaded backyard lawn with a realistic multi-tone turf. Most homeowners land in the middle of the $8–$15 range.</p>
+
+    <h3 class="text-xl font-semibold mt-4 mb-2">Waterfront and Lakeside Turf</h3>
+    <p>Turf between the house and the water is the signature Mooresville project. It replaces grass that struggles under heavy foot traffic and wet shoes coming up from the dock. Expect the scope adds described above: grading on the slope, drainage that keeps runoff controlled, and clean transitions to the dock walkway and any hardscape.</p>
+
+    <h3 class="text-xl font-semibold mt-4 mb-2"><a href="/putting-greens" class="text-green-600 hover:text-green-700 underline">Backyard Putting Greens</a></h3>
+    <p>Putting greens are the most requested upgrade in Mooresville, and the larger lots here often leave room for a green alongside the main lawn. Greens use a shorter, denser, more expensive turf and typically run <strong>$15–$25 per square foot</strong> depending on size, contouring, fringe, and cup count. A 300–500 square foot green is a common size.</p>
+
+    <h3 class="text-xl font-semibold mt-4 mb-2"><a href="/pet-friendly-turf" class="text-green-600 hover:text-green-700 underline">Pet-Friendly Turf</a></h3>
+    <p>Dog areas add a modest premium for antimicrobial infill and a base built to flush liquid down and away. That matters in Lake Norman humidity. See our guide to <a href="/blog/artificial-turf-dog-odor-charlotte-nc" class="text-green-600 hover:text-green-700 underline">preventing dog odor on artificial turf</a> for what a pet-ready build includes.</p>
+
+    <h3 class="text-xl font-semibold mt-4 mb-2">Poolside Turf</h3>
+    <p>Turf around a pool replaces grass that gets splashed, trampled, and tracked into the water. It needs drainage-rated backing and attention to surface heat. Our <a href="/blog/poolside-artificial-turf-charlotte-lake-norman-guide" class="text-green-600 hover:text-green-700 underline">poolside turf guide</a> covers the details.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">What Makes Lake Norman Waterfront Lots Different</h2>
+
+    <ul class="list-disc list-inside space-y-2 my-4">
+      <li><strong>Slope and runoff:</strong> Most lakefront lots fall toward the water. The base has to be built to stay put on a grade, and drainage has to control where runoff goes.</li>
+      <li><strong>Shoreline rules:</strong> Lake Norman is managed by Duke Energy, and work near the shoreline can fall under Duke Energy's shoreline management guidelines as well as local buffer requirements. These rules can affect what you are allowed to change close to the water, so confirm them before you finalize a design. A good installer will raise this during the site visit, not after.</li>
+      <li><strong>Equipment access:</strong> Peninsula homes along Brawley School Road and in The Point often have narrow side yards, steep driveways, or no rear access. Moving aggregate and equipment into the backyard takes more labor, which shows up in the quote.</li>
+      <li><strong>HOA architectural review:</strong> Communities like The Point, Langtree, and Morrison Plantation typically require approval before exterior changes. Boards usually want product specs, edging details, and a site plan. Our <a href="/blog/artificial-turf-hoa-approval-charlotte-nc" class="text-green-600 hover:text-green-700 underline">HOA approval guide</a> covers what to submit.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Return on Investment: How Turf Pays for Itself</h2>
+
+    <p>Turf costs more up front than sod, but the comparison that matters is the total cost over time:</p>
+
+    <ul class="list-disc list-inside space-y-2 my-4">
+      <li><strong>No mowing or lawn service:</strong> On a large Mooresville lot, especially one that slopes to the water, weekly mowing and treatment add up fast.</li>
+      <li><strong>Lower water bills:</strong> The turf area needs no irrigation, which matters during hot, dry stretches when lawns on the Town of Mooresville water system need the most water.</li>
+      <li><strong>No reseeding:</strong> Shade from mature lakefront trees and heavy summer foot traffic kill natural grass. Turf takes both without needing to be replaced every season.</li>
+      <li><strong>Typical break-even:</strong> Most Charlotte-area homeowners recover the upfront cost in maintenance and water savings within 4 to 6 years. A premium product still has many years of use left after that.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Questions to Ask Before You Compare Quotes</h2>
+
+    <ol class="list-decimal list-inside space-y-2 my-4">
+      <li><strong>What base depth and aggregate are you using,</strong> and how will the base stay stable on my slope?</li>
+      <li><strong>Where will water drain,</strong> and how will you keep runoff and base material away from the shoreline?</li>
+      <li><strong>Have you checked shoreline or buffer requirements</strong> for work near the water on my lot?</li>
+      <li><strong>What are the turf's face weight and warranty?</strong></li>
+      <li><strong>Is the quote itemized</strong> into base, drainage, turf, infill, and labor?</li>
+      <li><strong>Will you prepare the HOA submission?</strong></li>
+      <li><strong>Are you licensed and insured,</strong> and can you share references from Lake Norman projects?</li>
+    </ol>
+
+    <p>Comparing prices across the lake? Our <a href="/blog/artificial-turf-cost-huntersville-nc" class="text-green-600 hover:text-green-700 underline">Huntersville artificial turf pricing guide</a> covers the south end of Lake Norman.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
+
+    <h3 class="text-xl font-semibold mt-4 mb-2">How much does artificial turf cost in Mooresville, NC?</h3>
+    <p>Professional installation in Mooresville typically runs $8 to $15 per square foot, fully installed. A typical backyard costs roughly $6,400 to $22,500. Lakefront lots with slopes or tight access tend to land toward the upper end because of the extra grading and drainage, not a higher turf price.</p>
+
+    <h3 class="text-xl font-semibold mt-4 mb-2">Is artificial turf worth it on a Lake Norman lot?</h3>
+    <p>For most waterfront homeowners, yes. Lakefront grass deals with shade, slopes that are hard to mow, and heavy foot traffic from the dock. Turf handles all three, stays green through summer heat, and does not need mowing on a steep grade.</p>
+
+    <h3 class="text-xl font-semibold mt-4 mb-2">Can artificial turf be installed near the Lake Norman shoreline?</h3>
+    <p>Often, yes, but rules for work near the water vary by lot. Duke Energy's shoreline management guidelines and local buffer requirements can limit what changes are allowed close to the lake. Confirm these for your property before finalizing a design. We review this as part of every waterfront site visit.</p>
+
+    <h3 class="text-xl font-semibold mt-4 mb-2">How much does a backyard putting green cost in Mooresville?</h3>
+    <p>Most residential putting greens run $15 to $25 per square foot depending on size, contours, fringe, and cup count. A common 300 to 500 square foot green typically costs between $4,500 and $12,500.</p>
+
+    <h3 class="text-xl font-semibold mt-4 mb-2">How long does a Mooresville turf installation take?</h3>
+    <p>Most residential projects take one to three days on site. Steep slopes, retaining work, or limited backyard access on peninsula lots can add time, which is why an on-site estimate is more reliable than a phone quote.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">How We Help Mooresville Homeowners</h2>
+
+    <p>Atlantic Turf Specialists installs artificial turf across Mooresville, including The Point, Brawley School Road, Morrison Plantation, Langtree, River Ridge, and Downtown Mooresville, along with nearby Troutman, Davidson, Cornelius, and Huntersville. Every estimate is itemized, with base preparation, drainage, turf, infill, and labor listed separately, so you can compare it line by line against any other bid. If your community requires architectural review, we prepare the submission package as part of your estimate.</p>
+
+    <p><strong>Want a real number for your Mooresville property?</strong> <a href="/contact" class="text-green-600 hover:text-green-700 underline font-semibold">Request a free, itemized quote</a> and we will walk your lot, check drainage and access, and show you exactly what your project would cost.</p>
+    `,
+    publishedAt: "2026-10-06",
+    isPublished: true,
+    tags: [
+      "artificial turf cost Mooresville NC",
+      "artificial grass Mooresville",
+      "Lake Norman turf installation",
+      "synthetic turf Lake Norman",
+      "putting green Mooresville",
+      "turf cost per square foot",
+      "Iredell County landscaping",
+    ],
+  },
   {
     slug: "artificial-turf-dog-odor-charlotte-nc",
     title: "Dog Urine and Odor on Artificial Turf in Charlotte's Heat and Humidity: What Actually Works",
@@ -218,7 +350,7 @@ export const localSeoBlogPosts: BlogPost[] = [
 
     <h2 class="text-2xl font-bold mt-8 mb-4">How We Help Huntersville Homeowners</h2>
 
-    <p>Atlantic Turf Specialists installs throughout Huntersville, including Birkdale Village, Vermillion, Gilead Ridge, Northstone, Wynfield, and McCoy, as well as the surrounding Lake Norman communities of Cornelius, Davidson, and Mooresville and the broader Charlotte metro. Every estimate is itemized — base preparation, turf grade, drainage, and labor listed separately — so you can see exactly what you are paying for and compare it against any other bid you receive. If your community requires architectural review, we prepare the submission package as part of your estimate at no extra cost.</p>
+    <p>Atlantic Turf Specialists installs throughout Huntersville, including Birkdale Village, Vermillion, Gilead Ridge, Northstone, Wynfield, and McCoy, as well as the surrounding Lake Norman communities of Cornelius, Davidson, and Mooresville (see our <a href="/blog/artificial-turf-cost-mooresville-nc" class="text-green-600 hover:text-green-700 underline">Mooresville pricing guide</a>) and the broader Charlotte metro. Every estimate is itemized — base preparation, turf grade, drainage, and labor listed separately — so you can see exactly what you are paying for and compare it against any other bid you receive. If your community requires architectural review, we prepare the submission package as part of your estimate at no extra cost.</p>
 
     <p><strong>Ready for a real number?</strong> <a href="/contact" class="text-green-600 hover:text-green-700 underline font-semibold">Request a free, itemized quote</a> for your Huntersville property and see exactly what your project would cost before you commit to anything.</p>
     `,

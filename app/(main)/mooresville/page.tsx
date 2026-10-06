@@ -268,6 +268,13 @@ export default function MooresvillePage() {
               ))}
             </div>
           </div>
+          <p className="text-center text-gray-600">
+            Curious what it costs? Read our{" "}
+            <Link href="/blog/artificial-turf-cost-mooresville-nc" className="text-turf-green hover:underline font-medium">
+              Mooresville artificial turf pricing guide
+            </Link>
+            .
+          </p>
         </div>
       </section>
 
